@@ -1,0 +1,39 @@
+---
+title: "Nion M. Dransfeld"
+about:
+  id: hero-heading
+  template: trestles
+  image: profile.jpg
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+::: {#hero-heading}
+Mais de 10 anos em experiência como Engenheiro Civil. Orientado para Planejamento e fiscalização de contratos públicos, Execuções de obras de grandes portes voltado para área de galpões e Cameras frigorificas
+
+## Education
+
+University of Santa Catarina, Joinville \| Santa Catarina, SC Bachelor of Science in Civil Engineering \| Sept 2007 - June 2014
+
+Macalester College \| St. Paul MA B.A in Economics \| Sept 2007 - June 2011
+
+## Experience
+
+Wengo Analytics \| Head Data Scientist \| April 2018 - present
+
+GeoScynce \| Chief Analyst \| Sept 2012 - April 2018
+:::
+
+Esta página foi construída através do pacote Quater no Rstudio, publicado no repositório Github e hospedado no Net.
+
+unc
+
+```{r}
+unclass(as.Date("1969-01-01"))
+
+```
