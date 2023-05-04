@@ -7,9 +7,9 @@ website:
     right:
       - Blog.qmd
       - icon: linkedin
-        href: https://www.linkedin.com/in/nionmaron/
+        href: https://www.linkedin.com/in/nionmaron/?locale=en_US
       - icon: github
-        href: https://github.com
+        href: https://github.com/nionmaron
         
         
 

@@ -5,35 +5,26 @@ about:
   template: trestles
   image: profile.jpg
   links:
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/nionmaron/?locale=en_US
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/nionmaron
 ---
 
 ::: {#hero-heading}
-Mais de 10 anos em experiência como Engenheiro Civil. Orientado para Planejamento e fiscalização de contratos públicos, Execuções de obras de grandes portes voltado para área de galpões e Cameras frigorificas
-
-## Education
-
-University of Santa Catarina, Joinville \| Santa Catarina, SC Bachelor of Science in Civil Engineering \| Sept 2007 - June 2014
-
-Macalester College \| St. Paul MA B.A in Economics \| Sept 2007 - June 2011
-
-## Experience
-
-Wengo Analytics \| Head Data Scientist \| April 2018 - present
-
-GeoScynce \| Chief Analyst \| Sept 2012 - April 2018
+::: {style="text-align: justify;"}
+**Civil Engineer** with over 10 years of experience, working in areas such as strategic planning, contract management, construction execution, and building maintenance. Since 2020, I have been acquiring knowledge in **Data Science** and **Machine Learning**, focusing on problem-solving in the environmental and business intelligence fields. In addition, I am an enthusiast of the financial market and, in my free time, dedicate myself to studying investments and risk analysis in stocks, futures, options, and cryptocurrencies.
 :::
 
-Esta página foi construída através do pacote Quater no Rstudio, publicado no repositório Github e hospedado no Net.
+::: {style="font-size: 0.75em;"}
+## Education
 
-unc
+University of the State of Santa Catarina (Udesc) \| Joinville, **Master's in Civil Engineering** \| jan 2023 -
 
-```{r}
-unclass(as.Date("1969-01-01"))
+Educational Society University of Santa Catarina (Unisociesc) \|Joinville, **Postgraduate Structural Engineering** \| Sept 2014 - June 2016
 
-```
+University of the State of Santa Catarina (Udesc) \| Joinville, **Bachelor of Civil Engineering** \| Sept 2007 - June 2012
+:::
+:::

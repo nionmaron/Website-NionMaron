@@ -1,5 +1,5 @@
 ---
-title: "Blog_Quarto"
+title: "Blog Nion"
 listing:
   contents: posts
   sort: "date desc"

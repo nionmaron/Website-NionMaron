@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Este Blog tem com objetivo mostrar meu portifólio de programação"
-  },
-  {
-    "objectID": "Blog.html",
-    "href": "Blog.html",
-    "title": "Blog_Quarto",
-    "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Nion M. Dransfeld",
     "section": "",
-    "text": "twitter\n  \n  \n    \n     Github\n  \n\n  \n  \nNion M. Dransfeld é engenheiro Civil formado Finley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.\n\n\nUniversity of Santa Catarina, Joinville | Santa Catarina, SC Bachelor of Science in Civil Engineering | Sept 2007 - June 2014\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011\n\n\n\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018\nEsta página foi construída através do pacote Quater no Rstudio, publicado no repositório Github e hospedado no Net."
+    "text": "Linkedin\n  \n  \n    \n     Github\n  \n\n  \n  \n\nCivil Engineer with over 10 years of experience, working in areas such as strategic planning, contract management, construction execution, and building maintenance. Since 2020, I have been acquiring knowledge in Data Science and Machine Learning, focusing on problem-solving in the environmental and business intelligence fields. In addition, I am an enthusiast of the financial market and, in my free time, dedicate myself to studying investments and risk analysis in stocks, futures, options, and cryptocurrencies.\n\n\n\nUniversity of the State of Santa Catarina (Udesc) | Joinville, Master’s in Civil Engineering | jan 2023 -\nEducational Society University of Santa Catarina (Unisociesc) |Joinville, Postgraduate Structural Engineering | Sept 2014 - June 2016\nUniversity of the State of Santa Catarina (Udesc) | Joinville, Bachelor of Civil Engineering | Sept 2007 - June 2012"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "posts/post-with-code/index.html",
@@ -28,10 +21,10 @@
     "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "Blog.html",
+    "href": "Blog.html",
+    "title": "Blog Nion",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 15, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 12, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   }
 ]
