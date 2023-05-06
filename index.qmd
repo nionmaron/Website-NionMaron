@@ -18,13 +18,13 @@ about:
 **Civil Engineer** with over 10 years of experience, working in areas such as strategic planning, contract management, construction execution, and building maintenance. Since 2020, I have been acquiring knowledge in **Data Science** and **Machine Learning**, focusing on problem-solving in the environmental and business intelligence fields. In addition, I am an enthusiast of the financial market and, in my free time, dedicate myself to studying investments and risk analysis in stocks, futures, options, and cryptocurrencies.
 :::
 
-::: {style="font-size: 0.75em;"}
+::: {style="font-size: 0.9em;"}
 ## Education
 
-University of the State of Santa Catarina (Udesc) \| Joinville, **Master's in Civil Engineering** \| jan 2023 -
+> **Master's in Civil Engineering** \| jan 2023 <br> [University of the State of Santa Catarina](https://www.udesc.br/international/colleges)
 
-Educational Society University of Santa Catarina (Unisociesc) \|Joinville, **Postgraduate Structural Engineering** \| Sept 2014 - June 2016
+> **Postgraduate Structural Engineering** \| June 2016 <br> [Educational Society University of Santa Catarina](https://www.unisociesc.com.br/)
 
-University of the State of Santa Catarina (Udesc) \| Joinville, **Bachelor of Civil Engineering** \| Sept 2007 - June 2012
+> **Bachelor of Civil Engineering** \| June 2012 <br> [University of the State of Santa Catarina](https://www.udesc.br/international/colleges)
 :::
 :::

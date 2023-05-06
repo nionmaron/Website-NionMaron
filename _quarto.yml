@@ -3,14 +3,19 @@ project:
 
 website:
   title: "nionmaron"
+  page-footer:
+    center: "Developed by [Nion M. Dransfeld](https://nionmaron.com) <br> Powered by [Quarto](https://quarto.org/)"
+    border: false
+    background: light
+    
   navbar:
     right:
-      - Blog.qmd
+      - text: "Blog"
+        file: Blog.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/nionmaron/?locale=en_US
       - icon: github
         href: https://github.com/nionmaron
-        
         
 
 format:
