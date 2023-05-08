@@ -2,12 +2,14 @@ project:
   type: website
 
 website:
-  title: "nionmaron"
+  title: "NionMaron"
+  description: "Nion M. Dransfeld blog machine Learning"
+  site-url: https://nionmaron.com
+  favicon: "images/site_icon.png"
   page-footer:
     center: "Developed by [Nion M. Dransfeld](https://nionmaron.com) <br> Powered by [Quarto](https://quarto.org/)"
     border: false
     background: light
-    
   navbar:
     right:
       - text: "Blog"
@@ -17,7 +19,6 @@ website:
       - icon: github
         href: https://github.com/nionmaron
         
-
 format:
   html:
     theme: cosmo
