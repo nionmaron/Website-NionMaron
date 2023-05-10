@@ -1,0 +1,2 @@
+https://jthomasmock.github.io/quarto-2hr-webinar/materials/02-authoring.html#/why-the-name-quarto1
+https://ivelasq.quarto.pub/building-a-blog-with-quarto/lets-build-a-quarto-blog/

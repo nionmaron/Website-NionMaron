@@ -1,9 +1,7 @@
 project:
   type: website
-
 website:
   title: "NionMaron"
-  description: "Nion M. Dransfeld blog machine Learning"
   site-url: https://nionmaron.com
   favicon: "images/site_icon.png"
   page-footer:
@@ -11,6 +9,7 @@ website:
     border: false
     background: light
   navbar:
+    background: "#2E8BC0" # / Ref: https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     right:
       - text: "Blog"
         file: Blog.qmd
@@ -18,10 +17,13 @@ website:
         href: https://www.linkedin.com/in/nionmaron/?locale=en_US
       - icon: github
         href: https://github.com/nionmaron
-        
+
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
+    
     css: styles.css
 
 editor: visual

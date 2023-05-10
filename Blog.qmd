@@ -9,12 +9,16 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: true
+#title-block-banner: "#4040ff"
+#title-block-banner: "images/banner-min.jpg"
 ---
 
 ::: {style="text-align: justify;"}
 Welcome to my blog, where I apply various concepts from statistics, geostatistics, data science and machine learning. My mission is to provide high-quality content that helps you understand and apply fundamental and advanced concepts in this area. Join me on this journey as we explore the latest trends and techniques in data-driven decision-making and spatial analysis.
 :::
 
-<hr style="border: 3px solid blue;"> 
+<hr style="border: 3px solid blue;">
+
 **Navigate the world of data science, machine learning and geostatistics to uncover powerful insights and make informed decision**
-<hr style="border: 1px solid blue;"> 
+
+<hr style="border: 1px solid blue;">

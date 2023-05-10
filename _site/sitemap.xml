@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://nionmaron.com/posts/welcome/index.html</loc>
+    <lastmod>2023-05-10T13:27:52.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/post-with-code/index.html</loc>
+    <lastmod>2023-05-10T13:27:54.791Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/data-driven/index.html</loc>
+    <lastmod>2023-05-10T13:27:55.798Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/Blog.html</loc>
+    <lastmod>2023-05-10T13:28:31.875Z</lastmod>
+  </url>
+  <url>
     <loc>https://nionmaron.com/index.html</loc>
-    <lastmod>2023-05-08T18:44:47.576Z</lastmod>
+    <lastmod>2023-05-10T13:27:58.711Z</lastmod>
   </url>
 </urlset>

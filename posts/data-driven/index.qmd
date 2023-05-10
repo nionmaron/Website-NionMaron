@@ -1,0 +1,8 @@
+---
+title: "Data Driven"
+author: "Nion M. Dransfeld"
+date: "2023-05-15"
+categories: [português, code, analysis]
+
+---
+
