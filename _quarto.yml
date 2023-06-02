@@ -17,12 +17,13 @@ website:
         href: https://www.linkedin.com/in/nionmaron/?locale=en_US
       - icon: github
         href: https://github.com/nionmaron
-
 format:
   html:
+    mainfont: Corn # MADE Gentle # Sans-serif
     theme:
       light: cosmo
       dark: darkly
+      
     
     css: styles.css
 
