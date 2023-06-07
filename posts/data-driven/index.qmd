@@ -1,6 +1,6 @@
 ---
 title: "O que é 'Data Driven ?'"
-author: "Nion M. Dransfeld"
+author: "Dransfeld, N. M."
 date: "2023-06-06"
 categories: [DataScience,BusinessIntelligence,Português]
 ---
