@@ -2,7 +2,7 @@
 title: "Termos com a palavra 'Data'"
 author: "Dransfeld, N. M."
 date: "2023-06-01"
-categories: [database,português]
+categories: [DataScience,Português]
 image: "Data-terms-cloud.png"
 ---
 
@@ -21,9 +21,7 @@ A ciência de dados é uma área rica e diversificada, com muitos termos e conce
 
 **Data Warehouse (Depósito de Dados):** Um grande repositório de dados coletados de diferentes fontes e organizados de uma maneira que facilite a análise.
 
-**Data Lake:** Um repositório de armazenamento que contém uma grande quantidade de dados brutos em seu formato natural.
-
-**Delta Lake:** Delta Lake é um projeto de código aberto que proporciona confiabilidade aos Data Lakes. Ele faz isso fornecendo um novo armazenamento em camadas que traz ACID (Atomicidade, Consistência, Isolamento, Durabilidade) para grandes conjuntos de dados e o suporte para operações de leitura e gravação em escala de petabytes. Isso é particularmente útil para lidar com Big Data, onde os dados estão em formatos e volumes diferentes.
+**Data Lake (Lago de Dados):** Um repositório de armazenamento que contém uma grande quantidade de dados brutos em seu formato natural.
 
 **Data Mart (Depósito de Dados Departamental):** É um subconjunto de um data warehouse que se concentra em uma área específica de negócios. Diferentemente de um data warehouse, que serve toda a organização, um data mart é mais focado e atende a uma equipe ou departamento específico.
 
