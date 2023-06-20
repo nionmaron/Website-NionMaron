@@ -1,29 +1,20 @@
 {
-  "about.qmd": {
-    "about.html": "fa43c04b"
-  },
-  "index.qmd": {
-    "index.html": "38a08b82"
-  },
-  "posts/post-with-code/index.qmd": {
-    "index.html": "f8bb14c8"
-  },
-  "posts/welcome/index.qmd": {
-    "index.html": "cb052f71"
-  },
   "Blog.qmd": {
-    "Blog.html": "70d5fa7a"
-  },
-  "index2.qmd": {
-    "index2.html": "6446f17b"
+    "Blog.html": "1accde68"
   },
   "404.qmd": {
-    "404.html": "dc4b811b"
+    "404.html": "3003d14c"
   },
-  "posts/data-driven/index.qmd": {
-    "index.html": "64bec6bb"
+  "index.qmd": {
+    "index.html": "2cf959cc"
   },
-  "posts/data-terms/index.qmd": {
-    "index.html": "eccf47f5"
+  "posts/data-driven-pt/index.qmd": {
+    "index.html": "3be28256"
+  },
+  "posts/data-terms-pt/index.qmd": {
+    "index.html": "95bcb669"
+  },
+  "posts/lambda-architecture-pt/index.qmd": {
+    "index.html": "b8726f22"
   }
 }
