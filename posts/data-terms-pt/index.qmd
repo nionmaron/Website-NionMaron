@@ -21,11 +21,13 @@ A ciência de dados é uma área rica e diversificada, com muitos termos e conce
 
 **Data Warehouse (Depósito de Dados):** Um grande repositório de dados coletados de diferentes fontes e organizados de uma maneira que facilite a análise.
 
-**Data Lake (Lago de Dados):** Um repositório de armazenamento que contém uma grande quantidade de dados brutos em seu formato natural.
+[**Data Lake (Lago de Dados):**](https://nionmaron.com/posts/lambda-architecture-pt/) Um repositório de armazenamento que contém uma grande quantidade de dados brutos em seu formato natural.
 
 **Data Mart (Depósito de Dados Departamental):** É um subconjunto de um data warehouse que se concentra em uma área específica de negócios. Diferentemente de um data warehouse, que serve toda a organização, um data mart é mais focado e atende a uma equipe ou departamento específico.
 
 **Data Catalog (Catálogo de Dados):** É um recurso organizacional que permite que as equipes de dados descubram e usem dados para encontrar insights de negócios. É um repositório para encontrar, entender e confiar em dados corporativos.
+
+**Data ingestion (ingestão de dados):** É o processo de coleta e importação de dados de diversas fontes para um sistema de armazenamento ou plataforma de processamento de dados.
 
 **Master Data Management (Gestão de Dados Mestres):** É um método de permitir que uma organização vincule todos os seus dados críticos a um arquivo mestre, proporcionando uma referência comum. Quando feito corretamente, os benefícios do MDM podem incluir a eliminação de dados redundantes, a melhoria da qualidade dos dados e a redução de discrepâncias e erros.
 

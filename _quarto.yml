@@ -4,6 +4,9 @@ website:
   title: "NionMaron"
   site-url: https://nionmaron.com
   favicon: "images/site_icon.png"
+  twitter-card: true
+  open-graph: true #specification that enables richer sharing of links to articles on the web
+   
   page-footer:
     center: "Developed by [Nion M. Dransfeld](https://nionmaron.com) <br> Powered by [Quarto](https://quarto.org/)"
     border: false
@@ -22,7 +25,7 @@ format:
     mainfont: Corn # MADE Gentle # Sans-serif
     theme:
       light: cosmo
-      dark: darkly
+      dark: [cosmo, theme-dark.scss]
       
     
     css: styles.css
