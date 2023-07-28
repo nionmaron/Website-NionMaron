@@ -168,6 +168,13 @@
     "text": "Git Stash\nO comando “git stash” é uma funcionalidade do sistema de controle de versão Git que permite aos desenvolvedores salvar temporariamente as alterações feitas em seu repositório de trabalho, sem precisar fazer um commit completo. O “stash” pode ser visto como uma área de armazenamento temporário para alterações não concluídas.\nPosteriormente, quando desejar retomar as alterações salvas, você pode usar os comandos git stash list para ver a lista de stashes disponíveis e git stash apply ou git stash pop para aplicar novamente as alterações salvas no seu diretório de trabalho. A diferença entre os comandos “apply” e “pop” é que o “apply” mantém o stash na lista, enquanto o “pop” remove o stash após aplicar as alterações."
   },
   {
+    "objectID": "posts/Git-Tips-and-Tricks-pt/index.html#git-reflog",
+    "href": "posts/Git-Tips-and-Tricks-pt/index.html#git-reflog",
+    "title": "Git: Dicas e truques",
+    "section": "Git Reflog",
+    "text": "Git Reflog\nO git reflog é um comando útil do Git que registra quando as pontas dos ramos e outras referências foram atualizadas no repositório local. Ele ajuda você a entender a história de um repositório de uma maneira mais granular do que git log, porque também registra quando você faz checkout para outro ramo, quando um commit é alterado (por exemplo, com git commit --amend), e assim por diante.\nSegue alguns usos comuns do git reflog:\n\nRecuperação de commits perdidos: O Git tem um sistema de garbage collection que limpa commits inacessíveis de tempos em tempos, mas antes disso, você pode usar o git reflog para encontrar commits perdidos. Isso é útil quando você exclui um ramo por engano, por exemplo.\nDesfazer rebase: Um comando git rebase pode ser uma operação complicada que às vezes dá errado. Se você deseja desfazer um rebase, pode usar o git reflog para encontrar o estado do seu ramo antes do rebase e retornar a esse estado.\n\nO comando git reflog exibe uma lista de todos os pontos na história do seu HEAD. Para cada entrada, ele mostra um hash de commit, a ação que levou a esse estado (como um commit, rebase, checkout etc.), e uma referência para essa entrada na forma de HEAD@{n}, onde n é o número de passos atrás nesse ponto na história.\nO git reflog mantém um registro das últimas ações no Git que modificaram o HEAD, incluindo commits, checkouts e outros. Por padrão, o Git mantém esses registros por 90 dias. Esse período de 90 dias é chamado de período de “expiração” do reflog."
+  },
+  {
     "objectID": "posts/Git-Tips-and-Tricks-pt/index.html#rebasing-x-merging",
     "href": "posts/Git-Tips-and-Tricks-pt/index.html#rebasing-x-merging",
     "title": "Git: Dicas e truques",
@@ -194,6 +201,13 @@
     "title": "Git: Dicas e truques",
     "section": "Objetos Git",
     "text": "Objetos Git\nO Git é um sistema de controle de versão que mantém o histórico de alterações em arquivos e diretórios em um repositório. Para fazer isso, o Git usa um sistema de armazenamento de objetos que contém quatro tipos principais de objetos: blob, tree, commit e tag.\n1. Blob: O tipo de objeto mais básico no Git é o blob. Um objeto blob é um arquivo com dados, mas sem metadados (como nome de arquivo ou permissões). Cada versão de cada arquivo em seu repositório Git é armazenada como um objeto blob separado.\n2. Tree: Um objeto de tree (árvore) no Git é essencialmente análogo a um diretório. Ele representa uma estrutura de diretório de arquivos e outros diretórios. Um objeto tree contém um ou mais entradas de tree, cada uma das quais contém uma referência a um blob ou tree, juntamente com o nome do arquivo, permissões e o bit ‘execute’.\n3. Commit: Um objeto de commit contém metadados para cada alteração introduzida no repositório, incluindo o autor, o committer (que pode ser diferente do autor), a mensagem de commit e um ponteiro para o objeto tree que representa a estrutura de diretório de nível superior para o projeto. Cada commit também contém um ou mais ponteiros para os commit(s) pai(s) que representam o(s) estado(s) anterior(es) do projeto.\n4. Tag: Uma tag é uma referência a um objeto de commit, usada geralmente para marcar pontos específicos no histórico do repositório como uma versão específica de um projeto. Tags podem ser leves (apontando diretamente para um commit) ou anotadas (armazenadas como objetos completos com um apontador para um commit, um nome de tag, uma mensagem de tag e um tagger).\nEsses quatro tipos de objetos (blob, tree, commit e tag), juntamente com referências que apontam para objetos de commit (como branches e HEAD), formam a estrutura fundamental do sistema de armazenamento de dados do Git."
+  },
+  {
+    "objectID": "posts/Git-Tips-and-Tricks-pt/index.html#excluir-um-repositório-git",
+    "href": "posts/Git-Tips-and-Tricks-pt/index.html#excluir-um-repositório-git",
+    "title": "Git: Dicas e truques",
+    "section": "Excluir um repositório Git",
+    "text": "Excluir um repositório Git\nSe surgir a necessidade de excluir um repositório Git e manter os arquivos, você pode fazer isso excluindo a pasta oculta .git, que é onde todas as informações do repositório Git são armazenadas. Porém, tenha muito cuidado, pois isso removerá todo o histórico de versões do Git para este repositório. Siga os passos abaixo para excluir o repositório Git:\n1- Navegue até o diretório que contém o repositório Git que você deseja excluir.\ncd /caminho/para/o/diretorio\n2- Exclua a pasta .git dentro desse diretório.\nrm -rf .git"
   },
   {
     "objectID": "posts/Git-Tips-and-Tricks-pt/index.html#diferentes-contas-git-para-diferentes-projetos",
@@ -243,19 +257,5 @@
     "title": "Data Lake e Arquitetura Lambda",
     "section": "Conclusão",
     "text": "Conclusão\nA crescente quantidade de dados gerados por várias fontes vem exigindo que as empresas explorem soluções como Data Lakes e Arquitetura Lambda para lidar com essa avalanche de informações. As empresas estão procurando extrair valor desses dados, e a combinação de Data Lakes com a Arquitetura Lambda permite que elas façam exatamente isso.\nEm resumo, embora o uso de Data Lakes e a Arquitetura Lambda possam apresentar desafios, eles oferecem benefícios significativos para as instituições/corporações que precisam lidar com grandes volumes de dados variados e desejam obter insights em tempo real. Como todas as decisões tecnológicas, a escolha de usar estas soluções deve ser feita com base nas necessidades específicas e capacidades de uma organização."
-  },
-  {
-    "objectID": "posts/Git-Tips-and-Tricks-pt/index.html#excluir-um-repositório-git",
-    "href": "posts/Git-Tips-and-Tricks-pt/index.html#excluir-um-repositório-git",
-    "title": "Git: Dicas e truques",
-    "section": "Excluir um repositório Git",
-    "text": "Excluir um repositório Git\nSe surgir a necessidade de excluir um repositório Git e manter os arquivos, você pode fazer isso excluindo a pasta oculta .git, que é onde todas as informações do repositório Git são armazenadas. Porém, tenha muito cuidado, pois isso removerá todo o histórico de versões do Git para este repositório. Siga os passos abaixo para excluir o repositório Git:\n1- Navegue até o diretório que contém o repositório Git que você deseja excluir.\ncd /caminho/para/o/diretorio\n2- Exclua a pasta .git dentro desse diretório.\nrm -rf .git"
-  },
-  {
-    "objectID": "posts/Git-Tips-and-Tricks-pt/index.html#git-reflog",
-    "href": "posts/Git-Tips-and-Tricks-pt/index.html#git-reflog",
-    "title": "Git: Dicas e truques",
-    "section": "Git Reflog",
-    "text": "Git Reflog\nO git reflog é um comando útil do Git que registra quando as pontas dos ramos e outras referências foram atualizadas no repositório local. Ele ajuda você a entender a história de um repositório de uma maneira mais granular do que git log, porque também registra quando você faz checkout para outro ramo, quando um commit é alterado (por exemplo, com git commit --amend), e assim por diante.\nSegue alguns usos comuns do git reflog:\n\nRecuperação de commits perdidos: O Git tem um sistema de garbage collection que limpa commits inacessíveis de tempos em tempos, mas antes disso, você pode usar o git reflog para encontrar commits perdidos. Isso é útil quando você exclui um ramo por engano, por exemplo.\nDesfazer rebase: Um comando git rebase pode ser uma operação complicada que às vezes dá errado. Se você deseja desfazer um rebase, pode usar o git reflog para encontrar o estado do seu ramo antes do rebase e retornar a esse estado.\n\nO comando git reflog exibe uma lista de todos os pontos na história do seu HEAD. Para cada entrada, ele mostra um hash de commit, a ação que levou a esse estado (como um commit, rebase, checkout etc.), e uma referência para essa entrada na forma de HEAD@{n}, onde n é o número de passos atrás nesse ponto na história.\nO git reflog mantém um registro das últimas ações no Git que modificaram o HEAD, incluindo commits, checkouts e outros. Por padrão, o Git mantém esses registros por 90 dias. Esse período de 90 dias é chamado de período de “expiração” do reflog."
   }
 ]
