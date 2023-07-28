@@ -16,5 +16,20 @@
   },
   "posts/lambda-architecture-pt/index.qmd": {
     "index.html": "b8726f22"
+  },
+  "posts/Git-Tips-and-Tricks-pt/index.qmd": {
+    "index.html": "3bea461a"
+  },
+  "LICENSE.md": {
+    "LICENSE.html": "e3c3d8bd"
+  },
+  "posts/openCV-pt/index.qmd": {
+    "index.html": "90b426c0"
+  },
+  "posts/Git-GUI-pt/index.qmd": {
+    "index.html": "c27fa2aa"
+  },
+  "posts/Git-Quiz-en/index.qmd": {
+    "index.html": "b232eda3"
   }
 }

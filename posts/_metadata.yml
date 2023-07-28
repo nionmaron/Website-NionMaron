@@ -2,9 +2,11 @@
 
 # freeze computational output
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+
+# freeze computational output
+freeze: true # options apply to all posts in this folder
 
 # Enable banner style title blocks
-title-block-banner: true
+title-block-banner: true 
 #title-block-banner: "#4040ff"
 

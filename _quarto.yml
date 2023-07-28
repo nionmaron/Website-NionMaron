@@ -27,7 +27,6 @@ format:
       light: cosmo
       dark: [cosmo, theme-dark.scss]
       
-    
     css: styles.css
 
 editor: visual

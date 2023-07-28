@@ -1,8 +1,9 @@
 .Rproj.user
-.Rhistory
+*.Rhistory
 .Rdata
 .httr-oauth
 .DS_Store
 /.quarto/
 usethis.R
-.posts
+posts/
+*.vsdx
