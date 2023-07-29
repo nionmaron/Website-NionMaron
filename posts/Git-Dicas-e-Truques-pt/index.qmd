@@ -1,5 +1,5 @@
 ---
-title: "Git: Dicas e truques"
+title: "Git: Dicas e Truques"
 #description: " "
 lang: pt
 author: "Dransfeld, N. M."
@@ -7,7 +7,7 @@ author: "Dransfeld, N. M."
 date: "2023-07-25"
 #date-modified: "2023-07-25"
 categories: [Git,GitHub,Português]
-image: "git_workflow.png"
+image: "git_workflow_cover.png"
 #https://quarto.org/docs/websites/website-blog.html#posts-directory
 #https://quarto.org/docs/websites/website-listings.html#feeds
 ---
@@ -27,7 +27,7 @@ Além disso, [o Git possui uma ampla gama de recursos, como ramificações (bran
 
 A adoção generalizada do Git e a integração com várias plataformas de desenvolvimento, como o GitHub, tornam-no uma escolha adquada para o controle de versão. Além disso, à medida que mais empresas adotam práticas de DevOps e integração contínua / entrega contínua (CI/CD), o Git, com suas características de ramificação e fusão, torna-se uma ferramenta essencial. O [Git também é altamente escalável, o que significa que pode acomodar projetos que vão desde pequenos aplicativos individuais até grandes projetos corporativos]{style="background-color:#DCDCDC"}.
 
-![Fig.01 - Representação simplificada do fluxo de trabalho no Git](git_workflow.png){fig-align="center"}
+![Fig.01 - Principais comandos Git e representação do fluxo de trabalho](git_workflow.png){fig-align="center"}
 
 Nesse artigo, **vou apresentar uma série de dicas e truques essenciais para o Git, focados na plataforma Windows e utilizando o Git Bash como ambiente** de linha de comando. Embora o enfoque seja no Windows, é importante ressaltar que muitos dos comandos e conceitos abordados também se aplicam ao Mac e ao Linux. Caso queira consultar todas as funções e ter uma melhor descrição dos comandos você pode consulta o manual no link <https://git-scm.com/docs>
 
@@ -106,6 +106,8 @@ Aqui estão alguns dos principais comandos relacionados a branches no Git, junta
 ### Outros comandos
 
 -   `git commit -a -m`: adiciona automaticamente todas as alterações nos arquivos rastreados e faz um commit com uma mensagem específica, permitindo que você realize o commit rapidamente sem precisar usar o comando git add separadamente;
+
+-   `git init`: cria um novo repositório do Git. Ele pode ser usado para converter um projeto existente e não versionado em um repositório do Git ou inicializar um novo repositório vazio.
 
 -   `git diff branch1..branch2`: Compara a ponta das duas ramificações (branch), para visualizar as modificações;
 
