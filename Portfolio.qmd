@@ -1,0 +1,22 @@
+---
+draft: true
+page-layout: custom
+section-divs: false
+editor: source
+sidebar: false
+search: false
+toc: false
+---
+
+
+::: {.header-text} 
+::: {.content-container}
+::: {.header-block .top-story-text}
+Bem-vindo ao meu portfólio. Aqui estão alguns dos projetos em que trabalhei.
+:::
+:::
+:::
+
+
+Em desenvolvimento
+
