@@ -8,9 +8,17 @@ website:
   open-graph: true #specification that enables richer sharing of links to articles on the web
    
   page-footer:
-    center: "Developed by [Nion M. Dransfeld](https://nionmaron.com) <br> Powered by [Quarto](https://quarto.org/)"
+    background: "#000000"
+    #background: light
+    left: |
+      Copyright &copy; 2023 [NionMaron](https://github.com/nionmaron/Website-NionMaron/blob/master/LICENSE.md)
+    center: | 
+      Developed by [Nion M. Dransfeld](https://nionmaron.com) 
+      <br> [Edit this page]( https://github.com/nionmaron/Website-NionMaron/) | [Report an issue](https://github.com/nionmaron/Website-NionMaron/issues)
+    right: |
+      [Terms & Conditions](/ts-and-cs.qmd)
     border: false
-    background: light
+    
   navbar:
     background: "#2E8BC0" # / Ref: https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     right:
@@ -33,3 +41,5 @@ format:
 
 editor: visual
 
+execute: 
+  freeze: auto

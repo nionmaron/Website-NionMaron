@@ -304,3 +304,22 @@ pre code {
 pre.sourceCode {
   background-color: #f8f8f8;
 }
+
+
+
+.iframe-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Opcional: Centraliza verticalmente se necessário */
+    height: 100%;            /* Altura do contêiner (ajuste conforme necessário) */
+}
+
+#meuIframe {
+    border: none; /* Opcional: Remove a borda do iframe */
+}
+
+
+
+
+
+

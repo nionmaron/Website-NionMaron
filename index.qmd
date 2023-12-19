@@ -4,7 +4,7 @@ lang: en
 about:
   id: hero-heading
   template: trestles
-  image: images/profile.jpg
+  image: images/profile.png
   links:
     - icon: linkedin
       text: Linkedin
@@ -41,15 +41,13 @@ listing:
 :::
 :::
 
-::: {.content-container}
-::: {.listing-block}
+::: content-container
+::: listing-block
+## Latest content
 
-## Latest content 
 </a>
 
 ::: {#latest-content}
 :::
-
 :::
 :::
-

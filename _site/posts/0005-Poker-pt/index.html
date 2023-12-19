@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dransfeld, N. M.">
-<meta name="dcterms.date" content="2023-06-06">
+<meta name="description" content="Explora como o pôquer, um jogo estratégico com raízes no século XVIII, pode enriquecer a ciência de dados. É Abordado as semelhanças entre os dois campos, enfatizando a importância de habilidades como análise estratégica, tomada de decisão sob incerteza, e gerenciamento de riscos.">
 
-<title>NionMaron - O que é ‘Data Driven ?’</title>
+<title>NionMaron - Lições do Pôquer para Cientistas de Dados</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -52,31 +52,31 @@ ul.task-list li input[type="checkbox"] {
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
   }
 }</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="NionMaron - O que é ‘Data Driven ?’">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://nionmaron.com/posts/data-driven-pt/data-driven.png">
+<meta property="og:title" content="NionMaron - Lições do Pôquer para Cientistas de Dados">
+<meta property="og:description" content="Explora como o pôquer, um jogo estratégico com raízes no século XVIII, pode enriquecer a ciência de dados. É Abordado as semelhanças entre os dois campos, enfatizando a importância de habilidades como análise estratégica, tomada de decisão sob incerteza, e gerenciamento de riscos.">
+<meta property="og:image" content="https://nionmaron.com/posts/0005-Poker-pt/Data-Scientist-Poker-pt.png">
 <meta property="og:site-name" content="NionMaron">
-<meta property="og:image:height" content="1636">
-<meta property="og:image:width" content="3081">
-<meta name="twitter:title" content="NionMaron - O que é ‘Data Driven ?’">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://nionmaron.com/posts/data-driven-pt/data-driven.png">
-<meta name="twitter:image-height" content="1636">
-<meta name="twitter:image-width" content="3081">
+<meta property="og:image:height" content="1128">
+<meta property="og:image:width" content="1434">
+<meta name="twitter:title" content="NionMaron - Lições do Pôquer para Cientistas de Dados">
+<meta name="twitter:description" content="Explora como o pôquer, um jogo estratégico com raízes no século XVIII, pode enriquecer a ciência de dados. É Abordado as semelhanças entre os dois campos, enfatizando a importância de habilidades como análise estratégica, tomada de decisão sob incerteza, e gerenciamento de riscos.">
+<meta name="twitter:image" content="https://nionmaron.com/posts/0005-Poker-pt/Data-Scientist-Poker-pt.png">
+<meta name="twitter:image-height" content="1128">
+<meta name="twitter:image-width" content="1434">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -91,8 +91,8 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">NionMaron</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -127,10 +127,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">O que é ‘Data Driven ?’</h1>
-                                <div class="quarto-categories">
+      <h1 class="title">Lições do Pôquer para Cientistas de Dados</h1>
+                  <div>
+        <div class="description">
+          <p>Explora como o pôquer, um jogo estratégico com raízes no século XVIII, pode enriquecer a ciência de dados. É Abordado as semelhanças entre os dois campos, enfatizando a importância de habilidades como análise estratégica, tomada de decisão sob incerteza, e gerenciamento de riscos.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Poker</div>
                 <div class="quarto-category">DataScience</div>
-                <div class="quarto-category">BusinessIntelligence</div>
                 <div class="quarto-category">Português</div>
               </div>
                   </div>
@@ -140,16 +145,16 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor</div>
       <div class="quarto-title-meta-contents">
                <p>Dransfeld, N. M. </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 6, 2023</p>
+        <p class="date">17 de dezembro de 2023</p>
       </div>
     </div>
     
@@ -167,61 +172,48 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="o-que-é-data-driven-e-qual-sua-a-importância" class="level1" style="color: navy; text-align: center;">
-<h1><strong>O que é ‘Data Driven’ e qual sua a importância ?</strong></h1>
+<section id="estratégia-risco-e-dados-lições-do-pôquer-para-cientistas-de-dados" class="level1" style="color: navy; text-align: center;">
+<h1><strong>Estratégia, Risco e Dados: Lições do Pôquer para Cientistas de Dados</strong></h1>
 </section>
 <div style="text-align: justify;">
-<p>Data Driven, ou orientação por dados, é uma metodologia que prioriza o uso de dados para tomar decisões estratégicas e operacionais. Este enfoque se baseia em análise e interpretação de dados reais, ao invés de se guiar apenas por intuição ou experiência anterior.</p>
+<p>O pôquer, com suas raízes remontando a vários jogos europeus do século XVIII, evoluiu ao longo dos séculos para se tornar um dos jogos de cartas mais populares e estratégicos do mundo. Sua história é rica e diversificada, refletindo uma mistura de influências culturais e estilos de jogo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="data-driven.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Processos Organizacionais Orientados por Dados</figcaption>
+<p><img src="Data-Scientist-Poker-pt.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Fig.01 - Lições do poker para análise de dados.</figcaption>
 </figure>
 </div>
-<p>A importância do Data Driven está em sua capacidade de proporcionar melhores tomadas de decisão dentro de uma organização. Isso é possível porque os dados são capazes de mostrar uma realidade objetiva, baseada em números e fatos, reduzindo a incerteza e o risco. Além disso, o uso de dados também pode revelar padrões, tendências e insights que poderiam passar despercebidos sem a devida análise.</p>
-<section id="como-surgiu" class="level2">
-<h2 class="anchored" data-anchor-id="como-surgiu">Como surgiu?</h2>
-<p>O Data Driven surgiu como extensão da ciência de dados, campo do conhecimento que utiliza métodos científicos e algoritmos para transformar dados – estruturados e não estruturados – em conhecimento.</p>
-</section>
-<section id="benefícios" class="level2">
-<h2 class="anchored" data-anchor-id="benefícios">Benefícios</h2>
-<p>A implantação de uma cultura Data Driven pode trazer uma série de benefícios para qualquer organização. Estes são alguns dos principais motivos para considerar esta abordagem:</p>
-<p><strong>Tomada de decisão baseada em evidências:</strong> Com dados confiáveis e precisos, você pode tomar decisões mais informadas e baseadas em evidências, reduzindo o risco e a incerteza.</p>
-<p><strong>Melhor compreensão do negócio:</strong> A análise de dados pode revelar padrões e tendências que podem ajudar a entender melhor o seu negócio e o ambiente em que opera.</p>
-<p><strong>Maior eficiência operacional:</strong> A análise de dados pode identificar ineficiências e gargalos nos processos de negócios, permitindo que você faça melhorias que aumentem a eficiência e reduzam os custos.</p>
-<p><strong>Melhor atendimento ao cliente:</strong> Com os dados do cliente, você pode personalizar suas ofertas, melhorar a experiência do cliente e construir relacionamentos mais fortes com seus clientes.</p>
-<p><strong>Inovação:</strong> Os dados podem inspirar novas ideias, ajudar a identificar oportunidades de inovação e tornar possível testar e validar essas inovações.</p>
-</section>
-<section id="implantação" class="level2">
-<h2 class="anchored" data-anchor-id="implantação">Implantação</h2>
-<p>Implantar uma cultura Data Driven envolve várias etapas, que podem variar dependendo das especificidades de cada organização. No entanto, aqui estão alguns passos gerais que você pode seguir:</p>
+<p>Jogar pôquer pode ser benéfico para compreender a ciência de dados, pois ambos <span style="background-color:#DCDCDC"><strong>compartilham fundamentos em análise estratégica, tomada de decisão sob incerteza e interpretação de padrões complexos</strong></span>. No pôquer, os jogadores são constantemente desafiados a tomar decisões baseadas em informações incompletas e probabilidades, um exercício que está diretamente ligado ao trabalho de um cientista de dados ao modelar e prever a partir de conjuntos de dados imperfeitos. Além disso, o pôquer aprimora habilidades de gerenciamento de risco e avaliação de variáveis desconhecidas - competências essenciais na construção de modelos de dados robustos e na tomada de decisões baseadas em dados. A natureza dinâmica do pôquer, que exige adaptação rápida a novas informações e situações, reflete o ambiente em constante mudança da ciência de dados, onde os profissionais devem se adaptar a novas tecnologias, algoritmos e insights de dados.</p>
+<section id="habilidades-desenvolvidas" class="level2">
+<h2 class="anchored" data-anchor-id="habilidades-desenvolvidas">Habilidades Desenvolvidas</h2>
+<p>Jogar pôquer pode ser uma experiência enriquecedora, não apenas em termos de entretenimento, mas também no desenvolvimento de várias habilidades úteis. Abaixo algumas dessas habilidades:</p>
 <ol type="1">
-<li><p><strong>Defina seus objetivos:</strong> Antes de coletar e analisar os dados, é importante ter uma clara compreensão do que você espera alcançar. Esses objetivos orientarão a coleta, análise e interpretação dos dados.</p></li>
-<li><p><strong>Coleta de dados:</strong> A coleta de dados pode vir de várias fontes, incluindo sistemas internos, redes sociais, pesquisas, entre outros. É importante garantir a qualidade e relevância dos dados coletados.</p></li>
-<li><p><strong>Análise de dados:</strong> Isso envolve o processamento dos dados coletados para extrair insights úteis. As ferramentas de análise de dados, como software de business intelligence, podem ser úteis nessa fase.</p></li>
-<li><p><strong>Implementação de insights:</strong> Os insights derivados dos dados devem ser aplicados à tomada de decisão na organização. Isso pode envolver a criação de novas estratégias, a alteração de processos existentes ou a implementação de novas práticas.</p></li>
-<li><p><strong>Promova uma cultura de dados:</strong> Para que a orientação por dados seja efetiva, é importante promover uma cultura em que todos na organização entendam a importância dos dados e usem essas informações em seu trabalho. Isso pode envolver treinamento e educação, além da criação de uma estrutura organizacional que suporte a tomada de decisões baseada em dados.</p></li>
-<li><p><strong>Revisão e melhoria contínua:</strong> Uma vez que a abordagem Data Driven esteja em prática, é importante revisar regularmente o processo e buscar formas de melhorá-lo. Isso pode envolver a coleta de novos tipos de dados, a utilização de melhores ferramentas de análise ou a implementação de melhores práticas de tomada de decisão baseada em dados.</p></li>
+<li><p><strong>Análise e Tomada de Decisão Estratégica</strong>: Pôquer é um jogo de estratégia e decisão. Os jogadores devem avaliar constantemente suas mãos, as ações dos adversários e as probabilidades para tomar decisões informadas.</p></li>
+<li><p><strong>Gerenciamento de Riscos e Controle de Impulsos</strong>: No pôquer, é crucial saber quando apostar, aumentar ou desistir. Isso requer uma avaliação cuidadosa do risco e a habilidade de controlar impulsos, evitando decisões precipitadas.</p></li>
+<li><p><strong>Habilidades Matemáticas e Probabilísticas</strong>: Jogar pôquer melhora a capacidade de cálculo rápido, especialmente em relação a probabilidades e pot odds (razão entre o tamanho do pote e o valor da aposta).</p></li>
+<li><p><strong>Leitura de Pessoas e Compreensão de Psicologia</strong>: Um aspecto importante do pôquer é a habilidade de ler os outros jogadores, compreender suas estratégias e intenções, e antecipar seus movimentos.</p></li>
+<li><p><strong>Paciência e Disciplina</strong>: O pôquer exige paciência, pois nem todas as mãos são jogáveis, e a disciplina para manter uma estratégia consistente, mesmo em situações adversas.</p></li>
+<li><p><strong>Gestão de Recursos (Bankroll Management)</strong>: Os jogadores aprendem a gerenciar seu dinheiro de forma eficaz, tomando decisões sobre quanto apostar e quando se afastar de um jogo.</p></li>
+<li><p><strong>Resiliência e Lidar com a Perda</strong>: No pôquer, a perda é uma parte natural do jogo. Aprender a lidar com essas perdas, não se deixar abater e se recuperar para o próximo jogo é uma habilidade valiosa.</p></li>
+<li><p><strong>Foco e Concentração</strong>: Durante um jogo, os jogadores precisam manter um alto nível de foco e concentração, observando as ações dos adversários e mantendo-se atentos às mudanças no jogo.</p></li>
+<li><p><strong>Habilidades Sociais e Comunicação</strong>: Jogar pôquer, especialmente em ambientes físicos, promove a interação social e o desenvolvimento de habilidades de comunicação, à medida que os jogadores interagem uns com os outros.</p></li>
+<li><p><strong>Flexibilidade e Adaptação</strong>: No pôquer, as situações mudam rapidamente, exigindo dos jogadores a capacidade de se adaptar a novas informações e condições de jogo.</p></li>
 </ol>
 </section>
-<section id="profissionais" class="level2">
-<h2 class="anchored" data-anchor-id="profissionais">Profissionais</h2>
-<p>Para desenvolver uma cultura Data Driven em sua organização, você precisará de uma variedade de profissionais que possam ajudar a coletar, gerenciar, analisar e interpretar dados, além de implementar mudanças com base nessas informações. Aqui estão alguns dos papéis principais que você pode precisar:</p>
-<p><strong>Cientistas de Dados:</strong> Esses profissionais usam técnicas estatísticas e de machine learning para extrair insights dos dados. Eles são capazes de modelar e interpretar conjuntos de dados complexos, e suas habilidades são cruciais para a tomada de decisões baseada em dados.</p>
-<p><strong>Engenheiros de Dados:</strong> Eles organizam, limpam, e estruturam os dados para análise. Eles também garantem que os dados sejam coletados de maneira eficiente e armazenados de maneira a serem acessados facilmente.</p>
-<p><strong>Analistas de Negócios:</strong> Esses profissionais são capazes de traduzir os insights dos dados em recomendações práticas para os tomadores de decisão na empresa. Eles devem ser capazes de entender os dados, mas também o contexto do negócio.</p>
-<p><strong>Gerentes de Projeto Data Driven:</strong> Esses gerentes de projeto têm experiência em gerenciar projetos que envolvem a análise e interpretação de dados. Eles podem ajudar a coordenar os esforços entre os diferentes papéis e garantir que os projetos de análise de dados sejam concluídos com sucesso.</p>
-<p><strong>Especialistas em Visualização de Dados:</strong> Eles são responsáveis por apresentar os dados de uma maneira fácil de entender, geralmente por meio de gráficos, diagramas e outras representações visuais. Isso pode tornar os insights dos dados mais acessíveis para os tomadores de decisão.</p>
-<p><strong>Líder de Transformação de Dados ou Chief Data Officer (CDO):</strong> Este é um executivo sênior que supervisiona a estratégia de dados de uma organização. Eles garantem que a organização esteja utilizando seus dados de maneira eficaz e alinhada aos objetivos gerais de negócios.</p>
-<p>Além desses papéis específicos, é importante que todos na organização tenham uma compreensão básica dos dados e de sua importância. Isso pode exigir algum treinamento ou desenvolvimento profissional, especialmente para aqueles que não estão acostumados a trabalhar com dados.</p>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>Portanto, além de ser uma forma de entretenimento, o pôquer pode ser uma ferramenta eficaz para desenvolver uma variedade de habilidades cognitivas e sociais. Ao integrar as habilidades desenvolvidas no pôquer, os aprendizes e praticantes de Ciência de dados podem ganhar uma perspectiva valiosa sobre como navegar na incerteza, interpretar dados complexos e tomar decisões estratégicas.</p>
 </section>
-<section id="conclusões" class="level2">
-<h2 class="anchored" data-anchor-id="conclusões">Conclusões</h2>
-<p>Muitos especialistas concordam que a abordagem Data Driven é o futuro dos negócios. Estamos na era da informação, onde temos acesso a quantidades cada vez maiores de dados. As empresas que são capazes de aproveitar esses dados para tomar decisões melhores e mais informadas terão uma vantagem competitiva significativa.</p>
-<p>No entanto, a transição para uma cultura Data Driven não é sem desafios. Exige investimento em tecnologia, mudanças nos processos de negócios e, em muitos casos, uma mudança na cultura da empresa. Mas, apesar desses desafios, o potencial de benefícios torna a transição para um modelo Data Driven uma opção atraente para muitas organizações.</p>
+<section id="explore-mais-e-colabore" class="level2">
+<h2 class="anchored" data-anchor-id="explore-mais-e-colabore">Explore Mais e Colabore</h2>
+<p>Se você se interessou pelas relações entre o pôquer e ciência de dados e gostaria de ver esses conceitos em ação, convido você a explorar meu projeto no <a href="https://github.com/nionmaron/Poker-Probability">Github</a> e <a href="https://nionmaron.shinyapps.io/poker_app_shiny/">Shiny</a> na qual consiste a simulação de jogos e uma análise detalhada das probabilidades envolvidas, sendo útil tanto para os jogadores iniciantes quanto para os mais experientes interessados em refinar suas estratégias.</p>
+<ul>
+<li><p><strong>Projeto no GitHub</strong>: Visite <a href="https://github.com/nionmaron/Poker-Probability" class="uri">https://github.com/nionmaron/Poker-Probability</a> para ter acesso ao código-fonte, entender mais sobre o desenvolvimento do projeto e, se desejar, contribuir para sua evolução.</p></li>
+<li><p><strong>Aplicativo Shiny de probabilidades do Poker (desktop)</strong>: Para uma experiência prática do projeto, acesse o aplicativo diretamente através de <a href="https://nionmaron.shinyapps.io/poker_app_shiny/" class="uri">https://nionmaron.shinyapps.io/poker_app_shiny/</a>. Aqui, você pode testar jogos de pôquer na <strong>modalidade Texas Hold’em</strong> e ver as análises de probabilidades ao longo da sequência de cartas (<strong>Pre-Flop ➔ Flop ➔ Turn ➔ River</strong>). Sua experiência com o app e qualquer feedback será valioso para futuras melhorias.</p></li>
+</ul>
 </section>
 </div>
-<p>#DataDriven #BigData #DataScience #DataAnalytics #BusinessIntelligence #DecisionMaking #DigitalTransformation #DataStrategy</p>
+<p><strong>#DataDrivenPoker #PokerAnalytics #StrategicData #StatisticalPoker</strong></p>
 
 
 
@@ -395,12 +387,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

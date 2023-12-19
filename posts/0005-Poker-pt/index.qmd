@@ -1,11 +1,14 @@
 ---
 title: "Lições do Pôquer para Cientistas de Dados"
+description: |
+  Explora como o pôquer, um jogo estratégico com raízes no século XVIII, pode enriquecer a ciência de dados. É Abordado as semelhanças entre os dois campos, enfatizando a importância de habilidades como análise estratégica, tomada de decisão sob incerteza, e gerenciamento de riscos.
 lang: pt
 author: "Dransfeld, N. M."
 draft: false
 date: "2023-12-17"
 categories: [Poker,DataScience,Português]
 image: "Data-Scientist-Poker-pt.png"
+#toc: true
 ---
 
 ::: {style="color: navy; text-align: center;"}
@@ -49,7 +52,7 @@ Portanto, além de ser uma forma de entretenimento, o pôquer pode ser uma ferra
 
 ## Explore Mais e Colabore
 
-Se você se interessou pelas relações entre o pôquer e ciência de dados e gostaria de ver esses conceitos em ação, convido você a explorar meu projeto no [github](https://github.com/nionmaron/Poker-Probability) e [Shiny](https://nionmaron.shinyapps.io/poker_app_shiny/) na qual consiste a simulação de jogos e uma análise detalhada das probabilidades envolvidas, sendo útil tanto para os jogadores iniciantes quanto para os mais experientes interessados em refinar suas estratégias.
+Se você se interessou pelas relações entre o pôquer e ciência de dados e gostaria de ver esses conceitos em ação, convido você a explorar meu projeto no [Github](https://github.com/nionmaron/Poker-Probability) e [Shiny](https://nionmaron.shinyapps.io/poker_app_shiny/) na qual consiste a simulação de jogos e uma análise detalhada das probabilidades envolvidas, sendo útil tanto para os jogadores iniciantes quanto para os mais experientes interessados em refinar suas estratégias.
 
 -   **Projeto no GitHub**: Visite <https://github.com/nionmaron/Poker-Probability> para ter acesso ao código-fonte, entender mais sobre o desenvolvimento do projeto e, se desejar, contribuir para sua evolução.
 
