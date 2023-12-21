@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nionmaron.com/Blog.html</loc>
-    <lastmod>2023-12-21T12:02:23.756Z</lastmod>
+    <lastmod>2023-12-21T12:25:21.217Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/index.html</loc>
-    <lastmod>2023-12-21T12:02:24.525Z</lastmod>
+    <lastmod>2023-12-21T12:25:05.166Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/LICENSE.html</loc>
-    <lastmod>2023-12-21T12:02:25.789Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/index.html</loc>
-    <lastmod>2023-12-21T12:02:27.756Z</lastmod>
+    <lastmod>2023-12-21T12:25:06.097Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/posts/0005-Poker-pt/index.html</loc>
-    <lastmod>2023-12-21T12:02:28.356Z</lastmod>
+    <lastmod>2023-12-21T12:25:07.183Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/posts/data-driven-pt/index.html</loc>
-    <lastmod>2023-12-21T12:02:29.023Z</lastmod>
+    <lastmod>2023-12-21T12:25:07.813Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/posts/data-terms-pt/index.html</loc>
-    <lastmod>2023-12-21T12:02:29.623Z</lastmod>
+    <lastmod>2023-12-21T12:25:08.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/Git-Dicas-e-Truques-pt/index.html</loc>
+    <lastmod>2023-12-21T12:25:09.863Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/posts/lambda-architecture-pt/index.html</loc>
-    <lastmod>2023-12-21T12:02:31.489Z</lastmod>
+    <lastmod>2023-12-21T12:25:11.680Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/ts-and-cs.html</loc>
-    <lastmod>2023-12-21T12:02:32.573Z</lastmod>
+    <lastmod>2023-12-21T12:25:12.716Z</lastmod>
   </url>
 </urlset>

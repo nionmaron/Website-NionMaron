@@ -37,8 +37,8 @@
 /*-- homepage styles --*/
 
 .content-container {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 0em;
+  padding-right: 0em;
 }
 
 .content-container .listing-pagination {
@@ -319,8 +319,6 @@ pre.sourceCode {
 }
 
 
-
-/*-- outros --*/
 
 
 
