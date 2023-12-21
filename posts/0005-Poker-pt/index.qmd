@@ -1,19 +1,16 @@
 ---
 title: "Lições do Pôquer para Cientistas de Dados"
+# description limitar a 100 caracteres
 description: |
-  Explora como o pôquer, um jogo estratégico com raízes no século XVIII, pode enriquecer a ciência de dados. É Abordado as semelhanças entre os dois campos, enfatizando a importância de habilidades como análise estratégica, tomada de decisão sob incerteza, e gerenciamento de riscos.
+  Explora como o pôquer e ciência de dados se assemelham em análise estratégica, decisão sob incerteza e gerenciamento de riscos.
 lang: pt
 author: "Dransfeld, N. M."
 draft: false
 date: "2023-12-17"
 categories: [Poker,DataScience,Português]
 image: "Data-Scientist-Poker-pt.png"
-#toc: true
+title-block-banner: false
 ---
-
-::: {style="color: navy; text-align: center;"}
-# **Estratégia, Risco e Dados: Lições do Pôquer para Cientistas de Dados**
-:::
 
 ::: {style="text-align: justify;"}
 O pôquer, com suas raízes remontando a vários jogos europeus do século XVIII, evoluiu ao longo dos séculos para se tornar um dos jogos de cartas mais populares e estratégicos do mundo. Sua história é rica e diversificada, refletindo uma mistura de influências culturais e estilos de jogo.

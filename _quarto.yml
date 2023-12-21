@@ -6,7 +6,7 @@ website:
   favicon: "images/site_icon.png"
   twitter-card: true
   open-graph: true #specification that enables richer sharing of links to articles on the web
-   
+  google-analytics: "G-PGRFF9TPBC"
   page-footer:
     background: "#000000"
     #background: light

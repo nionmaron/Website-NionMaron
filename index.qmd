@@ -21,8 +21,14 @@ listing:
     categories: false
     sort-ui: false
     filter-ui: false
+    grid-columns: 3
     max-items: 3
+    #image-height: 210px
+    #max-description-length: 100
+
+    #grid-item-align: center
     feed: false
+title-block-banner: false
 ---
 
 ::: {#hero-heading}
