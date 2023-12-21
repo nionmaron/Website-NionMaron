@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - ads.txt # add adsense
 website:
   title: "NionMaron"
   site-url: https://nionmaron.com
