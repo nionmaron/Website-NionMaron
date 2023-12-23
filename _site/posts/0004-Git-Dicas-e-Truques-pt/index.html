@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dransfeld, N. M.">
+<meta name="description" content="Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.">
 
 <title>NionMaron - Git: Dicas e Truques</title>
 <style>
@@ -96,18 +97,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Enviar"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PGRFF9TPBC"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="NionMaron - Git: Dicas e Truques">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://nionmaron.com/posts/Git-Dicas-e-Truques-pt/git_workflow_cover.png">
+<meta property="og:description" content="Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.">
+<meta property="og:image" content="https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/git_workflow_cover.png">
 <meta property="og:site-name" content="NionMaron">
 <meta property="og:image:height" content="1299">
 <meta property="og:image:width" content="1634">
 <meta name="twitter:title" content="NionMaron - Git: Dicas e Truques">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://nionmaron.com/posts/Git-Dicas-e-Truques-pt/git_workflow_cover.png">
+<meta name="twitter:description" content="Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.">
+<meta name="twitter:image" content="https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/git_workflow_cover.png">
 <meta name="twitter:image-height" content="1299">
 <meta name="twitter:image-width" content="1634">
 <meta name="twitter:card" content="summary_large_image">
@@ -157,53 +167,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Git: Dicas e Truques</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Git</div>
-                <div class="quarto-category">GitHub</div>
-                <div class="quarto-category">Português</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Autor</div>
-      <div class="quarto-title-meta-contents">
-               <p>Dransfeld, N. M. </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Data de Publicação</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">25 de julho de 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Git: Dicas e Truques</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Git</div>
+    <div class="quarto-category">GitHub</div>
+    <div class="quarto-category">Português</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.</p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dransfeld, N. M. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">25 de julho de 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
-<section id="git-dicas-e-truques" class="level1" style="color: navy; text-align: center;">
-<h1><strong>Git: Dicas e Truques</strong></h1>
-</section>
-<div style="text-align: justify;">
+</header>
+
 <section id="introdução" class="level2">
 <h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
 <p>O <a href="https://git-scm.com/">Git</a> é um sistema de controle de versão conhecido como VCS (do inglês, <em>version control system</em>) e vem sendo amplamente utilizado no desenvolvimento de códigos para software, sites, aplicativos, aprendizado de máquina, inteligência artificial, etc. Ele foi criado por <a href="https://pt.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> em 2005 para ajudar no desenvolvimento do kernel do Linux, mas desde então se tornou uma ferramenta essencial em muitos projetos de software.</p>
@@ -422,13 +431,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://git-scm.com/docs/git-pull"><strong>git pull</strong></a><strong>:</strong> Este comando é essencialmente uma combinação de<code>git fetch</code> seguido de <code>git merge</code>. Ou seja, ele baixa as alterações do repositório remoto e as mescla automaticamente com o seu código atual. É útil quando você sabe que quer atualizar o seu código para corresponder ao estado mais recente do repositório remoto.</p></li>
 </ul>
 <p>A integração dessas plataformas baseadas em nuvem com o Git permite a colaboração e o controle de versão eficientes, facilitando o desenvolvimento de software ágil e o uso de práticas de DevOps. Além disso, elas também desempenham um papel crítico no suporte a equipes remotas, já que os desenvolvedores podem colaborar em projetos independentemente de sua localização geográfica.</p>
-<p><strong>“Fetching” e “Pulling” são dois conceitos importantes no Git relacionados à obtenção de dados de repositórios remotos. A diferença entre os dois é que git fetch permite que você veja as alterações antes de decidir se quer integrá-las ou não, enquanto git pull baixa as alterações e as mescla com o seu código imediatamente (Fig. 01)</strong>.</p>
-</section>
-</div>
+<p><strong>“Fetching” e “Pulling” são dois conceitos importantes no Git relacionados à obtenção de dados de repositórios remotos. A diferença entre os dois é que git fetch permite que você veja as alterações antes de decidir se quer integrá-las ou não, enquanto git pull baixa as alterações e as mescla com o seu código imediatamente (Fig. 01)</strong>. :::</p>
 <hr>
 <p><strong>#GitTips #GitTricks #GitBestPractices #VersionControl #GitCommands #GitAdvanced</strong></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

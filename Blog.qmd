@@ -8,7 +8,7 @@ listing:
   sort-ui: false
   filter-ui: false
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 #title-block-banner: "#4040ff"
 #title-block-banner: "images/banner-min.jpg"
 ---

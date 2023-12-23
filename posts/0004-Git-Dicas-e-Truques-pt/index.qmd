@@ -1,6 +1,7 @@
 ---
 title: "Git: Dicas e Truques"
-#description: " "
+description: |
+  Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.
 lang: pt
 author: "Dransfeld, N. M."
 #draft: false
@@ -8,15 +9,12 @@ date: "2023-07-25"
 #date-modified: "2023-07-25"
 categories: [Git,GitHub,Português]
 image: "git_workflow_cover.png"
+title-block-banner: false
 #https://quarto.org/docs/websites/website-blog.html#posts-directory
 #https://quarto.org/docs/websites/website-listings.html#feeds
 ---
 
-::: {style="color: navy; text-align: center;"}
-# **Git: Dicas e Truques**
-:::
 
-::: {style="text-align: justify;"}
 ## Introdução
 
 O [Git](https://git-scm.com/) é um sistema de controle de versão conhecido como VCS (do inglês, *version control system*) e vem sendo amplamente utilizado no desenvolvimento de códigos para software, sites, aplicativos, aprendizado de máquina, inteligência artificial, etc. Ele foi criado por [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds) em 2005 para ajudar no desenvolvimento do kernel do Linux, mas desde então se tornou uma ferramenta essencial em muitos projetos de software.
