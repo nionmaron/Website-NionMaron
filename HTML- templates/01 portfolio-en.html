@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .icon-text-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+  }
+
+  .icon-text-block:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover effect */
+    transform: translateY(-5px);
+  }
+  
+  .icon-text-block-link {
+    text-decoration: none; /* Removes the underline from links */
+    color: inherit; /* Ensures the text color is consistent */
+    display: block; /* Makes the anchor behave like a block */
+  }
+
+  .icon-circle {
+    width: 96px; /* Increased by 20% */
+    height: 96px; /* Increased by 20% */
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  .icon-circle img {
+  width: 100%; /* Make the image fill the circle */
+  height: 100%; /* Make the image fill the circle */
+  object-fit: cover; /* Ensure the image covers the circle area */
+  border-radius: 50%; /* Ensure the image is circular */
+  transform: scale(1.1); /* Scale the image up by 10% to achieve a crop effect */
+}
+
+  .icon-circle:hover {
+    transform: scale(1.2); /* Scale up on hover for emphasis */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Even deeper shadow on hover */
+  }
+
+  .text-content {
+    padding: 10px 15px;
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .description {
+    font-size: 14px;
+    overflow-wrap: break-word;
+  }
+
+  @media (max-width: 600px) {
+    .icon-text-block {
+      flex-direction: column;
+    }
+
+    .icon-circle {
+      margin: 10px auto;
+      width: 96px; /* Adjusted size for mobile */
+      height: 96px; /* Adjusted size for mobile */
+    }
+
+    .text-content {
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Wrap the block with an anchor tag linking to your website -->
+    <a href="http://www.nionmaron.com" class="icon-text-block-link">
+      <div class="icon-text-block">
+        <div class="icon-circle">
+          <img src="Git-github.png" alt="Icon Description"> <!-- Replace with your image path -->
+        </div>
+        <div class="text-content">
+          <div class="title">Increase Visual Impact</div>
+          <div class="description">Icons are a great way to make your bullet points stand out. They draw attention and convey your message effectively. Use icons to enhance the readability of your content and engage your audience.</div>
+        </div>
+      </div>
+    </a>
+  <!-- ...other blocks... -->
+</div>
+
+</body>
+</html>

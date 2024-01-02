@@ -1,26 +1,32 @@
-# **Creating a website with no hosting cost**
+
+# Nion Maron Website
+
+Welcome to the repository for my professional portfolio website. This project is a testament to the power and versatility of R programming. Developed entirely using R and hosted on Netlify at no cost, this website serves as a dynamic showcase of my professional journey, skills, and projects. The only expense incurred is the domain registration, emphasizing the efficiency and cost-effectiveness of this approach. Below, you'll find a summarized step-by-step guide detailing the construction of this site, from inception to deployment. This guide aims to provide insights into the process and encourage others to leverage such tools for their professional presentation.
+
+
+## **Creating a website with no hosting cost**
 
 This is an Rstudio-Quarto-GitHub-Netlify project
 
 The resulting website can be viewed here: [nionmaron.netlify.app](https://nionmaron.netlify.app)
 
-## **What is Quarto?**
+### **What is Quarto?**
 
--   Quarto^®^ is an open-source scientific and technical publishing system built on Pandoc
+-   Quarto is an open-source scientific and technical publishing system built on Pandoc
 
 -   <https://quarto.org/>
 
-## Project Flowchart
+### Project Flowchart
 
-![](images/Website%20Nion%20Flowchart.png){fig-align="left"}
+![](images/Website%20Nion%20Flowchart.png)
 
-## Main steps of the project
+### Main steps of the project
 
 1.  Install the necessary tools:
 
-    -   Rstudio: [**https://www.rstudio.com/products/rstudio/download/**](https://www.rstudio.com/products/rstudio/download/)
-
     -   R: [**https://cran.r-project.org/**](https://cran.r-project.org/)
+    
+    -   Rstudio: [**https://www.rstudio.com/products/rstudio/download/**](https://www.rstudio.com/products/rstudio/download/)
 
     -   Git: [**https://git-scm.com/downloads**](https://git-scm.com/downloads)
 

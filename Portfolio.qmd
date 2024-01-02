@@ -8,14 +8,109 @@ search: false
 toc: false
 ---
 
+::: {.header-text} 
+::: {.content-container}
+::: {.header-block .top-story-text}
+Welcome to my portfolio
+:::
+:::
+:::
 
 ::: {.header-text} 
 ::: {.content-container}
 ::: {.header-block .top-story-text}
-Bem-vindo ao meu portfólio. Aqui estão alguns dos projetos em que trabalhei.
+Here you will find links to some of my projects focused on programming and data science. My journey in this area began in 2016 with an introduction to R programming and a fascination with using statistics and machine learning in analysis for the financial market.
 :::
 :::
 :::
 
+```{r include=FALSE}
+# Function to generate HTML block with dynamic content
+generate_html_block <- function(image_link, title, description,link) {
+  # Read the template
+  template <- readLines("HTML- templates/01 portfolio-en-template.html")
+  # Replace placeholders with actual content
+  html_content <- gsub("--title--", title, template)
+  html_content <- gsub("--description--", description, html_content)
+  html_content <- gsub("--image_link--", image_link, html_content)
+  html_content <- gsub("--link--", link, html_content)
+  
+  # Return the HTML content as a single string
+  paste( html_content, collapse = "\n")
+}
+```
 
-Em construção
+
+```{r include=FALSE}
+# potfolio 01 GitHub Repositories
+portfolio_01 <- generate_html_block(
+  title = "GitHub Repositories",
+  description = "I demonstrate advanced proficiency in version control systems, with an emphasis on Git. My portfolio spans a variety of repositories in programming languages such as R, Python, and JavaScript, each showcasing my ability to tackle complex computational challenges. These repositories are testimonials to my commitment to innovation and versatility, illustrating not just my skill in software development, but also in advanced data analysis.",
+  link ="https://github.com/nionmaron?tab=repositories",
+  image_link = "images/git-github.png"
+)
+
+
+# potfolio 02 - Cryptos Research Project
+portfolio_02 <- generate_html_block(
+  title = "Cryptos Research Project",
+  description = "In the Cryptos Research Project, my colleague Luiz and I spearheaded an advanced analysis of cryptocurrency trends, utilizing data scraping and a proprietary methodology. I developed an algorithm to predict promising crypto assets based on 9 factors, including correlation and online engagement. Initiated in 2021, the project encompassed marketing development, website creation, brand registration, and report automation, underscoring my experience in project management and the implementation of automated solutions.",
+  link ="https://cryptosresearch.com/",
+  image_link = "images/cryptosresearch.png"
+)
+
+# potfolio 03 Docker Hub Repositories
+portfolio_03 <- generate_html_block(
+    title = "Docker Hub Repositories",
+  description = "In my Docker Hub portfolio, I exhibit proficiency and adeptness in deploying applications and configurations tailored to operate efficiently, securely, and at scale through the utilization of container technology. This collection stands as a testament to my dedication to contemporary deployment strategies and my ongoing pursuit of technological knowledge and innovation.",
+  link ="https://hub.docker.com/u/nionmaron",
+  image_link = "images/docker.png"
+)
+
+
+# potfolio 04 - LinkedIn Articles
+portfolio_04 <- generate_html_block(
+  title = "LinkedIn Articles",
+  description = "Currently, I have been publishing articles on LinkedIn in the field of data science to contribute and showcase my expertise, as well as to promote my experiences and projects. This endeavor also enables me to explore new concepts and technologies, furthering my professional growth and engagement with the community.",
+  link ="https://www.linkedin.com/today/author/nionmaron?trk=public_profile_see-all-articles",
+  image_link = "images/linkdin.png"
+)
+
+# potfolio 05
+portfolio_05 <- generate_html_block(
+  link ="https://www.linkedin.com/in/nionmaron/?locale=en_US",
+  image_link = "images/git-github.png",
+  title = "Increase Visual Impact",
+  description = "Icons are a great way to make your bullet points stand out..."
+)
+
+# publicações estatiticas
+# websites Quarto e wordpress
+# aprendizado de maquina
+# banco de dados
+# deploy de aplicativos python e R
+# dashboards (studio. powerbi)
+# conhecimento serviços de nuvens (azure AWS, google clode)
+# quiz para relembrar conceitos
+# analises espaciais
+
+```
+
+
+```{r, echo=FALSE, results='asis'}
+library(htmltools)
+HTML(portfolio_01)
+HTML(portfolio_02)
+HTML(portfolio_03)
+HTML(portfolio_04)
+```
+
+
+::: {.content-container}
+::: {.header-block .top-story-text}
+Additionally, this site was entirely developed using R programming with Quarto. The script can be accessed at [link](https://github.com/nionmaron/Website-NionMaron).
+:::
+:::
+
+
+

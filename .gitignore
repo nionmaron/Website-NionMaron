@@ -4,7 +4,19 @@
 .httr-oauth
 .DS_Store
 /.quarto/
-usethis.R
+
+# ignorar extensões
 *.vsdx
 *.pptx
+
+# ignorar arquivos
+Portfolio.qmd
+freemason.qmd
+quiz.qmd
+usethis.R
 links.txt
+
+# ignorar pastas
+quiz/
+freemason/
+portfolio/

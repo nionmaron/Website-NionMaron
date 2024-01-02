@@ -58,5 +58,17 @@
   },
   "posts/0004-Git-Dicas-e-Truques-pt/index.qmd": {
     "index.html": "bfea2f72"
+  },
+  "posts/0006-Docker-Shiny-pt/index.qmd": {
+    "index.html": "52db0354"
+  },
+  "Freemason.qmd": {
+    "Freemason.html": "9df26382"
+  },
+  "freemason.qmd": {
+    "freemason.html": "47a36f47"
+  },
+  "quiz.qmd": {
+    "quiz.html": "22ea5fe6"
   }
 }
