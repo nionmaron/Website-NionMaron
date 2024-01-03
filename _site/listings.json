@@ -2,6 +2,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/posts/0006-gitignore-pt/index.html",
       "/posts/0005-Poker-pt/index.html",
       "/posts/0004-Git-Dicas-e-Truques-pt/index.html",
       "/posts/lambda-architecture-pt/index.html",
@@ -12,6 +13,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/0006-gitignore-pt/index.html",
       "/posts/0005-Poker-pt/index.html",
       "/posts/0004-Git-Dicas-e-Truques-pt/index.html",
       "/posts/lambda-architecture-pt/index.html",

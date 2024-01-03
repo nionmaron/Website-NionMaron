@@ -1,6 +1,8 @@
+
+# arquivos em R
 .Rproj.user
-*.Rhistory
 .Rdata
+*.Rhistory
 .httr-oauth
 .DS_Store
 /.quarto/

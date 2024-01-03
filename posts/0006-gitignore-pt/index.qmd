@@ -1,0 +1,61 @@
+---
+title: "**Como usar o .gitignore para Segurança de Dados**"
+description: |
+  Apresenta o arquivo `.gitignore` para Git e dá dicas de como ignorar determinados arquivos do seu repositório.
+lang: pt
+author: "Dransfeld, N. M."
+draft: false
+date: "2024-01-02"
+#date-modified: "2023-07-25"
+categories: [Git,GitHub,Português]
+image: "gitignore.png"
+title-block-banner: false
+#https://quarto.org/docs/websites/website-blog.html#posts-directory
+#https://quarto.org/docs/websites/website-listings.html#feeds
+---
+::: {style="text-align: justify"}
+## Introdução
+::: grid
+::: {.g-col-12 .g-col-lg-6}
+O arquivo `.gitignore` é essencial nos projetos Git para manter o repositório limpo e seguro. Ele impede que arquivos desnecessários ou sensíveis sejam rastreados, reduzindo a desordem e prevenindo o envio acidental de informações confidenciais. Isso otimiza o desempenho do Git, evita conflitos desnecessários e mantém a consistência do código entre diferentes ambientes de trabalho. Adotar um `.gitignore` bem configurado é uma boa prática, crucial para a segurança e eficiência em projetos colaborativos.  
+:::
+::: {.g-col-12 .g-col-lg-6}
+
+![](gitignore.png)
+:::
+:::
+
+
+
+## Como Especificar a Exclusão de Arquivos
+
+No `.gitignore`, você pode especificar padrões para excluir certos arquivos ou diretórios do seu repositório Git. Aqui estão as formas básicas de fazer isso:
+
+1. **Ignorar Arquivos por Extensão:**
+   - Para ignorar todos os arquivos de uma determinada extensão, você usa `*.extensão`. Por exemplo, para ignorar todos os arquivos `.log`, você escreveria `*.log`.
+
+2. **Ignorar uma Pasta Específica:**
+   - Para ignorar uma pasta inteira, você simplesmente lista o nome da pasta seguido de uma barra `/`. Por exemplo, `pasta_ignorada/` ignora tudo dentro do diretório `pasta_ignorada`.
+
+3. **Ignorar Arquivos com Padrões Específicos:**
+   - Você pode combinar asteriscos e outros caracteres para ignorar arquivos que correspondam a padrões específicos. Por exemplo, `*temp*` ignorará todos os arquivos que tenham 'temp' em qualquer lugar do nome.
+
+4. **Excluir Diretórios em Qualquer Lugar:**
+   - Para ignorar diretórios com um nome específico em qualquer lugar no seu repositório, use `**`. Por exemplo, `**/logs` ignorará qualquer pasta chamada 'logs', não importa onde ela esteja.
+
+5. **Ignorar Arquivos Exceto Alguns:**
+   - Se você quiser ignorar todos os arquivos de uma certa extensão, mas manter um, você pode usar `!` para reverter a regra para esse arquivo específico. Por exemplo:
+   
+``` bash
+*.log
+!important.log
+```
+
+6. **Ignorar Imagens:**
+   - Para ignorar todas as imagens, você pode usar os padrões de extensão para tipos comuns de imagem. Por exemplo: `*.png`, `*.jpg`, `*.gif`.
+
+Ao usar o `.gitignore`, é importante lembrar que ele só afeta os arquivos não rastreados (arquivos que ainda não foram adicionados ao índice Git com `git add`). Se você já rastreou um arquivo que agora deseja ignorar, você precisará primeiro desfazê-lo do índice usando `git rm --cached`.
+:::
+------------------------------------------------------------------------
+
+**#GitTips #GitTricks #GitBestPractices #VersionControl #GitCommands #GitAdvanced**

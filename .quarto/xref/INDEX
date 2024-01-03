@@ -70,5 +70,11 @@
   },
   "quiz.qmd": {
     "quiz.html": "22ea5fe6"
+  },
+  "posts/0006-gitignore-pt/index.qmd": {
+    "index.html": "8e0349e7"
+  },
+  "posts/Docker-Shiny-pt/index.qmd": {
+    "index.html": "26cd5066"
   }
 }

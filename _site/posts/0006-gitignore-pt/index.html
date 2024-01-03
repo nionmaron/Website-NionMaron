@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Dransfeld, N. M.">
+<meta name="description" content="Apresenta o arquivo .gitignore para Git e dá dicas de como ignorar determinados arquivos do seu repositório.">
 
-<title>NionMaron - Nion M. Dransfeld</title>
+<title>NionMaron - Como usar o .gitignore para Segurança de Dados</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/site_icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/site_icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -51,46 +86,17 @@ ul.task-list li input[type="checkbox"] {
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest-content .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest-content'] = new List('listing-latest-content', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PGRFF9TPBC"></script>
 
 <script type="text/javascript">
@@ -101,19 +107,19 @@ gtag('js', new Date());
 gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="NionMaron - Nion M. Dransfeld">
-<meta property="og:image" content="https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/git_workflow_cover.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="NionMaron - Como usar o .gitignore para Segurança de Dados">
+<meta property="og:description" content="Apresenta o arquivo .gitignore para Git e dá dicas de como ignorar determinados arquivos do seu repositório.">
+<meta property="og:image" content="https://nionmaron.com/posts/0006-gitignore-pt/gitignore.png">
 <meta property="og:site-name" content="NionMaron">
-<meta property="og:image:height" content="1299">
-<meta property="og:image:width" content="1634">
-<meta name="twitter:title" content="NionMaron - Nion M. Dransfeld">
-<meta name="twitter:image" content="https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/git_workflow_cover.png">
-<meta name="twitter:image-height" content="1299">
-<meta name="twitter:image-width" content="1634">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1792">
+<meta name="twitter:title" content="NionMaron - Como usar o .gitignore para Segurança de Dados">
+<meta name="twitter:description" content="Apresenta o arquivo .gitignore para Git e dá dicas de como ignorar determinados arquivos do seu repositório.">
+<meta name="twitter:image" content="https://nionmaron.com/posts/0006-gitignore-pt/gitignore.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1792">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -124,22 +130,22 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">NionMaron</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Blog.html" rel="" target="">
+    <a class="nav-link" href="../../Blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Portfolio.html" rel="" target="">
+    <a class="nav-link" href="../../Portfolio.html" rel="" target="">
  <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item compact">
@@ -154,7 +160,7 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
   </li>  
 </ul>
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
 </div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -168,139 +174,95 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/profile.png" class="about-image
-  rounded " style="width: 20em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Nion M. Dransfeld</h1>
+<h1 class="title"><strong>Como usar o .gitignore para Segurança de Dados</strong></h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Git</div>
+    <div class="quarto-category">GitHub</div>
+    <div class="quarto-category">Português</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>Apresenta o arquivo <code>.gitignore</code> para Git e dá dicas de como ignorar determinados arquivos do seu repositório.</p>
+  </div>
 </div>
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dransfeld, N. M. </p>
+          </div>
   </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2 de janeiro de 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
 </header>
-    <div class="about-links">
-  <a href="https://www.linkedin.com/in/nionmaron/?locale=en_US" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">Linkedin</span>
-  </a>
-  <a href="https://github.com/nionmaron" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><div id="hero-heading">
-<div style="text-align: justify;">
-<p><strong>Civil Engineer</strong> with over 10 years of experience, working in areas such as strategic planning, contract management, construction execution, and building maintenance. Since 2020, I have been acquiring knowledge in <strong>Data Science</strong> and <strong>Machine Learning</strong>, focusing on problem-solving in the environmental and business intelligence fields. In addition, I am an enthusiast of the financial market and, in my free time, dedicate myself to studying investments and risk analysis in stocks, futures, options, and cryptocurrencies.</p>
-</div>
-<section id="education" class="level2" style="font-size: 0.9em;">
-<h2 data-anchor-id="education">Education</h2>
-<blockquote class="blockquote">
-<p><strong>Master’s in Civil Engineering</strong> | jan 2023 <br> <a href="https://www.udesc.br/international/colleges">University of the State of Santa Catarina</a></p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>Postgraduate Structural Engineering</strong> | June 2016 <br> <a href="https://www.unisociesc.com.br/">Educational Society University of Santa Catarina</a></p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>Bachelor of Civil Engineering</strong> | June 2012 <br> <a href="https://www.udesc.br/international/colleges">University of the State of Santa Catarina</a></p>
-</blockquote>
-</section>
-</div></div>
-</div>
 
-<div class="content-container">
-<section id="latest-content" class="level2 listing-block">
-<h2 data-anchor-id="latest-content">Latest content</h2>
-<p></p>
-<div id="listing-latest-content" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Git,GitHub,Português" data-listing-date-sort="1704164400000" data-listing-file-modified-sort="1704244545139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/0006-gitignore-pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/0006-gitignore-pt/gitignore.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<strong>Como usar o .gitignore para Segurança de Dados</strong>
-</h5>
-<div class="card-text listing-description">
-<p>Apresenta o arquivo <code>.gitignore</code> para Git e dá dicas de como ignorar determinados arquivos do seu repositório.</p>
+<div style="text-align: justify">
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<div class="grid">
+<div class="g-col-12 g-col-lg-6">
+<p>O arquivo <code>.gitignore</code> é essencial nos projetos Git para manter o repositório limpo e seguro. Ele impede que arquivos desnecessários ou sensíveis sejam rastreados, reduzindo a desordem e prevenindo o envio acidental de informações confidenciais. Isso otimiza o desempenho do Git, evita conflitos desnecessários e mantém a consistência do código entre diferentes ambientes de trabalho. Adotar um <code>.gitignore</code> bem configurado é uma boa prática, crucial para a segurança e eficiência em projetos colaborativos.</p>
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Dransfeld, N. M.
-</div>
-<div class="listing-date">
-Jan 2, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Poker,DataScience,Português" data-listing-date-sort="1702782000000" data-listing-file-modified-sort="1703167077942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<a href="./posts/0005-Poker-pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/0005-Poker-pt/Data-Scientist-Poker-pt.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lições do Pôquer para Cientistas de Dados
-</h5>
-<div class="card-text listing-description">
-<p>Aborda como o pôquer e a ciência de dados se assemelham em análise estratégica, decisão sob incerteza e gerenciamento de riscos.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Dransfeld, N. M.
-</div>
-<div class="listing-date">
-Dec 17, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Git,GitHub,Português" data-listing-date-sort="1690254000000" data-listing-file-modified-sort="1703164268017" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="24">
-<a href="./posts/0004-Git-Dicas-e-Truques-pt/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/0004-Git-Dicas-e-Truques-pt/git_workflow_cover.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Git: Dicas e Truques
-</h5>
-<div class="card-text listing-description">
-<p>Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Dransfeld, N. M.
-</div>
-<div class="listing-date">
-Jul 25, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
+<div class="g-col-12 g-col-lg-6">
+<p><img src="gitignore.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
+<section id="como-especificar-a-exclusão-de-arquivos" class="level2">
+<h2 class="anchored" data-anchor-id="como-especificar-a-exclusão-de-arquivos">Como Especificar a Exclusão de Arquivos</h2>
+<p>No <code>.gitignore</code>, você pode especificar padrões para excluir certos arquivos ou diretórios do seu repositório Git. Aqui estão as formas básicas de fazer isso:</p>
+<ol type="1">
+<li><strong>Ignorar Arquivos por Extensão:</strong>
+<ul>
+<li>Para ignorar todos os arquivos de uma determinada extensão, você usa <code>*.extensão</code>. Por exemplo, para ignorar todos os arquivos <code>.log</code>, você escreveria <code>*.log</code>.</li>
+</ul></li>
+<li><strong>Ignorar uma Pasta Específica:</strong>
+<ul>
+<li>Para ignorar uma pasta inteira, você simplesmente lista o nome da pasta seguido de uma barra <code>/</code>. Por exemplo, <code>pasta_ignorada/</code> ignora tudo dentro do diretório <code>pasta_ignorada</code>.</li>
+</ul></li>
+<li><strong>Ignorar Arquivos com Padrões Específicos:</strong>
+<ul>
+<li>Você pode combinar asteriscos e outros caracteres para ignorar arquivos que correspondam a padrões específicos. Por exemplo, <code>*temp*</code> ignorará todos os arquivos que tenham ‘temp’ em qualquer lugar do nome.</li>
+</ul></li>
+<li><strong>Excluir Diretórios em Qualquer Lugar:</strong>
+<ul>
+<li>Para ignorar diretórios com um nome específico em qualquer lugar no seu repositório, use <code>**</code>. Por exemplo, <code>**/logs</code> ignorará qualquer pasta chamada ‘logs’, não importa onde ela esteja.</li>
+</ul></li>
+<li><strong>Ignorar Arquivos Exceto Alguns:</strong>
+<ul>
+<li>Se você quiser ignorar todos os arquivos de uma certa extensão, mas manter um, você pode usar <code>!</code> para reverter a regra para esse arquivo específico. Por exemplo:</li>
+</ul></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">*.log</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">!important.log</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="6" type="1">
+<li><strong>Ignorar Imagens:</strong>
+<ul>
+<li>Para ignorar todas as imagens, você pode usar os padrões de extensão para tipos comuns de imagem. Por exemplo: <code>*.png</code>, <code>*.jpg</code>, <code>*.gif</code>.</li>
+</ul></li>
+</ol>
+<p>Ao usar o <code>.gitignore</code>, é importante lembrar que ele só afeta os arquivos não rastreados (arquivos que ainda não foram adicionados ao índice Git com <code>git add</code>). Se você já rastreou um arquivo que agora deseja ignorar, você precisará primeiro desfazê-lo do índice usando <code>git rm --cached</code>.</p>
+</section>
 </div>
-
-
+<hr>
+<p><strong>#GitTips #GitTricks #GitBestPractices #VersionControl #GitCommands #GitAdvanced</strong></p>
 
 
 
@@ -440,6 +402,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -467,12 +436,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiada");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiada");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -651,7 +620,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-footer">
     <div class="nav-footer-left">Copyright © 2023 <a href="https://github.com/nionmaron/Website-NionMaron/blob/master/LICENSE.md">NionMaron</a></div>   
     <div class="nav-footer-center">Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> | <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></div>
-    <div class="nav-footer-right"><a href="./ts-and-cs.html">Terms &amp; Conditions</a></div>
+    <div class="nav-footer-right"><a href="../../ts-and-cs.html">Terms &amp; Conditions</a></div>
   </div>
 </footer>
 
