@@ -76,5 +76,8 @@
   },
   "posts/Docker-Shiny-pt/index.qmd": {
     "index.html": "26cd5066"
+  },
+  "CV.qmd": {
+    "CV.html": "29f86a34"
   }
 }

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>NionMaron – portfolio</title>
+<title>NionMaron – cv</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,7 +86,7 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     <span class="navbar-title">NionMaron</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="false"></div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -97,11 +97,11 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Portfolio.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./Portfolio.html" rel="" target="">
  <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./CV.html" rel="" target="">
+    <a class="nav-link active" href="./CV.html" rel="" target="" aria-current="page">
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item compact">
@@ -123,508 +123,399 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
 
 
-<div class="header-text">
-<div class="content-container">
-<div class="header-block top-story-text">
-<p>Welcome to my portfolio</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<style>
+h2 {
+  font-size: 22px; /* Diminui o tamanho da letra */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+h3 {
+  font-size: 20px; /* Diminui o tamanho da letra */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Style for the image */
+.img-container {
+  width: 200px; /* Initial width */
+  overflow: hidden; /* Hide the overflow */
+  opacity: 0; /* Start with the image invisible */
+  transition: opacity 2s ease-in, transform 0.5s ease; /* Transition for fade-in and hover */
+}
+
+/* Fade-in effect when the page loads */
+.img-container img {
+  width: 100%; /* Make image fill the container */
+  transition: transform 0.5s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.img-container:hover {
+  transform: scale(1.1); /* Increase size to 110% when hovered */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply the animation to the image container */
+.img-container {
+    animation: fadeIn 2s ease-in forwards; /* Apply the fade-in effect on load */
+}
+
+</style>
+<p><a href="https://nionmaron.com/"></a></p><a href="https://nionmaron.com/">
+<div class="img-container">
+<p><img src="images/profile.png" alt="Nion Maron"></p>
+</div>
+</a><p><a href="https://nionmaron.com/"></a></p>
+<section id="contact" class="level3">
+<h3 class="anchored" data-anchor-id="contact">Contact</h3>
+<p><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"></p>
+<style>
+.contact-item a {
+  text-decoration: none;  /* Remove o sublinhado */
+  color: inherit;         /* A cor do link será a mesma do texto circundante */
+}
+</style>
+<div class="contact-item">
+<p><span class="visible-in-print"><i class="fas fa-envelope icon"></i> <a href="mailto:nionmaron@gmail.com">nionmaron@gmail.com</a></span> <i class="fab fa-linkedin icon"></i> <a href="https://www.linkedin.com/in/nionmaron/" target="_blank">linkedin.com/nionmaron</a> <br> <i class="fas fa-globe icon"></i> <a href="http://www.nionmaron.com" target="_blank">www.nionmaron.com</a> <br></p>
+</div>
+</section>
+<section id="skills" class="level3">
+<h3 class="anchored" data-anchor-id="skills">Programming languages</h3>
+<p><span class="visible-in-print"><strong><code>R</code></strong>, <strong><code>Python</code></strong>, <strong><code>SQL</code></strong>, <code>JavaScript</code>, <code>Scala</code>,<code>MQL5</code></span></p>
+<style>
+/* Add some styling to the skill-bar */
+.skill-bar {
+  width: 100%; /* Full width of the container */
+  background-color: #d9d9d9; /* Light grey background color of the bar */
+  position: relative; /* Set position relative for absolute positioning inside */
+  height: 30px; /* Fixed height for the bar */
+  margin-bottom: 10px; /* Space between bars */
+}
+
+/* The actual bar */
+.progress {
+  background-color: #969696; /* Green color of the progressing bar */
+  width: 0%; /* Start width at 0% to ensure left to right fill */
+  height: 100%; /* Full height of its container */
+  transition: width 2s ease; /* Smooth transition for the width */
+  position: absolute; /* Position the bar */
+}
+
+/* Text to display over the bar */
+.progress-text {
+  position: absolute; /* Position the text over the bar */
+  left: 10px; /* Small space from the left */
+  line-height: 30px; /* Align vertically */
+  /*font-weight: bold;  Make the text bold */
+  z-index: 1; /* Bring text in front of the bar */
+}
+</style>
+<!-- Skill Bars -->
+<div class="hide-in-print">
+<div class="skill-bar">
+<div class="progress" data-width="96">
+
+</div>
+<div class="progress-text">
+<p>R</p>
+</div>
+</div>
+<div class="skill-bar">
+<div class="progress" data-width="75">
+
+</div>
+<div class="progress-text">
+<p>Python</p>
+</div>
+</div>
+<div class="skill-bar">
+<div class="progress" data-width="55">
+
+</div>
+<div class="progress-text">
+<p>SQL</p>
+</div>
+</div>
+<div class="skill-bar">
+<div class="progress" data-width="20">
+
+</div>
+<div class="progress-text">
+<p>JavaScript</p>
+</div>
+</div>
+<div class="skill-bar">
+<div class="progress" data-width="20">
+
+</div>
+<div class="progress-text">
+<p>Scala</p>
+</div>
+</div>
+<div class="skill-bar">
+<div class="progress" data-width="50">
+
+</div>
+<div class="progress-text">
+<p>MQL5</p>
 </div>
 </div>
 </div>
-<div class="header-text">
-<div class="content-container">
-<div class="header-block top-story-text">
-<p>Here you will find links to some of my projects focused on programming and data science. My journey in this area began in 2016 with an introduction to R programming and a fascination with using statistics and machine learning in analysis for the financial market.</p>
+<!-- Add more skill bars as needed -->
+<script>
+// Use JavaScript to animate the width of the progress bars
+window.onload = function() {
+  var elems = document.querySelectorAll('.progress');
+  for(var i = 0; i < elems.length; i++) {
+    // Retrieve the target width from the data attribute
+    var targetWidth = elems[i].getAttribute('data-width') + '%';
+    // Animate the width from 0% to the target width
+    elems[i].style.width = targetWidth;
+  }
+}
+</script>
+</section>
+<section id="packages-and-frameworks" class="level3">
+<h3 class="anchored" data-anchor-id="packages-and-frameworks">Packages and Frameworks</h3>
+<p><strong><code>Rmarkdown</code>, <code>Quarto</code>,<code>Pandas</code>, <code>Caret</code>, <code>H2O</code>, <code>TensorFlow</code>, <code>OpenCV</code></strong></p>
+</section>
+<section id="devops-tool" class="level3">
+<h3 class="anchored" data-anchor-id="devops-tool">DevOps Tool</h3>
+<p><strong><code>Git</code>, <code>GitHub</code>, <code>Docker</code>, <code>ShinyApp</code>, <code>PostgreSQL</code>, <code>PowerBI</code>, <code>Data Studio</code></strong></p>
+</section>
+<section id="languages" class="level3">
+<h3 class="anchored" data-anchor-id="languages">Languages</h3>
+<p><code>Portuguese: Native</code> <br> <code>English: Proficient</code></p>
+</section>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:61%;">
+<section id="nion-m.-dransfeld" class="level1">
+<h1><strong>Nion M. Dransfeld</strong></h1>
+<div style="text-align: justify">
+
+<style>
+.highlight {
+  animation: fadeBackground 100s forwards; /* Animar por 5 segundos e manter o estado final */
+  display: inline; /* Manter o comportamento de texto */
+  padding: 5px 10px; /* 5px de espaço vertical e 10px de espaço horizontal */
+  margin: 0 5px; /* Espaço adicional nas laterais para separar do resto do texto */
+  border-radius: 5px; /* Borda arredondada com um raio de 5px */
+}
+
+@keyframes fadeBackground {
+  from {background-color: transparent;}
+  to {background-color: #b3daff;} /* Um tom de azul claro e moderno */
+}
+.print-only {
+    display: none; /* Esconde elementos específicos para impressão */
+  }
+  
+  
+.visible-in-print {
+  display: none; /* Esconde o texto na tela */
+}
+
+/* Estilos específicos para impressão */
+@media print {
+  .visible-in-print {
+    display: block; /* Mostra o texto na impressão */
+  }
+  
+
+  .hide-in-print {
+    display: none; /* Esconde elementos específicos para impressão */
+  }
+}
+
+</style>
+
+<p>Graduated in <strong>Civil Engineering</strong> and passionate about <strong>data analysis</strong> and <strong>Business Intelligence</strong>, I possess a <strong>self-taught</strong> approach to solving complex challenges. With skills in transforming data into insights for finance, I am adaptable and evolve quickly. My hobbies in <strong>chess</strong> and <strong>poker</strong> complement my analytical and strategic abilities. I am committed to applying my experience in <strong>data science</strong> and <strong>machine learning</strong> to make a positive and significant impact on various projects. <span class="hide-in-print"><a href="documents/NionMaron-Resume.pdf">CV in PDF</a>.</span></p>
 </div>
-</div>
-</div>
-<div class="cell-output-display">
+<section id="education" class="level2">
+<h2 class="anchored" data-anchor-id="education"><i class="fas fa-graduation-cap"></i> Education</h2>
 
 
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Blocks</title>
 <style>
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    border: none;
-  }
 
-  .icon-text-block {
+  .education-block {
+    background: transparent; /* Set the background to transparent */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px; /* Further reduced margin */
+    padding: 10px; /* Further reduced padding */
     display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #F9F9F9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden;
-
+    flex-direction: column;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
   }
 
-  .icon-text-block:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover effect */
-    transform: translateY(-5px);
-  }
-  
-  .icon-text-block-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Ensures the text color is consistent */
-    display: block; /* Makes the anchor behave like a block */
-  }
-
-  .icon-circle {
-    width: 96px; /* Increased by 20% */
-    height: 96px; /* Increased by 20% */
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  }
-  .icon-circle img {
-  width: 100%; /* Make the image fill the circle */
-  height: 100%; /* Make the image fill the circle */
-  object-fit: cover; /* Ensure the image covers the circle area */
-  border-radius: 50%; /* Ensure the image is circular */
-  transform: scale(1.1); /* Scale the image up by 10% to achieve a crop effect */
-}
-
-  .icon-circle:hover {
-    transform: scale(1.2); /* Scale up on hover for emphasis */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Even deeper shadow on hover */
-  }
-
-  .text-content {
-    padding: 10px 15px;
-    flex-grow: 1;
-    min-width: 0;
+  .education-block:hover {
+    background-color: #f9f9f9; /* Background color on hover */
+    cursor: pointer; /* Change cursor to indicate clickable */
   }
 
   .title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #0077B5;
+    margin-bottom: 1px; /* Further reduced margin */
   }
 
-  .description {
-    font-size: 14px;
-    overflow-wrap: break-word;
-  }
-
-  @media (max-width: 600px) {
-    .icon-text-block {
-      flex-direction: column;
-    }
-
-    .icon-circle {
-      margin: 10px auto;
-      width: 96px; /* Adjusted size for mobile */
-      height: 96px; /* Adjusted size for mobile */
-    }
-
-    .text-content {
-      text-align: center;
-    }
-  }
-</style>
-
-
-
-  <div class="container">
-    <!-- Wrap the block with an anchor tag linking to your website -->
-    <a href="https://github.com/nionmaron?tab=repositories" target="_blank" class="icon-text-block-link">
-      <div class="icon-text-block">
-        <div class="icon-circle">
-          <img src="images/git-github.png" alt="Icon Description"> <!-- Replace with your image path -->
-        </div>
-        <div class="text-content">
-          <div class="title">GitHub Repositories</div>
-          <div class="description">I demonstrate advanced proficiency in version control systems, with an emphasis on Git. My portfolio spans a variety of repositories in programming languages such as R, Python, and JavaScript, each showcasing my ability to tackle complex computational challenges. These repositories are testimonials to my commitment to innovation and versatility, illustrating not just my skill in software development, but also in advanced data analysis.</div>
-        </div>
-      </div>
-    </a>
-  <!-- ...other blocks... -->
-</div>
-
-
-
-</div>
-<div class="cell-output-display">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    border: none;
-  }
-
-  .icon-text-block {
+  .institution {
+    font-size: 15px;
+    margin-bottom: 1px; /* Further reduced margin */
     display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #F9F9F9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden;
-
+    align-items: center; /* Align the icon and text vertically */
   }
 
-  .icon-text-block:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover effect */
-    transform: translateY(-5px);
-  }
-  
-  .icon-text-block-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Ensures the text color is consistent */
-    display: block; /* Makes the anchor behave like a block */
-  }
-
-  .icon-circle {
-    width: 96px; /* Increased by 20% */
-    height: 96px; /* Increased by 20% */
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
+  .location {
+    font-size: 13px;
+    color: #666;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    align-items: center; /* Align the icon and text vertically */
+    margin-bottom: 2px; /* Further reduced margin */
   }
-  .icon-circle img {
-  width: 100%; /* Make the image fill the circle */
-  height: 100%; /* Make the image fill the circle */
-  object-fit: cover; /* Ensure the image covers the circle area */
-  border-radius: 50%; /* Ensure the image is circular */
-  transform: scale(1.1); /* Scale the image up by 10% to achieve a crop effect */
+
+  .location-icon {
+    font-size: 16px; /* Adjust size as needed */
+    color: #0077B5; /* Or any other color you prefer */
+    margin-right: 5px; /* Space between icon and text */
+  }
+
+  .period {
+    font-size: 13px;
+    color: #666;
+    text-align: right;
+    margin-top: auto; /* Keeps the period at the bottom */
+  }
+
+  @media screen and (max-width: 768px) {
+    .education-block {
+        padding: 8px; /* Even more reduced padding for small screens */
+    }
+  }
+  .education-block-link {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: inherit; /* Mantém a cor do texto igual ao resto do conteúdo */
+  display: block; /* Faz o link se comportar como um bloco */
 }
 
-  .icon-circle:hover {
-    transform: scale(1.2); /* Scale up on hover for emphasis */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Even deeper shadow on hover */
-  }
-
-  .text-content {
-    padding: 10px 15px;
-    flex-grow: 1;
-    min-width: 0;
-  }
-
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .description {
-    font-size: 14px;
-    overflow-wrap: break-word;
-  }
-
-  @media (max-width: 600px) {
-    .icon-text-block {
-      flex-direction: column;
-    }
-
-    .icon-circle {
-      margin: 10px auto;
-      width: 96px; /* Adjusted size for mobile */
-      height: 96px; /* Adjusted size for mobile */
-    }
-
-    .text-content {
-      text-align: center;
-    }
-  }
-</style>
-
-
-
-  <div class="container">
-    <!-- Wrap the block with an anchor tag linking to your website -->
-    <a href="https://cryptosresearch.com/" target="_blank" class="icon-text-block-link">
-      <div class="icon-text-block">
-        <div class="icon-circle">
-          <img src="images/cryptosresearch.png" alt="Icon Description"> <!-- Replace with your image path -->
-        </div>
-        <div class="text-content">
-          <div class="title">Cryptos Research Project</div>
-          <div class="description">In the Cryptos Research Project, my colleague Luiz and I spearheaded an advanced analysis of cryptocurrency trends, utilizing data scraping and a proprietary methodology. I developed an algorithm to predict promising crypto assets based on 9 factors, including correlation and online engagement. Initiated in 2021, the project encompassed marketing development, website creation, brand registration, and report automation, underscoring my experience in project management and the implementation of automated solutions.</div>
-        </div>
-      </div>
-    </a>
-  <!-- ...other blocks... -->
-</div>
-
-
-
-</div>
-<div class="cell-output-display">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    border: none;
-  }
-
-  .icon-text-block {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #F9F9F9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden;
-
-  }
-
-  .icon-text-block:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover effect */
-    transform: translateY(-5px);
-  }
-  
-  .icon-text-block-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Ensures the text color is consistent */
-    display: block; /* Makes the anchor behave like a block */
-  }
-
-  .icon-circle {
-    width: 96px; /* Increased by 20% */
-    height: 96px; /* Increased by 20% */
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  }
-  .icon-circle img {
-  width: 100%; /* Make the image fill the circle */
-  height: 100%; /* Make the image fill the circle */
-  object-fit: cover; /* Ensure the image covers the circle area */
-  border-radius: 50%; /* Ensure the image is circular */
-  transform: scale(1.1); /* Scale the image up by 10% to achieve a crop effect */
+.education-block:hover {
+  background-color: #f9f9f9; /* Cor de fundo no hover */
+  /* Outras propriedades de estilo para hover */
 }
 
-  .icon-circle:hover {
-    transform: scale(1.2); /* Scale up on hover for emphasis */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Even deeper shadow on hover */
-  }
+/* Outros estilos permanecem inalterados */
 
-  .text-content {
-    padding: 10px 15px;
-    flex-grow: 1;
-    min-width: 0;
-  }
-
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .description {
-    font-size: 14px;
-    overflow-wrap: break-word;
-  }
-
-  @media (max-width: 600px) {
-    .icon-text-block {
-      flex-direction: column;
-    }
-
-    .icon-circle {
-      margin: 10px auto;
-      width: 96px; /* Adjusted size for mobile */
-      height: 96px; /* Adjusted size for mobile */
-    }
-
-    .text-content {
-      text-align: center;
-    }
-  }
-</style>
-
-
-
-  <div class="container">
-    <!-- Wrap the block with an anchor tag linking to your website -->
-    <a href="https://hub.docker.com/u/nionmaron" target="_blank" class="icon-text-block-link">
-      <div class="icon-text-block">
-        <div class="icon-circle">
-          <img src="images/docker.png" alt="Icon Description"> <!-- Replace with your image path -->
-        </div>
-        <div class="text-content">
-          <div class="title">Docker Hub Repositories</div>
-          <div class="description">In my Docker Hub portfolio, I exhibit proficiency and adeptness in deploying applications and configurations tailored to operate efficiently, securely, and at scale through the utilization of container technology. This collection stands as a testament to my dedication to contemporary deployment strategies and my ongoing pursuit of technological knowledge and innovation.</div>
-        </div>
-      </div>
-    </a>
-  <!-- ...other blocks... -->
-</div>
-
-
-
-</div>
-<div class="cell-output-display">
-
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    border: none;
-  }
-
-  .icon-text-block {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    background-color: #F9F9F9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    overflow: hidden;
-
-  }
-
-  .icon-text-block:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for hover effect */
-    transform: translateY(-5px);
-  }
   
-  .icon-text-block-link {
-    text-decoration: none; /* Removes the underline from links */
-    color: inherit; /* Ensures the text color is consistent */
-    display: block; /* Makes the anchor behave like a block */
-  }
-
-  .icon-circle {
-    width: 96px; /* Increased by 20% */
-    height: 96px; /* Increased by 20% */
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  }
-  .icon-circle img {
-  width: 100%; /* Make the image fill the circle */
-  height: 100%; /* Make the image fill the circle */
-  object-fit: cover; /* Ensure the image covers the circle area */
-  border-radius: 50%; /* Ensure the image is circular */
-  transform: scale(1.1); /* Scale the image up by 10% to achieve a crop effect */
-}
-
-  .icon-circle:hover {
-    transform: scale(1.2); /* Scale up on hover for emphasis */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Even deeper shadow on hover */
-  }
-
-  .text-content {
-    padding: 10px 15px;
-    flex-grow: 1;
-    min-width: 0;
-  }
-
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  .description {
-    font-size: 14px;
-    overflow-wrap: break-word;
-  }
-
-  @media (max-width: 600px) {
-    .icon-text-block {
-      flex-direction: column;
-    }
-
-    .icon-circle {
-      margin: 10px auto;
-      width: 96px; /* Adjusted size for mobile */
-      height: 96px; /* Adjusted size for mobile */
-    }
-
-    .text-content {
-      text-align: center;
-    }
-  }
 </style>
 
 
 
-  <div class="container">
-    <!-- Wrap the block with an anchor tag linking to your website -->
-    <a href="https://www.linkedin.com/today/author/nionmaron?trk=public_profile_see-all-articles" target="_blank" class="icon-text-block-link">
-      <div class="icon-text-block">
-        <div class="icon-circle">
-          <img src="images/linkdin.png" alt="Icon Description"> <!-- Replace with your image path -->
-        </div>
-        <div class="text-content">
-          <div class="title">LinkedIn Articles</div>
-          <div class="description">Currently, I have been publishing articles on LinkedIn in the field of data science to contribute and showcase my expertise, as well as to promote my experiences and projects. This endeavor also enables me to explore new concepts and technologies, furthering my professional growth and engagement with the community.</div>
-        </div>
-      </div>
-    </a>
-  <!-- ...other blocks... -->
+<a href="https://www.udesc.br/international/colleges" target="_blank" rel="noopener noreferrer" class="education-block-link">
+  <div class="education-block">
+    <div class="title">Master’s in Civil Engineering</div>
+    <div class="institution">
+      University of the State of Santa Catarina
+    </div>
+    <div class="location">Area of study: Machine Learning</div>
+    <div class="period">2021 - 2024</div>
+  </div>
+</a>
+
+<a href="https://www.unisociesc.com.br/" target="_blank" rel="noopener noreferrer" class="education-block-link">
+  <div class="education-block">
+    <div class="title">Postgraduate Structural Engineering</div>
+    <div class="institution">
+      Educational Society University of Santa Catarina
+    </div>
+    <div class="period">2014 - 2016</div>
+  </div>
+</a>
+
+<a href="https://www.udesc.br/international/colleges/graduate" target="_blank" rel="noopener noreferrer" class="education-block-link">
+  <div class="education-block">
+    <div class="title">Bachelor's Degree in Civil Engineering</div>
+    <div class="institution">
+      University of the State of Santa Catarina
+    </div>
+    <div class="period">2007 - 2012</div>
+  </div>
+</a>
+
+
+
+</section>
+<section id="experience" class="level2">
+<h2 class="anchored" data-anchor-id="experience"><i class="fas fa-briefcase"></i> Experience</h2>
+
+<a href="https://cryptosresearch.com/" target="_blank" rel="noopener noreferrer" class="education-block-link">
+  <div class="education-block">
+    <div class="title">Co-founder and Data Scientist</div>
+    <div class="institution">
+      Cryptos Research 
+    </div>
+     <div class="location">Programming - Data Scraping - Statistical Analysis - Data Visualization</div>
+    <div class="period">2021 - 2024</div>
+  </div>
+</a>
+
+<a href="https://camara.joinville.br/" target="_blank" rel="noopener noreferrer" class="education-block-link">
+  <div class="education-block">
+    <div class="title">Civil Engineer</div>
+    <div class="institution">
+      Joinville City Council
+    </div>
+     <div class="location">Contract Administration - Building Maintenance - Legislative Process </div>
+    <div class="period">2014 - 2024</div>
+  </div>
+</a>
+<a href="https://danica.com.br/en" target="_blank" rel="noopener noreferrer" class="education-block-link">
+  <div class="education-block">
+    <div class="title">Construction Engineer</div>
+    <div class="institution">
+      Dânica 
+    </div>
+     <div class="location">Project Management - Thermal Insulation - Cold Storage Chambers </div>
+    <div class="period">2012 - 2014</div>
+  </div>
+</a>
+</section>
+</section>
+</div>
+</div>
+<p><br></p>
+<div style="text-align: justify">
+<div class="contact-item">
+<p>Further details of my portfolio and expertise in the field of data science and machine learning are available for consultation on my website: <a href="https://nionmaron.com/portfolio"><strong>www.nionmaron.com/portfolio</strong></a>.</p>
+<p class="small">
+This resume was last updated on jan 06, 2024. The code is available on <a href="https://github.com/nionmaron/Resume-NionMaron">www.github.com/nionmaron/Resume-NionMaron</a>. <span class="visible-in-print">Visit the website <a href="https://nionmaron.com/CV" class="uri">https://nionmaron.com/CV</a> to view the online version of the CV.</span>
+</p>
+</div>
 </div>
 
 
 
-</div>
-<div class="content-container">
-<div class="header-block top-story-text">
-<p>Additionally, this site was entirely developed using R programming with Quarto. The script can be accessed at <a href="https://github.com/nionmaron/Website-NionMaron">link</a>.</p>
-</div>
-</div>
-
-
-
-
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

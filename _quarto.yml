@@ -29,6 +29,8 @@ website:
         file: Blog.qmd
       - text: "Portfolio"
         file: Portfolio.qmd
+      - text: "CV"
+        file: CV.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/nionmaron/?locale=en_US
       - icon: github
