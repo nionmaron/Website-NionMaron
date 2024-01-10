@@ -37,9 +37,6 @@ listing:
   padding: 0;
 }
 
-body, html {
-   overflow: hidden;
-}
 
 .container {
   width: 100%;
@@ -281,7 +278,9 @@ body, html {
 </body>
 </html>
 ```
+
 </br>
+
 :::
 :::
 
