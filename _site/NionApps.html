@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Dransfeld, N. M.">
-<meta name="dcterms.date" content="2023-06-06">
 
-<title>NionMaron - O que é ‘Data Driven ?’</title>
+<title>NionMaron – nionapps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../images/site_icon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/site_icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,19 +72,7 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 </script>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="NionMaron - O que é ‘Data Driven ?’">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://nionmaron.com/posts/data-driven-pt/data-driven.png">
-<meta property="og:site-name" content="NionMaron">
-<meta property="og:image:height" content="1636">
-<meta property="og:image:width" content="3081">
-<meta name="twitter:title" content="NionMaron - O que é ‘Data Driven ?’">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://nionmaron.com/posts/data-driven-pt/data-driven.png">
-<meta name="twitter:image-height" content="1636">
-<meta name="twitter:image-width" content="3081">
-<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -96,26 +82,26 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">NionMaron</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
+            <div id="quarto-search" class="" title="false"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../Blog.html" rel="" target="">
+    <a class="nav-link" href="./Blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Portfolio.html" rel="" target="">
+    <a class="nav-link" href="./Portfolio.html" rel="" target="">
  <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../CV.html" rel="" target="">
+    <a class="nav-link" href="./CV.html" rel="" target="">
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item compact">
@@ -137,108 +123,24 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">O que é ‘Data Driven ?’</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">DataScience</div>
-                <div class="quarto-category">BusinessIntelligence</div>
-                <div class="quarto-category">Português</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Dransfeld, N. M. </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">June 6, 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-
-<section id="o-que-é-data-driven-e-qual-sua-a-importância" class="level1" style="color: navy; text-align: center;">
-<h1><strong>O que é ‘Data Driven’ e qual sua a importância ?</strong></h1>
-</section>
-<div style="text-align: justify;">
-<p>Data Driven, ou orientação por dados, é uma metodologia que prioriza o uso de dados para tomar decisões estratégicas e operacionais. Este enfoque se baseia em análise e interpretação de dados reais, ao invés de se guiar apenas por intuição ou experiência anterior.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="data-driven.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Processos Organizacionais Orientados por Dados</figcaption>
-</figure>
+<div class="header-text">
+<div class="content-container">
+<div class="header-block top-story-text">
+<p>Em construção quiz</p>
 </div>
-<p>A importância do Data Driven está em sua capacidade de proporcionar melhores tomadas de decisão dentro de uma organização. Isso é possível porque os dados são capazes de mostrar uma realidade objetiva, baseada em números e fatos, reduzindo a incerteza e o risco. Além disso, o uso de dados também pode revelar padrões, tendências e insights que poderiam passar despercebidos sem a devida análise.</p>
-<section id="como-surgiu" class="level2">
-<h2 class="anchored" data-anchor-id="como-surgiu">Como surgiu?</h2>
-<p>O Data Driven surgiu como extensão da ciência de dados, campo do conhecimento que utiliza métodos científicos e algoritmos para transformar dados – estruturados e não estruturados – em conhecimento.</p>
-</section>
-<section id="benefícios" class="level2">
-<h2 class="anchored" data-anchor-id="benefícios">Benefícios</h2>
-<p>A implantação de uma cultura Data Driven pode trazer uma série de benefícios para qualquer organização. Estes são alguns dos principais motivos para considerar esta abordagem:</p>
-<p><strong>Tomada de decisão baseada em evidências:</strong> Com dados confiáveis e precisos, você pode tomar decisões mais informadas e baseadas em evidências, reduzindo o risco e a incerteza.</p>
-<p><strong>Melhor compreensão do negócio:</strong> A análise de dados pode revelar padrões e tendências que podem ajudar a entender melhor o seu negócio e o ambiente em que opera.</p>
-<p><strong>Maior eficiência operacional:</strong> A análise de dados pode identificar ineficiências e gargalos nos processos de negócios, permitindo que você faça melhorias que aumentem a eficiência e reduzam os custos.</p>
-<p><strong>Melhor atendimento ao cliente:</strong> Com os dados do cliente, você pode personalizar suas ofertas, melhorar a experiência do cliente e construir relacionamentos mais fortes com seus clientes.</p>
-<p><strong>Inovação:</strong> Os dados podem inspirar novas ideias, ajudar a identificar oportunidades de inovação e tornar possível testar e validar essas inovações.</p>
-</section>
-<section id="implantação" class="level2">
-<h2 class="anchored" data-anchor-id="implantação">Implantação</h2>
-<p>Implantar uma cultura Data Driven envolve várias etapas, que podem variar dependendo das especificidades de cada organização. No entanto, aqui estão alguns passos gerais que você pode seguir:</p>
-<ol type="1">
-<li><p><strong>Defina seus objetivos:</strong> Antes de coletar e analisar os dados, é importante ter uma clara compreensão do que você espera alcançar. Esses objetivos orientarão a coleta, análise e interpretação dos dados.</p></li>
-<li><p><strong>Coleta de dados:</strong> A coleta de dados pode vir de várias fontes, incluindo sistemas internos, redes sociais, pesquisas, entre outros. É importante garantir a qualidade e relevância dos dados coletados.</p></li>
-<li><p><strong>Análise de dados:</strong> Isso envolve o processamento dos dados coletados para extrair insights úteis. As ferramentas de análise de dados, como software de business intelligence, podem ser úteis nessa fase.</p></li>
-<li><p><strong>Implementação de insights:</strong> Os insights derivados dos dados devem ser aplicados à tomada de decisão na organização. Isso pode envolver a criação de novas estratégias, a alteração de processos existentes ou a implementação de novas práticas.</p></li>
-<li><p><strong>Promova uma cultura de dados:</strong> Para que a orientação por dados seja efetiva, é importante promover uma cultura em que todos na organização entendam a importância dos dados e usem essas informações em seu trabalho. Isso pode envolver treinamento e educação, além da criação de uma estrutura organizacional que suporte a tomada de decisões baseada em dados.</p></li>
-<li><p><strong>Revisão e melhoria contínua:</strong> Uma vez que a abordagem Data Driven esteja em prática, é importante revisar regularmente o processo e buscar formas de melhorá-lo. Isso pode envolver a coleta de novos tipos de dados, a utilização de melhores ferramentas de análise ou a implementação de melhores práticas de tomada de decisão baseada em dados.</p></li>
-</ol>
-</section>
-<section id="profissionais" class="level2">
-<h2 class="anchored" data-anchor-id="profissionais">Profissionais</h2>
-<p>Para desenvolver uma cultura Data Driven em sua organização, você precisará de uma variedade de profissionais que possam ajudar a coletar, gerenciar, analisar e interpretar dados, além de implementar mudanças com base nessas informações. Aqui estão alguns dos papéis principais que você pode precisar:</p>
-<p><strong>Cientistas de Dados:</strong> Esses profissionais usam técnicas estatísticas e de machine learning para extrair insights dos dados. Eles são capazes de modelar e interpretar conjuntos de dados complexos, e suas habilidades são cruciais para a tomada de decisões baseada em dados.</p>
-<p><strong>Engenheiros de Dados:</strong> Eles organizam, limpam, e estruturam os dados para análise. Eles também garantem que os dados sejam coletados de maneira eficiente e armazenados de maneira a serem acessados facilmente.</p>
-<p><strong>Analistas de Negócios:</strong> Esses profissionais são capazes de traduzir os insights dos dados em recomendações práticas para os tomadores de decisão na empresa. Eles devem ser capazes de entender os dados, mas também o contexto do negócio.</p>
-<p><strong>Gerentes de Projeto Data Driven:</strong> Esses gerentes de projeto têm experiência em gerenciar projetos que envolvem a análise e interpretação de dados. Eles podem ajudar a coordenar os esforços entre os diferentes papéis e garantir que os projetos de análise de dados sejam concluídos com sucesso.</p>
-<p><strong>Especialistas em Visualização de Dados:</strong> Eles são responsáveis por apresentar os dados de uma maneira fácil de entender, geralmente por meio de gráficos, diagramas e outras representações visuais. Isso pode tornar os insights dos dados mais acessíveis para os tomadores de decisão.</p>
-<p><strong>Líder de Transformação de Dados ou Chief Data Officer (CDO):</strong> Este é um executivo sênior que supervisiona a estratégia de dados de uma organização. Eles garantem que a organização esteja utilizando seus dados de maneira eficaz e alinhada aos objetivos gerais de negócios.</p>
-<p>Além desses papéis específicos, é importante que todos na organização tenham uma compreensão básica dos dados e de sua importância. Isso pode exigir algum treinamento ou desenvolvimento profissional, especialmente para aqueles que não estão acostumados a trabalhar com dados.</p>
-</section>
-<section id="conclusões" class="level2">
-<h2 class="anchored" data-anchor-id="conclusões">Conclusões</h2>
-<p>Muitos especialistas concordam que a abordagem Data Driven é o futuro dos negócios. Estamos na era da informação, onde temos acesso a quantidades cada vez maiores de dados. As empresas que são capazes de aproveitar esses dados para tomar decisões melhores e mais informadas terão uma vantagem competitiva significativa.</p>
-<p>No entanto, a transição para uma cultura Data Driven não é sem desafios. Exige investimento em tecnologia, mudanças nos processos de negócios e, em muitos casos, uma mudança na cultura da empresa. Mas, apesar desses desafios, o potencial de benefícios torna a transição para um modelo Data Driven uma opção atraente para muitas organizações.</p>
-</section>
 </div>
-<p>#DataDriven #BigData #DataScience #DataAnalytics #BusinessIntelligence #DecisionMaking #DigitalTransformation #DataStrategy</p>
+</div>
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -592,7 +494,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-footer">
     <div class="nav-footer-left">Copyright © 2023 <a href="https://github.com/nionmaron/Website-NionMaron/blob/master/LICENSE.md">NionMaron</a></div>   
     <div class="nav-footer-center">Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> | <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></div>
-    <div class="nav-footer-right"><a href="../../ts-and-cs.html">Terms &amp; Conditions</a></div>
+    <div class="nav-footer-right"><a href="./ts-and-cs.html">Terms &amp; Conditions</a></div>
   </div>
 </footer>
 

@@ -1,0 +1,14 @@
+{
+  "hash": "bfd6b0c7733f9c5905766a2fc93fe07e",
+  "result": {
+    "markdown": "---\ntitle: \"Nion M. Dransfeld\"\nlang: en\n\nlisting:\n  - id: latest-content\n    contents: posts\n    sort: \"date desc\"\n    type: grid\n    categories: false\n    sort-ui: false\n    filter-ui: false\n    max-items: 3\n    feed: false\n---\n\n\n::: {#hero-heading}\n::: {style=\"text-align: justify;\"}\n**Civil Engineer** with over 10 years of experience, working in areas such as strategic planning, contract management, construction execution, and building maintenance. Since 2020, I have been acquiring knowledge in **Data Science** and **Machine Learning**, focusing on problem-solving in the environmental and business intelligence fields. In addition, I am an enthusiast of the financial market and, in my free time, dedicate myself to studying investments and risk analysis in stocks, futures, options, and cryptocurrencies.\n:::\n\n::: {style=\"font-size: 0.9em;\"}\n## Education\n\n> **Master's in Civil Engineering** \\| jan 2023 <br> [University of the State of Santa Catarina](https://www.udesc.br/international/colleges)\n\n> **Postgraduate Structural Engineering** \\| June 2016 <br> [Educational Society University of Santa Catarina](https://www.unisociesc.com.br/)\n\n> **Bachelor of Civil Engineering** \\| June 2012 <br> [University of the State of Santa Catarina](https://www.udesc.br/international/colleges)\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n#library(htmltools)\n#template <- readLines(\"NO-GIT/MODELO PAGE 01.html\")\n```\n:::\n\n\n\n```{=HTML}\n```\n\n\n\n::: content-container\n::: listing-block\n## Latest content\n\n</a>\n\n::: {#latest-content}\n:::\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

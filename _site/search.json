@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Nion M. Dransfeld",
     "section": "",
-    "text": "Linkedin\n  \n  \n    \n     Github\n  \n\n  \n  \n\nCivil Engineer with over 10 years of experience, working in areas such as strategic planning, contract management, construction execution, and building maintenance. Since 2020, I have been acquiring knowledge in Data Science and Machine Learning, focusing on problem-solving in the environmental and business intelligence fields. In addition, I am an enthusiast of the financial market and, in my free time, dedicate myself to studying investments and risk analysis in stocks, futures, options, and cryptocurrencies.\n\n\n\n\nMaster’s in Civil Engineering | jan 2023  University of the State of Santa Catarina\n\n\nPostgraduate Structural Engineering | June 2016  Educational Society University of Santa Catarina\n\n\nBachelor of Civil Engineering | June 2012  University of the State of Santa Catarina"
+    "text": "Conversa Interativa\n    \n\n\n    \n        \n    \n            \n                \n                \n            \n    \n            \n                \n                Civil Engineer | Data Scientist\nHello and welcome! I’m Nion, and I’m passionate about the power of Data Science and Machine Learning to tackle complex challenges. On this platform, you’ll find a rich array of content that reflects my journey and expertise in these fields. Here’s what you can expect:"
   },
   {
     "objectID": "index.html#education",
@@ -362,5 +362,12 @@
     "title": "Terms and conditions",
     "section": "Software and services",
     "text": "Software and services\nSource code and files for this site are available from GitHub.\nThis site is built using Quarto, an open-source scientific and technical publishing system developed by Posit. Quarto source code and software licences are available from GitHub.\nNionMaron is hosted by Netlify."
+  },
+  {
+    "objectID": "index.html#insights",
+    "href": "index.html#insights",
+    "title": "Nion M. Dransfeld",
+    "section": "Insights",
+    "text": "Insights\n“Data science is not about making complicated models. It’s about making it simple enough to understand the problem at hand and then robustly solving it.” - Dr. N.R. Srinivasa Raghavan, Chief Global Data Scientist at Infosys.\n“Overfitting is more dangerous than failing to build the most powerful model possible.” - Pedro Domingos, author of “The Master Algorithm”."
   }
 ]

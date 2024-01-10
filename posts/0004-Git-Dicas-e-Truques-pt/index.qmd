@@ -1,5 +1,5 @@
 ---
-title: "Git: Dicas e Truques"
+title: "**Git: Dicas e Truques**"
 description: |
   Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.
 lang: pt
@@ -13,7 +13,6 @@ title-block-banner: false
 #https://quarto.org/docs/websites/website-blog.html#posts-directory
 #https://quarto.org/docs/websites/website-listings.html#feeds
 ---
-
 
 ## Introdução
 
@@ -316,8 +315,7 @@ git clone https://github.com/user/example.git
 
 A integração dessas plataformas baseadas em nuvem com o Git permite a colaboração e o controle de versão eficientes, facilitando o desenvolvimento de software ágil e o uso de práticas de DevOps. Além disso, elas também desempenham um papel crítico no suporte a equipes remotas, já que os desenvolvedores podem colaborar em projetos independentemente de sua localização geográfica.
 
-**"Fetching" e "Pulling" são dois conceitos importantes no Git relacionados à obtenção de dados de repositórios remotos. A diferença entre os dois é que git fetch permite que você veja as alterações antes de decidir se quer integrá-las ou não, enquanto git pull baixa as alterações e as mescla com o seu código imediatamente (Fig. 01)**.
-:::
+**"Fetching" e "Pulling" são dois conceitos importantes no Git relacionados à obtenção de dados de repositórios remotos. A diferença entre os dois é que git fetch permite que você veja as alterações antes de decidir se quer integrá-las ou não, enquanto git pull baixa as alterações e as mescla com o seu código imediatamente (Fig. 01)**. :::
 
 ------------------------------------------------------------------------
 
