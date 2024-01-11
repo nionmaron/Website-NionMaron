@@ -1,5 +1,5 @@
 ---
-title: "Lições do Pôquer para Cientistas de Dados"
+title: "**Lições do Pôquer para Cientistas de Dados**"
 description: |
   Aborda como o pôquer e a ciência de dados se assemelham em análise estratégica, decisão sob incerteza e gerenciamento de riscos.
 lang: pt
@@ -12,11 +12,10 @@ title-block-banner: false
 #toc: true
 ---
 
-
 ::: {style="text-align: justify;"}
 O pôquer, com suas raízes remontando a vários jogos europeus do século XVIII, evoluiu ao longo dos séculos para se tornar um dos jogos de cartas mais populares e estratégicos do mundo. Sua história é rica e diversificada, refletindo uma mistura de influências culturais e estilos de jogo.
 
-![Fig.01 - Lições do poker para análise de dados.](Data-Scientist-Poker-pt.png){fig-align="center"}
+![Fig.01 - Lições do poker para análise de dados.](Data-Scientist-Poker-pt.png){width=90% fig-align="center"}
 
 Jogar pôquer pode ser benéfico para compreender a ciência de dados, pois ambos [**compartilham fundamentos em análise estratégica, tomada de decisão sob incerteza e interpretação de padrões complexos**]{style="background-color:#DCDCDC"}. No pôquer, os jogadores são constantemente desafiados a tomar decisões baseadas em informações incompletas e probabilidades, um exercício que está diretamente ligado ao trabalho de um cientista de dados ao modelar e prever a partir de conjuntos de dados imperfeitos. Além disso, o pôquer aprimora habilidades de gerenciamento de risco e avaliação de variáveis desconhecidas - competências essenciais na construção de modelos de dados robustos e na tomada de decisões baseadas em dados. A natureza dinâmica do pôquer, que exige adaptação rápida a novas informações e situações, reflete o ambiente em constante mudança da ciência de dados, onde os profissionais devem se adaptar a novas tecnologias, algoritmos e insights de dados.
 

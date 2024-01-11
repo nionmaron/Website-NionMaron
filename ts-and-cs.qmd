@@ -6,22 +6,21 @@ toc: true
 title-block-banner: true
 ---
 
-
 ## Legal disclaimer
 
 Statements of fact and opinion published on this website are those of the respective authors and contributors.
 
 The NionMaron website's content is created with responsibility and care. However, the blog disclaims all warranties, express and implied, regarding the accuracy of the information in its materials and on linked sites. The NionMaron website and its linked content are provided as-is. We do not guarantee the accuracy or reliability of the information. This disclaimer covers:
 
-- any implied warranties of merchantability and fitness for a particular purpose. 
+-   any implied warranties of merchantability and fitness for a particular purpose.
 
-- any liability for damage to your computer hardware, data, information, materials and business resulting from the information or the lack of information available. 
+-   any liability for damage to your computer hardware, data, information, materials and business resulting from the information or the lack of information available.
 
-- any errors, omissions, or inaccuracies in the information. 
+-   any errors, omissions, or inaccuracies in the information.
 
-- any decision made or action taken or not taken in reliance upon the information. 
+-   any decision made or action taken or not taken in reliance upon the information.
 
-By using this site, you agree to these terms and conditions of use. 
+By using this site, you agree to these terms and conditions of use.
 
 ## Site content
 
@@ -35,6 +34,4 @@ Source code and files for this site are available from [GitHub](https://github.c
 
 This site is built using [Quarto](https://quarto.org/), an open-source scientific and technical publishing system developed by [Posit](https://posit.co/). Quarto source code and software licences are available from [GitHub](https://github.com/quarto-dev).
 
-NionMaron is hosted by [Netlify](https://www.netlify.com/). 
-
-
+NionMaron is hosted by [Netlify](https://www.netlify.com/).

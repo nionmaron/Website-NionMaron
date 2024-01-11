@@ -9,6 +9,11 @@
 
 /*-- background styles --*/
 
+.cinza-background {
+  background-color: #708090;
+}
+
+
 .black-background {
   background-color: black;
 }

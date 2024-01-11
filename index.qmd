@@ -2,7 +2,7 @@
 pagetitle: "Nion M. Dransfeld Website"
 #title: "Nion M. Dransfeld"
 description: | 
-  Discover insights with Nion M. Dransfeld, a passionate Data Science and Machine Learning enthusiast. Learn how statistics, geosciences, and machine learning can drive problem-solving. Join me in transforming data into powerful decisions.
+  Learn how data science, statistics, geosciences, and machine learning can drive problem-solving. Join me in transforming data into powerful decisions.
 lang: en
 
 listing:
@@ -15,14 +15,25 @@ listing:
     filter-ui: false
     max-items: 3
     feed: false
+    fields: [image, title]
 ---
 
+```{=html}
+<style>
+    @media (max-width: 860px) {
+        .NM-imagem-none {
+            display: none;
+        }
+    }
+</style>
+```
+
 ::: grid
-::: {.g-col-12 .g-col-lg-2 .top-story-text}
-![](images/profile.png){fig-alt="Imagem de Nion M. Dransfeld" height="100px" fig-align="center"}
+::: {.g-col-12 .g-col-md-2 .top-story-text }
+<img src="images/profile.png" alt="Imagem de Nion M. Dransfeld" class="NM-imagem-none" style=" height: 100px; padding: 0px; background: transparent;"/>
 :::
 
-::: {.g-col-12 .g-col-lg-10 .top-story-img}
+::: {.g-col-12 .g-col-md-10 .top-story-img}
 ```{=html}
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +41,6 @@ listing:
     <meta charset="UTF-8">
     <title>Conversa Interativa</title>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
 
 * {
   margin: 0;
@@ -41,7 +51,7 @@ listing:
 .container {
   width: 100%;
   height: 100px;
-  background: #232323;
+  background: #2E8BC0;
 
   display: flex;
   justify-content: center;
@@ -264,12 +274,12 @@ listing:
     
             <div class="title">
                 <span class="block"></span>
-                <h1>Nion M. Dransfeld<span></span></h1>
+                <h1> Nion M. Dransfeld<span></span></h1>
             </div>
     
             <div class="role">
                 <div class="block"></div>
-                <p>Civil Engineer | Data Scientist</p>
+                <p> Data Scientist</p>
             </div>
     
         </div>
@@ -278,9 +288,7 @@ listing:
 </body>
 </html>
 ```
-
 </br>
-
 :::
 :::
 
@@ -312,5 +320,3 @@ Hello and welcome! I'm **Nion**, and I'm passionate about the power of Data Scie
 
 ::: {#latest-content}
 :::
-
-

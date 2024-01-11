@@ -1,7 +1,10 @@
 ---
-title: "O que é 'Data Driven ?'"
+title: "**O que é 'Data Driven ?**'"
 author: "Dransfeld, N. M."
 date: "2023-06-06"
+description: |
+  "Data Driven" destacando a importância de tomar decisões baseadas em dados.
+lang: pt
 categories: [DataScience,BusinessIntelligence,Português]
 ---
 

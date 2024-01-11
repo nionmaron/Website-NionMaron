@@ -8,7 +8,7 @@
 
 <meta name="author" content="Dransfeld, N. M.">
 
-<title>NionMaron - GIT: uso de interfaces gráficas de usuário (GUI)</title>
+<title>NionMaron - Data Lake e Arquitetura Lambda</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,12 +74,18 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="NionMaron - GIT: uso de interfaces gráficas de usuário (GUI)">
+<meta property="og:title" content="NionMaron - Data Lake e Arquitetura Lambda">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://nionmaron.com/posts/0003-lambda-architecture-pt/Lambda_pt.png">
 <meta property="og:site-name" content="NionMaron">
-<meta name="twitter:title" content="NionMaron - GIT: uso de interfaces gráficas de usuário (GUI)">
+<meta property="og:image:height" content="1270">
+<meta property="og:image:width" content="1595">
+<meta name="twitter:title" content="NionMaron - Data Lake e Arquitetura Lambda">
 <meta name="twitter:description" content="">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://nionmaron.com/posts/0003-lambda-architecture-pt/Lambda_pt.png">
+<meta name="twitter:image-height" content="1270">
+<meta name="twitter:image-width" content="1595">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -133,10 +139,11 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">GIT: uso de interfaces gráficas de usuário (GUI)</h1>
+      <h1 class="title">Data Lake e Arquitetura Lambda</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">GIT</div>
-                <div class="quarto-category">GitHub</div>
+                <div class="quarto-category">BigData</div>
+                <div class="quarto-category">Database</div>
+                <div class="quarto-category">LambdaArchitecture</div>
                 <div class="quarto-category">Português</div>
               </div>
                   </div>
@@ -155,7 +162,7 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Data de Publicação</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">25 de julho de 2023</p>
+        <p class="date">19 de junho de 2023</p>
       </div>
     </div>
     
@@ -173,37 +180,63 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 
 
 
-<section id="git-uso-de-interfaces-gráficas-de-usuário-gui" class="level1" style="color: navy; text-align: center;">
-<h1><strong>GIT: uso de interfaces gráficas de usuário (GUI)</strong></h1>
+<section id="data-lake-e-arquitetura-lambda" class="level1" style="color: navy; text-align: center;">
+<h1><strong>Data Lake e Arquitetura Lambda</strong></h1>
 </section>
 <div style="text-align: justify;">
-<p>As interfaces gráficas de usuário (GUI) para Git proporcionam uma maneira visual e mais intuitiva de interagir, tornando-o mais acessível para pessoas não familiarizadas com a linha de comando.Essas ferramentas permitem aos usuários ver o histórico de commits, diferenças entre commits, e outras informações de uma maneira visual. Com interfaces gráficas para Git, o controle de versão se torna uma tarefa menos assustadora, especialmente para aqueles que são novos no mundo da programação.</p>
-<p>** Principais Interfaces (GUI)**</p>
+<p>Um Data Lake é uma forma de arquitetura de dados que permite armazenar grandes volumes de dados em seu formato bruto ou nativo. Diferentemente de um data warehouse, que armazena dados de maneira estruturada e frequentemente depende de esquemas rígidos, um data lake não requer uma estrutura ou formato específico para os dados no momento do armazenamento.</p>
+<p>Os dados em um data lake são armazenados em uma variedade de formatos, incluindo <span style="background-color:#DCDCDC"><strong>dados estruturados, semiestruturados e não estruturados</strong></span>. Isso permite que organizações com grande quantidade de dados de diferentes tipos e fontes, mantenham suas informações em um formato mais bruto e flexível.</p>
+<p>Os usuários podem então extrair esses dados e transformá-los conforme necessário para suas necessidades específicas. Como tal, <span style="background-color:#DCDCDC"><strong>os data lakes são particularmente úteis para big data e análises em tempo real</strong></span>, além de machine learning e IA, onde o acesso a dados brutos pode ser extremamente valioso.</p>
+<section id="características-de-um-data-lake" class="level2">
+<h2 class="anchored" data-anchor-id="características-de-um-data-lake">Características de um Data Lake</h2>
+<p>Data Lakes são úteis quando você precisa manipular um grande volume de dados (Big Data).Geralmente, é <span style="background-color:#DCDCDC"><strong>recomendavél a implantação de Data Lakes para um volume de petabytes ou exabytes de dados</strong></span>. Abaixo as principais características:</p>
 <ul>
-<li><p><a href="https://www.sourcetreeapp.com/">SourceTree</a>: é uma ferramenta gratuita de gerenciamento de repositórios Git com uma interface gráfica para MAC e Windows.</p></li>
-<li><p><a href="https://www.syntevo.com/smartgit/">SmartGit</a>: é uma ferramenta gratuita para uso não comercial de gerenciamento de repositórios Git com uma interface gráfica para macOS, Windows e Linux e com suporte para as hospedagem nas plataformas GitHub, Bitbucket, GitLab and Azure DevOps.</p></li>
-<li><p><a href="https://www.gitkraken.com/">GitKraken</a>: é uma interface gráfica para Git desenvolvida pela Axosoft. Esse produto tem uma interface simples e bem intuitiva e está disponível para várias plataformas como: Windows, Linux e Mac. Tem versão paga e gratuíta.</p></li>
-<li><p><a href="https://gitextensions.github.io/">GitExtensions</a>: GitExtensions é uma ferramenta de software gratuita e de código aberto que fornece uma interface gráfica para facilitar o uso e o gerenciamento do sistema de controle de versão Git.</p></li>
-<li><p><a href="https://www.git-tower.com/windows">Tower</a>: é uma interface gráfica paga que facilita a utilização do Git em vez de usar apenas a linha de comando. Ele é desenvolvido pela empresa “Fournova” e oferece uma variedade de recursos para tornar o trabalho com repositórios Git mais simples e eficiente.</p></li>
-<li><p><a href="https://desktop.github.com/">GitHub Desktop</a>: é uma interface para o sistema de controle de versão Git, focada na experiência do usuário e na integração com a plataforma GitHub. Ele permite aos usuários executar tarefas comuns do Git, como clonar repositórios, fazer commits, puxar e empurrar mudanças, criar e alternar entre branches, além de mesclar alterações, sem ter que usar a linha de comando.</p></li>
+<li>Centralizar todos os dados da organização num único local;</li>
+<li>Aceita dados estruturados, semi-estruturados e não-estruturados;</li>
+<li>Alta performance em escrita (ingestão) e em acesso (consumption);</li>
+<li>Baixo custo de armazenamento;</li>
+<li>Suporta regras de segurança e proteção de dados;</li>
+<li>Desacopla o armazenamento do processamento (permitindo alta performance e alta escala).</li>
 </ul>
-<p>Além das opções mencionadas anteriormente, existem várias outras soluções e plataformas/pacotes que podem facilitar a interação. Seguem outros exemplos:</p>
-<p><strong>Interfaces (GUI) e bibliotecas para R:</strong></p>
-<ul>
-<li><p><a href="https://cran.r-project.org/web/packages/git2r/index.html"><strong>git2r</strong></a><strong>:</strong> É uma biblioteca R que fornece uma interface para executar operações do Git, como clonar repositórios, fazer commits, criar branches e muito mais. Ela permite que você trabalhe diretamente com o Git dentro do ambiente R.</p></li>
-<li><p><a href="https://cran.r-project.org/web/packages/usethis/index.html"><strong>usethis</strong></a><strong>:</strong> Embora não seja especificamente uma interface Git, a biblioteca usethis oferece funções convenientes para automatizar tarefas relacionadas ao controle de versão no R. Ela facilita a criação de repositórios, o gerenciamento de branches e a realização de commits.</p></li>
-<li><p><a href="https://posit.co/"><strong>RStudio / Posit</strong></a><strong>:</strong> O popular ambiente de desenvolvimento integrado (IDE) RStudio possui uma integração nativa com o Git. Ele oferece uma interface gráfica intuitiva para executar operações do Git, visualizar o status do repositório, fazer commits, mesclar branches e muito mais.</p></li>
-</ul>
-<p><strong>Bibliotecas para Python:</strong></p>
-<ul>
-<li><p><a href="https://gitpython.readthedocs.io/en/stable/"><strong>GitPython</strong></a><strong>:</strong> É uma biblioteca Python completa e amplamente utilizada para interagir com repositórios Git. Permite que você clone, navegue, faça commits, crie branches e realize outras operações do Git diretamente do seu código Python.</p></li>
-<li><p><a href="https://www.pygit2.org/"><strong>pygit2</strong></a><strong>:</strong> Essa biblioteca foi construída em cima da biblioteca C libgit2. Ela oferece uma API poderosa para realizar operações do Git em Python, incluindo a criação e manipulação de repositórios.</p></li>
-<li><p><a href="https://pypi.org/project/pyvcs/"><strong>pyvcs</strong></a><strong>:</strong> É uma biblioteca Python que fornece uma interface consistente para vários sistemas de controle de versão, incluindo o Git. Ela abstrai as diferenças entre os sistemas de controle de versão e permite que você execute operações comuns, como fazer commits e verificar o status do repositório.</p></li>
-</ul>
-<p>No entanto, é importante destacar que o uso de uma GUI não exclui a necessidade de entender os conceitos básicos e os comandos do Git em linha de comando. As GUIs podem ser uma camada adicional de conveniência, mas ter um conhecimento sólido dos comandos do Git é essencial para um uso eficiente e avançado do controle de versão.</p>
+</section>
+<section id="arquitetura-lambda" class="level2">
+<h2 class="anchored" data-anchor-id="arquitetura-lambda">Arquitetura Lambda</h2>
+<p><span style="background-color:#DCDCDC"><strong>A Arquitetura Lambda é frequentemente usada em Data Lakes devido à sua capacidade de processar grandes quantidades de dados em tempo real e em lote.</strong></span> Essa arquitetura permite que as empresas usem dados históricos (através da camada de batch) e dados em tempo real (através da camada de speed) para obter insights.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lambda_Architecture.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Concepção da Arquitetura Lambda</figcaption>
+</figure>
 </div>
-<p>#https://wiki.inf.ufpr.br/maziero/doku.php?id=unix:comandos_basicos#: ~:text=Comandos%20b%C3%A1sicos&amp;text=mv%20%3A%20movimentar%20arquivos.,conte%C3%BAdo%20de%20arquivos%20(paginado).</p>
-<p><strong>#GitTips #GitTricks #GitBestPractices #VersionControl #GitCommands #GitAdvanced</strong></p>
+<p>A capacidade de combinar a análise de dados históricos e em tempo real pode fornecer uma visão mais completa do negócio, permitindo a tomada de decisões mais assertivas. Além disso, como a arquitetura Lambda permite o processamento de dados brutos, ela se encaixa bem com o conceito de Data Lake, que armazena dados em seu formato bruto.</p>
+<p><strong>A Arquitetura Lambda tem três componentes principais:</strong></p>
+<ol type="1">
+<li><p><strong>Batch Layer (Camada de Batch)</strong>: Esta camada tem como objetivo lidar com grandes volumes de dados históricos. Os dados são processados em lote e o resultado é armazenado no data lake. Esta camada é responsável pela computação de views (visões ou conjuntos de dados) baseadas em um longo período de tempo.</p></li>
+<li><p><strong>Speed Layer (Camada de Speed)</strong>: Esta camada tem como objetivo fornecer visualizações em tempo real dos dados mais recentes, lidando com dados que não foram processados pela camada de batch. Sua finalidade é fornecer insights em tempo real e ela normalmente opera com uma janela de tempo muito menor.</p></li>
+<li><p><strong>Service Layer (Camada de Serviço)</strong>: Esta camada tem a função de responder às consultas, geralmente feitas por usuários ou aplicativos. O procedimento consiste em consultar os dados processados tanto pela camada de batch quanto pela camada de speed.</p></li>
+</ol>
+<p>No entanto, <span style="background-color:#DCDCDC"><strong>a arquitetura lambda é complexa para implementar e manter, já que exige a manutenção de dois sistemas de processamento de dados paralelos (batch e speed)..</strong></span></p>
+</section>
+<section id="implementação-da-arquitetura-lambda" class="level2">
+<h2 class="anchored" data-anchor-id="implementação-da-arquitetura-lambda">Implementação da Arquitetura Lambda</h2>
+<p>A implementação da Arquitetura Lambda geralmente envolve várias ferramentas diferentes, dependendo das necessidades específicas do projeto.A seguir são apresentadas algumas das ferramentas comumente usadas:</p>
+<ul>
+<li><p><strong>Apache Hadoop</strong>: O Hadoop é um dos sistemas mais populares para processamento de dados em lote. Ele fornece um sistema de arquivos distribuído que permite o processamento de grandes volumes de dados em clusters de computadores.</p></li>
+<li><p><strong>Apache Spark</strong>: O Spark é outra ferramenta comumente usada para processamento de dados em lote, também podendo ser usado para o processamento de dados em tempo real, tornando-o uma opção flexível para a camada de speed.</p></li>
+<li><p><strong>Apache Storm</strong>: O Storm é uma solução para processamento de dados em tempo real. É capaz de processar fluxos de dados grandes e contínuos, sendo uma boa escolha para a camada de speed na Arquitetura Lambda.</p></li>
+<li><p><strong>Apache Kafka</strong>:O Kafka é um sistema de streaming de dados distribuídos. Ele é comumente usado para gerenciar fluxos de dados entre as diferentes camadas de uma arquitetura Lambda.</p></li>
+<li><p><strong>Amazon S3</strong>: O Amazon S3 é um serviço de armazenamento em nuvem que é bastante usado para armazenar os dados brutos e processados na Arquitetura Lambda.</p></li>
+<li><p><strong>Elasticsearch / Apache Solr</strong>: Essas são ferramentas de pesquisa e análise que podem ser usadas na camada de serviço para fornecer consultas rápidas e eficientes sobre os dados processados.</p></li>
+</ul>
+<p>Vale ressaltar que a escolha de ferramentas dependerá das necessidades específicas de cada projeto. Portanto, é possível que diferentes implementações da Arquitetura Lambda usem um conjunto diferente de ferramentas.</p>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p><span style="background-color:#DCDCDC"><strong>A crescente quantidade de dados gerados por várias fontes vem exigindo que as empresas explorem soluções como Data Lakes e Arquitetura Lambda para lidar com essa avalanche de informações.</strong></span> As empresas estão procurando extrair valor desses dados, e a combinação de Data Lakes com a Arquitetura Lambda permite que elas façam exatamente isso.</p>
+<p>Em resumo, embora o uso de Data Lakes e a Arquitetura Lambda possam apresentar desafios, eles oferecem benefícios significativos para as instituições/corporações que precisam lidar com grandes volumes de dados variados e desejam obter insights em tempo real. Como todas as decisões tecnológicas, a escolha de usar estas soluções deve ser feita com base nas necessidades específicas e capacidades de uma organização.</p>
+</section>
+</div>
+<p><strong>#DataLake #LambdaArchitecture #BigData #AWSLambda #DataProcessing #DataAnalytics #CloudComputing #ETL #MachineLearning #DataScience</strong></p>
 
 
 
@@ -559,8 +592,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Copyright © 2023 <a href="https://github.com/nionmaron/Website-NionMaron/blob/master/LICENSE.md">NionMaron</a></div>   
-    <div class="nav-footer-center">Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> | <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></div>
+    <div class="nav-footer-left">Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a></div>   
+    <div class="nav-footer-center"><a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></div>
     <div class="nav-footer-right"><a href="../../ts-and-cs.html">Terms &amp; Conditions</a></div>
   </div>
 </footer>

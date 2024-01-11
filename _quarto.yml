@@ -14,10 +14,9 @@ website:
     background: "#000000"
     #background: light
     left: |
-      Copyright &copy; 2023 [NionMaron](https://github.com/nionmaron/Website-NionMaron/blob/master/LICENSE.md)
+      Developed by [Nion M. Dransfeld](https://nionmaron.com)
     center: | 
-      Developed by [Nion M. Dransfeld](https://nionmaron.com) 
-      <br> [Edit this page]( https://github.com/nionmaron/Website-NionMaron/) | [Report an issue](https://github.com/nionmaron/Website-NionMaron/issues)
+      [Edit this page]( https://github.com/nionmaron/Website-NionMaron/) <br> [Report an issue](https://github.com/nionmaron/Website-NionMaron/issues)
     right: |
       [Terms & Conditions](/ts-and-cs.qmd)
     border: false
@@ -42,7 +41,6 @@ format:
     theme:
       light: cosmo
       dark: [cosmo, theme-dark.scss]
-      
     css: styles.css
 
 editor: visual
