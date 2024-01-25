@@ -1,0 +1,12 @@
+---
+title: "<center>**Lei Federal Nº 14.133/2021 ** <br> Lei de Licitações e Contratos </center>"
+lang: pt
+author: "Dransfeld, N. M."
+draft: false
+date: "2024-01-02"
+categories: [Leis, Português]
+#image: "git_workflow.png"
+---
+
+Em construção
+

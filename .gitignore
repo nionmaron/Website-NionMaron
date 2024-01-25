@@ -17,6 +17,7 @@ CV.qmd
 quiz.qmd
 NionApps
 freemason.qmd
+Flashcards.qmd
 usethis.R
 links.txt
 
@@ -25,4 +26,3 @@ quiz/
 freemason/
 portfolio/
 NO-GIT/
-flashcards/

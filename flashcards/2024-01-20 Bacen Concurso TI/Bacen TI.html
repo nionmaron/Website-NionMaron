@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flash Cards nion</title>
+  <style>
+    
+    /* Estilos Padrões (Desktop) */
+
+
+    /* Estilos para a marca d'água */
+    .watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: grey;
+      z-index: 1000;
+    }
+
+.spacer {
+  height: 20px; /* Ajuste a altura para aumentar ou diminuir o espaço */
+}
+
+.container {
+  margin-top: 0 auto; /* Margem superior de 500px */
+  width: 760px; /* Largura fixa do container */
+  margin-left: auto; /* Margem esquerda automática para centralizar */
+  margin-right: auto; /* Margem direita automática para centralizar */
+  padding: 20px; /* Padding interno */
+  background-color: #fff; /* Cor de fundo */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra do box */
+}
+
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 8px 16px; /* Diminuído de 10px 20px para 8px 16px */
+  font-size: 10px; /* Diminuído de 16px para 14px */
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1 1 auto; /* Permite que o botão cresça e ocupe espaço igual */
+  margin: 5px; /* Espaçamento entre os botões */
+}
+
+.big-button {
+  font-size: 20px; /* Tamanho maior para botões grandes */
+}
+
+.small-button {
+  font-size: 16px; /* Tamanho menor para botões pequenos */
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: #fff;
+  text-align: center;
+}
+
+.question-style {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.answer-style {
+  font-size: 18px; /* Tamanho confortável para leitura */
+  color: #333; /* Cor mais escura para melhor contraste */
+  line-height: 1.6; /* Espaçamento entre as linhas para melhorar a leitura */
+  text-align: justify; /* Alinha o texto justificado para um fluxo uniforme */
+  padding: 10px; /* Espaço ao redor do texto */
+  border-radius: 5px; /* Bordas suavemente arredondadas para o bloco de texto */
+  background-color: #f9f9f9; /* Cor de fundo sutil para destacar a área de resposta */
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para profundidade */
+  margin-top: 20px; /* Mantém uma distância entre a pergunta e a resposta */
+}
+
+h1 {
+  margin-top: 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Espaçamento entre botões */
+button:not(:last-child) {
+    margin-bottom: 10px; /* Ajusta o espaçamento entre os botões */
+  }
+
+ /* Estilos para dispositivos móveis (telas menores que 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+        max-width: 96%; /* Faz o container ocupar 100% da largura */
+        padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .question-style {
+    font-size: 20px;
+  }
+
+  .answer-style {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 16px 18px;
+    font-size: 18px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="spacer"></div>
+  <div class="container">
+    <h1>NA</h1>
+    <div class="card" id="card">
+      <div class="buttons-container">
+        <button onclick="nextCard()">Próxima Pergunta</button>
+      </div>
+      
+      <p id="question" class="question-style">Seja Bem Vindo <br> <br> <small>Use setas para navegar, duplo clique revela resposta, ou clique nos botões.</small></p>
+      <p id="answer" class="answer-style">Clique em próxima pergunta para iniciar.</p>
+    </div>
+    <div class="buttons-container">
+      <button class="small-button" id="answerButton" onclick="showAnswer()">Mostrar Resposta</button>
+      <button class="small-button" onclick="shuffleCards()">Embaralhar Perguntas</button>
+    </div>
+    
+  </div>
+  <div class="spacer"></div>
+
+<!-- Marca d'água -->
+<div class="watermark">
+  Visite <a href="https://www.nionmaron.com" target="_blank">nionmaron.com</a>
+</div>
+
+</body>
+</html>
