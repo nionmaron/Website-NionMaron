@@ -100,5 +100,20 @@
   },
   "quiz/Git-Quiz-en/index.qmd": {
     "index.html": "9c405dab"
+  },
+  "flashcards.qmd": {
+    "flashcards.html": "8f35bf21"
+  },
+  "flashcards/2024-01-20 BACEN/index.qmd": {
+    "index.html": "0d4866b6"
+  },
+  "Flashcards.qmd": {
+    "Flashcards.html": "60068a82"
+  },
+  "flashcards/2024-01-20 Bacen Concurso TI/index.qmd": {
+    "index.html": "d56a19f8"
+  },
+  "flashcards/2023-12-01  Lei Federal 14133/index.qmd": {
+    "index.html": "36a40650"
   }
 }

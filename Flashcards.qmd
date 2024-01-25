@@ -1,0 +1,21 @@
+---
+title: "Science & Tech Flashcards"
+listing:
+  contents: flashcards
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title]
+page-layout: full
+title-block-banner: false
+#title-block-banner: "#4040ff"
+#title-block-banner: "images/banner-min.jpg"
+---
+
+::: {style="text-align: justify;"}
+Immerse yourself in the fundamental principles of science,statistic, Brazilian laws, machine learning, data science, mathematics, and technology through my flashcards. With a distinctive approach, each subject is thoughtfully presented, with some materials available in Portuguese and others in English.
+:::
+
+<hr style="border: 1px solid blue;">

@@ -3,6 +3,9 @@
     "Blog.qmd": [
       "posts"
     ],
+    "Flashcards.qmd": [
+      "flashcards"
+    ],
     "index.qmd": [
       "posts"
     ]

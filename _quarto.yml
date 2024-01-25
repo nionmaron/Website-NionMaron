@@ -26,14 +26,19 @@ website:
     right:
       - text: "Blog"
         file: Blog.qmd
-      - text: "Portfolio"
-        file: Portfolio.qmd
-      - text: "CV"
-        file: CV.qmd
-      - icon: linkedin
-        href: https://www.linkedin.com/in/nionmaron/?locale=en_US
-      - icon: github
-        href: https://github.com/nionmaron
+      - text: "Flashcards"
+        file: Flashcards.qmd
+      - text: "About Nion"
+        menu: 
+        - text: "Portfolio"
+          file: Portfolio.qmd
+        - text: "CV"
+          file: CV.qmd
+        - icon: linkedin
+          href: https://www.linkedin.com/in/nionmaron/?locale=en_US
+        - icon: github
+          href: https://github.com/nionmaron
+
 
 format:
   html:
