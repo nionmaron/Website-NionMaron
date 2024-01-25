@@ -27,9 +27,8 @@ listing:
     }
 </style>
 ```
-
 ::: grid
-::: {.g-col-12 .g-col-md-2 .top-story-text }
+::: {.g-col-12 .g-col-md-2 .top-story-text}
 <img src="images/profile.png" alt="Imagem de Nion M. Dransfeld" class="NM-imagem-none" style=" height: 100px; padding: 0px; background: transparent;"/>
 :::
 
