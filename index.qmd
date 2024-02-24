@@ -1,5 +1,5 @@
 ---
-pagetitle: "Nion M. Dransfeld Website"
+pagetitle: "Nion M. Dransfeld"
 #title: "Nion M. Dransfeld"
 description: | 
   Learn how data science, statistics, geosciences, and machine learning can drive problem-solving. Join me in transforming data into powerful decisions.

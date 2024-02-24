@@ -1,5 +1,8 @@
 ---
-title: "Data Driven Destinations"
+pagetitle: "Data Driven Destinations"
+description: | 
+  Welcome to my blog, where we explore statistics, data science, and machine learning in both English and Portuguese.
+
 listing:
   contents: posts
   sort: "date desc"
@@ -13,8 +16,10 @@ title-block-banner: false
 #title-block-banner: "images/banner-min.jpg"
 ---
 
+# Data Driven Destinations
+
 ::: {style="text-align: justify;"}
-Welcome to my blog, where I apply various concepts from statistics, geostatistics, data science and machine learning. My mission is to provide high-quality content that helps you understand and apply fundamental and advanced concepts in this area. Join me on this journey as we explore the latest trends and techniques in data-driven decision-making and spatial analysis.
+Welcome to my blog! Here, we delve into statistics, geostatistics, data science, and machine learning, offering top-notch content to help you grasp and apply both fundamental and advanced concepts. Join our journey to explore cutting-edge trends and techniques in data-driven decision-making and spatial analysis.
 :::
 
 <hr style="border: 3px solid blue;">

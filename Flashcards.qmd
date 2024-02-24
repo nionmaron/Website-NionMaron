@@ -1,5 +1,8 @@
 ---
-title: "Science & Tech Flashcards"
+pagetitle: "Science & Tech Flashcards"
+description: | 
+  Explore essential concepts in science, technology, and more with my flashcards. 
+
 listing:
   contents: flashcards
   sort: "date desc"
@@ -14,8 +17,10 @@ title-block-banner: false
 #title-block-banner: "images/banner-min.jpg"
 ---
 
+# Science & Tech Flashcards
+
 ::: {style="text-align: justify;"}
-Immerse yourself in the fundamental principles of science,statistic, Brazilian laws, machine learning, data science, mathematics, and technology through my flashcards. With a distinctive approach, each subject is thoughtfully presented, with some materials available in Portuguese and others in English.
+Immerse yourself in the fundamental principles of science, statistic, Brazilian laws, machine learning, data science, mathematics, and technology through my flashcards. With a distinctive approach, each subject is thoughtfully presented, with some materials available in Portuguese and others in English.
 :::
 
 <hr style="border: 1px solid blue;">

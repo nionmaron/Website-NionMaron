@@ -1,5 +1,8 @@
 ---
-draft: true
+pagetitle: "Portfolio"
+description: | 
+  Discover my programming and data science projects here.
+draft: false
 page-layout: custom
 section-divs: false
 editor: source
@@ -11,7 +14,7 @@ toc: false
 ::: {.header-text} 
 ::: {.content-container}
 ::: {.header-block .top-story-text}
-Welcome to my portfolio
+**Welcome to my portfolio**
 :::
 :::
 :::
