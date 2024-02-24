@@ -1,5 +1,5 @@
 ---
-pagetitle: "Portfolio"
+pagetitle: "Portfolio Nion M. Dransfeld"
 description: | 
   Discover my programming and data science projects here.
 draft: false
@@ -14,7 +14,9 @@ toc: false
 ::: {.header-text} 
 ::: {.content-container}
 ::: {.header-block .top-story-text}
-**Welcome to my portfolio**
+<center>
+# **Portfolio - Nion M. Dransfeld**
+</center>
 :::
 :::
 :::

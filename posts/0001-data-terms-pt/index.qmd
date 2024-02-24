@@ -1,19 +1,20 @@
 ---
 title: "Termos com a palavra 'Data'"
+description: |
+  Explorando 'Data': um guia sobre termos como Data Lake, Data Mining, e Big Data.
 author: "Dransfeld, N. M."
 date: "2023-06-01"
 categories: [DataScience,Português]
 image: "Data-terms-cloud.png"
+title-block-banner: false
 ---
 
-::: {style="color: navy; text-align: center;"}
-# **Data: Uma Palavra, Muitos Significados** \n Explorando os Termos da Ciência de Dados
-:::
+## **Data: Uma Palavra, Muitos Significados**
 
 ::: {style="text-align: justify;"}
 A ciência de dados é uma área rica e diversificada, com muitos termos e conceitos específicos. Conhecer os termos que contêm "data" é crucial por várias razões, especialmente se você está trabalhando ou planeja trabalhar no campo da ciência de dados, análise de dados, TI ou áreas relacionadas. Abaixo selecionei e descrevo de forma simplificada alguns termos importantes relacionados a palavra "data" (dados).
 
-![Termos de "data" em um fluxo de processo de Ciência de Dados.[^1]](data-terms%202.png){fig-align="center"}
+![Termos de "data" em um fluxo de processo de Ciência de Dados.[^1]](data-terms%202.png){fig-align="center" fig-alt="Fluxograma com a palavra "data" em um processo de Ciência de Dados"}
 
 ## Gestão e Armazenamento de Dados
 

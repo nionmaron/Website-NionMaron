@@ -1,16 +1,17 @@
 ---
-title: "**O que é 'Data Driven ?**'"
+title: "**O que é Data Driven ?**"
 author: "Dransfeld, N. M."
 date: "2023-06-06"
 description: |
   "Data Driven" destacando a importância de tomar decisões baseadas em dados.
 lang: pt
 categories: [DataScience,BusinessIntelligence,Português]
+title-block-banner: false
 ---
 
-::: {style="color: navy; text-align: center;"}
-# **O que é 'Data Driven' e qual sua a importância ?**
-:::
+
+## **Definição de 'Data Driven'**
+
 
 ::: {style="text-align: justify;"}
 Data Driven, ou orientação por dados, é uma metodologia que prioriza o uso de dados para tomar decisões estratégicas e operacionais. Este enfoque se baseia em análise e interpretação de dados reais, ao invés de se guiar apenas por intuição ou experiência anterior.
@@ -78,4 +79,4 @@ Muitos especialistas concordam que a abordagem Data Driven é o futuro dos negó
 No entanto, a transição para uma cultura Data Driven não é sem desafios. Exige investimento em tecnologia, mudanças nos processos de negócios e, em muitos casos, uma mudança na cultura da empresa. Mas, apesar desses desafios, o potencial de benefícios torna a transição para um modelo Data Driven uma opção atraente para muitas organizações.
 :::
 
-#DataDriven #BigData #DataScience #DataAnalytics #BusinessIntelligence #DecisionMaking #DigitalTransformation #DataStrategy
+**#DataDriven #BigData #DataScience #DataAnalytics #BusinessIntelligence #DecisionMaking #DigitalTransformation #DataStrategy**

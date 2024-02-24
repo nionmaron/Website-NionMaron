@@ -1,15 +1,18 @@
 ---
 title: "Data Lake e Arquitetura Lambda"
+description: |
+  Este artigo oferece um conceito introdutório de Data Lake e da Arquitetura Lambda, fundamentais no mundo da ciência de dados e da análise de big data.
 lang: pt
 author: "Dransfeld, N. M."
 date: "2023-06-19"
 categories: [BigData,Database,LambdaArchitecture,Português]
 image: "Lambda_pt.png"
+title-block-banner: false
 ---
 
-::: {style="color: navy; text-align: center;"}
-# **Data Lake e Arquitetura Lambda**
-:::
+
+## **Definições**
+
 
 ::: {style="text-align: justify;"}
 Um Data Lake é uma forma de arquitetura de dados que permite armazenar grandes volumes de dados em seu formato bruto ou nativo. Diferentemente de um data warehouse, que armazena dados de maneira estruturada e frequentemente depende de esquemas rígidos, um data lake não requer uma estrutura ou formato específico para os dados no momento do armazenamento.

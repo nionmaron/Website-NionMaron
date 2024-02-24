@@ -1,10 +1,17 @@
 ---
-title: "Terms and conditions"
+pagetitle: "Terms and conditions"
+description: |
+  Terms & Conditions: Clearly detailed rights, obligations, and usage of our service.
+  
 page-layout: article
 sidebar: false
 toc: true
 title-block-banner: true
 ---
+
+<center>
+# Terms and conditions
+</center>
 
 ## Legal disclaimer
 
