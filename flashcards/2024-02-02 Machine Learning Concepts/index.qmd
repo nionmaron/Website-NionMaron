@@ -103,7 +103,7 @@ These answers provide a snapshot of the key aspects of each question, offering a
 
 ::: {style="height:600px;"}
 
-<a href="ML Concepts NionMaron.html" class="custom-download-button">Download FlashCard</a>
+<a href="/documents/ML Concepts NionMaron.html" class="custom-download-button">Download FlashCard</a>
 :::
 :::
 
