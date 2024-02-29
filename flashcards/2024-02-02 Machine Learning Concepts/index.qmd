@@ -6,7 +6,7 @@ description: |
   **Improve your understanding of machine learning with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.**
 lang: en
 author: "Dransfeld, N. M."
-date: "2024-02-02"
+date: "2024-02-03"
 categories: [MachineLearning, English]
 image: "MachineLearning.webp"
 title-block-banner: false
@@ -102,9 +102,8 @@ These answers provide a snapshot of the key aspects of each question, offering a
 ## Concept Test FlashCards
 
 ::: {style="height:600px;"}
-```{=HTML}
-```
-<a href="/documents/ML Concepts NionMaron.html" class="custom-download-button">Download FlashCard</a>
+
+<a href="ML Concepts NionMaron.html" class="custom-download-button">Download FlashCard</a>
 :::
 :::
 
