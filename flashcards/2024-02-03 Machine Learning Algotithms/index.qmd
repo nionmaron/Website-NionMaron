@@ -1,0 +1,186 @@
+---
+draft: true
+
+title: "<center>**Machine Learning** <br> Algorithms</center>"
+description: |
+  **Improve your understanding of machine learning with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.**
+lang: en
+author: "Dransfeld, N. M."
+date: "2024-02-02"
+categories: [MachineLearning, English]
+image: "MachineLearning.webp"
+title-block-banner: false
+---
+
+::: {style="text-align: justify"}
+## Introduction
+
+We explore the fundamentals of machine learning in this guide, breaking down difficult ideas into manageable chunks. This handbook is designed for everyone interested in learning about machine learning, be they a student, a professional entering the field of artificial intelligence, or just a curious individual. Through a series of thoughtfully curated questions and clear, concise answers, we aim to provide a solid foundation in machine learning.
+:::
+
+## FlashCards
+
+::: panel-tabset
+## Concepts
+
+::: {style="text-align: justify"}
+### **What is Machine Learning?**
+
+Machine learning is a subset of artificial intelligence that involves training algorithms to learn patterns from data and make predictions or decisions, without being explicitly programmed for specific tasks. Unlike traditional programming, where logic and rules are defined by humans, machine learning algorithms adjust their parameters based on the data they process.
+
+### **Types of Machine Learning**
+
+The main types are:
+
+-   **Supervised Learning**: The model is trained on labeled data, learning to predict output variables from input data.
+-   **Unsupervised Learning**: The model works with unlabeled data to find underlying structures or patterns.
+-   **Reinforcement Learning**: The model learns to make decisions by performing actions in an environment to achieve a reward.
+
+### **Algorithms and Models**
+
+Common algorithms include:
+
+-   **Decision Trees**: Used for classification and regression tasks.
+-   **Neural Networks**: Flexible models ideal for complex tasks like image and speech recognition.
+-   **Support Vector Machines**: Effective for high-dimensional spaces, used in classification problems.
+
+### **Data Preprocessing**
+
+It's crucial for preparing raw data for modeling. Key tasks include:
+
+-   **Normalization**: Scaling data to a standard range.
+-   **Missing Value Imputation**: Handling missing data.
+-   **Feature Encoding**: Converting categorical data to numerical format.
+
+### **Overfitting and Underfitting**
+
+-   **Overfitting**: When a model is too complex and learns noise and details from the training data to the detriment of its performance on new data.
+-   **Underfitting**: When a model is too simple and cannot capture the underlying structure of the data.
+
+Solutions include adjusting model complexity, cross-validation, and regularization.
+
+### **Evaluation Metrics**
+
+Common metrics:
+
+-   **Accuracy**: The proportion of correct predictions.
+-   **Precision and Recall**: Important in imbalanced datasets; precision measures the correctness of positive predictions, while recall measures how many actual positives were identified.
+-   **F1 Score**: The harmonic mean of precision and recall.
+
+### **Neural Networks and Deep Learning**
+
+Neural networks consist of layers of interconnected nodes, mimicking biological neurons. Deep learning involves neural networks with many layers, enabling the learning of complex, hierarchical representations of data. It's particularly powerful for tasks like image and speech recognition.
+
+### **Challenges in Machine Learning:**
+
+Key challenges include:
+
+-   **Data Quality**: Garbage in, garbage out. Quality data is key.
+-   **Ethical Concerns**: Issues like bias in data and models.
+-   **Model Interpretability**: Understanding how models make decisions, especially important in sensitive areas like healthcare or finance.
+
+### **Machine Learning in Practice**
+
+Applications are widespread:
+
+-   Healthcare (predictive diagnostics, drug discovery)
+-   Finance (fraud detection, algorithmic trading)
+-   Technology (recommendation systems, voice assistants)
+-   And many others.
+
+### **The Future of Machine Learning:**
+
+Emerging trends include:
+
+-   **Reinforcement Learning**: For complex decision-making and gaming.
+-   **Generative Adversarial Networks (GANs)**: For generating new data instances.
+-   **Advancements in NLP**: Like transformer models improving language understanding and generation.
+
+These answers provide a snapshot of the key aspects of each question, offering a foundational understanding of various topics in machine learning.
+:::
+
+## Concept Test
+
+::: {style="height:600px;"}
+```{=HTML}
+
+```
+:::
+
+## Algorithms
+
+::: {style="text-align: justify"}
+Listing all algorithms in machine learning is quite a challenge due to the vastness and constant evolution of the field. However, I can provide a comprehensive list of some of the most commonly used and well-known algorithms, categorized by their primary application:
+
+### Supervised Learning
+
+1.  **Linear Regression**
+2.  **Logistic Regression**
+3.  **Linear Discriminant Analysis**
+4.  **Decision Trees**
+    -   CART (Classification and Regression Trees)
+    -   ID3 (Iterative Dichotomiser 3)
+    -   C4.5 and C5.0 (different versions of a decision tree algorithm)
+5.  **Random Forest**
+6.  **Naive Bayes**
+7.  **K-Nearest Neighbors (KNN)**
+8.  **Support Vector Machines (SVM)**
+9.  **Gradient Boosting Machines (GBM)**
+    -   XGBoost
+    -   LightGBM
+    -   CatBoost
+10. **Neural Networks**
+    -   Multilayer Perceptrons (MLP)
+    -   Convolutional Neural Networks (CNN)
+    -   Recurrent Neural Networks (RNN)
+    -   Long Short-Term Memory Networks (LSTM)
+
+### Unsupervised Learning
+
+1.  **K-Means Clustering**
+2.  **Hierarchical Clustering**
+3.  **DBSCAN (Density-Based Spatial Clustering of Applications with Noise)**
+4.  **Principal Component Analysis (PCA)**
+5.  **Singular Value Decomposition (SVD)**
+6.  **t-Distributed Stochastic Neighbor Embedding (t-SNE)**
+7.  **Apriori algorithm (for Association Rule Learning)**
+8.  **Gaussian Mixture Models**
+9.  **Self-Organizing Maps (SOM)**
+10. **Autoencoders**
+
+### Reinforcement Learning
+
+1.  **Q-Learning**
+2.  **SARSA (State-Action-Reward-State-Action)**
+3.  **Deep Q Network (DQN)**
+4.  **Policy Gradients**
+5.  **Actor-Critic Methods**
+6.  **Monte Carlo Tree Search (MCTS)**
+
+### Ensemble Techniques
+
+1.  **Bagging (Bootstrap Aggregating)**
+2.  **Boosting**
+3.  **Stacking**
+
+### Others
+
+1.  **Genetic Algorithms**
+2.  **Support Vector Regression (SVR)**
+3.  **Partial Least Squares Regression (PLSR)**
+4.  **Elastic Net**
+5.  **Ridge Regression**
+6.  **Lasso Regression**
+
+This list includes a range of algorithms from basic to advanced, covering different aspects of machine learning including classification, regression, clustering, dimensionality reduction, and more. Note that the field of machine learning is continually evolving, and new algorithms and variations are constantly being developed.
+:::
+
+## Algorithms Test
+
+::: {style="height:600px;"}
+```{=HTML}
+```
+:::
+:::
+
+**#AI #MachineLearning #Flashcards**

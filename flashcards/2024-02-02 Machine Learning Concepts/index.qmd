@@ -1,0 +1,111 @@
+---
+draft: false
+
+title: "<center>**Machine Learning** <br> Concepts </center>"
+description: |
+  **Improve your understanding of machine learning with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.**
+lang: en
+author: "Dransfeld, N. M."
+date: "2024-02-02"
+categories: [MachineLearning, English]
+image: "MachineLearning.webp"
+title-block-banner: false
+---
+
+::: {style="text-align: justify"}
+## Introduction
+
+We explore the fundamentals of machine learning in this guide, breaking down difficult ideas into manageable chunks. This handbook is designed for everyone interested in learning about machine learning, be they a student, a professional entering the field of artificial intelligence, or just a curious individual. Through a series of thoughtfully curated questions and clear, concise answers, we aim to provide a solid foundation in machine learning.
+:::
+
+## FlashCards
+
+::: panel-tabset
+## Concepts
+
+::: {style="text-align: justify"}
+### **What is Machine Learning?**
+
+Machine learning is a subset of artificial intelligence that involves training algorithms to learn patterns from data and make predictions or decisions, without being explicitly programmed for specific tasks. Unlike traditional programming, where logic and rules are defined by humans, machine learning algorithms adjust their parameters based on the data they process.
+
+### **Types of Machine Learning**
+
+The main types are:
+
+-   **Supervised Learning**: The model is trained on labeled data, learning to predict output variables from input data.
+-   **Unsupervised Learning**: The model works with unlabeled data to find underlying structures or patterns.
+-   **Reinforcement Learning**: The model learns to make decisions by performing actions in an environment to achieve a reward.
+
+### **Algorithms and Models**
+
+Common algorithms include:
+
+-   **Decision Trees**: Used for classification and regression tasks.
+-   **Neural Networks**: Flexible models ideal for complex tasks like image and speech recognition.
+-   **Support Vector Machines**: Effective for high-dimensional spaces, used in classification problems.
+
+### **Data Preprocessing**
+
+It's crucial for preparing raw data for modeling. Key tasks include:
+
+-   **Normalization**: Scaling data to a standard range.
+-   **Missing Value Imputation**: Handling missing data.
+-   **Feature Encoding**: Converting categorical data to numerical format.
+
+### **Overfitting and Underfitting**
+
+-   **Overfitting**: When a model is too complex and learns noise and details from the training data to the detriment of its performance on new data.
+-   **Underfitting**: When a model is too simple and cannot capture the underlying structure of the data.
+
+Solutions include adjusting model complexity, cross-validation, and regularization.
+
+### **Evaluation Metrics**
+
+Common metrics:
+
+-   **Accuracy**: The proportion of correct predictions.
+-   **Precision and Recall**: Important in imbalanced datasets; precision measures the correctness of positive predictions, while recall measures how many actual positives were identified.
+-   **F1 Score**: The harmonic mean of precision and recall.
+
+### **Neural Networks and Deep Learning**
+
+Neural networks consist of layers of interconnected nodes, mimicking biological neurons. Deep learning involves neural networks with many layers, enabling the learning of complex, hierarchical representations of data. It's particularly powerful for tasks like image and speech recognition.
+
+### **Challenges in Machine Learning:**
+
+Key challenges include:
+
+-   **Data Quality**: Garbage in, garbage out. Quality data is key.
+-   **Ethical Concerns**: Issues like bias in data and models.
+-   **Model Interpretability**: Understanding how models make decisions, especially important in sensitive areas like healthcare or finance.
+
+### **Machine Learning in Practice**
+
+Applications are widespread:
+
+-   Healthcare (predictive diagnostics, drug discovery)
+-   Finance (fraud detection, algorithmic trading)
+-   Technology (recommendation systems, voice assistants)
+-   And many others.
+
+### **The Future of Machine Learning:**
+
+Emerging trends include:
+
+-   **Reinforcement Learning**: For complex decision-making and gaming.
+-   **Generative Adversarial Networks (GANs)**: For generating new data instances.
+-   **Advancements in NLP**: Like transformer models improving language understanding and generation.
+
+These answers provide a snapshot of the key aspects of each question, offering a foundational understanding of various topics in machine learning.
+:::
+
+## Concept Test FlashCards
+
+::: {style="height:600px;"}
+```{=HTML}
+```
+<a href="/documents/ML Concepts NionMaron.html" class="custom-download-button">Download FlashCard</a>
+:::
+:::
+
+**#AI #MachineLearning #Flashcards**
