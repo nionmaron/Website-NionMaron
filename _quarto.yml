@@ -45,8 +45,10 @@ format:
     mainfont: Corn # MADE Gentle # Sans-serif
     theme:
       light: cosmo
-      dark: [cosmo, theme-dark.scss]
-    css: styles.css
+      dark: [cosmo, CSS/theme-dark.scss]
+    css: 
+    - CSS/styles.css
+    - CSS/Buttons.css
 
 editor: visual
 
