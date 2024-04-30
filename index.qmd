@@ -19,6 +19,31 @@ listing:
 ---
 
 ```{=html}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Nion M. Dransfeld",
+  "jobTitle": "Civil Engineer and Data Scientist",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of the State of Santa Catarina"
+  },
+  "url": "http://www.nionmaron.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Brazil"
+  },
+
+  "skills": ["Machine Learning","Python","R","JavaScript",],
+  "sameAs": [
+    "https://www.linkedin.com/in/nionmaron/?locale=en_US",
+    "https://github.com/nionmaron"
+  ]
+}
+</script>
+
 <style>
     @media (max-width: 860px) {
         .NM-imagem-none {
