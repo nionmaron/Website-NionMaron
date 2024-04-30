@@ -1,5 +1,5 @@
 ---
-pagetitle: "Data Driven Destinations"
+pagetitle: "NionMaron Blog"
 description: | 
   Welcome to my blog, where we explore statistics, data science, and machine learning in both English and Portuguese.
 
@@ -16,7 +16,7 @@ title-block-banner: false
 #title-block-banner: "images/banner-min.jpg"
 ---
 
-# Data Driven Destinations
+# NionMaron Blog
 
 ::: {style="text-align: justify;"}
 Welcome to my blog! Here, we delve into statistics, geostatistics, data science, and machine learning, offering top-notch content to help you grasp and apply both fundamental and advanced concepts. Join our journey to explore cutting-edge trends and techniques in data-driven decision-making and spatial analysis.

@@ -4,7 +4,7 @@ description: |
   Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.
 lang: pt
 author: "Dransfeld, N. M."
-#draft: false
+draft: true
 date: "2023-07-25"
 #date-modified: "2023-07-25"
 categories: [Git,GitHub,Português]
