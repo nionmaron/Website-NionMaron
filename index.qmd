@@ -25,22 +25,23 @@ listing:
   "@context": "http://schema.org",
   "@type": "Person",
   "name": "Nion M. Dransfeld",
-  "jobTitle": "Civil Engineer and Data Scientist",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "University of the State of Santa Catarina"
-  },
-  "url": "http://www.nionmaron.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "Brazil"
-  },
-
-  "skills": ["Machine Learning","Data Analysis","Python","R","JavaScript"],
+  "jobTitle": "Civil Engineer | Data Scientist | Machine Learning",
+  "url": "http://www.nionmaron.com/",
   "sameAs": [
     "https://www.linkedin.com/in/nionmaron/?locale=en_US",
     "https://github.com/nionmaron"
-  ]
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of the State of Santa Catarina",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": {
+        "@type": "Country",
+        "name": "Brazil"
+      }
+    }
+  }
 }
 </script>
 
