@@ -36,7 +36,7 @@ listing:
     "addressCountry": "Brazil"
   },
 
-  "skills": ["Machine Learning","Python","R","JavaScript",],
+  "skills": ["Machine Learning","Data Analysis","Python","R","JavaScript"],
   "sameAs": [
     "https://www.linkedin.com/in/nionmaron/?locale=en_US",
     "https://github.com/nionmaron"
