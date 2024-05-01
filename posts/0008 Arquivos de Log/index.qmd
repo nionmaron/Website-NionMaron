@@ -20,6 +20,42 @@ Arquivos de log são uma parte essencial da manutenção e do diagnóstico de si
 Diagnóstico de Problemas; Monitoramento de Desempenho Segurança e Conformidade; Análise de Dados e Insights de Negócio; Resolução Rápida de Problemas Documentação e Histórico Prevenção de Problemas
 :::
 
+```{=html}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Arquivos de Log na Programação: Conceitos e Implementação",
+  "description": "Explorando a Geração de Arquivos de Log e sua Importância na Programação, além de Estratégias de Implementação.",
+  "image": "https://nionmaron.com/posts/0008%20Arquivos%20de%20Log/log.webp",
+  "author": {
+    "@type": "Person",
+    "name": "Nion M. Dransfeld",
+    "url": "https://nionmaron.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NionMaron Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nionmaron.com/images/profile.png"
+    }
+  },
+  "datePublished": "2024-02-22T08:00:00Z",
+  "dateModified": "2024-02-22T09:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nionmaron.com/posts/0008%20arquivos%20de%20log/"
+  },
+  "url": "https://nionmaron.com/posts/0008%20arquivos%20de%20log/"
+}
+</script>
+
+
+
+```
+
+
 ## Implementação
 
 ::: {style="text-align: justify"}
