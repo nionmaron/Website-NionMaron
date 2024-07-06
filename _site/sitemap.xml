@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nionmaron.com/Blog.html</loc>
-    <lastmod>2024-05-01T20:40:24.854Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/CV.html</loc>
-    <lastmod>2024-05-01T20:39:56.264Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/flashcards/2024-01-02 Lei Federal 14133/index.html</loc>
-    <lastmod>2024-05-01T20:39:56.998Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/flashcards/2024-01-20 Bacen Concurso TI/index.html</loc>
-    <lastmod>2024-05-01T20:39:57.748Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/flashcards/2024-02-02 Machine Learning Concepts/index.html</loc>
-    <lastmod>2024-05-01T20:39:58.381Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/Flashcards.html</loc>
-    <lastmod>2024-05-01T20:39:59.831Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/index.html</loc>
-    <lastmod>2024-05-01T20:40:01.065Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/LICENSE.html</loc>
-    <lastmod>2024-05-01T20:40:02.048Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/Portfolio.html</loc>
-    <lastmod>2024-05-01T20:40:03.148Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0001-data-terms-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:03.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0002-data-driven-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:04.548Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0003-lambda-architecture-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:05.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:06.715Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0005-Poker-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:07.380Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0006-gitignore-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:08.015Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nionmaron.com/posts/0007-Combinar Arquivo em Exel-pt/index.html</loc>
-    <lastmod>2024-05-01T20:40:08.881Z</lastmod>
+    <loc>https://nionmaron.com/ts-and-cs.html</loc>
+    <lastmod>2024-02-24T17:54:10.179Z</lastmod>
   </url>
   <url>
     <loc>https://nionmaron.com/posts/0008 Arquivos de Log/index.html</loc>
-    <lastmod>2024-05-01T20:40:09.520Z</lastmod>
+    <lastmod>2024-05-01T20:39:34.657Z</lastmod>
   </url>
   <url>
-    <loc>https://nionmaron.com/ts-and-cs.html</loc>
-    <lastmod>2024-05-01T20:40:13.332Z</lastmod>
+    <loc>https://nionmaron.com/posts/0006-gitignore-pt/index.html</loc>
+    <lastmod>2024-01-03T01:15:45.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0004-Git-Dicas-e-Truques-pt/index.html</loc>
+    <lastmod>2024-01-10T13:30:21.796Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0002-data-driven-pt/index.html</loc>
+    <lastmod>2024-02-24T18:31:21.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/Portfolio.html</loc>
+    <lastmod>2024-02-24T18:49:07.254Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/LICENSE.html</loc>
+    <lastmod>2023-06-22T13:36:37.659Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/flashcards/2024-02-02 Machine Learning Concepts/index.html</loc>
+    <lastmod>2024-02-29T14:28:40.160Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/flashcards/2024-01-02 Lei Federal 14133/index.html</loc>
+    <lastmod>2024-01-30T00:09:00.600Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/Blog.html</loc>
+    <lastmod>2024-04-30T14:22:11.237Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/CV.html</loc>
+    <lastmod>2024-04-26T01:10:48.998Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/flashcards/2024-01-20 Bacen Concurso TI/index.html</loc>
+    <lastmod>2024-01-25T23:29:03.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/Flashcards.html</loc>
+    <lastmod>2024-02-24T14:33:34.775Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/index.html</loc>
+    <lastmod>2024-04-30T14:53:45.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0001-data-terms-pt/index.html</loc>
+    <lastmod>2024-02-24T19:09:49.572Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0003-lambda-architecture-pt/index.html</loc>
+    <lastmod>2024-02-24T18:36:03.800Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0005-Poker-pt/index.html</loc>
+    <lastmod>2024-01-11T14:35:42.041Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0007-Combinar Arquivo em Exel-pt/index.html</loc>
+    <lastmod>2024-07-06T00:58:46.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nionmaron.com/posts/0009 Docker-Dicas-e-Truques-pt/index.html</loc>
+    <lastmod>2024-07-06T00:51:23.571Z</lastmod>
   </url>
 </urlset>

@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dransfeld, N. M.">
-<meta name="description" content="Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.">
+<meta name="description" content="Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.">
 
-<title>NionMaron - Git: Dicas e Truques</title>
+<title>NionMaron - Docker Dicas e Truques</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -84,7 +84,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -93,8 +99,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "mais correspondência neste documento",
     "search-more-matches-text": "mais correspondências neste documento",
     "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar"
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PGRFF9TPBC"></script>
@@ -110,23 +118,27 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../CSS/styles.css">
 <link rel="stylesheet" href="../../CSS/Buttons.css">
-<meta property="og:title" content="NionMaron - Git: Dicas e Truques">
-<meta property="og:description" content="Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.">
-<meta property="og:image" content="https://nionmaron.com/posts/0009 Docker-Dicas-e-Truques-pt/git_workflow_cover.png">
-<meta property="og:site-name" content="NionMaron">
-<meta name="twitter:title" content="NionMaron - Git: Dicas e Truques">
-<meta name="twitter:description" content="Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.">
-<meta name="twitter:image" content="https://nionmaron.com/posts/0009 Docker-Dicas-e-Truques-pt/git_workflow_cover.png">
+<meta property="og:title" content="NionMaron - Docker Dicas e Truques">
+<meta property="og:description" content="Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.">
+<meta property="og:image" content="https://nionmaron.com/posts/0009 Docker-Dicas-e-Truques-pt/docker2.png">
+<meta property="og:site_name" content="NionMaron">
+<meta property="og:image:height" content="264">
+<meta property="og:image:width" content="449">
+<meta name="twitter:title" content="NionMaron - Docker Dicas e Truques">
+<meta name="twitter:description" content="Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.">
+<meta name="twitter:image" content="https://nionmaron.com/posts/0009 Docker-Dicas-e-Truques-pt/docker2.png">
+<meta name="twitter:image-height" content="264">
+<meta name="twitter:image-width" content="449">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">NionMaron</span>
     </a>
@@ -138,43 +150,43 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../Blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../Blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Flashcards.html" rel="" target="">
- <span class="menu-text">Flashcards</span></a>
+    <a class="nav-link" href="../../Flashcards.html"> 
+<span class="menu-text">Flashcards</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-nion" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-nion" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">About Nion</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about-nion">    
         <li>
-    <a class="dropdown-item" href="../../Portfolio.html" rel="" target="">
+    <a class="dropdown-item" href="../../Portfolio.html">
  <span class="dropdown-text">Portfolio</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../CV.html" rel="" target="">
+    <a class="dropdown-item" href="../../CV.html">
  <span class="dropdown-text">CV</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://www.linkedin.com/in/nionmaron/?locale=en_US" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="dropdown-item" href="https://www.linkedin.com/in/nionmaron/?locale=en_US"><i class="bi bi-linkedin" role="img">
 </i> 
  <span class="dropdown-text"></span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/nionmaron" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="dropdown-item" href="https://github.com/nionmaron"><i class="bi bi-github" role="img">
 </i> 
  <span class="dropdown-text"></span></a>
   </li>  
     </ul>
   </li>
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -182,23 +194,51 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#imagens-docker" id="toc-imagens-docker" class="nav-link" data-scroll-target="#imagens-docker">Imagens Docker</a></li>
+  <li><a href="#contêineres-docker" id="toc-contêineres-docker" class="nav-link" data-scroll-target="#contêineres-docker">Contêineres Docker</a></li>
+  <li><a href="#principais-comandos-docker" id="toc-principais-comandos-docker" class="nav-link" data-scroll-target="#principais-comandos-docker">Principais Comandos Docker</a>
+  <ul class="collapse">
+  <li><a href="#comandos-de-imagem" id="toc-comandos-de-imagem" class="nav-link" data-scroll-target="#comandos-de-imagem">Comandos de Imagem</a></li>
+  <li><a href="#comandos-de-contêiner" id="toc-comandos-de-contêiner" class="nav-link" data-scroll-target="#comandos-de-contêiner">Comandos de Contêiner</a></li>
+  <li><a href="#comandos-de-rede" id="toc-comandos-de-rede" class="nav-link" data-scroll-target="#comandos-de-rede">Comandos de Rede</a></li>
+  <li><a href="#comandos-de-volume" id="toc-comandos-de-volume" class="nav-link" data-scroll-target="#comandos-de-volume">Comandos de Volume</a></li>
+  <li><a href="#comandos-de-registro" id="toc-comandos-de-registro" class="nav-link" data-scroll-target="#comandos-de-registro">Comandos de Registro</a></li>
+  <li><a href="#comandos-de-sistema" id="toc-comandos-de-sistema" class="nav-link" data-scroll-target="#comandos-de-sistema">Comandos de Sistema</a></li>
+  <li><a href="#comandos-de-configuração" id="toc-comandos-de-configuração" class="nav-link" data-scroll-target="#comandos-de-configuração">Comandos de Configuração</a></li>
+  <li><a href="#comandos-de-logs-e-inspeção" id="toc-comandos-de-logs-e-inspeção" class="nav-link" data-scroll-target="#comandos-de-logs-e-inspeção">Comandos de Logs e Inspeção</a></li>
+  </ul></li>
+  <li><a href="#dockerfile" id="toc-dockerfile" class="nav-link" data-scroll-target="#dockerfile">Dockerfile</a>
+  <ul class="collapse">
+  <li><a href="#benefícios-do-dockerfile" id="toc-benefícios-do-dockerfile" class="nav-link" data-scroll-target="#benefícios-do-dockerfile">Benefícios do Dockerfile</a></li>
+  </ul></li>
+  <li><a href="#docker-compose" id="toc-docker-compose" class="nav-link" data-scroll-target="#docker-compose">Docker Compose</a></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
+  <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências">Referências</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Git: Dicas e Truques</strong></h1>
+<h1 class="title"><strong>Docker Dicas e Truques</strong></h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Git</div>
-    <div class="quarto-category">GitHub</div>
+    <div class="quarto-category">Docker</div>
+    <div class="quarto-category">Dockerfile</div>
     <div class="quarto-category">Português</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    <p>Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.</p>
+    <p>Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.</p>
   </div>
 </div>
 
@@ -215,7 +255,7 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">25 de julho de 2023</p>
+      <p class="date">25 de julho de 2024</p>
     </div>
   </div>
   
@@ -223,229 +263,259 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 <section id="introdução" class="level2">
 <h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
-<p>O <a href="https://git-scm.com/">Git</a> é um sistema de controle de versão conhecido como VCS (do inglês, <em>version control system</em>) e vem sendo amplamente utilizado no desenvolvimento de códigos para software, sites, aplicativos, aprendizado de máquina, inteligência artificial, etc. Ele foi criado por <a href="https://pt.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a> em 2005 para ajudar no desenvolvimento do kernel do Linux, mas desde então se tornou uma ferramenta essencial em muitos projetos de software.</p>
-<p>Esta ferramenta permite que os desenvolvedores acompanhem as alterações feitas em seus arquivos ao longo do tempo, facilitando o trabalho colaborativo e o gerenciamento eficiente de versões de um projeto. O sistema do Git registra todas as alterações feitas nos arquivos, permitindo que os desenvolvedores rastreiem quem fez cada alteração, quando foi feita e seu motivo.</p>
-<p>Além disso, <span style="background-color:#DCDCDC">o Git possui uma ampla gama de recursos, como ramificações (branches) para o desenvolvimento paralelo, fusão (merge) das ramificações, resolução de conflitos e integração com serviços de hospedagem</span> como o <a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">Bitbucket</a> e <a href="https://gitlab.com/">GitLab</a> (Fig. 01).</p>
-<p>A adoção generalizada do Git e a integração com várias plataformas de desenvolvimento, como o GitHub, tornam-no uma escolha adquada para o controle de versão. Além disso, à medida que mais empresas adotam práticas de DevOps e integração contínua / entrega contínua (CI/CD), o Git, com suas características de ramificação e fusão, torna-se uma ferramenta essencial. O <span style="background-color:#DCDCDC">Git também é altamente escalável, o que significa que pode acomodar projetos que vão desde pequenos aplicativos individuais até grandes projetos corporativos</span>.</p>
+<p>Docker é uma plataforma que permite a criação, envio e execução de aplicativos em contêineres. Contêineres são unidades padronizadas de software que empacotam o código do aplicativo e todas as suas dependências para que o aplicativo possa ser executado de maneira rápida e confiável em diferentes ambientes de computação. No cerne do Docker estão dois conceitos-chave: <strong>imagens e contêineres</strong>.</p>
+<div class="grid">
+<div class="g-col-12">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="git_workflow.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Fig.01 - Principais comandos Git e representação do fluxo de trabalho</figcaption>
+<p><img src="containers3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%" alt="Aplicativos nos contêineres Docker"></p>
 </figure>
 </div>
-<p>Nesse artigo, <strong>vou apresentar uma série de dicas e truques essenciais para o Git, focados na plataforma Windows e utilizando o Git Bash como ambiente</strong> de linha de comando. Embora o enfoque seja no Windows, é importante ressaltar que muitos dos comandos e conceitos abordados também se aplicam ao Mac e ao Linux. Caso queira consultar todas as funções e ter uma melhor descrição dos comandos você pode consulta o manual no link <a href="https://git-scm.com/docs" class="uri">https://git-scm.com/docs</a></p>
+</div>
+</div>
 </section>
-<section id="iniciando-com-git" class="level2">
-<h2 class="anchored" data-anchor-id="iniciando-com-git">Iniciando com GIT</h2>
-<section id="instalação" class="level3">
-<h3 class="anchored" data-anchor-id="instalação">Instalação</h3>
+<section id="imagens-docker" class="level2">
+<h2 class="anchored" data-anchor-id="imagens-docker">Imagens Docker</h2>
+<div style="text-align: justify">
+<p>Uma imagem Docker é um pacote imutável que contém tudo o que é necessário para executar uma aplicação: código-fonte, bibliotecas, dependências, ferramentas e arquivos de configuração. As imagens são construídas a partir de um arquivo chamado Dockerfile, que contém uma lista de instruções sobre como criar a imagem.</p>
+<p>Estrutura de uma Imagem Docker:</p>
 <ul>
-<li><strong>Windows</strong>: visite o site oficial do Git <a href="https://git-scm.com" class="uri">https://git-scm.com</a> e clique no botão de download para Windows e execute o arquivo.</li>
-<li><strong>macOS</strong>: se você usa o macOS, pode instalar o Git usando o gerenciador de pacotes <em>Homebrew</em>. Primeiro, instale o <em>Homebrew</em> abrindo o Terminal e executando alguns comandos.</li>
-<li><strong>Linux:</strong>: se você é usuário do Ubuntu ou Debian, o Git provavelmente está disponível via <code>apt</code>. Para instalá-lo, abra um terminal e execute: <code>sudo apt-get install git</code>.</li>
+<li><p><strong>Dockerfile:</strong> Um arquivo de texto com comandos que a CLI do Docker pode executar para montar uma imagem. Cada comando no Dockerfile cria uma camada na imagem, que é uma maneira eficiente de fazer alterações sem recriar a imagem inteira.</p></li>
+<li><p><strong>Base Image:</strong> A imagem base é a camada inicial da imagem. Pode ser um sistema operacional básico ou uma imagem preexistente.</p></li>
+<li><p><strong>Layers:</strong> Cada instrução no Dockerfile cria uma nova camada na imagem. Por exemplo, a instalação de uma biblioteca ou a cópia de arquivos para o contêiner criam camadas separadas.</p></li>
+<li><p><strong>Metadata:</strong> Informações sobre a imagem, como autor, versão, descrição, etc., são incluídas no Dockerfile e armazenadas na imagem.</p></li>
+</ul>
+</div>
+</section>
+<section id="contêineres-docker" class="level2">
+<h2 class="anchored" data-anchor-id="contêineres-docker">Contêineres Docker</h2>
+<div style="text-align: justify">
+<p>Um contêiner é uma instância em execução de uma imagem Docker. Ele pode ser visto como um ambiente de execução leve e portátil que compartilha o kernel do sistema operacional host, mas é isolado dos demais processos do sistema.</p>
+<p>Estrutura de Funcionamento de um Contêiner Docker:</p>
+<ul>
+<li><p><strong>Inicialização do Contêiner:</strong> Quando você executa um contêiner a partir de uma imagem, o Docker cria uma camada de escrita no topo das camadas da imagem e inicia um processo para executar a aplicação.</p></li>
+<li><p><strong>Namespace Isolation:</strong> Docker utiliza namespaces do kernel do Linux para fornecer um ambiente isolado para o contêiner. Isso inclui separação de rede, PID, montagens de sistema de arquivos e outros aspectos.</p></li>
+<li><p><strong>Control Groups (cgroups):</strong> Docker usa cgroups para limitar e monitorar o uso de recursos (CPU, memória, IO, etc.) por um contêiner.</p></li>
+<li><p><strong>Union File System (UnionFS):</strong> As imagens são construídas em camadas usando um sistema de arquivos union, que permite criar camadas de leitura e gravação de forma eficiente.</p></li>
+<li><p><strong>Networking:</strong> Contêineres podem ser conectados a várias redes virtuais. Docker configura automaticamente uma rede padrão, mas você pode definir redes personalizadas.</p></li>
+<li><p><strong>Storage:</strong> Contêineres usam volumes para persistir dados além do ciclo de vida do contêiner. Volumes podem ser montados em diferentes contêineres para compartilhar dados.</p></li>
+</ul>
+</div>
+</section>
+<section id="principais-comandos-docker" class="level2">
+<h2 class="anchored" data-anchor-id="principais-comandos-docker">Principais Comandos Docker</h2>
+<div style="text-align: justify">
+<p>Docker fornece uma variedade de comandos para gerenciar imagens, contêineres, volumes, redes e mais. Aqui estão alguns dos principais comandos Docker, junto com suas explicações:</p>
+</div>
+<section id="comandos-de-imagem" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-imagem">Comandos de Imagem</h3>
+<ul>
+<li><strong>docker build:</strong> Constrói uma imagem Docker a partir de um Dockerfile.</li>
+<li><strong>docker pull:</strong> Baixa uma imagem do Docker Hub ou de um registro de contêiner.</li>
+<li><strong>docker push:</strong> Envia uma imagem Docker para um registro.</li>
+<li><strong>docker images:</strong> Lista as imagens Docker no host.</li>
+<li><strong>docker rmi:</strong> Remove uma ou mais imagens Docker.</li>
+<li><strong>docker tag:</strong> Adiciona uma tag a uma imagem Docker.</li>
+<li><strong>docker history:</strong> Exibe o histórico de uma imagem Docker.</li>
+<li><strong>docker save:</strong> Salva uma ou mais imagens Docker em um arquivo tar.</li>
+<li><strong>docker load:</strong> Carrega uma ou mais imagens Docker de um arquivo tar.</li>
+<li><strong>docker commit:</strong> Cria uma nova imagem a partir de um contêiner em execução.</li>
+<li><strong>docker inspect:</strong> Exibe informações detalhadas sobre uma imagem Docker.</li>
+<li><strong>docker search:</strong> Procura imagens Docker em um registro.</li>
 </ul>
 </section>
-<section id="configurações-iniciais-nome-e-email" class="level3">
-<h3 class="anchored" data-anchor-id="configurações-iniciais-nome-e-email">Configurações iniciais: nome e email</h3>
-<p>Ao utilizar o Git, é recomendável configurar seu nome e endereço de e-mail. Essas informações são registradas nos commits (confirmações) que você realiza em um repositório Git. Existem algumas razões pelas quais você deve fornecer esses detalhes para identificação do autor e rastreamento de contribuições. Para configurar seu nome e endereço de e-mail no Git, você pode utilizar os seguintes comandos no terminal:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config –global user.name <span class="st">"Seu Nome"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config –global user.email <span class="st">"seuemail@exemplo.com"</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="comandos-unix-no-git" class="level3">
-<h3 class="anchored" data-anchor-id="comandos-unix-no-git">Comandos UNIX no GIT</h3>
-<p>O Git foi originalmente desenvolvido para ser usado no Linux, um sistema operacional do tipo Unix, por isso é natural que ele use uma interface de linha de comando baseada em <a href="https://wiki.inf.ufpr.br/maziero/doku.php?id=unix:comandos_basicos#:%20~:text=Comandos%20b%C3%A1sicos&amp;text=mv%20%3A%20movimentar%20arquivos.,conte%C3%BAdo%20de%20arquivos%20(paginado).">Unix</a>. Abaixo algumas funções úteis:</p>
+<section id="comandos-de-contêiner" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-contêiner">Comandos de Contêiner</h3>
 <ul>
-<li><code>ls</code>: Lista o conteúdo do diretório corrente;</li>
-<li><code>pwd</code>: significa “print working directory”, este comando retorna o caminho absoluto do diretório atual;</li>
-<li><code>cd</code>: significa “change directory”e é usado para mudar o diretório atual. Em Unix, <code>cd .</code> representa o diretório atual e <code>cd ..</code> representa o diretório pai;</li>
-<li><code>touch</code>: atualiza a data de um arquivo (o cria, se não existir).</li>
+<li><strong>docker run:</strong> Executa um contêiner a partir de uma imagem.</li>
+<li><strong>docker start:</strong> Inicia um contêiner parado.</li>
+<li><strong>docker stop:</strong> Para um contêiner em execução.</li>
+<li><strong>docker restart:</strong> Reinicia um contêiner.</li>
+<li><strong>docker pause:</strong> Pausa a execução de um contêiner.</li>
+<li><strong>docker unpause:</strong> Retoma a execução de um contêiner pausado.</li>
+<li><strong>docker kill:</strong> Força a parada de um contêiner.</li>
+<li><strong>docker rm:</strong> Remove um ou mais contêineres.</li>
+<li><strong>docker ps:</strong> Lista os contêineres em execução.</li>
+<li><strong>docker ps -a:</strong> Lista todos os contêineres no host.</li>
+<li><strong>docker logs:</strong> Exibe os logs de um contêiner.</li>
+<li><strong>docker exec:</strong> Executa um comando em um contêiner em execução.</li>
+<li><strong>docker attach:</strong> Conecta-se a um contêiner em execução.</li>
+<li><strong>docker cp:</strong> Copia arquivos entre o host e um contêiner.</li>
+<li><strong>docker top:</strong> Exibe os processos em execução em um contêiner.</li>
+<li><strong>docker stats:</strong> Exibe estatísticas de uso de recursos de um contêiner.</li>
+<li><strong>docker inspect:</strong> Exibe informações detalhadas sobre um contêiner.</li>
+<li><strong>docker diff:</strong> Exibe as alterações feitas em um contêiner.</li>
+<li><strong>docker commit:</strong> Cria uma nova imagem a partir de um contêiner em execução.</li>
 </ul>
 </section>
-<section id="commits-atômicos" class="level3">
-<h3 class="anchored" data-anchor-id="commits-atômicos">Commits atômicos</h3>
-<p>Commit atômico é um conceito em controle de versão que sugere na qual cada commit deve ser uma unidade pequena e que todos os seus arquivos estejam dentro do mesmo contexto. Isso significa que cada commit deve representar uma única alteração lógica no código - seja corrigindo um bug ou adicionando uma nova funcionalidade.</p>
-<p>Os commits atômicos são uma prática recomendada em controle de versão e são importantes por várias razões:</p>
+<section id="comandos-de-rede" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-rede">Comandos de Rede</h3>
 <ul>
-<li>Facilita o entendimento do histórico do projeto;</li>
-<li>Torna a resolução de conflitos mais fácil;</li>
-<li>Permite reverter mudanças facilmente;</li>
-<li>Facilita a revisão de código;</li>
-</ul>
-<p><span style="background-color:#DCDCDC">Alerta: Dentro de um repositório Git, não se deve criar outro repositório Git. Isso ocorre porque o Git trata todo o diretório do repositório como uma unidade indivisível</span> e não suporta a criação de repositórios dentro dele. Criar outro repositório Git dentro de um repositório existente pode levar a vários problemas e erros, pois o Git não foi projetado para lidar com aninhamento de repositórios. Aqui estão alguns possíveis erros que podem ocorrer: conflitos de versionamento, problemas de sincronização, dificuldades na colaboração e perda de dados. Para verificar se você está criando indevidamente um repositório dentro de um repositório existente, você pode executar o seguinte comando no terminal dentro do diretório do seu projeto: <code>git status</code>.</p>
-</section>
-</section>
-<section id="branches" class="level2">
-<h2 class="anchored" data-anchor-id="branches">Branches</h2>
-<p>No Git, uma branch é uma linha de desenvolvimento separada que permite que você trabalhe em recursos ou correções de bugs sem interferir no código principal. Cada branch é uma ramificação independente do histórico de commits e pode ser mesclada (merged) com outras branches posteriormente. As branches são úteis para organizar o trabalho em equipe, permitindo que várias pessoas trabalhem em diferentes partes do projeto simultaneamente.</p>
-<p>Aqui estão alguns dos principais comandos relacionados a branches no Git, juntamente com suas descrições:</p>
-<ul>
-<li><p><code>git branch</code>: Exibe uma lista de todas as branches no repositório. O asterisco (*) indica a branch atualmente ativa.</p></li>
-<li><p><code>git branch &lt;nome_branch&gt;</code>: Cria uma nova branch com o nome especificado.</p></li>
-<li><p><code>git switch &lt;nome_branch&gt;</code>: É um comando projetado para a tarefa de mudar de branch, simplificando o uso em relação ao git checkout. O git switch não executa ações adicionais, apenas muda a branch atual.</p></li>
-<li><p><code>git switch -c &lt;nome_branch&gt;</code>: cria uma nova branch a partir da branch atual e muda para ela, tudo em um único comando, permitindo que você crie e mude para uma nova branch de forma rápida e conveniente.</p></li>
-<li><p><code>git merge &lt;nome_branch&gt;</code>: Incorpora as alterações da branch especificada na branch atual. Isso cria um novo commit de merge no histórico.</p></li>
-<li><p><code>git branch -d &lt;nome_branch&gt;</code>: Exclui a branch especificada após mesclá-la com sucesso em outra branch.</p></li>
-<li><p><code>git branch -D &lt;nome_branch&gt;</code>: Força a exclusão da branch especificada, mesmo que as alterações não tenham sido mescladas.</p></li>
-<li><p><code>git branch -m &lt;nome_antigo&gt; &lt;nome_novo&gt;</code>: Renomeia a branch especificada.</p></li>
-<li><p><code>git branch -r</code>: Exibe uma lista das branches remotas disponíveis.</p></li>
-<li><p><code>git push &lt;origin&gt; &lt;nome_branch&gt;</code>: Envia a branch especificada para o repositório remoto.</p></li>
-<li><p><code>git pull &lt;origin&gt; &lt;nome_branch&gt;</code>: Atualiza a branch local com as alterações mais recentes do repositório remoto.</p></li>
-<li><p><code>git log</code>: é um comando usado no sistema de controle de versão Git que exibe um histórico de commits que levaram ao estado atual do código. Ele mostra o autor, a data e a mensagem do commit, ajudando a rastrear as mudanças e entender a evolução do projeto.</p></li>
-</ul>
-<section id="outros-comandos" class="level3">
-<h3 class="anchored" data-anchor-id="outros-comandos">Outros comandos</h3>
-<ul>
-<li><p><code>git commit -a -m</code>: adiciona automaticamente todas as alterações nos arquivos rastreados e faz um commit com uma mensagem específica, permitindo que você realize o commit rapidamente sem precisar usar o comando git add separadamente;</p></li>
-<li><p><code>git init</code>: cria um novo repositório do Git. Ele pode ser usado para converter um projeto existente e não versionado em um repositório do Git ou inicializar um novo repositório vazio.</p></li>
-<li><p><code>git diff branch1..branch2</code>: Compara a ponta das duas ramificações (branch), para visualizar as modificações;</p></li>
-<li><p><code>git checkout HEAD\~1</code>: é um comando do Git usado para alterar o estado do repositório Git para o commit anterior ao commit atual;</p></li>
-<li><p><code>git --version</code>: isso deve retornar a versão do Git que você instalou;</p></li>
-<li><p><code>ctrl + l</code>: é o comando no teclado que limpa a tela do terminal do git.</p></li>
+<li><strong>docker network ls:</strong> Lista as redes Docker no host.</li>
+<li><strong>docker network create:</strong> Cria uma nova rede Docker.</li>
+<li><strong>docker network rm:</strong> Remove uma ou mais redes Docker.</li>
+<li><strong>docker network inspect:</strong> Exibe informações detalhadas sobre uma rede Docker.</li>
+<li><strong>docker network connect:</strong> Conecta um contêiner a uma rede.</li>
+<li><strong>docker network disconnect:</strong> Desconecta um contêiner de uma rede.</li>
+<li><strong>docker network prune:</strong> Remove todas as redes não utilizadas.</li>
+<li><strong>docker network inspect:</strong> Exibe informações detalhadas sobre uma rede Docker.</li>
+<li><strong>docker network connect:</strong> Conecta um contêiner a uma rede.</li>
+<li><strong>docker network disconnect:</strong> Desconecta um contêiner de uma rede.</li>
+<li><strong>docker network prune:</strong> Remove todas as redes não utilizadas.</li>
 </ul>
 </section>
-</section>
-<section id="git-restore" class="level2">
-<h2 class="anchored" data-anchor-id="git-restore">Git Restore</h2>
-<p>A partir da versão 2.23 do Git, o comando <a href="https://git-scm.com/docs/git-restore"><code>git restore</code></a> é usado para restaurar conteúdos de arquivos no diretório de trabalho e na área de preparação (staging area) do Git. Ele pode ser usado para descartar modificações em arquivos que ainda não foram confirmadas em um commit ou para recuperar arquivos excluídos.</p>
-<p>A sintaxe básica do comando <code>git restore</code> é a seguinte:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> restore <span class="op">&lt;</span>opções<span class="op">&gt;</span> <span class="op">&lt;</span>arquivo<span class="op">&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>O comportamento exato do comando <code>git restore</code> pode variar dependendo da versão do Git que você está utilizando. É recomendado verificar a documentação oficial do Git ou executar <code>git restore --help</code> para obter informações detalhadas sobre as opções e comportamentos específicos da versão do Git que você está utilizando.</p>
-</section>
-<section id="git-reset" class="level2">
-<h2 class="anchored" data-anchor-id="git-reset">Git Reset</h2>
-<p>O comando <code>git reset</code> é usado no Git para alterar a posição do branch (ramificação) atual e desfazer commits. Ele permite reverter o histórico do Git, descartando commits anteriores ou movendo o branch para um commit específico.</p>
-<p>Existem diferentes opções de uso do comando <code>git reset</code>. Aqui estão algumas das formas comuns de uso:</p>
-<p><strong>Reset “soft” (suave)</strong>: O comando <code>git reset --soft</code> desfaz o commit mais recente, mas mantém as alterações do commit no diretório de trabalho e na área de preparação (staging area). Isso permite que você faça alterações adicionais e faça um novo commit com as alterações corrigidas. css Copy code git reset –soft HEAD~1</p>
-<p><strong>Reset “mixed” (padrão)</strong>: O comando <code>git reset --mixed</code>desfaz o commit mais recente e remove as alterações do commit da área de preparação (staging area), mas mantém as alterações no diretório de trabalho. Isso permite que você revise as alterações novamente e escolha quais arquivos deseja preparar para um novo commit. css Copy code git reset –mixed HEAD~1</p>
-<p><strong>Reset “hard” (rígido)</strong>: O comando <code>git reset --hard</code> desfaz completamente o commit mais recente, descartando todas as alterações do commit e do diretório de trabalho. Isso reverte o repositório Git para o estado do commit anterior e exclui todas as alterações não confirmadas. É importante ressaltar que, ao usar o comando git reset, os commits desfeitos são excluídos permanentemente do histórico. Portanto, tenha cuidado ao usá-lo e verifique se você tem um backup ou está confortável em perder esses commits.</p>
-<p>Recomenda-se verificar a <a href="https://git-scm.com/docs/git-restore">documentação oficial do Git</a> ou executar <code>git reset --help</code> para obter informações detalhadas sobre as opções e comportamentos específicos do comando “git reset” na versão do Git que você está utilizando.</p>
-</section>
-<section id="git-revert" class="level2">
-<h2 class="anchored" data-anchor-id="git-revert">Git Revert</h2>
-<p>O comando “<a href="https://git-scm.com/docs/git-revert"><code>git revert</code></a>” é usado no Git para criar um novo commit que desfaz as alterações de um ou mais commits anteriores. Ao contrário do comando “git reset”, que remove os commits do histórico, o “git revert” desfaz as alterações de um commit existente criando um novo commit que reverte as modificações introduzidas.</p>
-<p>A sintaxe básica do comando <code>git revert</code> é a seguinte:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> revert <span class="op">&lt;</span>commit<span class="op">&gt;</span> </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ao executar o comando <code>git revert</code>, o Git cria um novo commit que reverte as alterações introduzidas pelo commit especificado. Esse novo commit é adicionado ao histórico, desfazendo as modificações feitas pelo commit original, mas preservando o histórico completo do projeto.</p>
-<p>O comando <code>git revert</code> pode aceitar várias opções para personalizar o comportamento:</p>
+<section id="comandos-de-volume" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-volume">Comandos de Volume</h3>
 <ul>
-<li><p><strong>n ou –no-commit</strong>: Realiza a revert sem criar automaticamente um novo commit. Isso permite que você faça alterações adicionais antes de confirmar as reversões em um novo commit.</p></li>
-<li><p><strong>m parent-number</strong>: Especifica qual parente de um commit de merge deve ser revertido. O parente é numerado a partir de 1, e o commit de merge é especificado usando seu hash.</p></li>
-<li><p><strong>s ou –signoff</strong>: Adiciona uma assinatura digital na mensagem de confirmação do revert.</p></li>
-</ul>
-<p>Essas são apenas algumas opções comuns, e há mais opções disponíveis. Recomenda-se consultar a documentação oficial do Git ou executar <code>git revert --help</code> para obter informações mais detalhadas sobre as opções e comportamentos específicos do comando <code>git revert</code> na versão do Git que você está utilizando.</p>
-<p><strong>O <code>git revert</code> é uma maneira segura de desfazer alterações em commits anteriores sem alterar o histórico do projeto, sendo útil quando você deseja manter um registro completo de todas as alterações e garantir que a colaboração no projeto não seja afetada.</strong></p>
-</section>
-<section id="git-stash" class="level2">
-<h2 class="anchored" data-anchor-id="git-stash">Git Stash</h2>
-<p>O comando “<a href="https://git-scm.com/docs/git-stash"><code>git stash</code></a>” é uma funcionalidade do sistema de controle de versão Git que permite aos desenvolvedores salvar temporariamente as alterações feitas em seu repositório de trabalho, sem precisar fazer um commit completo. O “stash” pode ser visto como uma área de armazenamento temporário para alterações não concluídas.</p>
-<p>Posteriormente, quando desejar retomar as alterações salvas, você pode usar os comandos <code>git stash list</code> para ver a lista de stashes disponíveis e <code>git stash apply</code> ou <code>git stash pop</code> para aplicar novamente as alterações salvas no seu diretório de trabalho. A diferença entre os comandos “apply” e “pop” é que o “apply” mantém o stash na lista, enquanto o “pop” remove o stash após aplicar as alterações.</p>
-</section>
-<section id="git-reflog" class="level2">
-<h2 class="anchored" data-anchor-id="git-reflog">Git Reflog</h2>
-<p>O <a href="https://git-scm.com/docs/git-reflog"><code>git reflog</code></a> é um comando útil do Git que registra quando as pontas dos ramos e outras referências foram atualizadas no repositório local. Ele ajuda você a entender a história de um repositório de uma maneira mais granular do que <code>git log</code>, porque também registra quando você faz checkout para outro ramo, quando um commit é alterado (por exemplo, com <code>git commit --amend)</code>, e assim por diante.</p>
-<p>Segue alguns usos comuns do <code>git reflog</code>:</p>
-<ul>
-<li><p><strong>Recuperação de commits perdidos</strong>: O Git tem um sistema de garbage collection que limpa commits inacessíveis de tempos em tempos, mas antes disso, você pode usar o <code>git reflog</code> para encontrar commits perdidos. Isso é útil quando você exclui um ramo por engano, por exemplo.</p></li>
-<li><p><strong>Desfazer rebase</strong>: Um comando git rebase pode ser uma operação complicada que às vezes dá errado. Se você deseja desfazer um rebase, pode usar o <code>git reflog</code> para encontrar o estado do seu ramo antes do rebase e retornar a esse estado.</p></li>
-</ul>
-<p>O comando git reflog exibe uma lista de todos os pontos na história do seu HEAD. Para cada entrada, ele mostra um hash de commit, a ação que levou a esse estado (como um commit, rebase, checkout etc.), e uma referência para essa entrada na forma de HEAD@{n}, onde n é o número de passos atrás nesse ponto na história.</p>
-<p><span style="background-color:#DCDCDC">O <code>git reflog</code> mantém um registro das últimas ações no Git que modificaram o HEAD, incluindo commits, checkouts e outros. Por padrão, <strong>o Git mantém esses registros por 90 dias</strong>. Esse período de 90 dias é chamado de período de “expiração” do reflog.</span></p>
-</section>
-<section id="rebasing-x-merging" class="level2">
-<h2 class="anchored" data-anchor-id="rebasing-x-merging">Rebasing x Merging</h2>
-<p><span style="background-color:#DCDCDC">Rebasing” e “Merging” são duas estratégias diferentes no Git para integrar mudanças de uma branch (ramificação) para outra</span>. Ambos são usados para manter o seu código sincronizado com o trabalho de outros desenvolvedores, mas funcionam de maneiras ligeiramente diferentes e são melhores em situações diferentes.</p>
-<ul>
-<li><p><strong>Rebasing (Rebase)</strong>: O comando <code>git rebase</code> move ou combina uma sequência de commits para uma nova base de commit. Ele é útil para fazer sua feature branch “atualizada” com as últimas mudanças de outra branch (como a main ou master). Com o rebase, os commits da feature branch são aplicados na branch base, um por um, como se eles tivessem sido criados de novo. Isso resulta em um histórico de commits linear, o que pode ser mais fácil de entender.</p></li>
-<li><p><strong>Merging (Merge)</strong>: O comando <code>git merge</code> pega o conteúdo de uma branch de origem e a integra com a branch de destino. Um novo commit de merge é criado que aponta para os dois commits, preservando o histórico de commits e a relação entre as branches. Isso mantém a história completa do projeto, incluindo todas as ramificações e mesclagens, mas pode ser mais difícil de navegar devido à sua não linearidade.</p></li>
-</ul>
-<p>A <span style="background-color:#DCDCDC">diferença principal entre os dois (rebase e merge) é que o rebase cria um histórico de commits linear, “recriando” os commits, enquanto o merge preserva o histórico exato e cria um novo commit de merge</span>. A escolha entre um e outro depende de fatores como a complexidade do projeto, a necessidade de manter um histórico limpo e linear versus um histórico completo e exato, e as preferências da equipe.</p>
-<p>O comando <code>git rebase -i HEAD</code> é utilizado para iniciar um processo de rebase interativo. O rebase interativo é uma funcionalidade do Git que permite modificar uma sequência de commits existente de várias formas. A opção -i no comando significa “interativo”, o que significa que o Git abrirá um editor de texto com uma lista dos últimos commits, permitindo que você escolha exatamente o que quer fazer com cada um.</p>
-<p>O termo <strong>HEAD</strong> é uma referência ao commit mais recente na branch atual. Portanto, <code>git rebase -i HEAD</code> começará um rebase interativo que, por padrão, não inclui nenhum commit, pois você está tentando rebase na mesma posição do HEAD. Normalmente, você especificaria um número de commits antes do HEAD ou uma referência a outro commit, como HEAD~3 ou HEAD^, para iniciar um rebase interativo dos últimos 3 commits ou do último commit, respectivamente.</p>
-<p>Durante um rebase interativo, você pode fazer várias coisas, como:</p>
-<ul>
-<li><strong>pick</strong>: usar um commit como está.</li>
-<li><strong>reword</strong>: usar o commit, mas alterar a mensagem do commit.</li>
-<li><strong>edit</strong>: usar o commit, mas parar para que você possa modificar os arquivos e/ou o commit.</li>
-<li><strong>squash</strong>: usar as alterações do commit, mas mesclá-las com o commit anterior.</li>
-<li><strong>fixup</strong>: como “squash”, mas descarta a mensagem do commit.</li>
-<li><strong>drop</strong>: descartar o commit. Essa flexibilidade faz do rebase interativo uma ferramenta poderosa para limpar o histórico de commits antes de compartilhar suas alterações com outros.</li>
+<li><strong>docker volume ls:</strong> Lista os volumes Docker no host.</li>
+<li><strong>docker volume create:</strong> Cria um novo volume Docker.</li>
+<li><strong>docker volume rm:</strong> Remove um ou mais volumes Docker.</li>
+<li><strong>docker volume inspect:</strong> Exibe informações detalhadas sobre um volume Docker.</li>
+<li><strong>docker volume prune:</strong> Remove todos os volumes não utilizados.</li>
 </ul>
 </section>
-<section id="git-tags" class="level2">
-<h2 class="anchored" data-anchor-id="git-tags">Git tags</h2>
-<p>As tags no Git são referências que apontam para pontos específicos no histórico de commits. Elas são usados geralmente para capturar um ponto na história que é marcado por uma versão de lançamento de software, por exemplo, v1.0, v2.0, etc.</p>
-<p>Existem dois tipos principais de tags no Git:</p>
+<section id="comandos-de-registro" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-registro">Comandos de Registro</h3>
 <ul>
-<li><p><strong>Lightweight</strong> (Leve): É simplesmente uma referência a um commit. As tags leves não incluem nenhuma informação extra além do commit em si. Para criar uma tag leve, você pode usar o comando git tag seguido do nome da tag e a referência do commit.</p></li>
-<li><p><strong>Annotated</strong> (Anotada): São armazenadas como objetos completos no banco de dados Git, o que significa que eles incluem informações extras como o tagger (a pessoa que fez a tag), a data, a mensagem e podem ser verificadas com GPG. As tags anotadas são recomendadas porque incluem essa informação extra. Você pode criar uma tag anotada com o comando <code>git tag -a</code>, seguido do nome da tag, e geralmente uma mensagem de descrição é adicionada.</p></li>
-</ul>
-<p><span style="background-color:#DCDCDC">As tags não são movidas quando novos commits são criados, elas continuam apontando para o mesmo commit mesmo quando novos commits são adicionados ao repositório. Isso torna as tags úteis para marcar versões específicas de um projeto.</span></p>
-<p>Você pode ver todas as tags em um repositório com o comando git tag. E para compartilhar tags com outros repositórios, elas precisam ser explicitamente “pushed” para o repositório remoto, usando o comando <code>git push origin \[tagname\]</code> ou <code>git push origin --tags</code> para enviar todas as tags.</p>
-<p>Mudar e deletar tags no Git é bastante simples: Para mudar uma tag, primeiro você deve deletá-la e então recriá-la apontando para o novo commit. Por exemplo, se você tem uma tag chamada “v1.0” e quer mudá-la para apontar para um commit diferente, você pode fazer isso da seguinte maneira:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-d</span> <span class="op">&lt;</span>nome-da-tag<span class="op">&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Se a tag tiver sido enviada para o repositório remoto, você precisará removê-la do repositório remoto também. Para fazer isso, use o seguinte comando:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--delete</span> origin <span class="op">&lt;</span>nome-da-tag<span class="op">&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><span style="background-color:#DCDCDC">Lembre-se de que, uma vez que a tag seja deletada e a informação seja propagada para outros clones do repositório, não haverá nenhuma referência ao commit original marcado pela tag. Então, tenha certeza antes de deletar uma tag, especialmente se ela foi compartilhada com outros.</span></p>
-</section>
-<section id="git-config" class="level2">
-<h2 class="anchored" data-anchor-id="git-config">Git Config</h2>
-<p>O comando <a href="https://git-scm.com/docs/git-config"><code>git config</code></a> é uma parte essencial do Git, usado para configurar as opções específicas do usuário, como email, algoritmo preferido para diff, nome de usuário e tipo de formato, entre outras coisas. Essas informações são armazenadas em três locais diferentes:</p>
-<ul>
-<li><p>/etc/gitconfig: Contém valores para todos os usuários no sistema e todos os seus repositórios. Se você passar a opção –system para git config, ele lê e escreve a partir deste arquivo.</p></li>
-<li><p>~/.gitconfig ou ~/.config/git/config: Especificamente para você, o usuário logado. Você pode fazer o Git ler e escrever para este arquivo passando a opção –global.</p></li>
-<li><p>config no diretório Git (ou seja, .git/config) de qualquer repositório que você esteja usando: Específico para esse único repositório. Cada nível sobrescreve os valores no nível anterior, então valores em .git/config têm precedência sobre /etc/gitconfig.</p></li>
-</ul>
-<p>O comando <code>git config --list</code> lista as configurações do Git que estão atualmente configuradas.</p>
-</section>
-<section id="objetos-git" class="level2">
-<h2 class="anchored" data-anchor-id="objetos-git">Objetos Git</h2>
-<p>O Git é um sistema de controle de versão que mantém o histórico de alterações em arquivos e diretórios em um repositório. Para fazer isso, o Git usa um sistema de armazenamento de objetos que contém quatro tipos principais de objetos: blob, tree, commit e tag.</p>
-<p><strong>1. Blob</strong>: O tipo de objeto mais básico no Git é o blob. Um objeto blob é um arquivo com dados, mas sem metadados (como nome de arquivo ou permissões). Cada versão de cada arquivo em seu repositório Git é armazenada como um objeto blob separado.</p>
-<p><strong>2. Tree</strong>: Um objeto de tree (árvore) no Git é essencialmente análogo a um diretório. Ele representa uma estrutura de diretório de arquivos e outros diretórios. Um objeto tree contém um ou mais entradas de tree, cada uma das quais contém uma referência a um blob ou tree, juntamente com o nome do arquivo, permissões e o bit ‘execute’.</p>
-<p><strong>3. Commit</strong>: Um objeto de commit contém metadados para cada alteração introduzida no repositório, incluindo o autor, o committer (que pode ser diferente do autor), a mensagem de commit e um ponteiro para o objeto tree que representa a estrutura de diretório de nível superior para o projeto. Cada commit também contém um ou mais ponteiros para os commit(s) pai(s) que representam o(s) estado(s) anterior(es) do projeto.</p>
-<p><strong>4. Tag</strong>: Uma tag é uma referência a um objeto de commit, usada geralmente para marcar pontos específicos no histórico do repositório como uma versão específica de um projeto. Tags podem ser leves (apontando diretamente para um commit) ou anotadas (armazenadas como objetos completos com um apontador para um commit, um nome de tag, uma mensagem de tag e um tagger).</p>
-<p><span style="background-color:#DCDCDC">Esses quatro tipos de objetos (blob, tree, commit e tag), juntamente com referências que apontam para objetos de commit (como branches e HEAD), formam a estrutura fundamental do sistema de armazenamento de dados do Git.</span></p>
-</section>
-<section id="excluir-um-repositório-git" class="level2">
-<h2 class="anchored" data-anchor-id="excluir-um-repositório-git">Excluir um repositório Git</h2>
-<p>Se surgir a necessidade de excluir um repositório Git e manter os arquivos, você pode fazer isso excluindo a pasta oculta .git, que é onde todas as informações do repositório Git são armazenadas. <strong>Porém, tenha muito cuidado, pois isso removerá todo o histórico de versões do Git para este repositório</strong>. Siga os passos abaixo para excluir o repositório Git:</p>
-<p>1- Navegue até o diretório que contém o repositório Git que você deseja excluir.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /caminho/para/o/diretorio</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>2- Exclua a pasta .git dentro desse diretório.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> .git</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="diferentes-contas-git-para-diferentes-projetos" class="level2">
-<h2 class="anchored" data-anchor-id="diferentes-contas-git-para-diferentes-projetos">Diferentes contas Git para diferentes projetos</h2>
-<p>Configurar duas contas Git para diferentes projetos pode ser feito de forma automática usando a funcionalidade de “inclusão condicional” no arquivo de configuração do Git (~/.gitconfig). Primeiro, é necessário configurar globalmente sua conta principal do Git com seu nome de usuário e email usando o comando git config. Em seguida, você pode criar uma inclusão condicional no arquivo ~/.gitconfig para especificar a configuração da segunda conta com base no diretório do projeto. Ao navegar para a pasta do segundo projeto, o Git utilizará automaticamente as configurações definidas para essa conta específica, como o nome do usuário e o email, enquanto em outros projetos continuará usando as configurações globais da primeira conta. Isso simplifica a gestão de várias contas Git em diferentes projetos, garantindo que as credenciais corretas sejam usadas em cada caso, sem a necessidade de alternar manualmente entre elas.</p>
-<p><strong>Para criar a inclusão condicional no arquivo de configuração global,</strong> abra o arquivo de configuração do Git global <code>~/.gitconfig</code> em um editor de texto. Adicione ou edite a seção [includeIf] da seguinte forma:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[includeIf</span> <span class="st">"gitdir:/caminho/para/sua/segunda/pasta/"</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">path</span> = ~/.gitconfig-segunda-conta</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Para configurar contas do GitHub diferentes com o Git de forma automática, você pode utilizar o mesmo conceito de inclusão condicional, para mais detalhes de como fazer nos links abaixo:</p>
-<ul>
-<li><a href="https://javascript.plainenglish.io/how-to-manage-multiple-github-accounts-in-vscode-using-ssh-keys-7f1a3adef58a">Manage Multiple GitHub Accounts</a></li>
-<li><a href="https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/">Steps to Set Up Multiple GitHub</a></li>
+<li><strong>docker login:</strong> Faz login em um registro de contêiner.</li>
+<li><strong>docker logout:</strong> Faz logout de um registro de contêiner.</li>
+<li><strong>docker search:</strong> Procura imagens Docker em um registro.</li>
+<li><strong>docker push:</strong> Envia uma imagem Docker para um registro.</li>
+<li><strong>docker pull:</strong> Baixa uma imagem do Docker Hub ou de um registro de contêiner.</li>
+<li><strong>docker tag:</strong> Adiciona uma tag a uma imagem Docker.</li>
 </ul>
 </section>
-<section id="integração-com-plataformas-de-hospedagem" class="level2">
-<h2 class="anchored" data-anchor-id="integração-com-plataformas-de-hospedagem">Integração com plataformas de hospedagem</h2>
-<p><a href="https://github.com/">GitHub</a>, <a href="https://bitbucket.org/">Bitbucket</a> e <a href="https://gitlab.com/">GitLab</a> são plataformas baseadas em nuvem que fornecem hospedagem de repositórios Git, permitindo que os desenvolvedores armazenem e compartilhem seus códigos, colaborem em projetos e rastreiem e controlem alterações no código. GitHub é a plataforma mais popular, hospedando milhões de repositórios de desenvolvedores e organizações em todo o mundo. Ele não só suporta controle de versão Git, mas também fornece funcionalidades adicionais, como pull requests, issues de rastreamento, actions para automação de CI/CD e integração com muitas outras ferramentas e plataformas.</p>
-<p>Copiando (clonar) um repositorio existente:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/user/example.git</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="comandos-de-sistema" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-sistema">Comandos de Sistema</h3>
 <ul>
-<li><p><a href="https://git-scm.com/docs/git-clone"><strong>git clone</strong></a><strong>:</strong> Este comando é usado para criar uma cópia local de um repositório remoto. Quando você executa git clone, o Git cria um novo diretório no seu sistema local, inicializa um repositório Git nesse diretório, puxa todo o histórico de commits do repositório remoto e verifica o último commit para o seu diretório de trabalho. Basicamente, é uma maneira de obter uma cópia completa de um projeto existente.</p></li>
-<li><p><a href="https://git-scm.com/docs/git-remote"><strong>git remote</strong></a><strong>:</strong> Este comando é usado para gerenciar as conexões com repositórios remotos. Ele permite que você crie, visualize e delete conexões para outros repositórios. Quando você clona um repositório, o Git automaticamente adiciona esse repositório como um “remote” chamado “origin”, permitindo que você interaja com o repositório original a partir do qual você clonou. Você pode adicionar mais remotos usando o comando git remote add, e pode sincronizar suas alterações com remotos usando comandos como git push e git pull.</p></li>
-<li><p><a href="https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork"><strong>git remote add usptream</strong></a><strong>:</strong> Quando você adiciona um “upstream” ao seu repositório Git, você está criando uma conexão com um repositório remoto a partir do qual você deseja buscar ou puxar mudanças. Isso é útil, por exemplo, quando você fez um “fork” de um repositório em um serviço como o GitHub, e quer manter o seu fork sincronizado com as alterações do repositório original.Depois de adicionar o upstream, você pode buscar as alterações do repositório original com ‘git fetch upstream’, e pode mesclar essas alterações em sua branch atual com ‘git merge upstream/branch_name’.</p></li>
-<li><p><a href="https://git-scm.com/docs/git-fetch"><strong>git fetch</strong></a><strong>:</strong> Este comando baixa as alterações do repositório remoto para o seu repositório local, mas não as mescla com o seu código nem modifica o seu código atual. Isso permite que você veja as alterações recentes no repositório remoto, sem misturá-las com o seu trabalho atual. Se você quiser integrar as mudanças no seu código, você precisará fazer um git merge após o fetch.</p></li>
-<li><p><a href="https://git-scm.com/docs/git-pull"><strong>git pull</strong></a><strong>:</strong> Este comando é essencialmente uma combinação de<code>git fetch</code> seguido de <code>git merge</code>. Ou seja, ele baixa as alterações do repositório remoto e as mescla automaticamente com o seu código atual. É útil quando você sabe que quer atualizar o seu código para corresponder ao estado mais recente do repositório remoto.</p></li>
+<li><strong>docker info:</strong> Exibe informações sobre o host Docker.</li>
+<li><strong>docker version:</strong> Exibe a versão do Docker instalada.</li>
+<li><strong>docker system df:</strong> Exibe informações sobre o uso de espaço no host.</li>
+<li><strong>docker system prune:</strong> Remove todos os contêineres parados, imagens não utilizadas, volumes e redes não utilizadas.</li>
+<li><strong>docker system events:</strong> Exibe eventos do sistema em tempo real.</li>
+<li><strong>docker system info:</strong> Exibe informações detalhadas sobre o sistema Docker.</li>
+<li><strong>docker system top:</strong> Exibe os processos em execução em todos os contêineres.</li>
 </ul>
-<p>A integração dessas plataformas baseadas em nuvem com o Git permite a colaboração e o controle de versão eficientes, facilitando o desenvolvimento de software ágil e o uso de práticas de DevOps. Além disso, elas também desempenham um papel crítico no suporte a equipes remotas, já que os desenvolvedores podem colaborar em projetos independentemente de sua localização geográfica.</p>
-<p><strong>“Fetching” e “Pulling” são dois conceitos importantes no Git relacionados à obtenção de dados de repositórios remotos. A diferença entre os dois é que git fetch permite que você veja as alterações antes de decidir se quer integrá-las ou não, enquanto git pull baixa as alterações e as mescla com o seu código imediatamente (Fig. 01)</strong>. :::</p>
+</section>
+<section id="comandos-de-configuração" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-configuração">Comandos de Configuração</h3>
+<ul>
+<li><strong>docker config ls:</strong> Lista as configurações do Docker.</li>
+<li><strong>docker config create:</strong> Cria uma nova configuração do Docker.</li>
+<li><strong>docker config rm:</strong> Remove uma ou mais configurações do Docker.</li>
+<li><strong>docker config inspect:</strong> Exibe informações detalhadas sobre uma configuração do Docker.</li>
+<li><strong>docker config export:</strong> Exporta uma configuração do Docker para um arquivo.</li>
+<li><strong>docker config import:</strong> Importa uma configuração do Docker de um arquivo.</li>
+<li><strong>docker config attach:</strong> Anexa uma configuração a um serviço.</li>
+<li><strong>docker config detach:</strong> Desanexa uma configuração de um serviço.</li>
+<li><strong>docker config prune:</strong> Remove todas as configurações não utilizadas.</li>
+<li><strong>docker config inspect:</strong> Exibe informações detalhadas sobre uma configuração do Docker.</li>
+</ul>
+</section>
+<section id="comandos-de-logs-e-inspeção" class="level3">
+<h3 class="anchored" data-anchor-id="comandos-de-logs-e-inspeção">Comandos de Logs e Inspeção</h3>
+<ul>
+<li><strong>docker logs:</strong> Exibe os logs de um contêiner.</li>
+<li><strong>docker logs -f:</strong> Exibe os logs de um contêiner em tempo real.</li>
+<li><strong>docker logs –tail:</strong> Exibe as últimas linhas de logs de um contêiner.</li>
+<li><strong>docker logs –since:</strong> Exibe os logs de um contêiner desde um determinado momento.</li>
+<li><strong>docker logs –until:</strong> Exibe os logs de um contêiner até um determinado momento.</li>
+<li><strong>docker stats:</strong> Exibe estatísticas de uso de recursos de um contêiner.</li>
+<li><strong>docker stats –all:</strong> Exibe estatísticas de uso de recursos de todos os contêineres no host.</li>
+<li><strong>docker stats –format:</strong> Formata a saída das estatísticas de uso de recursos.</li>
+<li><strong>docker stats –no-stream:</strong> Exibe as estatísticas de uso de recursos uma única vez.</li>
+<li><strong>docker stats –no-trunc:</strong> Exibe as estatísticas de uso de recursos sem truncar os valores.</li>
+</ul>
+</section>
+</section>
+<section id="dockerfile" class="level2">
+<h2 class="anchored" data-anchor-id="dockerfile">Dockerfile</h2>
+<div style="text-align: justify">
+<p>Um Dockerfile é um script de texto simples que contém uma série de instruções que a CLI do Docker (Interface de Linha de Comando) interpreta para criar uma imagem Docker. Ele define todos os passos necessários para criar uma imagem que pode ser usada para instanciar contêineres. Essencialmente, o Dockerfile automatiza a configuração e a montagem de um ambiente de execução de software.</p>
+<p><strong>FROM:</strong> Define a imagem base a partir da qual você está construindo. Esta é a primeira instrução de um Dockerfile.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">FROM</span> ubuntu:20.04</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>RUN:</strong> Executa um comando no contêiner durante a construção da imagem. É usado para instalar pacotes e configurar o ambiente.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">RUN</span> apt-get update <span class="kw">&amp;&amp;</span> <span class="ex">apt-get</span> install <span class="at">-y</span> python3</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>COPY:</strong> Copia arquivos ou diretórios do sistema de arquivos do host para o sistema de arquivos do contêiner.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">COPY</span> . /app</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>ADD:</strong> Similar ao COPY, mas também pode descompactar arquivos locais e fazer download de URLs.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ADD</span> https://example.com/file.tar.gz /app/</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>WORKDIR:</strong> Define o diretório de trabalho para qualquer instrução RUN, CMD, ENTRYPOINT, COPY e ADD subsequente.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">WORKDIR</span> /app</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>CMD:</strong> Fornece um comando padrão para ser executado quando um contêiner é iniciado a partir da imagem. Só pode haver um CMD por Dockerfile.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">CMD</span> [<span class="st">"python3"</span>, <span class="st">"app.py"</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>ENTRYPOINT:</strong> Define um comando que sempre será executado quando o contêiner iniciar. Pode ser combinado com CMD.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ENTRYPOINT</span> [<span class="st">"python3"</span>, <span class="st">"app.py"</span>]</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>ENV:</strong> Define variáveis de ambiente.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ENV</span> APP_ENV=production</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>EXPOSE:</strong> Informa ao Docker que o contêiner escuta na(s) porta(s) especificada(s) em tempo de execução.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">EXPOSE</span> 8080</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>VOLUME:</strong> Cria um ponto de montagem com o nome especificado e marca-o como um volume.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">VOLUME</span> /data</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="benefícios-do-dockerfile" class="level3">
+<h3 class="anchored" data-anchor-id="benefícios-do-dockerfile">Benefícios do Dockerfile</h3>
+<div style="text-align: justify">
+<ul>
+<li><strong>Reprodutibilidade:</strong> O Dockerfile permite que você defina o ambiente de execução de forma consistente, garantindo que a aplicação se comporte da mesma maneira em diferentes ambientes.</li>
+<li><strong>Automatização:</strong> O Dockerfile automatiza a configuração e a montagem de um ambiente de execução de software, economizando tempo e esforço.</li>
+<li><strong>Controle de Versão:</strong> O Dockerfile é um arquivo de texto simples que pode ser versionado e controlado com ferramentas de controle de versão como Git.</li>
+<li><strong>Flexibilidade:</strong> O Dockerfile oferece flexibilidade para personalizar o ambiente de execução da aplicação, adicionando ou removendo dependências conforme necessário.</li>
+<li><strong>Eficiência:</strong> O Dockerfile cria camadas de imagem que são reutilizadas entre builds, tornando o processo de construção mais eficiente.</li>
+<li><strong>Padronização:</strong> O Dockerfile permite padronizar a construção de imagens Docker em toda a organização, garantindo consistência e conformidade.</li>
+<li><strong>Segurança:</strong> O Dockerfile permite definir um ambiente de execução seguro, limitando as dependências e as permissões do contêiner.</li>
+<li><strong>Portabilidade:</strong> O Dockerfile facilita a migração de aplicativos entre diferentes ambientes de computação, garantindo que a aplicação se comporte da mesma maneira em qualquer lugar.</li>
+</ul>
+</div>
+</section>
+</section>
+<section id="docker-compose" class="level2">
+<h2 class="anchored" data-anchor-id="docker-compose">Docker Compose</h2>
+<div style="text-align: justify">
+<p>Docker compose é uma ferramenta para definir e executar aplicativos Docker multi-contêiner em um único arquivo YAML. Ele permite que você defina a configuração de todos os serviços, redes e volumes em um único arquivo, facilitando a execução de aplicativos complexos com várias partes.</p>
+<ul>
+<li><strong>docker-compose:</strong> Define e executa aplicativos Docker multi-contêiner em um único arquivo YAML.</li>
+<li><strong>docker-compose up:</strong> Cria e inicia contêineres definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose down:</strong> Para e remove contêineres definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose build:</strong> Constrói ou reconstrói serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose ps:</strong> Lista os serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose logs:</strong> Exibe os logs de serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose exec:</strong> Executa um comando em um serviço definido em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose pull:</strong> Baixa as imagens dos serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose restart:</strong> Reinicia os serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose stop:</strong> Para os serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose rm:</strong> Remove os contêineres definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose config:</strong> Valida e exibe a configuração de um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose events:</strong> Exibe eventos de serviço em tempo real.</li>
+<li><strong>docker-compose images:</strong> Lista as imagens usadas pelos serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose kill:</strong> Força a parada dos serviços definidos em um arquivo docker-compose.yml.</li>
+<li><strong>docker-compose pause:</strong> Pausa os serviços definidos em um arquivo docker-compose.yml.</li>
+</ul>
+</div>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<div style="text-align: justify">
+<p>O Docker é uma ferramenta poderosa para executar aplicativos em contêineres, oferecendo portabilidade, eficiência e segurança. Com o Dockerfile, você pode definir o ambiente de execução de forma consistente e automatizada, garantindo que a aplicação se comporte da mesma maneira em diferentes ambientes. Esperamos que essas dicas e truques de Docker sejam úteis para você ao trabalhar com contêineres e imagens Docker.</p>
+</div>
+</section>
+<section id="referências" class="level2">
+<h2 class="anchored" data-anchor-id="referências">Referências</h2>
+<ul>
+<li><a href="https://docs.docker.com/">Docker Documentation</a></li>
+<li><a href="https://docs.docker.com/engine/reference/builder/">Dockerfile Reference</a></li>
+<li><a href="https://www.docker.com/resources/what-container">Docker Overview</a></li>
+<li><a href="https://hub.docker.com/">Docker Hub</a></li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+</ul>
 <hr>
-<p><strong>#GitTips #GitTricks #GitBestPractices #VersionControl #GitCommands #GitAdvanced</strong></p>
+<p><strong>#Docker #Dockerfile #Microservices #DevOps</strong></p>
 
 
 </section>
@@ -492,6 +562,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -560,13 +657,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -645,10 +744,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/nionmaron\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -658,8 +774,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -671,7 +796,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -715,6 +963,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -740,6 +989,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -802,11 +1077,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a></div>   
-    <div class="nav-footer-center"><a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></div>
-    <div class="nav-footer-right"><a href="../../ts-and-cs.html">Terms &amp; Conditions</a></div>
+    <div class="nav-footer-left">
+<p>Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></p>
+</div>
+    <div class="nav-footer-right">
+<p><a href="../../ts-and-cs.html">Terms &amp; Conditions</a></p>
+</div>
   </div>
 </footer>
+
 
 
 

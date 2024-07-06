@@ -2,6 +2,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/posts/0009 Docker-Dicas-e-Truques-pt/index.html",
       "/posts/0008 Arquivos de Log/index.html",
       "/posts/0007-Combinar Arquivo em Exel-pt/index.html",
       "/posts/0006-gitignore-pt/index.html",
@@ -23,6 +24,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/0009 Docker-Dicas-e-Truques-pt/index.html",
       "/posts/0008 Arquivos de Log/index.html",
       "/posts/0007-Combinar Arquivo em Exel-pt/index.html",
       "/posts/0006-gitignore-pt/index.html",

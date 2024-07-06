@@ -1,14 +1,15 @@
 ---
-title: "**Git: Dicas e Truques**"
+title: "**Docker Dicas e Truques**"
 description: |
-  Oferece dicas e truques avançados de Git para otimizar controle de versões em desenvolvimento de software.
+  Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.
 lang: pt
 author: "Dransfeld, N. M."
-draft: true
-date: "2023-07-25"
+draft: false
+toc: true
+date: "2024-07-25"
 #date-modified: "2023-07-25"
-categories: [Git,GitHub,Português]
-image: "git_workflow_cover.png"
+categories: [Docker, Dockerfile, Português]
+image: "docker2.png"
 title-block-banner: false
 #https://quarto.org/docs/websites/website-blog.html#posts-directory
 #https://quarto.org/docs/websites/website-listings.html#feeds
@@ -16,307 +17,281 @@ title-block-banner: false
 
 ## Introdução
 
-O [Git](https://git-scm.com/) é um sistema de controle de versão conhecido como VCS (do inglês, *version control system*) e vem sendo amplamente utilizado no desenvolvimento de códigos para software, sites, aplicativos, aprendizado de máquina, inteligência artificial, etc. Ele foi criado por [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds) em 2005 para ajudar no desenvolvimento do kernel do Linux, mas desde então se tornou uma ferramenta essencial em muitos projetos de software.
+Docker é uma plataforma que permite a criação, envio e execução de aplicativos em contêineres. Contêineres são unidades padronizadas de software que empacotam o código do aplicativo e todas as suas dependências para que o aplicativo possa ser executado de maneira rápida e confiável em diferentes ambientes de computação. No cerne do Docker estão dois conceitos-chave: **imagens e contêineres**.
 
-Esta ferramenta permite que os desenvolvedores acompanhem as alterações feitas em seus arquivos ao longo do tempo, facilitando o trabalho colaborativo e o gerenciamento eficiente de versões de um projeto. O sistema do Git registra todas as alterações feitas nos arquivos, permitindo que os desenvolvedores rastreiem quem fez cada alteração, quando foi feita e seu motivo.
+::: grid
+::: {.g-col-12 }
+![](containers3.png){fig-align="center" width="90%" fig-alt="Aplicativos nos contêineres Docker"}
+:::
+:::
 
-Além disso, [o Git possui uma ampla gama de recursos, como ramificações (branches) para o desenvolvimento paralelo, fusão (merge) das ramificações, resolução de conflitos e integração com serviços de hospedagem]{style="background-color:#DCDCDC"} como o [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) e [GitLab](https://gitlab.com/) (Fig. 01).
+## Imagens Docker
 
-A adoção generalizada do Git e a integração com várias plataformas de desenvolvimento, como o GitHub, tornam-no uma escolha adquada para o controle de versão. Além disso, à medida que mais empresas adotam práticas de DevOps e integração contínua / entrega contínua (CI/CD), o Git, com suas características de ramificação e fusão, torna-se uma ferramenta essencial. O [Git também é altamente escalável, o que significa que pode acomodar projetos que vão desde pequenos aplicativos individuais até grandes projetos corporativos]{style="background-color:#DCDCDC"}.
+::: {style="text-align: justify"}
+Uma imagem Docker é um pacote imutável que contém tudo o que é necessário para executar uma aplicação: código-fonte, bibliotecas, dependências, ferramentas e arquivos de configuração. As imagens são construídas a partir de um arquivo chamado Dockerfile, que contém uma lista de instruções sobre como criar a imagem.
 
-![Fig.01 - Principais comandos Git e representação do fluxo de trabalho](git_workflow.png){fig-align="center"}
+Estrutura de uma Imagem Docker:
 
-Nesse artigo, **vou apresentar uma série de dicas e truques essenciais para o Git, focados na plataforma Windows e utilizando o Git Bash como ambiente** de linha de comando. Embora o enfoque seja no Windows, é importante ressaltar que muitos dos comandos e conceitos abordados também se aplicam ao Mac e ao Linux. Caso queira consultar todas as funções e ter uma melhor descrição dos comandos você pode consulta o manual no link <https://git-scm.com/docs>
+-   **Dockerfile:** Um arquivo de texto com comandos que a CLI do Docker pode executar para montar uma imagem. Cada comando no Dockerfile cria uma camada na imagem, que é uma maneira eficiente de fazer alterações sem recriar a imagem inteira.
 
-## Iniciando com GIT
+-   **Base Image:** A imagem base é a camada inicial da imagem. Pode ser um sistema operacional básico ou uma imagem preexistente.
 
-### Instalação
+-   **Layers:** Cada instrução no Dockerfile cria uma nova camada na imagem. Por exemplo, a instalação de uma biblioteca ou a cópia de arquivos para o contêiner criam camadas separadas.
 
--   **Windows**: visite o site oficial do Git <https://git-scm.com> e clique no botão de download para Windows e execute o arquivo.
--   **macOS**: se você usa o macOS, pode instalar o Git usando o gerenciador de pacotes *Homebrew*. Primeiro, instale o *Homebrew* abrindo o Terminal e executando alguns comandos.
--   **Linux:**: se você é usuário do Ubuntu ou Debian, o Git provavelmente está disponível via `apt`. Para instalá-lo, abra um terminal e execute: `sudo apt-get install git`.
+-   **Metadata:** Informações sobre a imagem, como autor, versão, descrição, etc., são incluídas no Dockerfile e armazenadas na imagem.
+:::
 
-### Configurações iniciais: nome e email
+## Contêineres Docker
 
-Ao utilizar o Git, é recomendável configurar seu nome e endereço de e-mail. Essas informações são registradas nos commits (confirmações) que você realiza em um repositório Git. Existem algumas razões pelas quais você deve fornecer esses detalhes para identificação do autor e rastreamento de contribuições. Para configurar seu nome e endereço de e-mail no Git, você pode utilizar os seguintes comandos no terminal:
+::: {style="text-align: justify"}
+
+Um contêiner é uma instância em execução de uma imagem Docker. Ele pode ser visto como um ambiente de execução leve e portátil que compartilha o kernel do sistema operacional host, mas é isolado dos demais processos do sistema.
+
+
+
+Estrutura de Funcionamento de um Contêiner Docker:
+
+-   **Inicialização do Contêiner:** Quando você executa um contêiner a partir de uma imagem, o Docker cria uma camada de escrita no topo das camadas da imagem e inicia um processo para executar a aplicação.
+
+-   **Namespace Isolation:** Docker utiliza namespaces do kernel do Linux para fornecer um ambiente isolado para o contêiner. Isso inclui separação de rede, PID, montagens de sistema de arquivos e outros aspectos.
+
+-   **Control Groups (cgroups):** Docker usa cgroups para limitar e monitorar o uso de recursos (CPU, memória, IO, etc.) por um contêiner.
+
+-   **Union File System (UnionFS):** As imagens são construídas em camadas usando um sistema de arquivos union, que permite criar camadas de leitura e gravação de forma eficiente.
+
+-   **Networking:** Contêineres podem ser conectados a várias redes virtuais. Docker configura automaticamente uma rede padrão, mas você pode definir redes personalizadas.
+
+-   **Storage:** Contêineres usam volumes para persistir dados além do ciclo de vida do contêiner. Volumes podem ser montados em diferentes contêineres para compartilhar dados.
+
+:::
+
+## Principais Comandos Docker
+
+::: {style="text-align: justify"}
+Docker fornece uma variedade de comandos para gerenciar imagens, contêineres, volumes, redes e mais. Aqui estão alguns dos principais comandos Docker, junto com suas explicações:
+:::
+
+### Comandos de Imagem
+
+-   **docker build:** Constrói uma imagem Docker a partir de um Dockerfile.
+-   **docker pull:** Baixa uma imagem do Docker Hub ou de um registro de contêiner.
+-   **docker push:** Envia uma imagem Docker para um registro.
+-   **docker images:** Lista as imagens Docker no host.
+-   **docker rmi:** Remove uma ou mais imagens Docker.
+-   **docker tag:** Adiciona uma tag a uma imagem Docker.
+-   **docker history:** Exibe o histórico de uma imagem Docker.
+-   **docker save:** Salva uma ou mais imagens Docker em um arquivo tar.
+-   **docker load:** Carrega uma ou mais imagens Docker de um arquivo tar.
+-   **docker commit:** Cria uma nova imagem a partir de um contêiner em execução.
+-   **docker inspect:** Exibe informações detalhadas sobre uma imagem Docker.
+-   **docker search:** Procura imagens Docker em um registro.
+
+### Comandos de Contêiner
+
+-   **docker run:** Executa um contêiner a partir de uma imagem.
+-   **docker start:** Inicia um contêiner parado.
+-   **docker stop:** Para um contêiner em execução.
+-   **docker restart:** Reinicia um contêiner.
+-   **docker pause:** Pausa a execução de um contêiner.
+-   **docker unpause:** Retoma a execução de um contêiner pausado.
+-   **docker kill:** Força a parada de um contêiner.
+-   **docker rm:** Remove um ou mais contêineres.
+-   **docker ps:** Lista os contêineres em execução.
+-   **docker ps -a:** Lista todos os contêineres no host.
+-   **docker logs:** Exibe os logs de um contêiner.
+-   **docker exec:** Executa um comando em um contêiner em execução.
+-   **docker attach:** Conecta-se a um contêiner em execução.
+-   **docker cp:** Copia arquivos entre o host e um contêiner.
+-   **docker top:** Exibe os processos em execução em um contêiner.
+-   **docker stats:** Exibe estatísticas de uso de recursos de um contêiner.
+-   **docker inspect:** Exibe informações detalhadas sobre um contêiner.
+-   **docker diff:** Exibe as alterações feitas em um contêiner.
+-   **docker commit:** Cria uma nova imagem a partir de um contêiner em execução.
+
+### Comandos de Rede
+
+-   **docker network ls:** Lista as redes Docker no host.
+-   **docker network create:** Cria uma nova rede Docker.
+-   **docker network rm:** Remove uma ou mais redes Docker.
+-   **docker network inspect:** Exibe informações detalhadas sobre uma rede Docker.
+-   **docker network connect:** Conecta um contêiner a uma rede.
+-   **docker network disconnect:** Desconecta um contêiner de uma rede.
+-   **docker network prune:** Remove todas as redes não utilizadas.
+-   **docker network inspect:** Exibe informações detalhadas sobre uma rede Docker.
+-   **docker network connect:** Conecta um contêiner a uma rede.
+-   **docker network disconnect:** Desconecta um contêiner de uma rede.
+-   **docker network prune:** Remove todas as redes não utilizadas.
+
+### Comandos de Volume
+
+-   **docker volume ls:** Lista os volumes Docker no host.
+-   **docker volume create:** Cria um novo volume Docker.
+-   **docker volume rm:** Remove um ou mais volumes Docker.
+-   **docker volume inspect:** Exibe informações detalhadas sobre um volume Docker.
+-   **docker volume prune:** Remove todos os volumes não utilizados.
+
+### Comandos de Registro
+
+-   **docker login:** Faz login em um registro de contêiner.
+-   **docker logout:** Faz logout de um registro de contêiner.
+-   **docker search:** Procura imagens Docker em um registro.
+-   **docker push:** Envia uma imagem Docker para um registro.
+-   **docker pull:** Baixa uma imagem do Docker Hub ou de um registro de contêiner.
+-   **docker tag:** Adiciona uma tag a uma imagem Docker.
+
+### Comandos de Sistema
+
+-   **docker info:** Exibe informações sobre o host Docker.
+-   **docker version:** Exibe a versão do Docker instalada.
+-   **docker system df:** Exibe informações sobre o uso de espaço no host.
+-   **docker system prune:** Remove todos os contêineres parados, imagens não utilizadas, volumes e redes não utilizadas.
+-   **docker system events:** Exibe eventos do sistema em tempo real.
+-   **docker system info:** Exibe informações detalhadas sobre o sistema Docker.
+-   **docker system top:** Exibe os processos em execução em todos os contêineres.
+
+### Comandos de Configuração
+
+-   **docker config ls:** Lista as configurações do Docker.
+-   **docker config create:** Cria uma nova configuração do Docker.
+-   **docker config rm:** Remove uma ou mais configurações do Docker.
+-   **docker config inspect:** Exibe informações detalhadas sobre uma configuração do Docker.
+-   **docker config export:** Exporta uma configuração do Docker para um arquivo.
+-   **docker config import:** Importa uma configuração do Docker de um arquivo.
+-   **docker config attach:** Anexa uma configuração a um serviço.
+-   **docker config detach:** Desanexa uma configuração de um serviço.
+-   **docker config prune:** Remove todas as configurações não utilizadas.
+-   **docker config inspect:** Exibe informações detalhadas sobre uma configuração do Docker.
+
+### Comandos de Logs e Inspeção
+
+-   **docker logs:** Exibe os logs de um contêiner.
+-   **docker logs -f:** Exibe os logs de um contêiner em tempo real.
+-   **docker logs --tail:** Exibe as últimas linhas de logs de um contêiner.
+-   **docker logs --since:** Exibe os logs de um contêiner desde um determinado momento.
+-   **docker logs --until:** Exibe os logs de um contêiner até um determinado momento.
+-   **docker stats:** Exibe estatísticas de uso de recursos de um contêiner.
+-   **docker stats --all:** Exibe estatísticas de uso de recursos de todos os contêineres no host.
+-   **docker stats --format:** Formata a saída das estatísticas de uso de recursos.
+-   **docker stats --no-stream:** Exibe as estatísticas de uso de recursos uma única vez.
+-   **docker stats --no-trunc:** Exibe as estatísticas de uso de recursos sem truncar os valores.
+
+## Dockerfile
+
+::: {style="text-align: justify"}
+Um Dockerfile é um script de texto simples que contém uma série de instruções que a CLI do Docker (Interface de Linha de Comando) interpreta para criar uma imagem Docker. Ele define todos os passos necessários para criar uma imagem que pode ser usada para instanciar contêineres. Essencialmente, o Dockerfile automatiza a configuração e a montagem de um ambiente de execução de software.
+
+**FROM:** Define a imagem base a partir da qual você está construindo. Esta é a primeira instrução de um Dockerfile.
 
 ``` bash
-git config –global user.name "Seu Nome"
+FROM ubuntu:20.04
 ```
+
+**RUN:** Executa um comando no contêiner durante a construção da imagem. É usado para instalar pacotes e configurar o ambiente.
 
 ``` bash
-git config –global user.email "seuemail@exemplo.com"
+RUN apt-get update && apt-get install -y python3
 ```
 
-### Comandos UNIX no GIT
-
-O Git foi originalmente desenvolvido para ser usado no Linux, um sistema operacional do tipo Unix, por isso é natural que ele use uma interface de linha de comando baseada em [Unix](https://wiki.inf.ufpr.br/maziero/doku.php?id=unix:comandos_basicos#:%20~:text=Comandos%20b%C3%A1sicos&text=mv%20%3A%20movimentar%20arquivos.,conte%C3%BAdo%20de%20arquivos%20(paginado).). Abaixo algumas funções úteis:
-
--   `ls`: Lista o conteúdo do diretório corrente;
--   `pwd`: significa "print working directory", este comando retorna o caminho absoluto do diretório atual;
--   `cd`: significa "change directory"e é usado para mudar o diretório atual. Em Unix, `cd .` representa o diretório atual e `cd ..` representa o diretório pai;
--   `touch`: atualiza a data de um arquivo (o cria, se não existir).
-
-### Commits atômicos
-
-Commit atômico é um conceito em controle de versão que sugere na qual cada commit deve ser uma unidade pequena e que todos os seus arquivos estejam dentro do mesmo contexto. Isso significa que cada commit deve representar uma única alteração lógica no código - seja corrigindo um bug ou adicionando uma nova funcionalidade.
-
-Os commits atômicos são uma prática recomendada em controle de versão e são importantes por várias razões:
-
--   Facilita o entendimento do histórico do projeto;
--   Torna a resolução de conflitos mais fácil;
--   Permite reverter mudanças facilmente;
--   Facilita a revisão de código;
-
-[Alerta: Dentro de um repositório Git, não se deve criar outro repositório Git. Isso ocorre porque o Git trata todo o diretório do repositório como uma unidade indivisível]{style="background-color:#DCDCDC"} e não suporta a criação de repositórios dentro dele. Criar outro repositório Git dentro de um repositório existente pode levar a vários problemas e erros, pois o Git não foi projetado para lidar com aninhamento de repositórios. Aqui estão alguns possíveis erros que podem ocorrer: conflitos de versionamento, problemas de sincronização, dificuldades na colaboração e perda de dados. Para verificar se você está criando indevidamente um repositório dentro de um repositório existente, você pode executar o seguinte comando no terminal dentro do diretório do seu projeto: `git status`.
-
-## Branches
-
-No Git, uma branch é uma linha de desenvolvimento separada que permite que você trabalhe em recursos ou correções de bugs sem interferir no código principal. Cada branch é uma ramificação independente do histórico de commits e pode ser mesclada (merged) com outras branches posteriormente. As branches são úteis para organizar o trabalho em equipe, permitindo que várias pessoas trabalhem em diferentes partes do projeto simultaneamente.
-
-Aqui estão alguns dos principais comandos relacionados a branches no Git, juntamente com suas descrições:
-
--   `git branch`: Exibe uma lista de todas as branches no repositório. O asterisco (\*) indica a branch atualmente ativa.
-
--   `git branch <nome_branch>`: Cria uma nova branch com o nome especificado.
-
--   `git switch <nome_branch>`: É um comando projetado para a tarefa de mudar de branch, simplificando o uso em relação ao git checkout. O git switch não executa ações adicionais, apenas muda a branch atual.
-
--   `git switch -c <nome_branch>`: cria uma nova branch a partir da branch atual e muda para ela, tudo em um único comando, permitindo que você crie e mude para uma nova branch de forma rápida e conveniente.
-
--   `git merge <nome_branch>`: Incorpora as alterações da branch especificada na branch atual. Isso cria um novo commit de merge no histórico.
-
--   `git branch -d <nome_branch>`: Exclui a branch especificada após mesclá-la com sucesso em outra branch.
-
--   `git branch -D <nome_branch>`: Força a exclusão da branch especificada, mesmo que as alterações não tenham sido mescladas.
-
--   `git branch -m <nome_antigo> <nome_novo>`: Renomeia a branch especificada.
-
--   `git branch -r`: Exibe uma lista das branches remotas disponíveis.
-
--   `git push <origin> <nome_branch>`: Envia a branch especificada para o repositório remoto.
-
--   `git pull <origin> <nome_branch>`: Atualiza a branch local com as alterações mais recentes do repositório remoto.
-
--   `git log`: é um comando usado no sistema de controle de versão Git que exibe um histórico de commits que levaram ao estado atual do código. Ele mostra o autor, a data e a mensagem do commit, ajudando a rastrear as mudanças e entender a evolução do projeto.
-
-### Outros comandos
-
--   `git commit -a -m`: adiciona automaticamente todas as alterações nos arquivos rastreados e faz um commit com uma mensagem específica, permitindo que você realize o commit rapidamente sem precisar usar o comando git add separadamente;
-
--   `git init`: cria um novo repositório do Git. Ele pode ser usado para converter um projeto existente e não versionado em um repositório do Git ou inicializar um novo repositório vazio.
-
--   `git diff branch1..branch2`: Compara a ponta das duas ramificações (branch), para visualizar as modificações;
-
--   `git checkout HEAD\~1`: é um comando do Git usado para alterar o estado do repositório Git para o commit anterior ao commit atual;
-
--   `git --version`: isso deve retornar a versão do Git que você instalou;
-
--   `ctrl + l`: é o comando no teclado que limpa a tela do terminal do git.
-
-## Git Restore
-
-A partir da versão 2.23 do Git, o comando [`git restore`](https://git-scm.com/docs/git-restore) é usado para restaurar conteúdos de arquivos no diretório de trabalho e na área de preparação (staging area) do Git. Ele pode ser usado para descartar modificações em arquivos que ainda não foram confirmadas em um commit ou para recuperar arquivos excluídos.
-
-A sintaxe básica do comando `git restore` é a seguinte:
+**COPY:** Copia arquivos ou diretórios do sistema de arquivos do host para o sistema de arquivos do contêiner.
 
 ``` bash
-git restore <opções> <arquivo>
+COPY . /app
 ```
 
-O comportamento exato do comando `git restore` pode variar dependendo da versão do Git que você está utilizando. É recomendado verificar a documentação oficial do Git ou executar `git restore --help` para obter informações detalhadas sobre as opções e comportamentos específicos da versão do Git que você está utilizando.
-
-## Git Reset
-
-O comando `git reset` é usado no Git para alterar a posição do branch (ramificação) atual e desfazer commits. Ele permite reverter o histórico do Git, descartando commits anteriores ou movendo o branch para um commit específico.
-
-Existem diferentes opções de uso do comando `git reset`. Aqui estão algumas das formas comuns de uso:
-
-**Reset "soft" (suave)**: O comando `git reset --soft` desfaz o commit mais recente, mas mantém as alterações do commit no diretório de trabalho e na área de preparação (staging area). Isso permite que você faça alterações adicionais e faça um novo commit com as alterações corrigidas. css Copy code git reset --soft HEAD\~1
-
-**Reset "mixed" (padrão)**: O comando `git reset --mixed`desfaz o commit mais recente e remove as alterações do commit da área de preparação (staging area), mas mantém as alterações no diretório de trabalho. Isso permite que você revise as alterações novamente e escolha quais arquivos deseja preparar para um novo commit. css Copy code git reset --mixed HEAD\~1
-
-**Reset "hard" (rígido)**: O comando `git reset --hard` desfaz completamente o commit mais recente, descartando todas as alterações do commit e do diretório de trabalho. Isso reverte o repositório Git para o estado do commit anterior e exclui todas as alterações não confirmadas. É importante ressaltar que, ao usar o comando git reset, os commits desfeitos são excluídos permanentemente do histórico. Portanto, tenha cuidado ao usá-lo e verifique se você tem um backup ou está confortável em perder esses commits.
-
-Recomenda-se verificar a [documentação oficial do Git](https://git-scm.com/docs/git-restore) ou executar `git reset --help` para obter informações detalhadas sobre as opções e comportamentos específicos do comando "git reset" na versão do Git que você está utilizando.
-
-## Git Revert
-
-O comando "[`git revert`](https://git-scm.com/docs/git-revert)" é usado no Git para criar um novo commit que desfaz as alterações de um ou mais commits anteriores. Ao contrário do comando "git reset", que remove os commits do histórico, o "git revert" desfaz as alterações de um commit existente criando um novo commit que reverte as modificações introduzidas.
-
-A sintaxe básica do comando `git revert` é a seguinte:
+**ADD:** Similar ao COPY, mas também pode descompactar arquivos locais e fazer download de URLs.
 
 ``` bash
-git revert <commit> 
+ADD https://example.com/file.tar.gz /app/
 ```
 
-Ao executar o comando `git revert`, o Git cria um novo commit que reverte as alterações introduzidas pelo commit especificado. Esse novo commit é adicionado ao histórico, desfazendo as modificações feitas pelo commit original, mas preservando o histórico completo do projeto.
-
-O comando `git revert` pode aceitar várias opções para personalizar o comportamento:
-
--   **n ou --no-commit**: Realiza a revert sem criar automaticamente um novo commit. Isso permite que você faça alterações adicionais antes de confirmar as reversões em um novo commit.
-
--   **m parent-number**: Especifica qual parente de um commit de merge deve ser revertido. O parente é numerado a partir de 1, e o commit de merge é especificado usando seu hash.
-
--   **s ou --signoff**: Adiciona uma assinatura digital na mensagem de confirmação do revert.
-
-Essas são apenas algumas opções comuns, e há mais opções disponíveis. Recomenda-se consultar a documentação oficial do Git ou executar `git revert --help` para obter informações mais detalhadas sobre as opções e comportamentos específicos do comando `git revert` na versão do Git que você está utilizando.
-
-**O `git revert` é uma maneira segura de desfazer alterações em commits anteriores sem alterar o histórico do projeto, sendo útil quando você deseja manter um registro completo de todas as alterações e garantir que a colaboração no projeto não seja afetada.**
-
-## Git Stash
-
-O comando "[`git stash`](https://git-scm.com/docs/git-stash)" é uma funcionalidade do sistema de controle de versão Git que permite aos desenvolvedores salvar temporariamente as alterações feitas em seu repositório de trabalho, sem precisar fazer um commit completo. O "stash" pode ser visto como uma área de armazenamento temporário para alterações não concluídas.
-
-Posteriormente, quando desejar retomar as alterações salvas, você pode usar os comandos `git stash list` para ver a lista de stashes disponíveis e `git stash apply` ou `git stash pop` para aplicar novamente as alterações salvas no seu diretório de trabalho. A diferença entre os comandos "apply" e "pop" é que o "apply" mantém o stash na lista, enquanto o "pop" remove o stash após aplicar as alterações.
-
-## Git Reflog
-
-O [`git reflog`](https://git-scm.com/docs/git-reflog) é um comando útil do Git que registra quando as pontas dos ramos e outras referências foram atualizadas no repositório local. Ele ajuda você a entender a história de um repositório de uma maneira mais granular do que `git log`, porque também registra quando você faz checkout para outro ramo, quando um commit é alterado (por exemplo, com `git commit --amend)`, e assim por diante.
-
-Segue alguns usos comuns do `git reflog`:
-
--   **Recuperação de commits perdidos**: O Git tem um sistema de garbage collection que limpa commits inacessíveis de tempos em tempos, mas antes disso, você pode usar o `git reflog` para encontrar commits perdidos. Isso é útil quando você exclui um ramo por engano, por exemplo.
-
--   **Desfazer rebase**: Um comando git rebase pode ser uma operação complicada que às vezes dá errado. Se você deseja desfazer um rebase, pode usar o `git reflog` para encontrar o estado do seu ramo antes do rebase e retornar a esse estado.
-
-O comando git reflog exibe uma lista de todos os pontos na história do seu HEAD. Para cada entrada, ele mostra um hash de commit, a ação que levou a esse estado (como um commit, rebase, checkout etc.), e uma referência para essa entrada na forma de HEAD\@{n}, onde n é o número de passos atrás nesse ponto na história.
-
-[O `git reflog` mantém um registro das últimas ações no Git que modificaram o HEAD, incluindo commits, checkouts e outros. Por padrão, **o Git mantém esses registros por 90 dias**. Esse período de 90 dias é chamado de período de "expiração" do reflog.]{style="background-color:#DCDCDC"}
-
-## Rebasing x Merging
-
-[Rebasing" e "Merging" são duas estratégias diferentes no Git para integrar mudanças de uma branch (ramificação) para outra]{style="background-color:#DCDCDC"}. Ambos são usados para manter o seu código sincronizado com o trabalho de outros desenvolvedores, mas funcionam de maneiras ligeiramente diferentes e são melhores em situações diferentes.
-
--   **Rebasing (Rebase)**: O comando `git rebase` move ou combina uma sequência de commits para uma nova base de commit. Ele é útil para fazer sua feature branch "atualizada" com as últimas mudanças de outra branch (como a main ou master). Com o rebase, os commits da feature branch são aplicados na branch base, um por um, como se eles tivessem sido criados de novo. Isso resulta em um histórico de commits linear, o que pode ser mais fácil de entender.
-
--   **Merging (Merge)**: O comando `git merge` pega o conteúdo de uma branch de origem e a integra com a branch de destino. Um novo commit de merge é criado que aponta para os dois commits, preservando o histórico de commits e a relação entre as branches. Isso mantém a história completa do projeto, incluindo todas as ramificações e mesclagens, mas pode ser mais difícil de navegar devido à sua não linearidade.
-
-A [diferença principal entre os dois (rebase e merge) é que o rebase cria um histórico de commits linear, "recriando" os commits, enquanto o merge preserva o histórico exato e cria um novo commit de merge]{style="background-color:#DCDCDC"}. A escolha entre um e outro depende de fatores como a complexidade do projeto, a necessidade de manter um histórico limpo e linear versus um histórico completo e exato, e as preferências da equipe.
-
-O comando `git rebase -i HEAD` é utilizado para iniciar um processo de rebase interativo. O rebase interativo é uma funcionalidade do Git que permite modificar uma sequência de commits existente de várias formas. A opção -i no comando significa "interativo", o que significa que o Git abrirá um editor de texto com uma lista dos últimos commits, permitindo que você escolha exatamente o que quer fazer com cada um.
-
-O termo **HEAD** é uma referência ao commit mais recente na branch atual. Portanto, `git rebase -i HEAD` começará um rebase interativo que, por padrão, não inclui nenhum commit, pois você está tentando rebase na mesma posição do HEAD. Normalmente, você especificaria um número de commits antes do HEAD ou uma referência a outro commit, como HEAD\~3 ou HEAD\^, para iniciar um rebase interativo dos últimos 3 commits ou do último commit, respectivamente.
-
-Durante um rebase interativo, você pode fazer várias coisas, como:
-
--   **pick**: usar um commit como está.
--   **reword**: usar o commit, mas alterar a mensagem do commit.
--   **edit**: usar o commit, mas parar para que você possa modificar os arquivos e/ou o commit.
--   **squash**: usar as alterações do commit, mas mesclá-las com o commit anterior.
--   **fixup**: como "squash", mas descarta a mensagem do commit.
--   **drop**: descartar o commit. Essa flexibilidade faz do rebase interativo uma ferramenta poderosa para limpar o histórico de commits antes de compartilhar suas alterações com outros.
-
-## Git tags
-
-As tags no Git são referências que apontam para pontos específicos no histórico de commits. Elas são usados geralmente para capturar um ponto na história que é marcado por uma versão de lançamento de software, por exemplo, v1.0, v2.0, etc.
-
-Existem dois tipos principais de tags no Git:
-
--   **Lightweight** (Leve): É simplesmente uma referência a um commit. As tags leves não incluem nenhuma informação extra além do commit em si. Para criar uma tag leve, você pode usar o comando git tag seguido do nome da tag e a referência do commit.
-
--   **Annotated** (Anotada): São armazenadas como objetos completos no banco de dados Git, o que significa que eles incluem informações extras como o tagger (a pessoa que fez a tag), a data, a mensagem e podem ser verificadas com GPG. As tags anotadas são recomendadas porque incluem essa informação extra. Você pode criar uma tag anotada com o comando `git tag -a`, seguido do nome da tag, e geralmente uma mensagem de descrição é adicionada.
-
-[As tags não são movidas quando novos commits são criados, elas continuam apontando para o mesmo commit mesmo quando novos commits são adicionados ao repositório. Isso torna as tags úteis para marcar versões específicas de um projeto.]{style="background-color:#DCDCDC"}
-
-Você pode ver todas as tags em um repositório com o comando git tag. E para compartilhar tags com outros repositórios, elas precisam ser explicitamente "pushed" para o repositório remoto, usando o comando `git push origin \[tagname\]` ou `git push origin --tags` para enviar todas as tags.
-
-Mudar e deletar tags no Git é bastante simples: Para mudar uma tag, primeiro você deve deletá-la e então recriá-la apontando para o novo commit. Por exemplo, se você tem uma tag chamada "v1.0" e quer mudá-la para apontar para um commit diferente, você pode fazer isso da seguinte maneira:
+**WORKDIR:** Define o diretório de trabalho para qualquer instrução RUN, CMD, ENTRYPOINT, COPY e ADD subsequente.
 
 ``` bash
-git tag -d <nome-da-tag>
+WORKDIR /app
 ```
 
-Se a tag tiver sido enviada para o repositório remoto, você precisará removê-la do repositório remoto também. Para fazer isso, use o seguinte comando:
+**CMD:** Fornece um comando padrão para ser executado quando um contêiner é iniciado a partir da imagem. Só pode haver um CMD por Dockerfile.
 
 ``` bash
-git push --delete origin <nome-da-tag>
+CMD ["python3", "app.py"]
 ```
 
-[Lembre-se de que, uma vez que a tag seja deletada e a informação seja propagada para outros clones do repositório, não haverá nenhuma referência ao commit original marcado pela tag. Então, tenha certeza antes de deletar uma tag, especialmente se ela foi compartilhada com outros.]{style="background-color:#DCDCDC"}
-
-## Git Config
-
-O comando [`git config`](https://git-scm.com/docs/git-config) é uma parte essencial do Git, usado para configurar as opções específicas do usuário, como email, algoritmo preferido para diff, nome de usuário e tipo de formato, entre outras coisas. Essas informações são armazenadas em três locais diferentes:
-
--   /etc/gitconfig: Contém valores para todos os usuários no sistema e todos os seus repositórios. Se você passar a opção --system para git config, ele lê e escreve a partir deste arquivo.
-
--   \~/.gitconfig ou \~/.config/git/config: Especificamente para você, o usuário logado. Você pode fazer o Git ler e escrever para este arquivo passando a opção --global.
-
--   config no diretório Git (ou seja, .git/config) de qualquer repositório que você esteja usando: Específico para esse único repositório. Cada nível sobrescreve os valores no nível anterior, então valores em .git/config têm precedência sobre /etc/gitconfig.
-
-O comando `git config --list` lista as configurações do Git que estão atualmente configuradas.
-
-## Objetos Git
-
-O Git é um sistema de controle de versão que mantém o histórico de alterações em arquivos e diretórios em um repositório. Para fazer isso, o Git usa um sistema de armazenamento de objetos que contém quatro tipos principais de objetos: blob, tree, commit e tag.
-
-**1. Blob**: O tipo de objeto mais básico no Git é o blob. Um objeto blob é um arquivo com dados, mas sem metadados (como nome de arquivo ou permissões). Cada versão de cada arquivo em seu repositório Git é armazenada como um objeto blob separado.
-
-**2. Tree**: Um objeto de tree (árvore) no Git é essencialmente análogo a um diretório. Ele representa uma estrutura de diretório de arquivos e outros diretórios. Um objeto tree contém um ou mais entradas de tree, cada uma das quais contém uma referência a um blob ou tree, juntamente com o nome do arquivo, permissões e o bit 'execute'.
-
-**3. Commit**: Um objeto de commit contém metadados para cada alteração introduzida no repositório, incluindo o autor, o committer (que pode ser diferente do autor), a mensagem de commit e um ponteiro para o objeto tree que representa a estrutura de diretório de nível superior para o projeto. Cada commit também contém um ou mais ponteiros para os commit(s) pai(s) que representam o(s) estado(s) anterior(es) do projeto.
-
-**4. Tag**: Uma tag é uma referência a um objeto de commit, usada geralmente para marcar pontos específicos no histórico do repositório como uma versão específica de um projeto. Tags podem ser leves (apontando diretamente para um commit) ou anotadas (armazenadas como objetos completos com um apontador para um commit, um nome de tag, uma mensagem de tag e um tagger).
-
-[Esses quatro tipos de objetos (blob, tree, commit e tag), juntamente com referências que apontam para objetos de commit (como branches e HEAD), formam a estrutura fundamental do sistema de armazenamento de dados do Git.]{style="background-color:#DCDCDC"}
-
-## Excluir um repositório Git
-
-Se surgir a necessidade de excluir um repositório Git e manter os arquivos, você pode fazer isso excluindo a pasta oculta .git, que é onde todas as informações do repositório Git são armazenadas. **Porém, tenha muito cuidado, pois isso removerá todo o histórico de versões do Git para este repositório**. Siga os passos abaixo para excluir o repositório Git:
-
-1- Navegue até o diretório que contém o repositório Git que você deseja excluir.
+**ENTRYPOINT:** Define um comando que sempre será executado quando o contêiner iniciar. Pode ser combinado com CMD.
 
 ``` bash
-cd /caminho/para/o/diretorio
+ENTRYPOINT ["python3", "app.py"]
 ```
 
-2- Exclua a pasta .git dentro desse diretório.
+**ENV:** Define variáveis de ambiente.
 
 ``` bash
-rm -rf .git
+ENV APP_ENV=production
 ```
 
-## Diferentes contas Git para diferentes projetos
-
-Configurar duas contas Git para diferentes projetos pode ser feito de forma automática usando a funcionalidade de "inclusão condicional" no arquivo de configuração do Git (\~/.gitconfig). Primeiro, é necessário configurar globalmente sua conta principal do Git com seu nome de usuário e email usando o comando git config. Em seguida, você pode criar uma inclusão condicional no arquivo \~/.gitconfig para especificar a configuração da segunda conta com base no diretório do projeto. Ao navegar para a pasta do segundo projeto, o Git utilizará automaticamente as configurações definidas para essa conta específica, como o nome do usuário e o email, enquanto em outros projetos continuará usando as configurações globais da primeira conta. Isso simplifica a gestão de várias contas Git em diferentes projetos, garantindo que as credenciais corretas sejam usadas em cada caso, sem a necessidade de alternar manualmente entre elas.
-
-**Para criar a inclusão condicional no arquivo de configuração global,** abra o arquivo de configuração do Git global `~/.gitconfig` em um editor de texto. Adicione ou edite a seção \[includeIf\] da seguinte forma:
+**EXPOSE:** Informa ao Docker que o contêiner escuta na(s) porta(s) especificada(s) em tempo de execução.
 
 ``` bash
-[includeIf "gitdir:/caminho/para/sua/segunda/pasta/"]
-path = ~/.gitconfig-segunda-conta
+EXPOSE 8080
 ```
 
-Para configurar contas do GitHub diferentes com o Git de forma automática, você pode utilizar o mesmo conceito de inclusão condicional, para mais detalhes de como fazer nos links abaixo:
-
--   [Manage Multiple GitHub Accounts](https://javascript.plainenglish.io/how-to-manage-multiple-github-accounts-in-vscode-using-ssh-keys-7f1a3adef58a)
--   [Steps to Set Up Multiple GitHub](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
-
-## Integração com plataformas de hospedagem
-
-[GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) e [GitLab](https://gitlab.com/) são plataformas baseadas em nuvem que fornecem hospedagem de repositórios Git, permitindo que os desenvolvedores armazenem e compartilhem seus códigos, colaborem em projetos e rastreiem e controlem alterações no código. GitHub é a plataforma mais popular, hospedando milhões de repositórios de desenvolvedores e organizações em todo o mundo. Ele não só suporta controle de versão Git, mas também fornece funcionalidades adicionais, como pull requests, issues de rastreamento, actions para automação de CI/CD e integração com muitas outras ferramentas e plataformas.
-
-Copiando (clonar) um repositorio existente:
+**VOLUME:** Cria um ponto de montagem com o nome especificado e marca-o como um volume.
 
 ``` bash
-git clone https://github.com/user/example.git
+VOLUME /data
 ```
+:::
 
--   [**git clone**](https://git-scm.com/docs/git-clone)**:** Este comando é usado para criar uma cópia local de um repositório remoto. Quando você executa git clone, o Git cria um novo diretório no seu sistema local, inicializa um repositório Git nesse diretório, puxa todo o histórico de commits do repositório remoto e verifica o último commit para o seu diretório de trabalho. Basicamente, é uma maneira de obter uma cópia completa de um projeto existente.
+### Benefícios do Dockerfile
 
--   [**git remote**](https://git-scm.com/docs/git-remote)**:** Este comando é usado para gerenciar as conexões com repositórios remotos. Ele permite que você crie, visualize e delete conexões para outros repositórios. Quando você clona um repositório, o Git automaticamente adiciona esse repositório como um "remote" chamado "origin", permitindo que você interaja com o repositório original a partir do qual você clonou. Você pode adicionar mais remotos usando o comando git remote add, e pode sincronizar suas alterações com remotos usando comandos como git push e git pull.
+::: {style="text-align: justify"}
+-   **Reprodutibilidade:** O Dockerfile permite que você defina o ambiente de execução de forma consistente, garantindo que a aplicação se comporte da mesma maneira em diferentes ambientes.
+-   **Automatização:** O Dockerfile automatiza a configuração e a montagem de um ambiente de execução de software, economizando tempo e esforço.
+-   **Controle de Versão:** O Dockerfile é um arquivo de texto simples que pode ser versionado e controlado com ferramentas de controle de versão como Git.
+-   **Flexibilidade:** O Dockerfile oferece flexibilidade para personalizar o ambiente de execução da aplicação, adicionando ou removendo dependências conforme necessário.
+-   **Eficiência:** O Dockerfile cria camadas de imagem que são reutilizadas entre builds, tornando o processo de construção mais eficiente.
+-   **Padronização:** O Dockerfile permite padronizar a construção de imagens Docker em toda a organização, garantindo consistência e conformidade.
+-   **Segurança:** O Dockerfile permite definir um ambiente de execução seguro, limitando as dependências e as permissões do contêiner.
+-   **Portabilidade:** O Dockerfile facilita a migração de aplicativos entre diferentes ambientes de computação, garantindo que a aplicação se comporte da mesma maneira em qualquer lugar.
+:::
 
--   [**git remote add usptream**](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork)**:** Quando você adiciona um "upstream" ao seu repositório Git, você está criando uma conexão com um repositório remoto a partir do qual você deseja buscar ou puxar mudanças. Isso é útil, por exemplo, quando você fez um "fork" de um repositório em um serviço como o GitHub, e quer manter o seu fork sincronizado com as alterações do repositório original.Depois de adicionar o upstream, você pode buscar as alterações do repositório original com 'git fetch upstream', e pode mesclar essas alterações em sua branch atual com 'git merge upstream/branch_name'.
+## Docker Compose
 
--   [**git fetch**](https://git-scm.com/docs/git-fetch)**:** Este comando baixa as alterações do repositório remoto para o seu repositório local, mas não as mescla com o seu código nem modifica o seu código atual. Isso permite que você veja as alterações recentes no repositório remoto, sem misturá-las com o seu trabalho atual. Se você quiser integrar as mudanças no seu código, você precisará fazer um git merge após o fetch.
+::: {style="text-align: justify"}
+Docker compose é uma ferramenta para definir e executar aplicativos Docker multi-contêiner em um único arquivo YAML. Ele permite que você defina a configuração de todos os serviços, redes e volumes em um único arquivo, facilitando a execução de aplicativos complexos com várias partes.
 
--   [**git pull**](https://git-scm.com/docs/git-pull)**:** Este comando é essencialmente uma combinação de`git fetch` seguido de `git merge`. Ou seja, ele baixa as alterações do repositório remoto e as mescla automaticamente com o seu código atual. É útil quando você sabe que quer atualizar o seu código para corresponder ao estado mais recente do repositório remoto.
+-   **docker-compose:** Define e executa aplicativos Docker multi-contêiner em um único arquivo YAML.
+-   **docker-compose up:** Cria e inicia contêineres definidos em um arquivo docker-compose.yml.
+-   **docker-compose down:** Para e remove contêineres definidos em um arquivo docker-compose.yml.
+-   **docker-compose build:** Constrói ou reconstrói serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose ps:** Lista os serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose logs:** Exibe os logs de serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose exec:** Executa um comando em um serviço definido em um arquivo docker-compose.yml.
+-   **docker-compose pull:** Baixa as imagens dos serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose restart:** Reinicia os serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose stop:** Para os serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose rm:** Remove os contêineres definidos em um arquivo docker-compose.yml.
+-   **docker-compose config:** Valida e exibe a configuração de um arquivo docker-compose.yml.
+-   **docker-compose events:** Exibe eventos de serviço em tempo real.
+-   **docker-compose images:** Lista as imagens usadas pelos serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose kill:** Força a parada dos serviços definidos em um arquivo docker-compose.yml.
+-   **docker-compose pause:** Pausa os serviços definidos em um arquivo docker-compose.yml.
 
-A integração dessas plataformas baseadas em nuvem com o Git permite a colaboração e o controle de versão eficientes, facilitando o desenvolvimento de software ágil e o uso de práticas de DevOps. Além disso, elas também desempenham um papel crítico no suporte a equipes remotas, já que os desenvolvedores podem colaborar em projetos independentemente de sua localização geográfica.
+:::
 
-**"Fetching" e "Pulling" são dois conceitos importantes no Git relacionados à obtenção de dados de repositórios remotos. A diferença entre os dois é que git fetch permite que você veja as alterações antes de decidir se quer integrá-las ou não, enquanto git pull baixa as alterações e as mescla com o seu código imediatamente (Fig. 01)**. :::
+## Conclusão
+
+::: {style="text-align: justify"}
+O Docker é uma ferramenta poderosa para executar aplicativos em contêineres, oferecendo portabilidade, eficiência e segurança. Com o Dockerfile, você pode definir o ambiente de execução de forma consistente e automatizada, garantindo que a aplicação se comporte da mesma maneira em diferentes ambientes. Esperamos que essas dicas e truques de Docker sejam úteis para você ao trabalhar com contêineres e imagens Docker.
+:::: 
+
+## Referências
+
+-   [Docker Documentation](https://docs.docker.com/)
+-   [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
+-   [Docker Overview](https://www.docker.com/resources/what-container)
+-   [Docker Hub](https://hub.docker.com/)
+-   [Docker Compose](https://docs.docker.com/compose/)
 
 ------------------------------------------------------------------------
 
-**#GitTips #GitTricks #GitBestPractices #VersionControl #GitCommands #GitAdvanced**
+**#Docker #Dockerfile #Microservices #DevOps**
