@@ -1,4 +1,5 @@
 ---
+pagetitle: "Concurso: Bacen/2024 TI"
 title: "<center>**Flashcards Bacen 2024** <br> Tecnologia da Informação</center>"
 description: |
   **Teste seus conhecimentos com flashcards para memorização do conteúdo da prova do BACEN 2024 referente a área da Tecnologia da Informação.**
