@@ -1,4 +1,5 @@
 ---
+pagetitle: "Docker Dicas e Truques"
 title: "**Docker Dicas e Truques**"
 description: |
   Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.
@@ -20,7 +21,7 @@ title-block-banner: false
 Docker é uma plataforma que permite a criação, envio e execução de aplicativos em contêineres. Contêineres são unidades padronizadas de software que empacotam o código do aplicativo e todas as suas dependências para que o aplicativo possa ser executado de maneira rápida e confiável em diferentes ambientes de computação. No cerne do Docker estão dois conceitos-chave: **imagens e contêineres**.
 
 ::: grid
-::: {.g-col-12 }
+::: g-col-12
 ![](containers3.png){fig-align="center" width="90%" fig-alt="Aplicativos nos contêineres Docker"}
 :::
 :::
@@ -44,10 +45,7 @@ Estrutura de uma Imagem Docker:
 ## Contêineres Docker
 
 ::: {style="text-align: justify"}
-
 Um contêiner é uma instância em execução de uma imagem Docker. Ele pode ser visto como um ambiente de execução leve e portátil que compartilha o kernel do sistema operacional host, mas é isolado dos demais processos do sistema.
-
-
 
 Estrutura de Funcionamento de um Contêiner Docker:
 
@@ -62,7 +60,6 @@ Estrutura de Funcionamento de um Contêiner Docker:
 -   **Networking:** Contêineres podem ser conectados a várias redes virtuais. Docker configura automaticamente uma rede padrão, mas você pode definir redes personalizadas.
 
 -   **Storage:** Contêineres usam volumes para persistir dados além do ciclo de vida do contêiner. Volumes podem ser montados em diferentes contêineres para compartilhar dados.
-
 :::
 
 ## Principais Comandos Docker
@@ -275,14 +272,13 @@ Docker compose é uma ferramenta para definir e executar aplicativos Docker mult
 -   **docker-compose images:** Lista as imagens usadas pelos serviços definidos em um arquivo docker-compose.yml.
 -   **docker-compose kill:** Força a parada dos serviços definidos em um arquivo docker-compose.yml.
 -   **docker-compose pause:** Pausa os serviços definidos em um arquivo docker-compose.yml.
-
 :::
 
 ## Conclusão
 
 ::: {style="text-align: justify"}
 O Docker é uma ferramenta poderosa para executar aplicativos em contêineres, oferecendo portabilidade, eficiência e segurança. Com o Dockerfile, você pode definir o ambiente de execução de forma consistente e automatizada, garantindo que a aplicação se comporte da mesma maneira em diferentes ambientes. Esperamos que essas dicas e truques de Docker sejam úteis para você ao trabalhar com contêineres e imagens Docker.
-:::: 
+:::
 
 ## Referências
 
