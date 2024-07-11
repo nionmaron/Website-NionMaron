@@ -1,0 +1,95 @@
+---
+pagetitle: "Concurso: IPEA/2024 Ciência de Dados"
+title: "<center>**Flashcards IPEA 2024** <br> Ciência de Dados</center>"
+description: |
+  **Teste seus conhecimentos com flashcards para memorização do conteúdo da prova do IPEA 2024 referente a área de ANALISTA DE GESTÃO CORPORATIVA – ÁREA DE ATUAÇÃO: TECNOLOGIA DA INFORMAÇÃO PERFIL 3 - CIÊNCIA DE DADOS.**
+lang: pt
+author: "Dransfeld, N. M."
+date: "2024-01-20"
+categories: [Concursos, Português]
+image: "banco-central-do-brasil.jpg"
+title-block-banner: false
+draft: true
+---
+
+::: {style="text-align: justify"}
+A (Empresa de Pesquisa Energética)\[https://www.ipea.gov.br/portal/\] (EPE) está realizando três Concursos Públicos para preencher 1.150 vagas de nível superior, com 90 oportunidades para contratação imediata. Os cargos variam entre Advogado, Analista de Gestão Corporativa, e Analista de Pesquisa Energética, abrangendo diversas especialidades como Tecnologia da Informação, Meio Ambiente, Economia de Energia, entre outras. A remuneração inicial é de R\$ 13.819,45 para uma carga horária de 40 horas semanais, com lotação no Rio de Janeiro ou em Brasília. As inscrições vão até 11 de julho de 2024, com provas previstas para 1º de setembro de 2024 em várias cidades do país.
+
+-   Banca: FGV \[https://conhecimento.fgv.br/concursos/epe24/2\]
+
+Segue abaixo um flashcard detalhado contendo questões abrangentes sobre o conteúdo do exame. Esta ferramenta é projetada para facilitar a revisão e o aprimoramento do conhecimento necessário para a prova, oferecendo uma ampla variedade de perguntas para testar e fortalecer a memória sobre os temas pertinentes.
+:::
+
+<hr style="border: 1px solid blue;">
+
+::: panel-tabset
+## Flashcards
+
+::: {style="height:600px;"}
+```{=HTML}
+
+```
+:::
+
+## Lista de Conteúdo
+
+::: {style="text-align: justify"}
+### CARGO: ANALISTA DE GESTÃO CORPORATIVA – ÁREA DE ATUAÇÃO: TECNOLOGIA DA INFORMAÇÃO PERFIL 3 - CIÊNCIA DE DADOS
+
+**Formação:** graduação de nível superior em: Engenharia, Matemática, Estatística, Economia, Física, Ciência de Dados ou na área de Tecnologia da Informação, em curso reconhecido pelo MEC, Secretarias ou Conselhos Estaduais de Educação.\
+**Requisito:** registro no Conselho de Classe correspondente, se houver.
+
+### CONHECIMENTOS BÁSICOS
+
+LÍNGUA PORTUGUESA 1. Compreensão e interpretação de textos. 2. Tipologia textual. 3. Ortografia oficial. 4. Acentuação gráfica. 5. Domínio da estrutura morfossintática do período. 5.1. Emprego das classes de palavras. 5,2. Relações de coordenação entre orações e entre termos da oração. 5.3. Relações de subordinação entre orações e entre termos da oração. 6. Emprego dos sinais de pontuação. 7. Concordância verbal e nominal. 8. Regência verbal e nominal. 9. Emprego do sinal indicativo de crase. 10. Pronomes: emprego, formas de tratamento e colocação. 11. Emprego de tempos e modos verbais. 12. Vozes dos verbos. 13. Semântica (sinônimos, antônimos, homônimos, parônimos). 14. Significação literal e contextual de vocábulos. 15. Coesão e coerência textuais: mecanismos linguísticos de conexão e sequência lógica entre as partes do texto (coesão referencial, lexical, sequencial e temporal). 16. Redação oficial (conforme Manual de Redação da Presidência da República).
+
+LÍNGUA INGLESA Compreensão e interpretação de texto escrito em Língua Inglesa. Itens gramaticais relevantes para a compreensão dos conteúdos semânticos.
+
+NOÇÕES DE ADMINISTRAÇÃO PÚBLICA 1. Noções de Organização Administrativa: administração direta e indireta; autarquias, fundações públicas; empresas públicas; sociedades de economia mista; entidades paraestatais. 2. Princípios Constitucionais da Administração Pública; 3. Noções básicas de Orçamento Público e Finanças; 4. Noções de processo administrativo; 5. Noções básicas de Licitações e Contratos nas Empresas Estatais.
+
+VALOR PÚBLICO GERADO PELA EPE 1. Lei nº 10.847, de 15 de março de 2004; 2. Decreto nº 5.184, de 16 de agosto de 2005; 3. Planejamento Estratégico da EPE; 4. Valor Público da EPE; 5. Estatuto Social da EPE; 6. Regimento Interno da EPE; 7. Accountability e Transparência; 8. Governo Digital.
+
+### CONHECIMENTOS ESPECÍFICOS
+
+I - CONHECIMENTOS GERAIS: 1.1. Ferramentas colaborativas: Microsoft 365; 1.2. Noções básicas de engenharia de software; 1.3. Conceitos de mapeamento de processos; 1.4. Noções básicas de Gestão de Contratos e Contratações de Tecnologia da Informação - Resolução CGPAR 29 de 5 de abril de 2022 e suas atualizações; 1.5. Noções básicas de IA Generativa.
+
+II – APRENDIZADO SUPERVISIONADO – REGRESSÃO E CLASSIFICAÇÃO: 2.1.Métricas de Avaliação; 2.2.Overfitting e Underfitting de Modelos; 2.3.Regularização; 2.4.Seleção de modelos: Erro de Generalização; 2.5.Validação Cruzada; 2.6.Conjuntos de Treino, Validação e Teste; 2.7.Trade off entre Variância e Viés; 2.8.Algoritmos: Regressão Linear e Regressão Logística; 2.9.Árvores de Decisão e Random Forests; 2.10.Máquina de suporte de vetores; 2.11.Naive Bayes; 2.12.K-NN; 2.13.Ensembles; 2.14.Conceitos de otimização de hiperparâmetros; 2.15. Aprendizado Supervisionado com R.
+
+III – APRENDIZADO NÃO SUPERVISIONADO: 3.1. Redução de dimensionalidade: PCA; 3.2. Agrupamento K-Means; 3.3. Agrupamento Hierárquico; 3.4. Regras de associação; 3.5. Aprendizado não supervisionado com R;
+
+IV – MANIPULAÇÃO E TRATAMENTO DE DADOS: 4.1. Integração dos dados (ETL, Transferência de Arquivos e Integração via Base de Dados); 4.2. Lidando com valores faltantes; 4.3. Lidando com dados categóricos; 4.4. Normalização numérica; 4.5. Detecção e tratamento de outliers; 4.6. Manipulação de dados em R com data frames e dplyr;
+
+V – BANCO DE DADOS E DATA WAREHOUSE: 5.1.Modelo entidade-relacionamento; 5.2.Mapeamento lógico relacional; 5.3.Normalização; 5.4.Linguagem de definição e manipulação de dados (SQL); 5.5.Conceitos de data warehousing e modelagem multidimensional (esquema estrela); 5.6.Conceitos de Data Lake e Bancos NoSQL ;
+
+VI – ANÁLISE E VISUALIZAÇÃO DE DADOS: 6.1.Princípios de data storytelling; 6.2.Técnicas de visualização de dados; 6.3.Gráficos de dispersão; 6.4.Séries Temporais; 6.5.Gráficos de barras; 6.6.Histogramas e Densidades; 6.7.Diagrama boxplot; 6.8.Avaliação de outliers; 6.9.Construção de gráficos em R com ggplot2; 6.10.Criação de dashboards interativos em R com shiny; 6.11.Construção de Dashboards em Microsoft Power BI;
+
+VII – REDES NEURAIS ARTIFICIAIS: 7.1.Conceitos Básicos em Redes Neurais Artificiais: Definições e Arquitetura; 7.2.Funções de Ativação; 7.3.Otimização de Redes Neurais Artificiais: 12 método do gradiente, método do gradiente estocástico, algoritmo backpropagation, métodos de inicialização dos pesos, Vanishing Gradients; 7.4.Métodos de regularização: penalização com normas L1 e L2, Dropout e Early Stopping; 7.5.Redes neurais com R: neuralnet;
+
+VIII – ANÁLISE ESTATÍSTICA ESPACIAL: 8.1.Conceitos básicos de geotecnologias; 8.2.Conceitos básicos de cartografia; 8.3.Projeções cartográficas: superfície de contato, propriedade, superfície de 8.4.projeção e método; 8.5.Sistemas de coordenadas; 8.6.Dados Geoespaciais: vetoriais e matriciais (raster); 8.7.Geoprocessamento: análise e modelagem de dados espaciais;
+
+IX – CONCEITOS MODERNOS DE SISTEMAS DE INFORMAÇÃO: 9.1.Conceitos básicos de Nuvem: IaaS, PaaS e SaaS; 9.2.Conceitos básicos de DevOps: princípios, versionamento com git, pipeline e CI/CD;
+
+X – CÁLCULO: 10.1.Pré-Cálculo: Conjuntos, Coordenadas Cartesianas, Cônicas e Produtos Notáveis; 10.2.Funções; 10.3.Limites; 10.4.Derivadas; 10.5.Derivadas parciais; 10.6.Máximos e Mínimos; 10.7.Esboços de Gráficos de Funções; 10.8.Integrais;
+
+XI – ÁLGEBRA LINEAR PARA CIÊNCIA DE DADOS: 11.1.Notação de vetores e matrizes; 11.2.Operações com vetores e matrizes; produto escalar e produto vetorial; 11.3.Matriz identidade, inversa e transposta; 11.4.Transformações lineares; 11.5.Normas (L1, L2); 11.6.Autovalores e autovetores; 11.7.Decomposição SVD; 11.8.Álgebra linear e operações matriciais com R;
+
+XII – PROBABILIDADE E ESTATÍSTICA: 12.1.Conceitos de Probabilidade: Modelo de probabilidade, Probabilidade Condicional, Independência, Variáveis Aleatórias, Esperança, Variância e Covariância; 12.2.Distribuições Contínuas e Discretas: Normal, tStudent, Poisson, Exponencial, Binomial, Dirichlet; 12.3.Distribuições multidimensionais; matriz de covariância; 12.4.Estatísticas Descritivas; 12.5.Inferência Estatística: Teorema do Limite Central, Teste de Hipótese e Intervalo de Confiança, Estimador de Máxima Verossimilhança, Inferência Bayesiana; 12.6.Coeficiente de correlação de Pearson.
+
+XIII – GESTÃO DE PROJETOS: 13.1.O conceito e os objetivos da gerência de projetos; 13.2.Gerenciamento do ciclo de vida do projeto; 13.3.Planejamento de um projeto; 13.4.Estrutura Analítica do Projeto, Cronograma, Diagrama de Rede, Caminho Crítico e Folgas; 13.5.Execução, acompanhamento e controle de um projeto; 13.6.Metodologias, técnicas e ferramentas da gerência de projetos.
+:::
+
+## Sobre o processo
+
+::: {style="text-align: justify"}
+A **Prova Objetiva de múltipla escolha**, de caráter eliminatório e classificatório, será realizada nas cidades de Brasília/DF, Rio de Janeiro/RJ, Recife/PE e Florianópolis/SC no **dia 1º de setembro de 2024, de 13h às 18h,** segundo o horário oficial de Brasília/DF. Os locais para realização da prova serão divulgados no endereço eletrônico https://conhecimento.fgv.br/concursos/epe24, a partir do dia 26 de agosto de 2024.
+
+DA PROVA OBJETIVA EDITAL N° 02, DE 07 DE JUNHO DE 2024 .
+
+A Prova Objetiva para o cargo de Analista de Gestão Corporativa será composta por 80 (oitenta) itens de múltipla escolha, numeradas sequencialmente, com 5 (cinco) alternativas e apenas uma correta, valendo 1 (um) ponto cada questão.
+
+-   MÓDULO I – CONHECIMENTOS BÁSICOS 35 questões
+-   MÓDULO II – CONHECIMENTOS ESPECÍFICOS 45 questões
+:::
+:::
+
+**#IPEA2024 #ConcursoIPEA #Flashcards**

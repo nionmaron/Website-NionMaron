@@ -1,6 +1,5 @@
 ---
 draft: true
-
 title: "<center>**Machine Learning** <br> Algorithms</center>"
 description: |
   **Improve your understanding of machine learning with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.**
@@ -103,7 +102,6 @@ These answers provide a snapshot of the key aspects of each question, offering a
 
 ::: {style="height:600px;"}
 ```{=HTML}
-
 ```
 :::
 

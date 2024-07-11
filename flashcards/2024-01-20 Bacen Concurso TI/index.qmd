@@ -3,6 +3,7 @@ pagetitle: "Concurso: Bacen/2024 TI"
 title: "<center>**Flashcards Bacen 2024** <br> Tecnologia da Informação</center>"
 description: |
   **Teste seus conhecimentos com flashcards para memorização do conteúdo da prova do BACEN 2024 referente a área da Tecnologia da Informação.**
+
 lang: pt
 author: "Dransfeld, N. M."
 draft: false
@@ -10,6 +11,7 @@ date: "2024-01-20"
 categories: [Concursos, Português]
 image: "banco-central-do-brasil.jpg"
 title-block-banner: false
+
 ---
 
 ::: {style="text-align: justify"}
@@ -19,6 +21,7 @@ Segue abaixo um flashcard detalhado contendo mais de 500 questões abrangentes s
 :::
 
 <hr style="border: 1px solid blue;">
+
 
 ::: panel-tabset
 ## Flashcards
@@ -873,5 +876,10 @@ O processo seletivo será organizado pelo Cebraspe e incluirá várias etapas:
 Para uma preparação eficaz, é recomendável que os candidatos se familiarizem com os temas e tipos de questões que serão abordados nas provas, praticando com provas anteriores e estudando os tópicos listados no edital.
 :::
 :::
+
+
+## Latest content
+
+
 
 **#BANCEN2024 #ConcursoBancenTI #CebraspeConcurso #AnalistaTI #Flashcards**
