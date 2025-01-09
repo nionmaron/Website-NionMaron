@@ -3,11 +3,17 @@
     "Blog.qmd": [
       "posts"
     ],
-    "Flashcards.qmd": [
-      "flashcards"
+    "Data-Science-Flashcards.qmd": [
+      "flashcards/Data-Science"
     ],
     "index.qmd": [
       "posts"
+    ],
+    "Leis-Concursos-Flashcards.qmd": [
+      "flashcards/Leis-Concursos"
+    ],
+    "Machine-Learning-Flashcards.qmd": [
+      "flashcards/Machine-Learning"
     ]
   }
 }

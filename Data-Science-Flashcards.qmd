@@ -1,0 +1,26 @@
+---
+pagetitle: "Data Science Flashcards"
+description: | 
+  Explore essential concepts about Data Science. 
+
+listing:
+  contents: flashcards/Data-Science
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title]
+page-layout: full
+title-block-banner: false
+#title-block-banner: "#4040ff"
+#title-block-banner: "images/banner-min.jpg"
+---
+
+# Data Science Flashcards
+
+::: {style="text-align: justify;"}
+Data Science Flashcards are a quick and engaging way to learn and review essential data science concepts, techniques, and terminology. Perfect for beginners and professionals alike, these flashcards cover topics such as statistics, machine learning, Python, R, data visualization, and more, helping you sharpen your skills on the go.
+:::
+
+<hr style="border: 1px solid blue;">

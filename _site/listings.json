@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/0010 git-cache-eng/index.html",
       "/posts/0009 Docker-Dicas-e-Truques-pt/index.html",
       "/posts/0008 Arquivos de Log/index.html",
       "/posts/0007-Combinar Arquivo em Exel-pt/index.html",
@@ -16,6 +17,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/posts/0010 git-cache-eng/index.html",
       "/posts/0009 Docker-Dicas-e-Truques-pt/index.html",
       "/posts/0008 Arquivos de Log/index.html",
       "/posts/0007-Combinar Arquivo em Exel-pt/index.html",
@@ -28,13 +30,22 @@
     ]
   },
   {
-    "listing": "/Flashcards.html",
+    "listing": "/Data-Science-Flashcards.html",
+    "items": []
+  },
+  {
+    "listing": "/Leis-Concursos-Flashcards.html",
     "items": [
-      "/flashcards/2024-07-05 Docker/index.html",
-      "/flashcards/2024-07-09 Data Warehouse/index.html",
-      "/flashcards/2024-02-02 Machine Learning Concepts/index.html",
-      "/flashcards/2024-01-20 Bacen Concurso TI/index.html",
-      "/flashcards/2024-01-02 Lei Federal 14133/index.html"
+      "/flashcards/Leis-Concursos/2024-07-05 Docker/index.html",
+      "/flashcards/Leis-Concursos/2024-07-09 Data Warehouse/index.html",
+      "/flashcards/Leis-Concursos/2024-01-20 Bacen Concurso TI/index.html",
+      "/flashcards/Leis-Concursos/2024-01-02 Lei Federal 14133/index.html"
+    ]
+  },
+  {
+    "listing": "/Machine-Learning-Flashcards.html",
+    "items": [
+      "/flashcards/Machine-Learning/2024-02-02 Machine Learning Concepts/index.html"
     ]
   }
 ]

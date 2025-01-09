@@ -166,5 +166,44 @@
   },
   "flashcards/2024-07-10 IPEA Ciência de Dados/index.qmd": {
     "index.html": "b784e238"
+  },
+  "posts/0010 git-cache-eng/index.qmd": {
+    "index.html": "d4a6df88"
+  },
+  "Brazil_Flashcards.qmd": {
+    "Brazil_Flashcards.html": "7c14248a"
+  },
+  "Brasil-Flashcards.qmd": {
+    "Brasil-Flashcards.html": "bf9f946e"
+  },
+  "Data-Science-Flashcards.qmd": {
+    "Data-Science-Flashcards.html": "fa3e4403"
+  },
+  "Data-Science-Flashcards - Copia.qmd": {
+    "Data-Science-Flashcards - Copia.html": "6a31a8be"
+  },
+  "Leis-Concursos-Flashcards.qmd": {
+    "Leis-Concursos-Flashcards.html": "73f21276"
+  },
+  "flashcards/Leis-Concursos/2024-01-02 Lei Federal 14133/index.qmd": {
+    "index.html": "e035e6a1"
+  },
+  "flashcards/Leis-Concursos/2024-01-20 Bacen Concurso TI/index.qmd": {
+    "index.html": "96e847ff"
+  },
+  "flashcards/Leis-Concursos/2024-07-05 Docker/index.qmd": {
+    "index.html": "9be87815"
+  },
+  "flashcards/Leis-Concursos/2024-07-09 Data Warehouse/index.qmd": {
+    "index.html": "0a2efb19"
+  },
+  "flashcards/Machine-Learning/2024-02-02 Machine Learning Concepts/index.qmd": {
+    "index.html": "cd7f02b5"
+  },
+  "flashcards/Machine-Learning/2024-02-03 Machine Learning Algotithms/index.qmd": {
+    "index.html": "8bba3f2a"
+  },
+  "Machine-Learning-Flashcards.qmd": {
+    "Machine-Learning-Flashcards.html": "95986899"
   }
 }

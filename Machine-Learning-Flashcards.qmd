@@ -1,0 +1,26 @@
+---
+pagetitle: "Machine Learning Flashcards"
+description: | 
+  Explore essential concepts abou Machine Learning Flashcards. 
+
+listing:
+  contents: flashcards/Machine-Learning
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, title]
+page-layout: full
+title-block-banner: false
+#title-block-banner: "#4040ff"
+#title-block-banner: "images/banner-min.jpg"
+---
+
+# Science & Tech Flashcards
+
+::: {style="text-align: justify;"}
+Machine Learning Flashcards are an interactive and convenient tool for mastering key concepts, algorithms, and techniques in machine learning. Designed for learners at all levels, these flashcards cover topics such as supervised and unsupervised learning, neural networks, decision trees, gradient descent, and more, making complex ideas easy to understand and review anytime, anywhere.
+:::
+
+<hr style="border: 1px solid blue;">

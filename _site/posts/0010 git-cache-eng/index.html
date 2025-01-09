@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dransfeld, N. M.">
-<meta name="description" content="Guia para dominar a fusão de grandes quantidades de dados no formato Excel com R e Python.">
+<meta name="dcterms.date" content="2024-12-21">
+<meta name="description" content="This article provides a detailed explanation of the git rm –cached command, exploring its purpose, usage, and practical examples. Learn how to effectively unstage files from Git’s index without deleting them from your working directory.">
 
-<title>Fusão de Dados em Excel com R e Python – NionMaron</title>
+<title>git rm -r –cached – NionMaron</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,17 +91,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Nenhum resultado",
-    "search-matching-documents-text": "documentos correspondentes",
-    "search-copy-link-title": "Copiar link para a busca",
-    "search-hide-matches-text": "Esconder correspondências adicionais",
-    "search-more-match-text": "mais correspondência neste documento",
-    "search-more-matches-text": "mais correspondências neste documento",
-    "search-clear-button-title": "Limpar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Procurar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PGRFF9TPBC"></script>
@@ -116,17 +117,13 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="../../CSS/styles.css">
 <link rel="stylesheet" href="../../CSS/Buttons.css">
-<meta property="og:title" content="Fusão de Dados em Excel com R e Python – NionMaron">
-<meta property="og:description" content="Guia para dominar a fusão de grandes quantidades de dados no formato Excel com R e Python.">
-<meta property="og:image" content="https://nionmaron.com/posts/0007-Combinar Arquivo em Exel-pt/Fusion_Exel.png">
+<meta property="og:title" content="git rm -r –cached">
+<meta property="og:description" content="This article provides a detailed explanation of the git rm –cached command, exploring its purpose, usage, and practical examples. Learn how to effectively unstage files from Git’s index without deleting them from your working directory.">
+<meta property="og:image" content="https://nionmaron.com/posts/0010 git-cache-eng/git cache.webp">
 <meta property="og:site_name" content="NionMaron">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1792">
-<meta name="twitter:title" content="Fusão de Dados em Excel com R e Python – NionMaron">
-<meta name="twitter:description" content="Guia para dominar a fusão de grandes quantidades de dados no formato Excel com R e Python.">
-<meta name="twitter:image" content="https://nionmaron.com/posts/0007-Combinar Arquivo em Exel-pt/Fusion_Exel.png">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1792">
+<meta name="twitter:title" content="git rm -r –cached">
+<meta name="twitter:description" content="This article provides a detailed explanation of the git rm –cached command, exploring its purpose, usage, and practical examples. Learn how to effectively unstage files from Git’s index without deleting them from your working directory.">
+<meta name="twitter:image" content="https://nionmaron.com/posts/0010 git-cache-eng/git cache.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -141,8 +138,8 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
     <span class="navbar-title">NionMaron</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Procurar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -212,18 +209,16 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Nesta página</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
-  <li><a href="#problemas-com-métodos-convencionais" id="toc-problemas-com-métodos-convencionais" class="nav-link" data-scroll-target="#problemas-com-métodos-convencionais">Problemas com Métodos Convencionais</a></li>
-  <li><a href="#solução-segura-para-grandes-volumes-de-arquivos" id="toc-solução-segura-para-grandes-volumes-de-arquivos" class="nav-link" data-scroll-target="#solução-segura-para-grandes-volumes-de-arquivos">Solução Segura para Grandes volumes de Arquivos</a>
-  <ul class="collapse">
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#linguagem-r" id="toc-linguagem-r" class="nav-link" data-scroll-target="#linguagem-r">Linguagem R</a></li>
-  <li><a href="#observação" id="toc-observação" class="nav-link" data-scroll-target="#observação">Observação</a></li>
-  </ul></li>
-  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão">Conclusão</a></li>
+  <li><a href="#understanding-the-role-of-.gitignore" id="toc-understanding-the-role-of-.gitignore" class="nav-link active" data-scroll-target="#understanding-the-role-of-.gitignore"><strong>Understanding the Role of <code>.gitignore</code></strong></a></li>
+  <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem"><strong>The Problem</strong></a></li>
+  <li><a href="#the-solution" id="toc-the-solution" class="nav-link" data-scroll-target="#the-solution"><strong>The Solution</strong></a></li>
+  <li><a href="#example-workflow" id="toc-example-workflow" class="nav-link" data-scroll-target="#example-workflow"><strong>Example Workflow</strong></a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><strong>Key Takeaways</strong></a></li>
+  <li><a href="#common-pitfalls" id="toc-common-pitfalls" class="nav-link" data-scroll-target="#common-pitfalls"><strong>Common Pitfalls</strong></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
     </div>
@@ -232,18 +227,17 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><strong>Fusão de Dados em Excel com R e Python</strong></h1>
+<h1 class="title"><strong>How to use git rm -r –cached</strong></h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Python</div>
-    <div class="quarto-category">RProgramming</div>
-    <div class="quarto-category">Exel</div>
-    <div class="quarto-category">Português</div>
+    <div class="quarto-category">Git</div>
+    <div class="quarto-category">GitHub</div>
+    <div class="quarto-category">gitignore</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    <p>Guia para dominar a fusão de grandes quantidades de dados no formato Excel com R e Python.</p>
+    <p>This article provides a detailed explanation of the git rm –cached command, exploring its purpose, usage, and practical examples. Learn how to effectively unstage files from Git’s index without deleting them from your working directory.</p>
   </div>
 </div>
 
@@ -251,16 +245,16 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
              <p>Dransfeld, N. M. </p>
           </div>
   </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">10 de janeiro de 2024</p>
+      <p class="date">December 21, 2024</p>
     </div>
   </div>
   
@@ -272,158 +266,101 @@ gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
 </header>
 
 
-<section id="introdução" class="level2">
-<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
-<style>
-    @media (max-width: 800px) {
-        .NM-imagem-none {
-            display: none;
-        }
-    }
-</style>
 <div style="text-align: justify">
-<div style="display: flex; align-items: center; justify-content: center; height: 100px; text-wrap: wrap; float: left;">
-<p><br> <img src="Excel-icon.png" alt="texto alternativo" class="NM-imagem-none" style=" height: 100px; padding: 0px; background: transparent;"></p>
+<p>Git is a robust version control system widely used by software developers and teams to track and manage changes in codebases. While powerful, certain challenges can arise when dealing with files or directories that were previously committed to a repository but later need to be excluded from version control. This article provides a step-by-step guide on how to effectively remove such files from Git tracking while keeping them locally and preventing their future inclusion using the <code>.gitignore</code> file.</p>
 </div>
-<p>No mundo da análise de dados, frequentemente nos deparamos com a necessidade de unir vários arquivos Excel ou CSV em um único conjunto de dados. Existem diversas abordagens para realizar esta tarefa, cada uma com seus próprios métodos e desafios. A forma mais básica envolve usar o próprio Excel para combinar arquivos manualmente ou através de macros.Além disso, existem várias ferramentas online que oferecem a fusão de arquivos Excel de maneira automatizada. Estes métodos são simples e diretos, mas têm limitações significativas, especialmente quando lidamos com grandes volumes de dados.</p>
-</div>
-</section>
-<section id="problemas-com-métodos-convencionais" class="level2">
-<h2 class="anchored" data-anchor-id="problemas-com-métodos-convencionais">Problemas com Métodos Convencionais</h2>
+<section id="understanding-the-role-of-.gitignore" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-the-role-of-.gitignore"><strong>Understanding the Role of <code>.gitignore</code></strong></h3>
 <div style="text-align: justify">
-<div class="grid">
-<div class="g-col-12 g-col-lg-6">
-<p>Quando o número de arquivos é grande e cada arquivo contém uma quantidade substancial de dados, o uso do Excel ou ferramentas online pode se tornar impraticável. Tais métodos podem consumir uma quantidade excessiva de recursos do sistema, levando à lentidão ou até mesmo travamento do computador. Além disso, a utilização de ferramentas online para a fusão de dados pode representar um risco de segurança, pois expõe informações potencialmente sensíveis a domínios externos e não privados.</p>
-</div>
-<div class="g-col-12 g-col-lg-6">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="exel-pastas.png" class="img-fluid figure-img" style="width:90.0%" alt="Imagem mostrando um grande volume de dados no formato exel"></p>
-<figcaption>Grandes Volumes de Arquivos</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<p>The <code>.gitignore</code> file is a configuration tool in Git that specifies intentionally untracked files to be ignored. For example, files like local configuration files, build outputs, and log files are commonly added to <code>.gitignore</code>. Here is a simple example:</p>
+<pre class="plaintext"><code># Example of a .gitignore file
+*.log       # Ignore all .log files
+temp/       # Ignore the 'temp' folder and its contents
+node_modules/ # Ignore dependencies folder</code></pre>
+<p>While <code>.gitignore</code> prevents untracked files from being staged, it does not affect files or folders that have already been committed. This distinction often leads to confusion, especially when developers expect <code>.gitignore</code> to retroactively stop tracking a file.</p>
 </div>
 </section>
-<section id="solução-segura-para-grandes-volumes-de-arquivos" class="level2">
-<h2 class="anchored" data-anchor-id="solução-segura-para-grandes-volumes-de-arquivos">Solução Segura para Grandes volumes de Arquivos</h2>
+<section id="the-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-problem"><strong>The Problem</strong></h3>
 <div style="text-align: justify">
-<p>Diante desses desafios, é essencial encontrar uma forma de unir arquivos de maneira eficiente e segura, especialmente em um ambiente profissional onde a integridade e a confidencialidade dos dados são primordiais. Abaixo, compartilho com vocês dois scripts que têm contribuido em meu trabalho. Eles permitem a rápida e segura fusão de grandes quantidades de arquivos em Excel e CSV, mantendo a integridade dos dados e operando com eficiência mesmo em datasets volumosos.</p>
-</div>
-<section id="python" class="level3">
-<h3 class="anchored" data-anchor-id="python">Python</h3>
-<div style="text-align: justify">
-<p>O script abaixo em Python é utilizado para combinar múltiplos arquivos Excel em um único DataFrame utilizando a biblioteca <code>pandas</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">import</span> os</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">import</span> pandas as pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Caminho onde os arquivos Excel estão localizados</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Path to the directory where the Excel files are located</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">path</span> = <span class="st">'/path/to/directory'</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista para armazenar os dataframes</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># List to store the dataframes</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">lista_dfs</span> = []</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterar sobre cada arquivo no diretório</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Iterate over each file in the directory</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> arquivo <span class="kw">in</span> os.listdir<span class="er">(</span><span class="ex">caminho</span><span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="ex">arquivo.endswith</span><span class="er">(</span><span class="st">'.xlsx'</span><span class="kw">)</span> <span class="ex">or</span> arquivo.endswith<span class="er">(</span><span class="st">'.xls'</span><span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Caminho completo do arquivo</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Full path of the file</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="ex">caminho_arquivo</span> = os.path.join<span class="er">(</span><span class="ex">caminho,</span> arquivo<span class="kw">)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ler o arquivo Excel</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>         <span class="co"># Read the Excel file</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="fu">df</span> = pd.read_excel<span class="er">(</span><span class="ex">caminho_arquivo</span><span class="kw">)</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Adicionar o dataframe à lista</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add the dataframe to the list</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="ex">lista_dfs.append</span><span class="er">(</span><span class="fu">df</span><span class="kw">)</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenar todos os dataframes</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate all the dataframes</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ex">df_final</span> = pd.concat<span class="er">(</span><span class="ex">lista_dfs,</span> ignore_index=True<span class="kw">)</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Exibir o dataframe resultante</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the resulting dataframe</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="ex">df_final</span><span class="kw">)</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Salvar o dataframe resultante em um novo arquivo Excel</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the resulting dataframe to a new Excel file</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ex">df_final.to_excel</span><span class="er">(</span><span class="st">'/caminho/para/salvar/o/arquivo_resultante.xlsx'</span><span class="ex">,</span> index=False<span class="kw">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Se você estiver interessado em utilizar a função que recria o script mencionado anteriormente, ela está disponível no meu Gist no GitHub. Você pode facilmente acessá-la e copiá-la para o seu próprio uso. Confira-a através do seguinte link: <a href="https://gist.githubusercontent.com/nionmaron/c7ff92193d9944c532629c88cb99ab43/raw/2f3f44c28b4595fa79b29e1367d38c7a35dbbc27/combinarArquivosExcel.py">gist.github.com/nionmaron</a>. Sinta-se à vontade para explorar, modificar e implementar a função conforme suas necessidades!</p>
-<section id="como-executar-o-script" class="level4">
-<h4 class="anchored" data-anchor-id="como-executar-o-script">Como Executar o Script</h4>
-<ol type="1">
-<li><p><strong>Instale a Biblioteca <code>pandas</code></strong>: Certifique-se de que a biblioteca pandas está instalada no seu ambiente Python. Se necessário, instale-a usando pip install pandas.</p></li>
-<li><p><strong>Modifique os Caminhos</strong>: Altere os valores de caminho e o caminho no final_df.to_excel() para os caminhos desejados no seu sistema.</p></li>
-<li><p><strong>Execute o Script</strong>: Execute o script em um ambiente Python. Isso pode ser feito através de um terminal de comando ou usando uma IDE como Jupyter Notebook, PyCharm, ou outro.</p></li>
-</ol>
-<p>Lembre-se de que os arquivos Excel devem estar no formato .xlsx ou .xls e localizados no diretório especificado na variável caminho.</p>
-</section>
+<p>Imagine you have a folder called <code>NOGIT/</code> that contains temporary or sensitive files. Initially, this folder was committed to the repository, but now you want to stop tracking it and exclude it from future commits. Adding it to <code>.gitignore</code> alone won’t work because the folder is already in the repository’s history.</p>
 </div>
 </section>
-<section id="linguagem-r" class="level3">
-<h3 class="anchored" data-anchor-id="linguagem-r">Linguagem R</h3>
-<div style="text-align: justify">
-<p>O script abaixo em R é utilizado para combinar múltiplos arquivos Excel em um único DataFrame utilizando a biblioteca <code>readxl</code> e <code>writexl</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregar biblioteca necessária</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">library</span><span class="er">(</span><span class="ex">readxl</span><span class="kw">)</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Definir o caminho onde os arquivos Excel estão localizados</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the path where Excel files are located</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">caminho</span> <span class="op">&lt;</span>- <span class="st">'/caminho/para/o/diretório'</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Obter uma lista de todos os arquivos Excel no diretório</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Get a list of all Excel files in the directory</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">arquivos</span> <span class="op">&lt;</span>- list.files<span class="er">(</span><span class="ex">path</span> = caminho, pattern = <span class="st">'\\\\.xlsx$'</span>, full.names = TRUE<span class="kw">)</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Ler cada arquivo e armazená-los em uma lista</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Read each file and store them in a list</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ex">lista_dfs</span> <span class="op">&lt;</span>- lapply<span class="er">(</span><span class="ex">arquivos,</span> read_excel<span class="kw">)</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Combinar todos os data frames</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine all the data frames</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ex">df_final</span> <span class="op">&lt;</span>- do.call<span class="er">(</span><span class="ex">rbind,</span> lista_dfs<span class="kw">)</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Exibir o dataframe resultante</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the resulting dataframe</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ex">print</span><span class="er">(</span><span class="ex">df_final</span><span class="kw">)</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Salvar o dataframe resultante em um novo arquivo Excel</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar o pacote 'writexl' se necessário</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages('writexl')</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the resulting dataframe in a new Excel file</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the 'writexl' package if necessary</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages('writexl')</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ex">library</span><span class="er">(</span><span class="ex">writexl</span><span class="kw">)</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="ex">write_xlsx</span><span class="er">(</span><span class="ex">df_final,</span> <span class="st">'/caminho/para/salvar/o/arquivo_resultante.xlsx'</span><span class="kw">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Se você estiver interessado em utilizar a função que recria o script mencionado anteriormente, ela está disponível no meu Gist no GitHub. Você pode facilmente acessá-la e copiá-la para o seu próprio uso. Confira-a através do seguinte link: <a href="https://gist.githubusercontent.com/nionmaron/823e67715ebecccb95bb81c53e464872/raw/05f0da2aeaa75766b93549a5760a7c8a61d58005/combinarArquivosExcel.R">gist.github.com/nionmaron</a>. Sinta-se à vontade para explorar, modificar e implementar a função conforme suas necessidades!</p>
-</div>
-<section id="como-executar-o-script-1" class="level4">
-<h4 class="anchored" data-anchor-id="como-executar-o-script-1">Como Executar o Script</h4>
-<p>Para executar o script, siga estes passos:</p>
-<ol type="1">
-<li>Certifique-se de ter o R e os pacotes <code>readxl</code> e <code>writexl</code> instalados.</li>
-<li>Modifique o valor de caminho para o diretório onde seus arquivos Excel estão armazenados.</li>
-<li>Execute o script no R. Isso lerá todos os arquivos <code>.xlsx</code> no diretório especificado, os combinará em um único data frame e, opcionalmente, salvará o resultado em um novo arquivo Excel.</li>
-</ol>
-<p>Lembre-se de que o caminho do diretório e o local do arquivo de saída devem ser alterados para corresponder à sua estrutura de diretórios e necessidades.</p>
-</section>
-</section>
-<section id="observação" class="level3">
-<h3 class="anchored" data-anchor-id="observação">Observação</h3>
-<p>Para garantir que o script funcione corretamente e combine os dados de todos os arquivos Excel, é essencial que o nome das colunas em cada arquivo seja exatamente o mesmo. Qualquer discrepância nos nomes das colunas entre os arquivos pode resultar em erros ou em um DataFrame combinado incorreto. Verifique e padronize os nomes das colunas em todos os arquivos antes de utilizar esta função para obter os melhores resultados.</p>
-</section>
-</section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<div style="text-align: justify">
-<p>A escolha do método correto para a fusão de arquivos Excel depende de vários fatores, incluindo o volume de dados, a necessidade de segurança e a disponibilidade de recursos. Ao optar por soluções de programação como R e Python, podemos superar muitas das limitações dos métodos convencionais, garantindo um processo mais rápido, seguro e adaptável às necessidades de grandes projetos de análise de dados.</p>
-</div>
+<section id="the-solution" class="level3">
+<h3 class="anchored" data-anchor-id="the-solution"><strong>The Solution</strong></h3>
+<p>To remove the folder (or file) from Git’s tracking while keeping it locally, follow these steps:</p>
 <hr>
-<p><strong>#DataFusion #RProgramming #PythonCoding #DataAnalysis #ExcelTips</strong></p>
+<section id="remove-the-folder-from-gits-tracking" class="level4">
+<h4 class="anchored" data-anchor-id="remove-the-folder-from-gits-tracking"><strong>1. Remove the Folder from Git’s Tracking</strong></h4>
+<p>Use the <code>git rm</code> command with the <code>--cached</code> flag to untrack the folder:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-r</span> <span class="at">--cached</span> NOGIT/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>The <code>-r</code> option ensures that the removal is recursive.</li>
+<li>The <code>--cached</code> flag ensures the folder is removed from Git’s tracking but remains on your local machine.</li>
+</ul>
+</section>
+<section id="update-the-.gitignore-file" class="level4">
+<h4 class="anchored" data-anchor-id="update-the-.gitignore-file"><strong>2. Update the <code>.gitignore</code> File</strong></h4>
+<p>Add the folder to your <code>.gitignore</code> file to prevent it from being tracked in the future:</p>
+<pre class="plaintext"><code># Ignore the NOGIT folder
+NOGIT/</code></pre>
+</section>
+<section id="commit-the-changes" class="level4">
+<h4 class="anchored" data-anchor-id="commit-the-changes"><strong>3. Commit the Changes</strong></h4>
+<p>Create a commit to register the removal of the folder from version control:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Remove NOGIT folder from version control and update .gitignore"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="push-the-changes-to-the-remote-repository" class="level4">
+<h4 class="anchored" data-anchor-id="push-the-changes-to-the-remote-repository"><strong>4. Push the Changes to the Remote Repository</strong></h4>
+<p>Sync the changes with the remote repository to ensure that the folder is no longer tracked by anyone pulling the repository:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Replace <code>main</code> with the name of your branch if you are working on a different branch.</p>
+</section>
+</section>
+<section id="example-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="example-workflow"><strong>Example Workflow</strong></h3>
+<p>Let’s take a practical example. Suppose you mistakenly committed a directory named <code>logs/</code> that contains debugging logs:</p>
+<ol type="1">
+<li><p><strong>Initial Commit:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add logs/</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add logs directory"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Realizing the Mistake:</strong> After realizing that <code>logs/</code> should not be versioned, you decide to untrack it.</p></li>
+<li><p><strong>Fix the Issue:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the folder from Git tracking</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-r</span> <span class="at">--cached</span> logs/</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Update the .gitignore file</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"logs/"</span> <span class="op">&gt;&gt;</span> .gitignore</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Commit the changes</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Remove logs directory from version control"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Push the changes</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="key-takeaways" class="level3">
+<h3 class="anchored" data-anchor-id="key-takeaways"><strong>Key Takeaways</strong></h3>
+<ol type="1">
+<li><strong>Untracking Files:</strong> Use <code>git rm --cached</code> to stop tracking files or folders without deleting them locally.</li>
+<li><strong>Prevent Future Tracking:</strong> Always add files or directories to <code>.gitignore</code> to prevent them from being tracked in subsequent commits.</li>
+<li><strong>Synchronize with Remote:</strong> Commit and push changes to ensure the repository remains consistent for all collaborators.</li>
+</ol>
+</section>
+<section id="common-pitfalls" class="level3">
+<h3 class="anchored" data-anchor-id="common-pitfalls"><strong>Common Pitfalls</strong></h3>
+<ol type="1">
+<li><p><strong>Forgetting to Commit Changes:</strong> Simply removing files from tracking or updating <code>.gitignore</code> without committing the changes won’t affect the repository.</p></li>
+<li><p><strong>Accidental Deletion:</strong> Using <code>git rm</code> without the <code>--cached</code> flag will delete files from both Git tracking and the local file system.</p></li>
+<li><p><strong>Retrospective Fix:</strong> <code>.gitignore</code> only applies to untracked files, so it cannot be used to retrospectively untrack files.</p></li>
+</ol>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>Managing files and directories in Git repositories effectively is essential for maintaining clean and secure version control. By understanding the limitations of <code>.gitignore</code> and leveraging commands like <code>git rm --cached</code>, you can efficiently manage files that no longer need to be tracked. Following the steps outlined in this article ensures your repository remains organized, secure, and free from unnecessary files.</p>
+<hr>
+<p><strong>#GIT </strong></p>
 
 
 </section>
@@ -472,12 +409,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiada");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiada");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

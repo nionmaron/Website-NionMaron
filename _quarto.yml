@@ -11,7 +11,7 @@ website:
   google-analytics: "G-PGRFF9TPBC"
   
   page-footer:
-    background: "#000000"
+    background: "#78c2ad"
     #background: light
     left: |
       Developed by [Nion M. Dransfeld](https://nionmaron.com)
@@ -19,20 +19,29 @@ website:
       [Edit this page]( https://github.com/nionmaron/Website-NionMaron/) <br> [Report an issue](https://github.com/nionmaron/Website-NionMaron/issues)
     right: |
       [Terms & Conditions](/ts-and-cs.qmd)
-    border: false
+    #border: false
     
   navbar:
-    background: "#2E8BC0" # / Ref: https://www.canva.com/colors/color-palettes/mermaid-lagoon/
+    #background: "#2E8BC0" # / Ref: https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     right:
       - text: "Blog"
         file: Blog.qmd
       - text: "Flashcards"
-        file: Flashcards.qmd
-      - text: "About Nion"
-        menu: 
+        menu:
+        - text: "Machine Learning"
+          file: Machine-Learning-Flashcards.qmd
+        - text: "Data Science"
+          file: Data-Science-Flashcards.qmd
+        - text: "Leis e Concursos TI"
+          file: Leis-Concursos-Flashcards.qmd
+          
+      - text: "About Me"
+        menu:
+        - text: "My Resume"
+          href: https://resume.nionmaron.com/
         - text: "Portfolio"
           file: Portfolio.qmd
-        - text: "CV"
+        - text: "Journey"
           file: CV.qmd
         - icon: linkedin
           href: https://www.linkedin.com/in/nionmaron/?locale=en_US
@@ -42,10 +51,12 @@ website:
 
 format:
   html:
-    mainfont: Corn # MADE Gentle # Sans-serif
-    theme:
-      light: cosmo
-      dark: [cosmo, CSS/theme-dark.scss]
+    #mainfont: Corn # MADE Gentle # Sans-serif
+    max-width: 1300px
+    linkcolor: '#212529'
+    #font-family: cursive
+    #https://bootswatch.com/minty/
+    theme: minty
     css: 
     - CSS/styles.css
     - CSS/Buttons.css
