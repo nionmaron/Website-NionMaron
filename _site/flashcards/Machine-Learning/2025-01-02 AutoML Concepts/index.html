@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dransfeld, N. M.">
+<meta name="dcterms.date" content="2025-01-02">
+<meta name="description" content="Improve your understanding of Auto Machine Learning (AutoML) with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.">
+
+<title>Auto Machine Learning (AutoML) - Concepts – NionMaron</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/site_icon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PGRFF9TPBC"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PGRFF9TPBC', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../../../CSS/styles.css">
+<link rel="stylesheet" href="../../../CSS/Buttons.css">
+<meta property="og:title" content="Auto Machine Learning (AutoML) - Concepts">
+<meta property="og:description" content="Improve your understanding of Auto Machine Learning (AutoML) with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.">
+<meta property="og:image" content="https://nionmaron.com/flashcards/Machine-Learning/2025-01-02 AutoML Concepts/autoML.webp">
+<meta property="og:site_name" content="NionMaron">
+<meta name="twitter:title" content="Auto Machine Learning (AutoML) - Concepts">
+<meta name="twitter:description" content="Improve your understanding of Auto Machine Learning (AutoML) with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.">
+<meta name="twitter:image" content="https://nionmaron.com/flashcards/Machine-Learning/2025-01-02 AutoML Concepts/autoML.webp">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">NionMaron</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-flashcards" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Flashcards</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-flashcards">    
+        <li>
+    <a class="dropdown-item" href="../../../Machine-Learning-Flashcards.html">
+ <span class="dropdown-text">Machine Learning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../Data-Science-Flashcards.html">
+ <span class="dropdown-text">Data Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../Leis-Concursos-Flashcards.html">
+ <span class="dropdown-text">Leis e Concursos TI</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-me" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About Me</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about-me">    
+        <li>
+    <a class="dropdown-item" href="https://resume.nionmaron.com/">
+ <span class="dropdown-text">My Resume</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../Portfolio.html">
+ <span class="dropdown-text">Portfolio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../CV.html">
+ <span class="dropdown-text">Journey</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/in/nionmaron/?locale=en_US"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="dropdown-text"></span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/nionmaron"><i class="bi bi-github" role="img">
+</i> 
+ <span class="dropdown-text"></span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><center><br>
+<strong>Auto Machine Learning (AutoML)</strong> <br> Concepts<br>
+</center></h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MachineLearning</div>
+    <div class="quarto-category">AutoML</div>
+    <div class="quarto-category">English</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p><strong>Improve your understanding of Auto Machine Learning (AutoML) with simple and effective flashcards. Test and solidify key concepts through clear, focused questions. A straightforward tool for learning and revisiting essential machine learning principles.</strong></p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dransfeld, N. M. </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 2, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2" style="text-align: justify">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The use of Machine Learning (ML) algorithms is growing exponentially, encompassing fields such as healthcare, finance, e-commerce, and many others. However, developing ML models effectively and efficiently often requires specialized knowledge, time, and extensive trial-and-error in hyperparameter tuning. This is where <strong>Auto Machine Learning (AutoML)</strong> comes in, with the goal of automating much of this process.</p>
+<p>Auto Machine Learning (AutoML) has revolutionized the way ML models are developed by automating key steps in the machine learning pipeline—ranging from algorithm selection and hyperparameter tuning to model evaluation. Its core lies in defining a search space of possible algorithms and parameters, employing a search strategy to efficiently explore that space, and relying on a performance measure to guide decision-making.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">FlashCard</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Concepts</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div style="height:900px;">
+
+
+
+
+  <style>
+    /* Default Styles (Desktop) */
+
+    /* Watermark Styles */
+    .nm-watermark {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: grey;
+      z-index: 1000;
+    }
+
+    .nm-spacer {
+      height: 20px; 
+    }
+
+    .nm-container {
+      margin-top: 0 auto;
+      width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .nm-buttons-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nm-button {
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      flex: 1 1 auto;
+      margin: 5px;
+    }
+
+    .nm-big-button {
+      font-size: 20px;
+    }
+
+    .nm-small-button {
+      font-size: 16px;
+    }
+
+    .nm-card {
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .nm-question-style {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nm-answer-style {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+      text-align: justify;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .nm-button:hover {
+      background-color: #3e8e41;
+    }
+
+    .nm-button:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive Styles for devices smaller than 768px */
+    @media screen and (max-width: 768px) {
+      .nm-container {
+        max-width: 96%;
+        padding: 10px;
+      }
+
+      .nm-card {
+        padding: 20px;
+      }
+
+      .nm-question-style {
+        font-size: 20px;
+      }
+
+      .nm-answer-style {
+        font-size: 18px;
+      }
+
+      .nm-button {
+        padding: 16px 18px;
+        font-size: 18px;
+      }
+    }
+  </style>
+
+
+  <div class="nm-spacer"></div>
+  
+    <h1>AutoML Concepts</h1>
+    <div class="nm-card" id="card">
+      <div class="nm-buttons-container">
+        <button class="nm-button" onclick="nextCard()">Next Question</button>
+      </div>
+      <p id="question" class="nm-question-style">
+        Welcome <br><br>
+        <small>Use arrow keys to navigate, double-click to reveal the answer, or click the buttons.</small>
+      </p>
+      <p id="answer" class="nm-answer-style">Click next question to start.</p>
+      <p id="counter" class="nm-counter-style"></p>
+    </div>
+    <div class="nm-buttons-container">
+      <button class="nm-button" id="answerButton" onclick="showAnswer()">Show Answer</button>
+      <div class="nm-button-row">
+        <button class="nm-button" onclick="shuffleCards()">Shuffle Questions</button>
+        <!-- Removed Full Screen button here -->
+        <button class="nm-button custom-button" onclick="markAsMemorized()">Mark as Memorized</button>
+      </div>
+    </div>
+  
+  <div class="nm-spacer"></div>
+
+  <!-- Watermark -->
+  <div class="nm-watermark">
+    Visit <a href="https://www.nionmaron.com" target="_blank">nionmaron.com</a>
+  </div>
+
+  <script>
+   var cards = [{question:"What are the three fundamental components of an AutoML system?",answer:"Search Space: All possible algorithms (e.g., Random Forest, XGBoost, Neural Networks) and their hyperparameter configurations.<br>Search Strategy: The method used to navigate or explore the search space (e.g., Grid Search, Random Search, Bayesian Optimization, Evolutionary Algorithms).<br>Performance Metric(s): The objective function(s) used to evaluate and compare different configurations (e.g., accuracy, F1-score, MSE, or domain-specific metrics)."},
+     {question:"Why can the size of the search space easily become prohibitively large in AutoML",answer:"Each model type may have numerous hyperparameters, each hyperparameter can have many possible values or ranges, and multiple models can be combined in pipelines. The combinatorial explosion of these possibilities causes the search space to grow exponentially, quickly becoming extremely large (potentially millions or even billions of configurations)."},
+     {question:"How does reducing the search space impact the performance and feasibility of AutoML?",answer:"By removing low-impact algorithms and fixing or narrowing the ranges of certain hyperparameters, one dramatically reduces the number of configurations to test. This leads to:<br><br>Less computational cost: Fewer configurations to evaluate.<br>Faster convergence: Speedier identification of good configurations.<br>Reduced risk of overfitting: Fewer unnecessary parameters that may overfit to noise in the data."},
+     {question:"What are some common hyperparameters that can be automated in AutoML pipelines?",answer:"Algorithm selection: Deciding among Logistic Regression, Random Forest, XGBoost, SVM, etc.<br>Regularization parameters: L1/L2 penalties, alpha, lambda.<br>Architectural parameters (neural networks): Number of layers, number of neurons per layer.<br>Learning rate (gradient-based methods).<br>Maximum depth, number of estimators (decision trees, random forests, boosting).<br>Feature engineering options: Whether to include polynomial features, text vectorizers, transformations, etc."},
+     {question:"In what scenarios might a simple Random Search outperform a more exhaustive Grid Search in AutoML?",answer:"High-dimensional hyperparameter spaces: Random Search often explores more varied regions quickly, whereas Grid Search gets “stuck” exhaustively evaluating restricted grids.<br>Time constraints: Random Search can find good hyperparameters faster by leveraging a limited budget.<br>Unknown parameter importance: Random exploration may stumble upon effective regions of the search space that a carefully spaced grid might miss."},
+     {question:"Explain how Bayesian Optimization differs from Grid or Random Search in the context of AutoML.",answer:"Bayesian Optimization builds a surrogate model (e.g., Gaussian Process, TPE) that approximates the performance function based on previously tested configurations. It uses this surrogate to iteratively select the next most promising hyperparameters to evaluate, rather than blindly (Grid) or randomly (Random Search) searching. This guided approach often converges to optimal or near-optimal solutions faster and with fewer evaluations."},
+     {question:"What are the main steps involved in an evolutionary (genetic) algorithm for hyperparameter optimization?",answer:"Initialization: Randomly create a population of hyperparameter configurations.<br>Evaluation: Train and score each configuration.<br>Selection/Elitism: Carry the best-performing configurations forward.<br>Crossover: Combine parts of different configurations to create new offspring.<br>Mutation: Randomly change some hyperparameter values.<br>Iteration: Repeat evaluation and breeding until a stopping criterion (e.g., performance threshold, time limit) is met."},
+     {question:"How can AutoML be extended to handle tasks beyond classification and regression (e.g., time-series forecasting, NLP)?",answer:"Time-series forecasting: Incorporate specialized data transformations (differencing, lag features, rolling statistics) and specialized models (ARIMA, Prophet, RNNs for sequence data).<br>NLP tasks: Include text-specific preprocessing (tokenization, stemming, embedding methods), specialized model architectures (LSTM, Transformers), and relevant hyperparameters.<br>Domain-specific metrics and search spaces: Tailor performance metrics (e.g., BLEU scores for NLP) and limit algorithm choices to those known to work well in the domain."},
+     {question:"Why is it critical to have a well-defined performance metric in AutoML?",answer:"Guides the search: Tells the optimization algorithm how to choose and evaluate new configurations.<br>Reflects business or research objectives: Ensures that the AutoML process aligns with real-world needs.<br>Prevents misleading results: If the metric doesn’t match the problem requirements, models may be optimized in the wrong direction (e.g., focusing on accuracy when recall is critical)."},
+     {question:"What role do ensemble methods play in many AutoML frameworks?",answer:"Ensembles combine multiple models or configurations to often achieve better performance and reduced variance. Many AutoML frameworks:<br><br>Automatically train various models.<br>Collect top-performing models.<br>Combine them via methods like averaging, stacking, or boosting.<br>This can yield more robust predictions than any single model alone."},
+     {question:"How does meta-learning help accelerate the AutoML process?",answer:"Meta-learning uses knowledge from past learning tasks to guide the search on a new task. By analyzing which hyperparameters or algorithms performed well on similar datasets, the system can:<br><br>Warm-start the optimization by focusing on promising regions.<br>Reduce trial and error on the new dataset.<br>Shorten the overall search time while maintaining high model quality."},
+     {question:"What is a “pipeline” in the context of AutoML, and why is it important?",answer:"A pipeline is a sequence of data transformations (e.g., scaling, encoding, feature engineering) followed by a model training step. It’s important because:<br><br>End-to-end automation: Ensures each step, from raw data input to final model prediction, is optimized.<br>Consistency: When replicating experiments or deploying models, the same transformations are applied.<br>Search synergy: Hyperparameter tuning can include both model parameters and transformation settings, yielding better overall performance."},
+     {question:"What are common stopping criteria in AutoML search processes?",answer:"Time budget: A maximum allotted time for searching.<br>Number of evaluations: A fixed limit on how many configurations can be tested.<br>Performance threshold: Stop if a certain metric threshold (e.g., 95% accuracy) is reached.<br>Convergence: If improvement in performance plateaus over a specified number of iterations."},
+     {question:"How does handling categorical vs. continuous hyperparameters differ in optimization strategies for AutoML?",answer:"Categorical hyperparameters (e.g., choice of algorithm, activation function) are discrete and must be explored by enumerating or sampling from a finite set.<br>Continuous hyperparameters (e.g., learning rate) typically require advanced sampling/optimization techniques (e.g., Bayesian methods, gradient-based for neural nets if feasible).<br>Some optimizers handle them differently, e.g., using specific kernels or sampling methods suited for discrete or continuous spaces."},
+     {question:"What are some techniques to avoid overfitting during the AutoML process?",answer:"Cross-validation: Evaluate configurations using multiple folds to get a more robust performance estimate.<br>Early stopping: Halt training if validation performance fails to improve.<br>Regularization: Incorporate hyperparameters that penalize model complexity.<br>Data augmentation (in images, text, audio): Increase effective dataset size.<br>Ensembling: Combine multiple models to reduce variance."},
+     {question:"Why might an AutoML system choose a simpler model over a more complex one, even if the latter has slightly higher accuracy?",answer:"Generalization and interpretability: A simpler model is less prone to overfitting and is often more interpretable.<br>Computational cost: Simpler models train faster and are cheaper to maintain.<br>Margin of improvement: If the accuracy gain is negligible compared to the added complexity, the system may favor the simpler option based on a cost-benefit analysis or user-defined constraints (e.g., resource limits, interpretability requirements)."},
+     {question:"What is the concept of a “warm start” in AutoML, and why is it beneficial?",answer:"A warm start uses knowledge from:<br><br>Previous runs on similar tasks.<br>Meta-learning databases.<br>This knowledge provides promising initial hyperparameter guesses, speeding up convergence and reducing wasted effort on unproductive areas of the search space."},
+     {question:"When might a hyperparameter optimization approach fail to find a good solution in AutoML?",answer:"Poor choice of search strategy (e.g., only Grid Search on a vast high-dimensional space).<br>Insufficient time or budget leads to incomplete exploration.<br>Inaccurate performance estimates (e.g., insufficient cross-validation) cause misleading signals.<br>Overly restricted or incorrectly designed search space that excludes potentially optimal configurations."},
+     {question:"How do AutoML systems handle missing data and data cleaning steps?",answer:"Many frameworks integrate data preprocessing/cleaning steps into the pipeline:<br><br>Imputation strategies (mean, median, mode, or advanced algorithms).<br>Dropping problematic features/rows if they exceed a missing threshold.<br>Auto-encoding categorical variables.<br>Users can often define or let the AutoML system pick automatically from a set of common data cleaning methods."},
+     {question:"Describe the trade-off between exploration and exploitation in AutoML’s search strategies.",answer:"Exploration: Trying new or untested regions of the hyperparameter space to discover potentially better solutions.<br>Exploitation: Focusing on areas known to be promising based on previous evaluations.<br>A successful search strategy balances both. Too much exploitation can lead to local optima; too much exploration can waste resources on unproductive areas."},
+     {question:"Why are surrogate models used in Bayesian Optimization, and how do they work?",answer:"Surrogate models approximate the true objective function (e.g., accuracy as a function of hyperparameters) so that the optimizer doesn’t need to train and evaluate every possible configuration directly (which is costly).<br><br>Gaussian Process, Tree-structured Parzen Estimator (TPE), or other regressors estimate performance.<br>The optimizer uses this model to choose hyperparameter points with the highest expected improvement.<br>This iterative model-refinement approach guides the search more efficiently than random exploration."},
+     {question:"What is multi-objective optimization in AutoML, and give an example?",answer:"Multi-objective optimization deals with optimizing more than one metric simultaneously (often with competing goals).<br>Example: Maximizing both accuracy and interpretability, or maximizing F1-score while minimizing inference latency. Instead of a single “best” model, the result is a Pareto front of trade-offs among the objectives."},
+     {question:"How do AutoML frameworks ensure reproducibility of experiments?",answer:"Random seeds: Fixing seeds for data splits and random number generators.<br>Saving pipeline configurations: Storing the entire pipeline, including preprocessing steps and final hyperparameter values.<br>Version control: Tracking dependencies, library versions, and dataset versions.<br>Logging: Recording each trial’s configuration, performance, and training logs."},
+     {question:"Explain the concept of “hyperparameter transfer” in meta-learning for AutoML.",answer:"Hyperparameter transfer uses historically successful configurations—those that performed well on previous, similar datasets—to initialize or constrain the search for new tasks. By “transferring” this knowledge, AutoML can skip large parts of the search space that are unlikely to yield good results, thus accelerating optimization."},
+     {question:"What challenges arise when applying AutoML to highly imbalanced datasets?",answer:"Skewed performance metrics: Accuracy may be misleading.<br>Sensitivity to minority classes: Must ensure the search strategy values recall, precision, or other metrics for the minority class.<br>Resampling steps: AutoML pipelines often need to integrate oversampling (SMOTE) or undersampling strategies.<br>Hyperparameter tuning for imbalance: Some models have imbalance-specific hyperparameters (e.g., class_weights)."},
+     {question:"How does an AutoML system handle model interpretability concerns?",answer:"Model selection: May prefer interpretable algorithms (e.g., linear models, decision trees) or produce them in an ensemble.<br>Interpretability constraints: The user can specify a preference or requirement (e.g., “use only linear or tree-based models”).<br>Post-hoc explanation: Tools like SHAP or LIME can be integrated to provide explanations for complex ensemble models."},
+     {question:"What is the role of feature engineering in AutoML, and how is it automated?",answer:"Feature engineering transforms raw data into more predictive inputs. Automation can include:<br><br>Common transformations: Scaling, one-hot encoding, PCA, polynomial features.<br>Domain-specific transformations: Date/time decomposition, text vectorization (Bag-of-Words, TF-IDF).<br>Feature selection: Eliminating redundant or non-informative features.<br>Modern AutoML frameworks either rely on rule-based feature engineering or employ search-based methods (e.g., iterative addition/removal of features) to find the best transformations automatically."},
+     {question:"In distributed or cloud-based environments, how do AutoML frameworks scale their search processes?",answer:"Parallel evaluations: Multiple hyperparameter configurations can be trained/evaluated simultaneously across machines.<br>Scheduler/orchestrator: A central controller (e.g., Ray Tune, Spark ML) dispatches trials and aggregates results.<br>Fault-tolerance: If a node fails, the orchestrator reschedules the job on another node.<br>Adaptive resource allocation: Dynamically assign more resources to promising trials (e.g., population-based training)."},
+     {question:"What does “pipeline caching” mean in AutoML, and why is it beneficial?",answer:"Pipeline caching stores intermediate results (e.g., preprocessed datasets, feature transformations) so that subsequent trials don’t have to re-run the same steps. This:<br><br>Saves computation time: Avoids repeated transformations for each new hyperparameter set.<br>Improves efficiency: Speeds up the iterative process in large data contexts."},
+     {question:"Looking toward the future, what emerging research trends or technologies are likely to drive AutoML innovation?",answer:"Neural Architecture Search (NAS): Automating the design of deep neural networks.<br>Meta-learning at scale: Systems that learn from thousands of past tasks to quickly solve new ones.<br>Federated AutoML: Optimizing models on distributed data without centralizing it (data privacy).<br>Zero-shot and few-shot AutoML: Making accurate hyperparameter guesses or entire model configurations with very few training samples.<br>Explainable AutoML: Further integration of interpretability constraints to provide transparent, trustable models for high-stakes domains."},
+     {question:"What is auto-sklearn, and how does it integrate with the scikit-learn ecosystem?",answer:"auto-sklearn is an open-source AutoML toolkit built on top of scikit-learn.<br>It automatically selects algorithms and tunes hyperparameters, leveraging Bayesian optimization and meta-learning.<br>It behaves similarly to other scikit-learn estimators, allowing you to use .fit() and .predict() methods in your code.<br>The library also includes ensembles of top-performing models to improve predictive performance."},
+     {question:"Which programming language is TPOT written in, and how does it optimize machine learning pipelines?",answer:"TPOT (Tree-Based Pipeline Optimization Tool) is written in Python and integrates with scikit-learn.<br>It uses genetic programming to evolve and optimize entire ML pipelines, including preprocessing steps, feature selection, and model selection.<br>The final output is a Python code snippet representing the best pipeline found during its search process."},
+     {question:"What is H2O AutoML, and what are its key advantages for large-scale data?",answer:"H2O AutoML is a feature of the H2O.ai open-source platform that automates ML tasks (training, validation, model selection, and ensembling).<br>It supports both classification and regression on structured data at scale.<br>Key Advantages:<br>Distributed computing: Uses Java-based, in-memory distributed architecture, making it highly scalable for large datasets.<br>Comprehensive models: Trains multiple algorithms (GLM, GBM, Random Forest, Deep Learning) and creates ensembles.<br>User-friendly: Has interfaces in Python, R, Scala, and a web-based Flow UI."},
+     {question:"How does AutoKeras simplify deep learning model creation, and which deep learning framework does it primarily rely on?",answer:"AutoKeras automates the design of deep neural network architectures, using methods like Neural Architecture Search (NAS).<br>It primarily relies on TensorFlow/Keras under the hood.<br>Developers can specify minimal inputs (like the type of data—images, text, structured), and AutoKeras searches for an optimal architecture automatically."},
+     {question:"What distinguishes MLBox from other AutoML libraries?",answer:"MLBox is a Python-based AutoML library focusing on preprocessing, feature selection, and hyperparameter tuning.<br>Distinguishing Features:<br>Robust data cleaning: Automatically handles missing and erroneous data.<br>Advanced feature engineering: Includes strategies for encoding categorical variables and detecting outliers.<br>Ease of use: Offers high-level APIs to run end-to-end experiments with minimal coding."},
+     {question:"Which AutoML library by Microsoft can be integrated into Python notebooks and also supports cloud-based experimentation through Azure?",answer:"Microsoft’s Azure AutoML (or Azure Machine Learning Automated ML) can be integrated directly into Python notebooks using the azureml-sdk.<br>It allows local experimentation or cloud-based runs on Azure, where it automatically trains and tunes multiple models, logs metrics, and offers deployment options."},
+     {question:"What is Google Cloud AutoML, and in which scenarios is it particularly useful?",answer:"Google Cloud AutoML is a suite of managed machine learning products that automate model building for specific use-cases (e.g., vision, natural language, translation, etc.).<br>Particularly Useful for:<br>Non-experts who need high-quality models without deep ML expertise.<br>Quick prototyping for image classification, object detection, text classification, or translation tasks with minimal manual hyperparameter tuning.<br>Scalability with Google’s cloud infrastructure."},
+     {question:"How does AWS AutoGluon streamline deep learning tasks and what kind of tasks does it support?",answer:"AWS AutoGluon is an open-source AutoML toolkit from Amazon focused on deep learning as well as traditional ML tasks."}]; 
+    
+
+    var currentCard = 0;
+
+    document.getElementById("answer").style.display = "none";
+    updateCounter();
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function nextCard() {
+      document.getElementById("answer").style.display = "none"; 
+      document.getElementById("answerButton").textContent = "Show Answer";
+      currentCard++;
+      if (currentCard >= cards.length) {
+        shuffle(cards);
+        currentCard = 0;
+      }
+      updateCard();
+    }
+
+    function showAnswer() {
+      var answer = document.getElementById("answer");
+      var answerButton = document.getElementById("answerButton");
+      if (answer.style.display === "none") {
+        answer.style.display = "block";
+        answerButton.textContent = "Hide Answer";
+      } else {
+        answer.style.display = "none";
+        answerButton.textContent = "Show Answer";
+      }
+    }
+
+    function shuffleCards() {
+      shuffle(cards);
+      currentCard = 0;
+      updateCard();
+    }
+
+    function markAsMemorized() {
+      if (cards.length > 0) {
+        cards.splice(currentCard, 1);
+        if (currentCard >= cards.length) {
+          currentCard = 0;
+        }
+        if (cards.length === 0) {
+          document.getElementById("question").innerHTML = "All questions have been memorized! To restart, refresh the page.";
+          document.getElementById("answer").innerHTML = "";
+          document.getElementById("answerButton").style.display = "none";
+          document.getElementById("counter").style.display = "none";
+        } else {
+          updateCard();
+        }
+      }
+    }
+
+    /* Removed toggleFullScreen function here */
+
+    function updateCard() {
+      document.getElementById("question").innerHTML = cards[currentCard].question;
+      document.getElementById("answer").innerHTML = cards[currentCard].answer;
+      updateCounter();
+      if (cards[currentCard].answer.length > 20) {
+        document.getElementById("answer").style.textAlign = "justify";
+      } else {
+        document.getElementById("answer").style.textAlign = "center";
+      }
+      if (currentCard === cards.length - 1) {
+        document.getElementById("question").innerHTML += " (Last question!)";
+      }
+    }
+
+    function updateCounter() {
+      document.getElementById("counter").innerHTML = (cards.length > 0) 
+        ? `Question ${currentCard + 1} of ${cards.length}` 
+        : '';
+    }
+
+    var xDown = null;
+    var yDown = null;
+
+    function handleTouchStart(evt) {
+      const firstTouch = evt.touches[0];
+      xDown = firstTouch.clientX;
+      yDown = firstTouch.clientY;
+    }
+
+    function handleTouchMove(evt) {
+      if (!xDown || !yDown) {
+        return;
+      }
+      var xUp = evt.touches[0].clientX;                                    
+      var yUp = evt.touches[0].clientY;
+
+      var xDiff = xDown - xUp;
+      var yDiff = yDown - yUp;
+
+      if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff > 0) {
+          nextCard();
+        } else {
+          previousCard();
+        }
+      }
+      xDown = null;
+      yDown = null;
+    }
+
+    function handleKeyDown(evt) {
+      if (evt.key === "ArrowLeft") {
+        previousCard();
+      } else if (evt.key === "ArrowRight") {
+        nextCard();
+      } else if (evt.key === "ArrowDown") {
+        showAnswer();
+      }
+    }
+
+    function handleDoubleClick() {
+      showAnswer();
+    }
+
+    var cardElement = document.getElementById('card');
+    cardElement.addEventListener('touchstart', handleTouchStart, false);        
+    cardElement.addEventListener('touchmove', handleTouchMove, false);
+    cardElement.addEventListener('dblclick', handleDoubleClick, false);
+
+    document.addEventListener('keydown', handleKeyDown);
+  </script>
+
+
+
+
+
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div style="text-align: justify">
+<p>Below is a comprehensive overview of <strong>Auto Machine Learning (AutoML)</strong>—its purpose, key components, and how it transforms traditional Machine Learning (ML) workflows. This guide includes the core concepts, typical approaches, and considerations when implementing AutoML solutions.</p>
+<hr>
+<section id="what-is-automl" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-automl">1. What Is AutoML?</h3>
+<p><strong>Auto Machine Learning (AutoML)</strong> refers to automated methods and tools that streamline the development of Machine Learning models by taking care of tasks such as: - <strong>Algorithm Selection</strong><br>
+- <strong>Hyperparameter Tuning</strong><br>
+- <strong>Feature Engineering</strong><br>
+- <strong>Model Evaluation and Comparison</strong></p>
+<p>By automating these tasks, AutoML significantly reduces the need for deep ML expertise and manual trial-and-error. The ultimate goal is to produce high-performing models in less time, making ML more accessible to a broader audience.</p>
+<hr>
+</section>
+<section id="key-components-of-automl" class="level3">
+<h3 class="anchored" data-anchor-id="key-components-of-automl">2. Key Components of AutoML</h3>
+<p>AutoML typically consists of three main components, each contributing to an automated process of building and optimizing ML models:</p>
+<section id="search-space" class="level4">
+<h4 class="anchored" data-anchor-id="search-space">2.1. Search Space</h4>
+<ol type="1">
+<li><p><strong>Definition</strong>: The search space includes all the possible combinations of ML algorithms (e.g., decision trees, neural networks, gradient boosting machines) and their hyperparameters (e.g., tree depth, learning rate, number of neurons).</p></li>
+<li><p><strong>Scope</strong>:</p>
+<ul>
+<li><strong>Algorithms</strong>: You can incorporate multiple algorithms, such as random forest, gradient boosting, logistic regression, and more.<br>
+</li>
+<li><strong>Hyperparameters</strong>: Each algorithm has parameters that need fine-tuning (e.g., learning rate, regularization strength, etc.).<br>
+</li>
+<li><strong>Value Domains</strong>: Hyperparameters may have different ranges or discrete sets of possible values.</li>
+</ul></li>
+<li><p><strong>Space Reduction</strong>: Techniques to narrow down the search space include excluding unpromising algorithms, fixing irrelevant hyperparameters to default values, or restricting wide parameter ranges. Reductions can cut down computation time substantially while still preserving good performance.</p></li>
+</ol>
+</section>
+<section id="search-strategy" class="level4">
+<h4 class="anchored" data-anchor-id="search-strategy">2.2. Search Strategy</h4>
+<p><strong>How</strong> you traverse the search space to identify the optimal configuration is a critical part of AutoML:</p>
+<ol type="1">
+<li><strong>Grid Search</strong>
+<ul>
+<li>A systematic, exhaustive approach that tests all combinations within predefined ranges.<br>
+</li>
+<li>Straightforward, but potentially very time-consuming.</li>
+</ul></li>
+<li><strong>Random Search</strong>
+<ul>
+<li>Samples combinations randomly from the search space.<br>
+</li>
+<li>Often more efficient than exhaustive methods, especially when you set a time limit.</li>
+</ul></li>
+<li><strong>Bayesian Optimization</strong>
+<ul>
+<li>Uses a surrogate model (e.g., Gaussian Process, Tree-structured Parzen Estimator) to predict model performance.<br>
+</li>
+<li>Iteratively chooses hyperparameter configurations with the greatest potential, guided by prior results.</li>
+</ul></li>
+<li><strong>Evolutionary or Genetic Algorithms</strong>
+<ul>
+<li>Inspired by natural selection, these algorithms use <em>populations</em> of solutions, selecting the best ones over multiple generations.<br>
+</li>
+<li>Implements operations like <strong>elitism</strong>, <strong>crossover</strong>, and <strong>mutation</strong> to systematically evolve better solutions.</li>
+</ul></li>
+<li><strong>Early Stopping</strong>
+<ul>
+<li>Many strategies allow early termination of underperforming configurations to save computational resources.</li>
+</ul></li>
+</ol>
+</section>
+<section id="performance-measure" class="level4">
+<h4 class="anchored" data-anchor-id="performance-measure">2.3. Performance Measure</h4>
+<p><strong>Performance metrics</strong> are essential for guiding the search strategy and selecting the best model: - <strong>Classification Metrics</strong>: Accuracy, Precision, Recall, F1-score, AUC-ROC, etc.<br>
+- <strong>Regression Metrics</strong>: Mean Squared Error (MSE), Mean Absolute Error (MAE), R², etc.<br>
+- <strong>Custom or Domain-Specific Metrics</strong>: For instance, profit-based metrics in financial applications or IoU (Intersection over Union) in image segmentation.</p>
+<p>It’s common to use multiple metrics to achieve a more holistic evaluation—for example, optimizing F1-score while ensuring the model maintains reasonable accuracy.</p>
+<hr>
+</section>
+</section>
+<section id="typical-automl-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="typical-automl-workflow">3. Typical AutoML Workflow</h3>
+<p>Although details vary by implementation, a typical AutoML workflow often includes:</p>
+<ol type="1">
+<li><strong>Data Preprocessing and Feature Engineering</strong>
+<ul>
+<li>Automated handling of missing data, outlier detection, and categorical feature encoding.<br>
+</li>
+<li>Techniques like feature selection or dimensionality reduction to improve model performance and reduce computational load.</li>
+</ul></li>
+<li><strong>Model Selection</strong>
+<ul>
+<li>Testing various classes of algorithms (e.g., linear models, tree-based methods, neural networks).<br>
+</li>
+<li>Dynamically excluding poor performers to focus on promising candidates.</li>
+</ul></li>
+<li><strong>Hyperparameter Tuning</strong>
+<ul>
+<li>Applying one of the search strategies (e.g., Bayesian Optimization) to refine hyperparameters.<br>
+</li>
+<li>May include advanced techniques like learning rate scheduling for neural networks or tree-specific optimizations for decision trees.</li>
+</ul></li>
+<li><strong>Ensembling</strong>
+<ul>
+<li>Some AutoML systems combine different high-performing models to produce an ensemble (e.g., voting or stacking), often improving overall performance.</li>
+</ul></li>
+<li><strong>Performance Evaluation</strong>
+<ul>
+<li>Repeated cross-validation or hold-out validation to ensure reliable performance estimates.<br>
+</li>
+<li>Comparing diverse models against the chosen metrics.</li>
+</ul></li>
+<li><strong>Deployment and Model Monitoring</strong>
+<ul>
+<li>Automated pipelines that push the best model into production.<br>
+</li>
+<li>Ongoing monitoring for data drift or performance degradation, triggering re-training or parameter updates as needed.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="popular-automl-frameworks-and-tools" class="level3">
+<h3 class="anchored" data-anchor-id="popular-automl-frameworks-and-tools">4. Popular AutoML Frameworks and Tools</h3>
+<p>Several open-source and commercial tools implement the concepts above, including:</p>
+<ol type="1">
+<li><strong>Auto-Sklearn</strong> (Python)
+<ul>
+<li>Built on scikit-learn; employs Bayesian Optimization and meta-learning.</li>
+</ul></li>
+<li><strong>H2O AutoML</strong> (R, Python)
+<ul>
+<li>Provides automatic model training, hyperparameter tuning, and ensembling of multiple algorithms (GLM, GBM, Deep Learning, etc.).</li>
+</ul></li>
+<li><strong>TPOT</strong> (Python)
+<ul>
+<li>Uses a genetic algorithm to explore and evolve ML pipelines.</li>
+</ul></li>
+<li><strong>Google Cloud AutoML</strong> (Cloud Platform)
+<ul>
+<li>Offers automated solutions for image recognition, NLP, and structured data, leveraging Google’s infrastructure.</li>
+</ul></li>
+<li><strong>Microsoft Azure AutoML</strong> (Cloud Platform)
+<ul>
+<li>Automates model selection and hyperparameter tuning, integrates with Azure ML Studio.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="challenges-in-automl" class="level3">
+<h3 class="anchored" data-anchor-id="challenges-in-automl">5. Challenges in AutoML</h3>
+<p>While AutoML can significantly reduce the time and expertise required to build a model, there are notable challenges:</p>
+<ol type="1">
+<li><strong>Computational Cost</strong>
+<ul>
+<li>Large search spaces can be expensive to explore, especially with resource-intensive models (e.g., deep learning).</li>
+</ul></li>
+<li><strong>Data Quality and Preprocessing</strong>
+<ul>
+<li>Automated feature engineering cannot replace domain knowledge. Poor data will lead to suboptimal models, regardless of the automation.</li>
+</ul></li>
+<li><strong>Overfitting</strong>
+<ul>
+<li>AutoML might overfit if it is not carefully regularized or if the performance measure encourages overly complex models.</li>
+</ul></li>
+<li><strong>Interpretability</strong>
+<ul>
+<li>Models automatically found by AutoML methods can be complex, making it difficult to explain them to stakeholders.</li>
+</ul></li>
+<li><strong>Domain Constraints</strong>
+<ul>
+<li>Not all tasks are suitable for a one-size-fits-all AutoML approach; domain-specific decisions still matter.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="best-practices-and-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-and-considerations">6. Best Practices and Considerations</h3>
+<ol type="1">
+<li><strong>Define Clear Goals</strong>
+<ul>
+<li>Specify relevant metrics and constraints (e.g., inference latency, memory usage) before the search begins.</li>
+</ul></li>
+<li><strong>Collaborate With Domain Experts</strong>
+<ul>
+<li>While AutoML reduces ML expertise requirements, domain expertise remains crucial for data understanding and metric design.</li>
+</ul></li>
+<li><strong>Limit the Search Space</strong>
+<ul>
+<li>Use knowledge of similar problems to eliminate unpromising algorithms or parameter ranges.</li>
+</ul></li>
+<li><strong>Use Appropriate Hardware</strong>
+<ul>
+<li>Adequate computing resources are essential, especially for computationally heavy tasks such as image classification or large-scale data.</li>
+</ul></li>
+<li><strong>Iterate and Monitor</strong>
+<ul>
+<li>Continuously monitor model performance in production; set up alerts and triggers for re-training when performance degrades.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</div>
+</div>
+</div>
+</div>
+<p><strong>#AI #MachineLearning #AutoML #Flashcards</strong></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/nionmaron\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Developed by <a href="https://nionmaron.com">Nion M. Dransfeld</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><a href="https://github.com/nionmaron/Website-NionMaron/">Edit this page</a> <br> <a href="https://github.com/nionmaron/Website-NionMaron/issues">Report an issue</a></p>
+</div>
+    <div class="nav-footer-right">
+<p><a href="../../../ts-and-cs.html">Terms &amp; Conditions</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
