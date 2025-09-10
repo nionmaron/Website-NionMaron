@@ -1,334 +1,240 @@
-/* css styles */
+/* ==============================================
+CSS Styles for Nion M. Dransfeld's Website
+==============================================
+Table of Contents:
+1.  :root Variables (Color Palette & Fonts)
+2.  Global Styles & Typography
+3.  Hero Section
+4.  Project & Content Cards
+5.  Callouts
+6.  Footer Styles
+7.  Utility & Specific Classes (Legacy, webR, etc.)
+==============================================
+*/
 
+/* 1. :root Variables 
+--------------------------------------------- */
+:root {
+  --primary-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --heading-font: 'Georgia', 'Times New Roman', Times, serif;
+  
+  --bg-color: #f8f9fa; /* Light gray background */
+  --text-color: #343a40; /* Dark gray for text */
+  --primary-color: #0d6efd; /* A modern blue */
+  --accent-color: #6f42c1; /* A nice purple for highlights */
+  --card-bg: #ffffff; /* White background for cards */
+  --border-color: #dee2e6; /* Light border color */
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* 2. Global Styles & Typography
+--------------------------------------------- */
 body {
-  margin-left: 10px;
-  margin-right: 10px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 15px;
 }
 
-/*-- callout styles --*/
-.callout {
-  background-color: white;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: #212529;
 }
 
-
-/*-- background styles --*/
-
-.cinza-background {
-  background-color: #708090;
-}
-
-
-.black-background {
-  background-color: black;
-}
-
-.purple-background {
-  background-color: #939bc9;
-}
-
-.blue-background {
-  background-color: #7eadba;
-}
-
-.yellow-background {
-  background-color: #e3b638;
-}
-
-.pink-background {
-  background-color: #d6748c;
-}
-
-.orange-background {
-  background-color: #da9359;
-}
-
-
-/*-- homepage styles --*/
-
-.content-container {
-  padding-left: 0em;
-  padding-right: 0em;
-}
-
-.content-container .listing-pagination {
-  display: none;
-}
-
-.top-story {
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 1em; 
-  box-sizing: border-box;
-  height: auto;
-  display: flex;
-  align-items: center;
-}
-
-.top-story img {
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.top-story-text {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 0;
-}
-
-.top-story-text h2 {
-  margin-top: 1.5rem;
-}
-
-.top-story-img p {
-  margin-bottom: 0;
-}
-
-.header-banner {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.header-banner .header-image {
-  position: absolute;
-  display: none;
-  height: auto;
-}
-
-.header-text p {
-  text-align: center;
-  margin-bottom: 0;
-}
-
-.header-block {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1.8em; 
-  box-sizing: border-box;
-  border-bottom: 1px solid black;
-}
-
-.listing-block {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-bottom: 1.1em; 
-  box-sizing: border-box;
-  border-bottom: 1px solid black;
-}
-
-.listing-block h2 {
-  color: black;
-  text-transform: uppercase;
-}
-
-.listing-block h2:hover {
-  color: #939bc9;
-}
-
-
-.pullout-container {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 2.5em;
-}
-
-.pullout-block {
-  text-align: center;
-  max-width: calc(1000px + 6vw);
-  margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1.8em; 
-  box-sizing: border-box;
-}
-
-.pullout-text h2 {
-  text-align: center;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  color: white;
-  margin-top: 0.5em;
-}
-
-.pullout-text p {
-  text-align: center;
-  font-family: 'Oswald';
-  font-weight: 500;
-  color: white;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-color: #939bc9;
-  text-decoration-thickness: 3px;
-  margin-bottom: 1.5rem;
-}
-
-.button {
-  border: none;
-  border-radius: 0px;
-  color: black;
-  background-color: white;
-  padding: 0.85em 1em;
-  text-align: center;
-  display: inline-block;
-  margin-top: 0.6em; 
-  margin-bottom: 0.25em; 
-  margin-left: 1.5em; 
-  margin-right: 1.5em;
-  cursor: pointer;
-}
-
-.button p {
-  color: black;
-  font-family: 'Oswald';
-  font-size: 1.3em;
-  text-transform: uppercase;
-  margin-bottom: 0px;
+a {
+  color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.button a {
-  color: black;
-  font-weight: 500;content-container
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
-.button a:hover {
-  color: #939bc9;
+/* 3. Hero Section
+--------------------------------------------- */
+.hero-section {
+  text-align: center;
+  padding: 20px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
-
-/*-- footer style --*/
-
-.footer-container {
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 1em;
-  margin-top: 2.5em;
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--card-bg);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  margin-bottom: 20px;
 }
 
-.footer-text h3, .h3 {
-  font-family: 'Oswald';
-  color: white;
-  font-size: .875rem;
-  font-weight: 500;
-  text-transform: uppercase;
+.hero-title {
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  margin-top: 0.3rem;
-  border-bottom: 0;
-  padding-bottom: 0;
-  padding-top: 0px;
 }
 
-.footer-text p, .p {
-  color: white;
-  font-size: .875rem;
-  font-weight: 400;
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
 }
 
-.footer-text p > a {
-  color: white;
-  font-size: .875rem;
-  font-weight: 400;
+.hero-intro {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
 }
 
-.footer-text p > a:hover {
-  color: #939bc9;
-  font-size: .875rem;
-  font-weight: 400;
+.social-links a {
+  margin: 0 10px;
+  color: var(--text-color);
+}
+
+.social-links svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover svg {
+  transform: scale(1.2);
+  color: var(--primary-color);
+}
+
+/* 4. Project & Content Cards 
+--------------------------------------------- */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem; /* Add space between cards */
+  display: flex; /* Ensures cards in the same row have same height */
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* 5. Callouts
+--------------------------------------------- */
+.callout-note.appearance-simple {
+  background-color: var(--card-bg);
+  border: none;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem; /* Add space between callouts */
+}
+
+.callout-note.appearance-simple:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.callout-note h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+/* 6. Footer Styles
+--------------------------------------------- */
+.footer-container {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer-container p, .footer-container h3 {
+  color: #f8f9fa;
+}
+
+.footer-container a {
+  color: #adb5bd;
+}
+
+.footer-container a:hover {
+  color: var(--card-bg);
 }
 
 .footer-block {
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1.8em; 
-  box-sizing: border-box;
 }
-
-
-/*-- nav footer styles --*/
 
 .nav-footer {
-  color: white;
-  font-family: 'Oswald';
-  font-weight: 400;
-  padding-left: 1.5em !important;
-  padding-right: 1.5em !important;
-}
-
-body:not(.floating) .nav-footer {
-  border-top: 1px solid #f0eeeb;
+  background-color: #212529;
+  color: #ced4da;
 }
 
 .nav-footer a {
-  color: white;
+  color: #ced4da;
 }
 
-.nav-footer a:hover {
-  color: #939bc9;
-}
+/* 7. Utility & Specific Classes
+--------------------------------------------- */
 
-.nav-footer-left .footer-items .nav-link, .nav-footer-center .footer-items .nav-link, .nav-footer-right .footer-items .nav-link {
-  font-weight: 400;
-  text-transform: uppercase;
-}
+/* Legacy background colors */
+.cinza-background { background-color: #708090; }
+.black-background { background-color: black; }
+.purple-background { background-color: #939bc9; }
+.blue-background { background-color: #7eadba; }
+.yellow-background { background-color: #e3b638; }
+.pink-background { background-color: #d6748c; }
+.orange-background { background-color: #da9359; }
 
-.nav-footer-left .footer-items .nav-item, .nav-footer-center .footer-items .nav-item, .nav-footer-right .footer-items .nav-item {
-  margin-top: 0;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.nav-footer-left {
-  font-family: 'Montserrat';
-}
-
-.nav-footer-right {
-  font-family: 'Montserrat';
-}
-
-
-/*-- DataScienceBites --*/
-
-.dsb {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-}
-
-
-/* webR */
+/* webR styles */
 .btn-webr {
-  background-color: #939bc9;
+  background-color: var(--accent-color);
   color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-webr:hover {
+  background-color: #5a3d9a;
 }
 
-pre code {
-  background-color: #f8f8f8;
+pre code, pre.sourceCode {
+  background-color: #e9ecef;
+  border-radius: 5px;
+  padding: 1em;
 }
 
-pre.sourceCode {
-  background-color: #f8f8f8;
-}
-
-
-
+/* Iframe container */
 .iframe-container {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Opcional: Centraliza verticalmente se necessário */
-    height: 100%;            /* Altura do contêiner (ajuste conforme necessário) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-
 #meuIframe {
-    border: none; /* Opcional: Remove a borda do iframe */
+  border: none;
 }
-
-
-
-
-
-

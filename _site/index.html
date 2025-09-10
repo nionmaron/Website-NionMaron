@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Learn how data science, statistics, geosciences, and machine learning can drive problem-solving. Join me in transforming data into powerful decisions.">
+<meta name="description" content="Data science, machine learning, and deploying applications with Docker and Shiny to deliver data-driven solutions.">
 
 <title>Nion M. Dransfeld – NionMaron</title>
 <style>
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
@@ -142,10 +142,10 @@ window.Quarto = {
 <link rel="stylesheet" href="CSS/styles.css">
 <link rel="stylesheet" href="CSS/Buttons.css">
 <meta property="og:title" content="Nion M. Dransfeld">
-<meta property="og:description" content="Learn how data science, statistics, geosciences, and machine learning can drive problem-solving. Join me in transforming data into powerful decisions.">
+<meta property="og:description" content="Data science, machine learning, and deploying applications with Docker and Shiny to deliver data-driven solutions.">
 <meta property="og:site_name" content="NionMaron">
 <meta name="twitter:title" content="Nion M. Dransfeld">
-<meta name="twitter:description" content="Learn how data science, statistics, geosciences, and machine learning can drive problem-solving. Join me in transforming data into powerful decisions.">
+<meta name="twitter:description" content="Data science, machine learning, and deploying applications with Docker and Shiny to deliver data-driven solutions.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -182,10 +182,6 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="./Data-Science-Flashcards.html">
  <span class="dropdown-text">Data Science</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./Leis-Concursos-Flashcards.html">
- <span class="dropdown-text">Leis e Concursos TI</span></a>
   </li>  
     </ul>
   </li>
@@ -236,17 +232,17 @@ window.Quarto = {
 
 
 
-
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
+  "@context": "[http://schema.org](http://schema.org)",
   "@type": "Person",
   "name": "Nion M. Dransfeld",
-  "jobTitle": "Civil Engineer | Data Scientist | Machine Learning",
-  "url": "http://www.nionmaron.com/",
+  "jobTitle": "Civil Engineer | Data Scientist | Machine Learning Engineer",
+  "url": "[http://www.nionmaron.com/](http://www.nionmaron.com/)",
   "sameAs": [
-    "https://www.linkedin.com/in/nionmaron/?locale=en_US",
-    "https://github.com/nionmaron"
+    "[https://www.linkedin.com/in/nionmaron/?locale=en_US](https://www.linkedin.com/in/nionmaron/?locale=en_US)",
+    "[https://github.com/nionmaron](https://github.com/nionmaron)",
+    "[https://hub.docker.com/u/nionmaron](https://hub.docker.com/u/nionmaron)"
   ],
   "alumniOf": {
     "@type": "CollegeOrUniversity",
@@ -262,299 +258,98 @@ window.Quarto = {
 }
 </script>
 
-<style>
-    @media (max-width: 860px) {
-        .NM-imagem-none {
-            display: none;
-        }
-    }
-</style>
+<!-- HERO SECTION -->
+<div class="hero-section">
+  <img src="images/profile.png" alt="Profile image of Nion M. Dransfeld" class="profile-img">
+  <h1 class="hero-title">Nion M. Dransfeld</h1>
+  <p class="hero-subtitle"> Civil Engineer | Data Scientist | Machine Learning Engineer</p>
+  <p class="hero-intro">
+    I am a data specialist with experience in deploying applications using Docker, Streamlit and Shiny.This site presents my projects and also offers educational content on geosciences, statistics, data science, programming, and machine learning.
+  </p>
+  <div class="social-links">
+    <a href="[https://www.linkedin.com/in/nionmaron/?locale=en_US](https://www.linkedin.com/in/nionmaron/?locale=en_US)" target="_blank" title="LinkedIn">
+      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </a>
+    <a href="[https://github.com/nionmaron](https://github.com/nionmaron)" target="_blank" title="GitHub">
+      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+    </a>
+    <a href="[https://hub.docker.com/u/nionmaron](https://hub.docker.com/u/nionmaron)" target="_blank" title="Docker Hub">
+      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewbox="0 0 24 24" fill="currentColor"><path d="M22.152 6.388a2.15 2.15 0 0 0-1.519-.638H18.23a2.15 2.15 0 0 0-1.519.638L15.399 7.7h-4.95L9.137 6.388a2.15 2.15 0 0 0-1.519-.638H2.15a2.15 2.15 0 0 0-1.519.638L0 7.7v1.313l.631.938a2.15 2.15 0 0 0 1.519.637h.75v.001h2.25v-.001h.75v-.001h1.5v.001h.75v-.001h1.5v.001h.75v-.001h1.5v.001h.75v-.001h1.5v.001h.75v-.001h.75a2.15 2.15 0 0 0 1.519-.637l.631-.938V7.7l-.631-1.312zm-3.001-1.425a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM24 12.425v5.325l-2.062 1.35a2.98 2.98 0 0 1-1.8.55H5.438a2.15 2.15 0 0 1-1.519-.638L3 18.088v-1.313l.631-.937a2.15 2.15 0 0 1 1.519-.638H18.23a2.15 2.15 0 0 0 1.519-.637l.631-.938h3.622z"></path></svg>
+    </a>
+  </div>
+</div>
+<hr>
+<section id="projects" class="level2">
+<h2 class="anchored" data-anchor-id="projects">Projects</h2>
+<p>The following projects highlight my expertise in data science, machine learning, and application deployment. I am open to new projects, collaborations, and professional opportunities where I can deliver innovative and impactful solutions.</p>
 <div class="grid">
-<div class="g-col-12 g-col-md-2 top-story-text">
-<p><img src="images/profile.png" alt="Imagem de Nion M. Dransfeld" class="NM-imagem-none" style=" height: 100px; padding: 0px; background: transparent;"></p>
-</div>
-<div class="g-col-12 g-col-md-10 top-story-img">
-
-
-
-    <meta charset="UTF-8">
-    <title>Conversa Interativa</title>
-    <style>
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-
-.container {
-  width: 100%;
-  height: 100px;
-  background: #78c2ad;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .box {
-    width: 400px;
-    height: 250px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-    .title {
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: 50px;
-
-      .block {
-        width: 0%;
-        height: inherit;
-        background: #ffb510;
-        position: absolute;
-        animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-        display: flex;
-      }
-
-      h1 {
-      
-        color: #fff;
-        font-size: 32px;
-        -webkit-animation: mainFadeIn 2s forwards;
-        -o-animation: mainFadeIn 2s forwards;
-        animation: mainFadeIn 2s forwards;
-        animation-delay: 1.6s;
-        opacity: 0;
-        display: flex;
-        align-items: baseline;
-        position: relative;
-
-        span {
-          width:0px;
-          height: 0px;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%;
-
-          background: #ffb510;
-          -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
-          animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
-          animation-delay: 2s;
-          margin-left: 5px;
-          margin-top: -10px;
-          position: absolute;
-          bottom: 13px;
-          right: -12px;
-
-        }
-      }
-    }
-
-    .role {
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: 30px;
-      margin-top: -10px;
-
-      .block {
-        width: 0%;
-        height: inherit;
-        background: #e91e63;
-        position: absolute;
-        animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-        animation-delay: 2s;
-        display: flex;
-      }
-
-      p {
-        animation: secFadeIn 2s forwards;
-        animation-delay: 3.2s;
-        opacity: 0;
-         font-weight: 400;
-        font-family: 'Lato';
-        color: #ffffff;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-      }
-    }
-  }
-}
-
-
-@keyframes mainBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-  50% {
-    width: 100%;
-    left: 0;
-
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes secBlock {
-  0% {
-    width: 0%;
-    left: 0;
-
-  }
-  50% {
-    width: 100%;
-    left: 0;
-
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-
-@keyframes mainFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-@keyframes popIn {
-  0% {
-    width: 0px;
-    height: 0px;
-    background: #e9d856;
-    border: 0px solid #ddd;
-    opacity: 0;
-  }
-  50% {
-    width: 10px;
-    height: 10px;
-    background: #e9d856;
-    opacity: 1;
-    bottom: 45px;
-  }
-   65% {
-      width: 7px;
-    height: 7px;
-      bottom: 0px;
-      width: 15px
-   }
-   80% {
-      width: 10px;
-    height: 10px;
-      bottom: 20px
-   }
-  100% {
-    width: 7px;
-    height: 7px;
-    background: #e9d856;
-    border: 0px solid #222;
-    bottom: 13px;
-
-  }
-}
-
-@keyframes secFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
-
-
-@keyframes top {
-  0% {
-    opacity: 0;
-     bottom: -80px
-  }
-  100% {
-    opacity: 1;
-     bottom: 0px
-
-  }
-}
-
-@keyframes icon {
-  0% {
-    opacity: 0;
-     transform: scale(0.0);
-  }
-   50% {
-      opacity: 1;
-     transform: scale(1.3) rotate(-02deg);
-   }
-  100% {
-    opacity: 1;
-     bottom: 0px;
-  }
-}
-    </style>
-
-
-    <div class="container">
-        <div class="box">
-    
-            <div class="title">
-                <span class="block"></span>
-                <h1> Nion M. Dransfeld<span></span></h1>
-            </div>
-    
-            <div class="role">
-                <div class="block"></div>
-                <p> Data Scientist</p>
-            </div>
-    
-        </div>
-    </div>
-    
-
-
-<p><br></p>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+<a href="http://Talkmapper.com">Talkmapper.com</a>
+</h5>
+<p class="card-text">
+An audio processing service that leverages advanced algorithms for automated transcription and speaker diarization (identifying who spoke when).
+</p>
 </div>
 </div>
-<p>Hello and welcome! I’m <strong>Nion</strong>, and I’m passionate about the power of Data Science and Machine Learning to tackle complex challenges. On this platform, you’ll find a rich array of content that reflects my journey and expertise in these fields. Here’s what you can expect:<br></p>
-<div class="grid">
-<div class="g-col-6">
-<ul>
-<li>In-Depth Articles and Case Studies</li>
-<li>Tutorials and Guides</li>
-</ul>
 </div>
-<div class="g-col-6">
-<ul>
-<li>Interactive Projects and Analyses</li>
-<li>Resources and Recommendations</li>
-</ul>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+<a href="http://Congeres.com.br">Congeres.com.br</a>
+</h5>
+<p class="card-text">
+A platform for analyzing general conditions of insurance policies in Brazil, designed for brokers to optimize risk assessment and client consultation.
+</p>
 </div>
 </div>
-<p></p>
-<section id="insights" class="level2">
-<h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p><strong>“Data science is not about making complicated models. It’s about making it simple enough to understand the problem at hand and then robustly solving it.”</strong> - Dr.&nbsp;N.R. Srinivasa Raghavan, Chief Global Data Scientist at Infosys.</p>
-<p><strong>“Overfitting is more dangerous than failing to build the most powerful model possible.”</strong> - Pedro Domingos, author of “The Master Algorithm”.</p>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+<a href="http://Nioeng.com">Nioeng.com</a>
+</h5>
+<p class="card-text">
+A data platform dedicated to the analysis, visualization, and tracking of the Brazilian public budget, promoting transparency and accessibility.
+</p>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+<a href="http://Cryptosresearch.com">Cryptosresearch.com</a>
+</h5>
+<p class="card-text">
+A research and analytics platform providing institutional-grade reports, on-chain data analysis, and market insights for crypto assets.
+</p>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<div class="card-body">
+<h5 class="card-title anchored">
+<a href="http://Ancestrymap.nionmaron.com">Ancestrymap.nionmaron.com</a>
+</h5>
+<p class="card-text">
+An offline-first desktop application for building, visualizing, and managing complex family genealogy trees with privacy as a core feature.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
 </section>
 <section id="latest-content" class="level2">
-<h2 class="anchored" data-anchor-id="latest-content">Latest content</h2>
-<p></p>
+<h2 class="anchored" data-anchor-id="latest-content">Latest Content</h2>
 <div id="listing-latest-content" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
+<div class="list grid quarto-listing-cols-2">
 <div class="g-col-1" data-index="0" data-categories="Git,GitHub,gitignore" data-listing-date-sort="1734750000000" data-listing-file-modified-sort="1736380990270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="744">
 <a href="./posts/0010 git-cache-eng/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
@@ -565,6 +360,14 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 <strong>How to use git rm -r –cached</strong>
 </h5>
+<div class="card-text listing-description">
+This article provides a detailed explanation of the git rm –cached command, exploring its purpose, usage, and practical examples. Learn how to effectively unstage files…
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Dec 21, 2024
+</div>
+</div>
 </div>
 </div>
 </a>
@@ -579,6 +382,14 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 <strong>Docker Dicas e Truques</strong>
 </h5>
+<div class="card-text listing-description">
+<p>Este artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 25, 2024
+</div>
+</div>
 </div>
 </div>
 </a>
@@ -593,6 +404,36 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 <strong>Arquivos de Log na Programação: Conceitos e Implementação</strong>
 </h5>
+<div class="card-text listing-description">
+<p>Explorando a Geração de Arquivos de Log e sua Importância na Programação, além de Estratégias de Implementação.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 22, 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Python,RProgramming,Exel,Português" data-listing-date-sort="1704855600000" data-listing-file-modified-sort="1720227526813" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1154">
+<a href="./posts/0007-Combinar Arquivo em Exel-pt/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./posts/0007-Combinar Arquivo em Exel-pt/Fusion_Exel.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<strong>Fusão de Dados em Excel com R e Python</strong>
+</h5>
+<div class="card-text listing-description">
+<p>Guia para dominar a fusão de grandes quantidades de dados no formato Excel com R e Python.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jan 10, 2024
+</div>
+</div>
 </div>
 </div>
 </a>
@@ -602,6 +443,83 @@ window.Quarto = {
 No matching items
 </div>
 </div>
+</section>
+<section id="what-youll-find-here" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-find-here">What You’ll Find Here</h2>
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+In-Depth Analyses
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Explore detailed articles and case studies where I apply machine learning and statistics to solve real-world problems.</p>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code Solutions &amp; Guides
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Find practical, step-by-step tutorials and reusable scripts to help you implement complex data science techniques.</p>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+R &amp; Python Package News
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Stay updated with commentary and reviews on the latest machine learning packages and tools in the R and Python ecosystems.</p>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Project Deep Dives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Go behind the scenes of my projects to understand the methodology, architecture, and challenges involved.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="insights" class="level2">
+<h2 class="anchored" data-anchor-id="insights">Insights</h2>
+<blockquote class="blockquote">
+<p>“Data science is not about making complicated models. It’s about making it simple enough to understand the problem at hand and then robustly solving it.”</p>
+<p><cite>– Dr.&nbsp;N.R. Srinivasa Raghavan</cite></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Overfitting is more dangerous than failing to build the most powerful model possible.”</p>
+<p><cite>– Pedro Domingos</cite></p>
+</blockquote>
+<hr>
 
 
 

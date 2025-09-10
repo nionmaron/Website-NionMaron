@@ -261,23 +261,37 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": " Nion M. Dransfeld",
+    "title": "Nion M. Dransfeld",
     "section": "",
-    "text": "Conversa Interativa\n    \n\n\n    \n        \n    \n            \n                \n                \n            \n    \n            \n                \n                 Data Scientist\nHello and welcome! I’m Nion, and I’m passionate about the power of Data Science and Machine Learning to tackle complex challenges. On this platform, you’ll find a rich array of content that reflects my journey and expertise in these fields. Here’s what you can expect:"
+    "text": "Civil Engineer | Data Scientist | Machine Learning Engineer\n  \n    I am a data specialist with experience in deploying applications using Docker, Streamlit and Shiny.This site presents my projects and also offers educational content on geosciences, statistics, data science, programming, and machine learning."
   },
   {
-    "objectID": "index.html#insights",
-    "href": "index.html#insights",
-    "title": " Nion M. Dransfeld",
-    "section": "Insights",
-    "text": "Insights\n“Data science is not about making complicated models. It’s about making it simple enough to understand the problem at hand and then robustly solving it.” - Dr. N.R. Srinivasa Raghavan, Chief Global Data Scientist at Infosys.\n“Overfitting is more dangerous than failing to build the most powerful model possible.” - Pedro Domingos, author of “The Master Algorithm”."
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Nion M. Dransfeld",
+    "section": "Projects",
+    "text": "Projects\nThe following projects highlight my expertise in data science, machine learning, and application deployment. I am open to new projects, collaborations, and professional opportunities where I can deliver innovative and impactful solutions.\n\n\n\n\n\nTalkmapper.com\n\n\nAn audio processing service that leverages advanced algorithms for automated transcription and speaker diarization (identifying who spoke when).\n\n\n\n\n\n\n\n\nCongeres.com.br\n\n\nA platform for analyzing general conditions of insurance policies in Brazil, designed for brokers to optimize risk assessment and client consultation.\n\n\n\n\n\n\n\n\nNioeng.com\n\n\nA data platform dedicated to the analysis, visualization, and tracking of the Brazilian public budget, promoting transparency and accessibility.\n\n\n\n\n\n\n\n\nCryptosresearch.com\n\n\nA research and analytics platform providing institutional-grade reports, on-chain data analysis, and market insights for crypto assets.\n\n\n\n\n\n\n\n\nAncestrymap.nionmaron.com\n\n\nAn offline-first desktop application for building, visualizing, and managing complex family genealogy trees with privacy as a core feature."
   },
   {
     "objectID": "index.html#latest-content",
     "href": "index.html#latest-content",
-    "title": " Nion M. Dransfeld",
-    "section": "Latest content",
-    "text": "Latest content\n\n\n\n\n\n\n\n\n\n\n\nHow to use git rm -r –cached\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocker Dicas e Truques\n\n\n\n\n\n\n\n\n\n\n\n\n\nArquivos de Log na Programação: Conceitos e Implementação\n\n\n\n\n\n\n\nNo matching items"
+    "title": "Nion M. Dransfeld",
+    "section": "Latest Content",
+    "text": "Latest Content\n\n\n\n\n\n\n\n\n\n\nHow to use git rm -r –cached\n\n\nThis article provides a detailed explanation of the git rm –cached command, exploring its purpose, usage, and practical examples. Learn how to effectively unstage files…\n\n\n\nDec 21, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocker Dicas e Truques\n\n\nEste artigo fornece uma visão geral do Docker, incluindo imagens, contêineres, Dockerfile e principais comandos Docker.\n\n\n\nJul 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArquivos de Log na Programação: Conceitos e Implementação\n\n\nExplorando a Geração de Arquivos de Log e sua Importância na Programação, além de Estratégias de Implementação.\n\n\n\nFeb 22, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFusão de Dados em Excel com R e Python\n\n\nGuia para dominar a fusão de grandes quantidades de dados no formato Excel com R e Python.\n\n\n\nJan 10, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#what-youll-find-here",
+    "href": "index.html#what-youll-find-here",
+    "title": "Nion M. Dransfeld",
+    "section": "What You’ll Find Here",
+    "text": "What You’ll Find Here\n\n\n\n\n\n\n\n\nIn-Depth Analyses\n\n\n\nExplore detailed articles and case studies where I apply machine learning and statistics to solve real-world problems.\n\n\n\n\n\n\n\n\n\n\nCode Solutions & Guides\n\n\n\nFind practical, step-by-step tutorials and reusable scripts to help you implement complex data science techniques.\n\n\n\n\n\n\n\n\n\n\nR & Python Package News\n\n\n\nStay updated with commentary and reviews on the latest machine learning packages and tools in the R and Python ecosystems.\n\n\n\n\n\n\n\n\n\n\nProject Deep Dives\n\n\n\nGo behind the scenes of my projects to understand the methodology, architecture, and challenges involved."
+  },
+  {
+    "objectID": "index.html#insights",
+    "href": "index.html#insights",
+    "title": "Nion M. Dransfeld",
+    "section": "Insights",
+    "text": "Insights\n\n“Data science is not about making complicated models. It’s about making it simple enough to understand the problem at hand and then robustly solving it.”\n– Dr. N.R. Srinivasa Raghavan\n\n\n“Overfitting is more dangerous than failing to build the most powerful model possible.”\n– Pedro Domingos"
   },
   {
     "objectID": "flashcards/Leis-Concursos/2024-07-09 Data Warehouse/index.html",
@@ -403,7 +417,7 @@
     "href": "Machine-Learning-Flashcards.html",
     "title": "Science & Tech Flashcards",
     "section": "",
-    "text": "Science & Tech Flashcards\n\nMachine Learning Flashcards are an interactive and convenient tool for mastering key concepts, algorithms, and techniques in machine learning. Designed for learners at all levels, these flashcards cover topics such as supervised and unsupervised learning, neural networks, decision trees, gradient descent, and more, making complex ideas easy to understand and review anytime, anywhere.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAuto Machine Learning (AutoML)  Concepts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning  Concepts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning  Algorithms\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Science & Tech Flashcards\n\nMachine Learning Flashcards are an interactive and convenient tool for mastering key concepts, algorithms, and techniques in machine learning. Designed for learners at all levels, these flashcards cover topics such as supervised and unsupervised learning, neural networks, decision trees, gradient descent, and more, making complex ideas easy to understand and review anytime, anywhere.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAuto Machine Learning (AutoML)  Concepts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning  Concepts\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/0001-data-terms-pt/index.html",

@@ -32,8 +32,6 @@ website:
           file: Machine-Learning-Flashcards.qmd
         - text: "Data Science"
           file: Data-Science-Flashcards.qmd
-        - text: "Leis e Concursos TI"
-          file: Leis-Concursos-Flashcards.qmd
           
       - text: "About Me"
         menu:
@@ -52,7 +50,8 @@ website:
 format:
   html:
     #mainfont: Corn # MADE Gentle # Sans-serif
-    max-width: 1300px
+    allow-html: true
+    max-width: 1400px
     linkcolor: '#212529'
     #font-family: cursive
     #https://bootswatch.com/minty/
