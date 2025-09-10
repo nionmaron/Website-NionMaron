@@ -11,7 +11,7 @@ website:
   google-analytics: "G-PGRFF9TPBC"
   
   page-footer:
-    background: "#78c2ad"
+    background: "#005f73"
     #background: light
     left: |
       Developed by [Nion M. Dransfeld](https://nionmaron.com)
@@ -22,7 +22,7 @@ website:
     #border: false
     
   navbar:
-    #background: "#2E8BC0" # / Ref: https://www.canva.com/colors/color-palettes/mermaid-lagoon/
+    background: "#005f73" # / Ref: https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     right:
       - text: "Blog"
         file: Blog.qmd
@@ -49,16 +49,11 @@ website:
 
 format:
   html:
-    #mainfont: Corn # MADE Gentle # Sans-serif
-    allow-html: true
-    max-width: 1400px
-    linkcolor: '#212529'
-    #font-family: cursive
-    #https://bootswatch.com/minty/
     theme: minty
-    css: 
-    - CSS/styles.css
-    - CSS/Buttons.css
+    #mainfont: "Montserrat"
+    css:
+      - CSS/styles.css
+      - CSS/Buttons.css
 
 editor: visual
 

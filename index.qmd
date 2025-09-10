@@ -21,31 +21,43 @@ listing:
 ```{=html}
 <script type="application/ld+json">
 {
-  "@context": "[http://schema.org](http://schema.org)",
+  "@context": "http://schema.org",
   "@type": "Person",
   "name": "Nion M. Dransfeld",
   "jobTitle": "Civil Engineer | Data Scientist | Machine Learning Engineer",
-  "url": "[http://www.nionmaron.com/](http://www.nionmaron.com/)",
+  "url": "http://www.nionmaron.com/",
+  "image": "http://www.nionmaron.com/images/profile.png",
+  "email": "mailto:contact@nionmaron.com",
   "sameAs": [
-    "[https://www.linkedin.com/in/nionmaron/?locale=en_US](https://www.linkedin.com/in/nionmaron/?locale=en_US)",
-    "[https://github.com/nionmaron](https://github.com/nionmaron)",
-    "[https://hub.docker.com/u/nionmaron](https://hub.docker.com/u/nionmaron)"
+    "https://www.linkedin.com/in/nionmaron/?locale=en_US",
+    "https://github.com/nionmaron",
+    "https://hub.docker.com/u/nionmaron"
   ],
   "alumniOf": {
     "@type": "CollegeOrUniversity",
     "name": "University of the State of Santa Catarina",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": {
-        "@type": "Country",
-        "name": "Brazil"
-      }
+      "addressCountry": "BR"
     }
-  }
+  },
+  "knowsAbout": [
+    "Data Science",
+    "Machine Learning",
+    "Docker",
+    "Streamlit",
+    "Shiny",
+    "Geosciences",
+    "Statistics",
+    "Civil Engineering"
+  ]
 }
 </script>
 
-<!-- HERO SECTION -->
+```
+
+
+```{=html}
 <div class="hero-section">
   <img src="images/profile.png" alt="Profile image of Nion M. Dransfeld" class="profile-img">
   <h1 class="hero-title">Nion M. Dransfeld</h1>
@@ -54,117 +66,657 @@ listing:
     I am a data specialist with experience in deploying applications using Docker, Streamlit and Shiny.This site presents my projects and also offers educational content on geosciences, statistics, data science, programming, and machine learning.
   </p>
   <div class="social-links">
-    <a href="[https://www.linkedin.com/in/nionmaron/?locale=en_US](https://www.linkedin.com/in/nionmaron/?locale=en_US)" target="_blank" title="LinkedIn">
-      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    <a href="https://www.linkedin.com/in/nionmaron/?locale=en_US" target="_blank" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
     </a>
-    <a href="[https://github.com/nionmaron](https://github.com/nionmaron)" target="_blank" title="GitHub">
-      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+    <a href="https://github.com/nionmaron" target="_blank" title="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
     </a>
-    <a href="[https://hub.docker.com/u/nionmaron](https://hub.docker.com/u/nionmaron)" target="_blank" title="Docker Hub">
-      <svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.152 6.388a2.15 2.15 0 0 0-1.519-.638H18.23a2.15 2.15 0 0 0-1.519.638L15.399 7.7h-4.95L9.137 6.388a2.15 2.15 0 0 0-1.519-.638H2.15a2.15 2.15 0 0 0-1.519.638L0 7.7v1.313l.631.938a2.15 2.15 0 0 0 1.519.637h.75v.001h2.25v-.001h.75v-.001h1.5v.001h.75v-.001h1.5v.001h.75v-.001h1.5v.001h.75v-.001h1.5v.001h.75v-.001h.75a2.15 2.15 0 0 0 1.519-.637l.631-.938V7.7l-.631-1.312zm-3.001-1.425a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM24 12.425v5.325l-2.062 1.35a2.98 2.98 0 0 1-1.8.55H5.438a2.15 2.15 0 0 1-1.519-.638L3 18.088v-1.313l.631-.937a2.15 2.15 0 0 1 1.519-.638H18.23a2.15 2.15 0 0 0 1.519-.637l.631-.938h3.622z"/></svg>
+    <a href="https://hub.docker.com/u/nionmaron" target="_blank" title="Docker Hub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><path d="M21.17 3.83a2.43 2.43 0 0 0-1.2-.58H4.03a2.43 2.43 0 0 0-1.2.58A2.4 2.4 0 0 0 2 6.22v7.56a2.4 2.4 0 0 0 .83 1.83 2.43 2.43 0 0 0 1.2.58h16.94a2.43 2.43 0 0 0 1.2-.58 2.4 2.4 0 0 0 .83-1.83V6.22a2.4 2.4 0 0 0-.83-2.39zM9.5 9h5M7 13h10"></path><path d="M2.35 15.61l1.62 1.94a2.4 2.4 0 0 0 2.06 1.05h12.94a2.4 2.4 0 0 0 2.06-1.05l1.62-1.94"></path></svg>
+    </a>
+    <a href="mailto:contact@nionmaron.com" target="_blank" title="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
     </a>
   </div>
 </div>
 ```
 
----
+------------------------------------------------------------------------
 
 ## Projects
 
-The following projects highlight my expertise in data science, machine learning, and application deployment. I am open to new projects, collaborations, and professional opportunities where I can deliver innovative and impactful solutions.
+The projects below showcase my commitment to creating solutions using data science, machine learning, and application deployment.
 
-::::: {.grid}
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
-<div class="card-body">
-<h5 class="card-title">[Talkmapper.com](http://Talkmapper.com)</h5>
-<p class="card-text">An audio processing service that leverages advanced algorithms for automated transcription and speaker diarization (identifying who spoke when).</p>
-</div>
-:::
-:::
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
-<div class="card-body">
-<h5 class="card-title">[Congeres.com.br](http://Congeres.com.br)</h5>
-<p class="card-text">A platform for analyzing general conditions of insurance policies in Brazil, designed for brokers to optimize risk assessment and client consultation.</p>
-</div>
-:::
-:::
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
-<div class="card-body">
-<h5 class="card-title">[Nioeng.com](http://Nioeng.com)</h5>
-<p class="card-text">A data platform dedicated to the analysis, visualization, and tracking of the Brazilian public budget, promoting transparency and accessibility.</p>
-</div>
-:::
-:::
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
-<div class="card-body">
-<h5 class="card-title">[Cryptosresearch.com](http://Cryptosresearch.com)</h5>
-<p class="card-text">A research and analytics platform providing institutional-grade reports, on-chain data analysis, and market insights for crypto assets.</p>
-</div>
-:::
-:::
-::: {.g-col-12 .g-col-md-6}
-::: {.card .h-100}
-<div class="card-body">
-<h5 class="card-title">[Ancestrymap.nionmaron.com](http://Ancestrymap.nionmaron.com)</h5>
-<p class="card-text">An offline-first desktop application for building, visualizing, and managing complex family genealogy trees with privacy as a core feature.</p>
-</div>
-:::
-:::
-:::::
+```{=html}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Projetos Completo</title>
+    <style>
+        /* CSS Reset Básico e Estilo do Container */
+        .pjc_pure-container * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
----
+        .pjc_pure-container {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            overflow: hidden;
+            position: relative; /* Contexto para os botões de controle */
+        }
+
+        /* --- Estilos do Carrossel --- */
+        .pjc_carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Animação de slide */
+        }
+
+        .pjc_carousel-item {
+            min-width: 100%;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+        
+        /* Card do Projeto */
+        .pjc_project-card {
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: #1a2a3a;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .pjc_project-card-title a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            transition: color 0.3s ease;
+        }
+
+        .pjc_project-card-title a:hover {
+            color: #00bcd4;
+        }
+
+        .pjc_project-card-text {
+            font-size: 1.15rem;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin: 15px auto 25px auto;
+        }
+
+        .pjc_tech-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 8px 16px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Controles (Setas) */
+        .pjc_carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            line-height: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .pjc_carousel-control:hover { background-color: rgba(0, 0, 0, 0.6); }
+        .pjc_carousel-control.pjc_prev { left: 15px; }
+        .pjc_carousel-control.pjc_next { right: 15px; }
+
+        /* Indicadores (Pontos) */
+        .pjc_carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .pjc_indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .pjc_indicator.pjc_active {
+            background-color: white;
+        }
+        
+        /* --- Estilos do Modal --- */
+        .pjc_modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .pjc_modal-overlay.pjc_active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .pjc_modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .pjc_modal-overlay.pjc_active .pjc_modal-content {
+            transform: scale(1);
+        }
+
+        .pjc_modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+        }
+        .pjc_modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .pjc_modal-description {
+             font-size: 1rem;
+             line-height: 1.5;
+             margin-bottom: 20px;
+        }
+        #pjc_modalTechStack .pjc_tech-badge {
+            background-color: #6c757d;
+            border: none;
+            color: white;
+        }
+        .pjc_tech-stack-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="pjc_projectCarousel" class="pjc_pure-container">
+    <div class="pjc_carousel-inner">
+        <div class="pjc_carousel-item"
+             data-title="Talkmapper.com"
+             data-tech="Streamlit, AI, Whisper, Python"
+             data-description="An innovative audio processing service that uses advanced algorithms for automated transcription and speaker diarization. It identifies who spoke and when, making it ideal for meetings, interviews, and conversation analysis.">
+            <div class="pjc_project-card">
+                <h5 class="pjc_project-card-title"><a href="http://Talkmapper.com" target="_blank">Talkmapper.com</a></h5>
+                <p class="pjc_project-card-text">An audio processing service with automated transcription and speaker diarization.</p>
+                <div>
+                    <span class="pjc_tech-badge">Streamlit</span><span class="pjc_tech-badge">AI</span><span class="pjc_tech-badge">Whisper</span><span class="pjc_tech-badge">Python</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pjc_carousel-item"
+             data-title="Congeres.com.br"
+             data-tech="R Shiny, Web Scraping, NLP"
+             data-description="A robust platform for analyzing the general conditions of insurance policies in Brazil. Designed for brokers, it optimizes risk assessment and client consultation, facilitating strategic decisions in the insurance sector.">
+            <div class="pjc_project-card">
+                <h5 class="pjc_project-card-title"><a href="http://Congeres.com.br" target="_blank">Congeres.com.br</a></h5>
+                <p class="pjc_project-card-text">A platform for analyzing general conditions of insurance policies in Brazil.</p>
+                <div>
+                    <span class="pjc_tech-badge">R Shiny</span><span class="pjc_tech-badge">Web Scraping</span><span class="pjc_tech-badge">NLP</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pjc_carousel-item"
+             data-title="Nioeng.com"
+             data-tech="R, Web Scraping, Data Automation"
+             data-description="A data platform dedicated to the analysis, visualization, and tracking of the Brazilian public budget. It promotes transparency and accessibility of fiscal information, allowing citizens and researchers to monitor government spending.">
+            <div class="pjc_project-card">
+                <h5 class="pjc_project-card-title"><a href="http://Nioeng.com" target="_blank">Nioeng.com</a></h5>
+                <p class="pjc_project-card-text">A data platform for analysis and visualization of the Brazilian public budget.</p>
+                <div>
+                    <span class="pjc_tech-badge">R</span><span class="pjc_tech-badge">Web Scraping</span><span class="pjc_tech-badge">Data Automation</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pjc_carousel-item"
+             data-title="Cryptosresearch.com"
+             data-tech="Web Scraping, Statistical Analysis, R Markdown, Shiny Web App"
+             data-description="A research and analytics platform that provides institutional-grade reports, on-chain data analysis, and market insights for crypto assets. It's essential for investors and researchers in the cryptocurrency market.">
+            <div class="pjc_project-card">
+                <h5 class="pjc_project-card-title"><a href="http://Cryptosresearch.com" target="_blank">Cryptosresearch.com</a></h5>
+                <p class="pjc_project-card-text">A research and analytics platform for crypto assets with institutional reports.</p>
+                <div>
+                    <span class="pjc_tech-badge">Web Scraping</span><span class="pjc_tech-badge">Statistical Analysis</span><span class="pjc_tech-badge">R Markdown</span><span class="pjc_tech-badge">Shiny Web App</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pjc_carousel-item"
+             data-title="Ancestrymap.nionmaron.com"
+             data-tech="JavaScript, HTML5, Browser DB"
+             data-description="An offline-first desktop application for building, visualizing, and managing complex family genealogy trees. With privacy as a core feature, it allows users to explore their ancestry safely and in detail.">
+            <div class="pjc_project-card">
+                <h5 class="pjc_project-card-title"><a href="http://Ancestrymap.nionmaron.com" target="_blank">Ancestrymap.nionmaron.com</a></h5>
+                <p class="pjc_project-card-text">A desktop app to build and manage family trees with a focus on privacy.</p>
+                <div>
+                    <span class="pjc_tech-badge">JavaScript</span><span class="pjc_tech-badge">HTML5</span><span class="pjc_tech-badge">Browser DB</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="pjc_carousel-control pjc_prev">&#10094;</button>
+    <button class="pjc_carousel-control pjc_next">&#10095;</button>
+    <div class="pjc_carousel-indicators"></div>
+</div>
+
+<div id="pjc_projectModal" class="pjc_modal-overlay">
+    <div class="pjc_modal-content">
+        <button class="pjc_modal-close">&times;</button>
+        <h5 id="pjc_modalTitle" class="pjc_modal-title"></h5>
+        <p id="pjc_modalDescription" class="pjc_modal-description"></p>
+        <hr>
+        <h6>Technology Stack</h6>
+        <div id="pjc_modalTechStack" class="pjc_tech-stack-container"></div>
+    </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // --- LÓGICA DO CARROSSEL ---
+    const carousel = document.querySelector('#pjc_projectCarousel');
+    // Verifica se o elemento do carrossel existe na página antes de continuar
+    if (!carousel) return;
+
+    const inner = carousel.querySelector('.pjc_carousel-inner');
+    const items = carousel.querySelectorAll('.pjc_carousel-item');
+    const prevBtn = carousel.querySelector('.pjc_prev');
+    const nextBtn = carousel.querySelector('.pjc_next');
+    const indicatorsContainer = carousel.querySelector('.pjc_carousel-indicators');
+    
+    // Sai da função se não houver itens para evitar erros
+    if (items.length === 0) return;
+
+    const totalItems = items.length;
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    // Função para mover para um slide específico
+    function goToSlide(index) {
+        if (index < 0) {
+            index = totalItems - 1;
+        } else if (index >= totalItems) {
+            index = 0;
+        }
+        inner.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+        updateIndicators();
+    }
+    
+    // Função para atualizar os indicadores (pontos)
+    function updateIndicators() {
+        if (!indicatorsContainer) return;
+        indicatorsContainer.childNodes.forEach((indicator, index) => {
+            if (index === currentIndex) {
+                indicator.classList.add('pjc_active');
+            } else {
+                indicator.classList.remove('pjc_active');
+            }
+        });
+    }
+    
+    // Função para iniciar o avanço automático
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayInterval = setInterval(() => {
+            goToSlide(currentIndex + 1);
+        }, 4000);
+    }
+
+    // Função para parar o avanço automático
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+    
+    // Cria os indicadores
+    if (indicatorsContainer) {
+        items.forEach((_, index) => {
+            const indicator = document.createElement('button');
+            indicator.classList.add('pjc_indicator');
+            indicator.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            indicator.addEventListener('click', () => {
+                 goToSlide(index);
+            });
+            indicatorsContainer.appendChild(indicator);
+        });
+    }
+
+    // Event Listeners dos botões
+    if(prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    if(nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    
+    // Pausa a animação quando o mouse está sobre o carrossel
+    carousel.addEventListener('mouseenter', stopAutoPlay);
+    carousel.addEventListener('mouseleave', startAutoPlay);
+
+    // Inicia tudo
+    goToSlide(0);
+    startAutoPlay();
+
+
+    // --- LÓGICA DO MODAL ---
+    const modalOverlay = document.getElementById('pjc_projectModal');
+    // Verifica se o modal existe na página
+    if (!modalOverlay) return;
+
+    const modalContent = modalOverlay.querySelector('.pjc_modal-content');
+    const modalCloseBtn = modalOverlay.querySelector('.pjc_modal-close');
+    const modalTitle = document.getElementById('pjc_modalTitle');
+    const modalDescription = document.getElementById('pjc_modalDescription');
+    const modalTechStack = document.getElementById('pjc_modalTechStack');
+
+    // Abre o modal
+    function openModal(item) {
+        modalTitle.textContent = item.dataset.title || '';
+        modalDescription.textContent = item.dataset.description || '';
+        
+        modalTechStack.innerHTML = '';
+        const techs = item.dataset.tech ? item.dataset.tech.split(',') : [];
+        techs.forEach(techName => {
+            const badge = document.createElement('span');
+            badge.className = 'pjc_tech-badge';
+            badge.textContent = techName.trim();
+            modalTechStack.appendChild(badge);
+        });
+
+        modalOverlay.classList.add('pjc_active');
+    }
+
+    // Fecha o modal
+    function closeModal() {
+        modalOverlay.classList.remove('pjc_active');
+    }
+
+    // Adiciona evento de clique a cada item do carrossel para abrir o modal
+    items.forEach(item => {
+        item.addEventListener('click', () => openModal(item));
+    });
+
+    // Eventos para fechar o modal
+    if(modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', function(event) {
+        if (event.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
+```
+
+
+
+
+------------------------------------------------------------------------
 
 ## Latest Content
 
 ::: {#latest-content}
 :::
 
-
 ## What You'll Find Here
 
-::::: grid
-::: {.g-col-12 .g-col-md-6}
-::: {.callout-note appearance="simple"}
-### In-Depth Analyses
-Explore detailed articles and case studies where I apply machine learning and statistics to solve real-world problems.
-:::
-:::
 
-::: {.g-col-12 .g-col-md-6}
-::: {.callout-note appearance="simple"}
-### Code Solutions & Guides
-Find practical, step-by-step tutorials and reusable scripts to help you implement complex data science techniques.
-:::
-:::
+```{=html}
 
-::: {.g-col-12 .g-col-md-6}
-::: {.callout-note appearance="simple"}
-### R & Python Package News
-Stay updated with commentary and reviews on the latest machine learning packages and tools in the R and Python ecosystems.
-:::
-:::
+<style>
+    /* Estilização base para o iframe */
 
-::: {.g-col-12 .g-col-md-6}
-::: {.callout-note appearance="simple"}
-### Project Deep Dives
-Go behind the scenes of my projects to understand the methodology, architecture, and challenges involved.
-:::
-:::
-:::::
+    /* Container da Seção */
+    .features-section {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .features-section h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #005f73; /* Azul petróleo escuro do tema */
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    /* Grid para os cartões */
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Uma coluna por padrão (mobile) */
+        gap: 1.75rem; /* Espaço entre os cartões */
+    }
+
+    /* Duas colunas para telas médias (tablets) e maiores */
+    @media (min-width: 768px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Estilo do Cartão Individual */
+    .feature-card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 2rem;
+        text-align: left;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border-top: 5px solid #0a9396; /* Borda superior com o verde do tema */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card .icon {
+        width: 48px;
+        height: 48px;
+        color: #0a9396; /* Cor do ícone */
+        margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+        margin: 0 0 0.75rem 0;
+        font-size: 1.3rem;
+        color: #005f73;
+    }
+
+    .feature-card p {
+        margin: 0;
+        line-height: 1.6;
+        color: #495057;
+    }
+</style>
+
+<section class="features-section">
+    
+    <div class="features-grid">
+        <div class="feature-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+            </svg>
+            <h3>In-Depth Analyses</h3>
+            <p>Explore detailed articles and case studies where I apply machine learning and statistics to solve real-world problems.</p>
+        </div>
+
+        <div class="feature-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+            </svg>
+            <h3>Code Solutions & Guides</h3>
+            <p>Find practical, step-by-step tutorials and reusable scripts to help you implement complex data science techniques.</p>
+        </div>
+
+        <div class="feature-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+            </svg>
+            <h3>R & Python Package News</h3>
+            <p>Stay updated with commentary and reviews on the latest machine learning packages and tools in the R and Python ecosystems.</p>
+        </div>
+
+        <div class="feature-card">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <h3>Project Deep Dives</h3>
+            <p>Go behind the scenes of my projects to understand the methodology, architecture, and challenges involved.</p>
+        </div>
+    </div>
+</section>
+```
 
 
 ## Insights
 
-> "Data science is not about making complicated models. It's about making it simple enough to understand the problem at hand and then robustly solving it."
->
-> <cite>– Dr. N.R. Srinivasa Raghavan</cite>
+```{=html}
+<style>
+    /* Estilização otimizada para iframe */
 
-> "Overfitting is more dangerous than failing to build the most powerful model possible."
->
-> <cite>– Pedro Domingos</cite>
+    .insights-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto; /* Centraliza o container se o iframe for largo */
+        text-align: center;
+    }
 
----
+    .insights-container h2 {
+        font-size: 2.5rem;
+        color: #005f73;
+        margin-bottom: 3rem;
+        font-weight: 600;
+    }
+
+    blockquote {
+        background: #ffffff;
+        border-left: 8px solid #0a9396;
+        margin: 0 0 2.5rem 0;
+        padding: 2rem 2.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        position: relative;
+        text-align: left;
+    }
+
+    blockquote::before {
+        content: '“';
+        font-size: 6rem;
+        color: #cae9e3;
+        position: absolute;
+        left: 1rem;
+        top: -0.5rem;
+        z-index: 0;
+    }
+    
+    blockquote p, blockquote footer {
+        position: relative;
+        z-index: 1;
+    }
+
+    blockquote p {
+        margin: 0;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        font-style: italic;
+        color: #495057;
+    }
+
+    blockquote footer {
+        display: block;
+        margin-top: 1.5rem;
+        text-align: right;
+        font-style: normal;
+        font-weight: 600;
+        color: #005f73;
+    }
+</style>
+
+
+    <blockquote>
+        <p>Data science is not about making complicated models. It's about making it simple enough to understand the problem at hand and then robustly solving it.</p>
+        <footer>– Dr. N.R. Srinivasa Raghavan</footer>
+    </blockquote>
+
+    <blockquote>
+        <p>Overfitting is more dangerous than failing to build the most powerful model possible.</p>
+        <footer>– Pedro Domingos</footer>
+    </blockquote>
+</main>
+```
+
+
+------------------------------------------------------------------------

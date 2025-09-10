@@ -11,16 +11,17 @@ Table of Contents:
 7.  Utility & Specific Classes (Legacy, webR, etc.)
 ==============================================
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
 
 /* 1. :root Variables 
 --------------------------------------------- */
 :root {
-  --primary-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --heading-font: 'Georgia', 'Times New Roman', Times, serif;
   
   --bg-color: #f8f9fa; /* Light gray background */
   --text-color: #343a40; /* Dark gray for text */
-  --primary-color: #0d6efd; /* A modern blue */
+  --primary-color:#005f73; /* A modern blue */
   --accent-color: #6f42c1; /* A nice purple for highlights */
   --card-bg: #ffffff; /* White background for cards */
   --border-color: #dee2e6; /* Light border color */
@@ -30,17 +31,17 @@ Table of Contents:
 /* 2. Global Styles & Typography
 --------------------------------------------- */
 body {
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--primary-font);
   line-height: 1.6;
   margin: 0;
   padding: 0 15px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: #212529;
+
+h1 {
+  color: #005f73;
 }
 
 a {
@@ -58,7 +59,7 @@ a:hover {
 --------------------------------------------- */
 .hero-section {
   text-align: center;
-  padding: 20px 20px;
+  padding: 50px 20px;
   margin: 20px auto;
   max-width: 1200px;
 }
@@ -164,7 +165,7 @@ a:hover {
 /* 6. Footer Styles
 --------------------------------------------- */
 .footer-container {
-  background-color: #343a40;
+  background-color: #005f73;
   color: #f8f9fa;
   padding: 2rem 1.5rem;
   margin-top: 3rem;
@@ -188,7 +189,7 @@ a:hover {
 }
 
 .nav-footer {
-  background-color: #212529;
+  background-color: #005f73;
   color: #ced4da;
 }
 
