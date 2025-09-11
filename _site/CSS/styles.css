@@ -9,16 +9,15 @@ Table of Contents:
 5.  Callouts
 6.  Footer Styles
 7.  Utility & Specific Classes (Legacy, webR, etc.)
+8.  Responsive Enhancements (TIPOGRAFIA + TABELAS + MÍDIAS)
+9.  Breakpoints: Tablets & Celulares
 ==============================================
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
-
-
 /* 1. :root Variables 
 --------------------------------------------- */
 :root {
-  
   --bg-color: #f8f9fa; /* Light gray background */
   --text-color: #343a40; /* Dark gray for text */
   --primary-color:#005f73; /* A modern blue */
@@ -26,28 +25,62 @@ Table of Contents:
   --card-bg: #ffffff; /* White background for cards */
   --border-color: #dee2e6; /* Light border color */
   --shadow-color: rgba(0, 0, 0, 0.08);
+
+  /* Espaçamento fluido */
+  --space-1: clamp(6px, 0.6vw, 10px);
+  --space-2: clamp(10px, 1vw, 16px);
+  --space-3: clamp(14px, 1.6vw, 24px);
+  --space-4: clamp(18px, 2.2vw, 32px);
 }
 
 /* 2. Global Styles & Typography
 --------------------------------------------- */
+html{
+  font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
   margin: 0;
   padding: 0 15px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
-
-h1 {
-  color: #005f73;
+h1, h2, h3, h4, h5, h6{
+  line-height: 1.2;
+  margin: var(--space-3) 0 var(--space-2);
+  font-weight: 700;
+  color: var(--text-color);
 }
+
+h1 { color: #005f73; }
+
+h1{ font-size: clamp(1.8rem, 3.8vw, 3rem); }
+h2{ font-size: clamp(1.5rem, 3.0vw, 2.2rem); }
+h3{ font-size: clamp(1.25rem, 2.3vw, 1.75rem); }
+h4{ font-size: clamp(1.1rem, 1.8vw, 1.4rem); }
+h5{ font-size: clamp(1rem, 1.6vw, 1.2rem); }
+h6{ font-size: clamp(0.95rem, 1.4vw, 1.05rem); }
+
+p, ul, ol, blockquote, pre, table{
+  margin: 0 0 var(--space-3);
+  font-size: 1rem;
+}
+
+li{ margin: 0 0 var(--space-1); }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s ease;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
 }
 
 a:hover {
@@ -74,18 +107,18 @@ a:hover {
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4.5vw, 2.5rem);
   margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: #6c757d;
   margin-bottom: 1rem;
 }
 
 .hero-intro {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   max-width: 900px;
   margin: 0 auto 2rem auto;
 }
@@ -114,8 +147,8 @@ a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 8px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 1.5rem; /* Add space between cards */
-  display: flex; /* Ensures cards in the same row have same height */
+  margin-bottom: 1.5rem;
+  display: flex;
   flex-direction: column;
 }
 
@@ -129,7 +162,7 @@ a:hover {
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.25rem);
   margin-top: 0;
   margin-bottom: 0.75rem;
 }
@@ -149,7 +182,7 @@ a:hover {
   padding: 1.5rem;
   box-shadow: 0 4px 8px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 1.5rem; /* Add space between callouts */
+  margin-bottom: 1.5rem;
 }
 
 .callout-note.appearance-simple:hover {
@@ -199,8 +232,6 @@ a:hover {
 
 /* 7. Utility & Specific Classes
 --------------------------------------------- */
-
-/* Legacy background colors */
 .cinza-background { background-color: #708090; }
 .black-background { background-color: black; }
 .purple-background { background-color: #939bc9; }
@@ -209,7 +240,6 @@ a:hover {
 .pink-background { background-color: #d6748c; }
 .orange-background { background-color: #da9359; }
 
-/* webR styles */
 .btn-webr {
   background-color: var(--accent-color);
   color: white;
@@ -229,13 +259,92 @@ pre code, pre.sourceCode {
   padding: 1em;
 }
 
-/* Iframe container */
 .iframe-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-#meuIframe {
-  border: none;
+#meuIframe { border: none; }
+
+/* 8. Responsive Enhancements (TIPOGRAFIA + TABELAS + MÍDIAS)
+--------------------------------------------- */
+img, video, svg, canvas{
+  max-width: 100%;
+  height: auto;
+}
+
+.table-responsive{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-responsive table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+table th, table td{
+  text-align: left;
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+}
+table thead th{
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
+}
+table{
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* 9. Breakpoints: Tablets & Celulares
+--------------------------------------------- */
+/* Tablets */
+@media (max-width: 768px){
+  body{ font-size: 0.95rem; }
+  h1{ font-size: 1.8rem; }
+  h2{ font-size: 1.4rem; }
+  h3{ font-size: 1.2rem; }
+  .hero-title{ font-size: 2.1rem; }
+  .hero-subtitle{ font-size: 1.05rem; }
+  .hero-intro{ font-size: 1rem; }
+  .card-title{ font-size: 1.05rem; }
+  .card-text{ font-size: 0.95rem; }
+}
+
+/* Celulares */
+@media (max-width: 480px){
+  body{ 
+    line-height: 1.7; 
+    font-size: 0.9rem;
+  }
+  h1{ font-size: 1.6rem; letter-spacing: -0.01em; }
+  h2{ font-size: 1.3rem; }
+  h3{ font-size: 1.1rem; }
+  h4{ font-size: 1rem; }
+  h5{ font-size: 0.95rem; }
+  h6{ font-size: 0.9rem; }
+
+  p, ul, ol, blockquote, pre, table{ 
+    font-size: 0.9rem; 
+    margin-bottom: var(--space-2); 
+  }
+
+  .hero-title{ font-size: 1.9rem; }
+  .hero-subtitle{ font-size: 1rem; }
+  .hero-intro{ font-size: 0.95rem; }
+  .card-title{ font-size: 1rem; }
+  .card-text{ font-size: 0.9rem; }
+
+  .hero-section{ padding: 36px 16px; }
+  .card-body{ padding: 1.1rem; }
+}
+
+/* Acessibilidade: menos movimento */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
 }
