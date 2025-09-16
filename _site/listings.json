@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/0011 UV-Package/index.html",
       "/posts/0010 git-cache-eng/index.html",
       "/posts/0009 Docker-Dicas-e-Truques-pt/index.html",
       "/posts/0008 Arquivos de Log/index.html",
@@ -9,7 +10,6 @@
       "/posts/0006-gitignore-pt/index.html",
       "/posts/0005-Poker-pt/index.html",
       "/posts/0004-Git-Dicas-e-Truques-pt/index.html",
-      "/posts/Docker-Shiny-pt/index.html",
       "/posts/0003-lambda-architecture-pt/index.html",
       "/posts/0002-data-driven-pt/index.html",
       "/posts/0001-data-terms-pt/index.html"
@@ -22,6 +22,7 @@
   {
     "listing": "/Blog.html",
     "items": [
+      "/posts/0011 UV-Package/index.html",
       "/posts/0010 git-cache-eng/index.html",
       "/posts/0009 Docker-Dicas-e-Truques-pt/index.html",
       "/posts/0008 Arquivos de Log/index.html",
@@ -29,6 +30,7 @@
       "/posts/0006-gitignore-pt/index.html",
       "/posts/0005-Poker-pt/index.html",
       "/posts/0004-Git-Dicas-e-Truques-pt/index.html",
+      "/posts/Docker-Shiny-pt/index.html",
       "/posts/0003-lambda-architecture-pt/index.html",
       "/posts/0002-data-driven-pt/index.html",
       "/posts/0001-data-terms-pt/index.html"
